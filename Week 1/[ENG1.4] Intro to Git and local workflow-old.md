@@ -14,18 +14,18 @@ This lesson introduces the fundamentals of the Git workflow, Git Bash, and VS Co
 
 Total time: 1.5 hour
 
-* 60 minutes - [**Pre-session**](https://github.com/tnt-summer-academy/Curriculum/wiki/%5BENG1.5%5D-Intro-to-Git-and-local-workflow): background learning, research, and investigations
+* 60 minutes - [**Pre-session**](https://github.com/tnt-summer-academy/Curriculum/wiki/%5BENG1.4%5D-Intro-to-Git-and-local-workflow): background learning, research, and investigations
 * 60 minutes - **Instructional Session**
     * 10 minutes - engage: source control and you
     * 15 minutes - explain: recap git basics and best practices
     * 10 minutes - explore: create repo and edit in VS Code
     * 10 minutes - elaborate: best practices, trouble spots and talk about 
-* 30 minutes - [**Post-session**](https://github.com/tnt-summer-academy/Curriculum/wiki/%5BENG1.5%5D-Intro-to-Git-and-local-workflow): review, and investigations
+* 30 minutes - [**Post-session**](https://github.com/tnt-summer-academy/Curriculum/wiki/%5BENG1.4%5D-Intro-to-Git-and-local-workflow): review, and investigations
 
 
 ## Pre-session 
 
-View the pre-session [here](https://github.com/tnt-summer-academy/Curriculum/wiki/%5BENG1.5%5D-Intro-to-Git-and-local-workflow)
+View the pre-session [here](https://github.com/tnt-summer-academy/Curriculum/wiki/%5BENG1.4%5D-Intro-to-Git-and-local-workflow)
 
 ## Lesson details
 
@@ -57,7 +57,7 @@ View the pre-session [here](https://github.com/tnt-summer-academy/Curriculum/wik
        * It works locally, on your own computer, and offline
        * It makes having multiple branches, parallel worlds of code, easier
 
-       ![git workflow steps](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.5]GitWorkFlowDynamic.gif)
+       ![git workflow steps](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.4]GitWorkFlowDynamic.gif)
 
 2. Git Gotchas
    * Git can mean several things - the name of the source control technology, the functionality built into VS Code, the file formats and protocols that underlie the system.
@@ -84,7 +84,7 @@ View the pre-session [here](https://github.com/tnt-summer-academy/Curriculum/wik
 
     *Remember*
 
-    ![git workflow](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.5]GitWorkFlow.gif)
+    ![git workflow](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.4]GitWorkFlow.gif)
 
 
 ### Demo: Git in VS Code
@@ -117,17 +117,17 @@ View the pre-session [here](https://github.com/tnt-summer-academy/Curriculum/wik
     * Check out the changes in Git Bash with `git log`
     * Show the differnt between `git log` and git `log --oneline`
 
- ![git log vs git log --oneline](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.5]gitlog_gitlogoneline.gif)
+ ![git log vs git log --oneline](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.4]gitlog_gitlogoneline.gif)
 
  6. Make some changes to index.html.
 
  7. Show the Source Control tab and the file diffs.
 
-  ![file different](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.5]-fileDiffVS.gif)
+  ![file different](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.4]-fileDiffVS.gif)
 
  8. Show how to read the git log view
 
-![git log view](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.5]-GitLogCommandView.png)
+![git log view](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.4]-GitLogCommandView.png)
 
 ### Best practices, trouble spots, and what's next
 
@@ -162,5 +162,5 @@ This practice reinforces using the Git command line and VS Code together.
 
 # Post-session and Stretch
 
-View the post-session [here](https://github.com/tnt-summer-academy/Curriculum/wiki/%5BENG1.5%5D-Intro-to-Git-and-local-workflow)
+View the post-session [here](https://github.com/tnt-summer-academy/Curriculum/wiki/%5BENG1.4%5D-Intro-to-Git-and-local-workflow)
 

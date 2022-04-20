@@ -41,29 +41,29 @@ We'll cover three scenarios: amending a commit, recovering a deleted file, and r
       You deleted a file, and immediately realized it was a mistake?  
       If a file is accidentally deleted from a repository it can be recovered with `git checkout`. Using a specific file name will pull the file back from the index into the working tree.
 
-      <img src="https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.6]recovering-a-deleted-file.png" alt="recovering a deleted file" style="zoom:65%;" />
+      <img src="https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.5]recovering-a-deleted-file.png" alt="recovering a deleted file" style="zoom:65%;" />
 
 
     * ***Case 2: I deleted a file and committed the deletion***
     
-        ![resetting](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.6]-resetting.png)
+        ![resetting](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.5]-resetting.png)
     
         You made a commit deleting a file, but then realized you wanted to keep the file around after all? 
         Do a * *reset** to go back to the state before your commit `$ git reset --hard HEAD~1` (be careful: the "--hard" option means the command will discard changes to tracked files after the specified commit — you can also leave this option out in which case the file deletion will show up as an un-staged change along with any other changes you’ve made in your working tree. The file can then be restored as in the previous scenario)
 
     (Note: this presumes you haven’t already pushed your commit to a remote — this will be covered later next week.
     
-    <img src="https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.6]recovering-a-deleted-file-aftercommit.png" alt="hard rest" style="zoom:65%;" />
+    <img src="https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.5]recovering-a-deleted-file-aftercommit.png" alt="hard rest" style="zoom:65%;" />
     
     * ***Case3: I committed the deletion and then I did more commits***
   
       If you deleted a file, committed, then continued work and did more commits, only to find that deleting the file was a mistake, Git still has you covered! 
       
-      <img src="https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.6]recover-deleted-after-newcommit-p1.png" alt="recovering a deleted file after new commit" style="zoom:70%;" />
+      <img src="https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.5]recover-deleted-after-newcommit-p1.png" alt="recovering a deleted file after new commit" style="zoom:70%;" />
       
       To find the right commit, first check the history for the deleted file: `$ git log -- <filename>` 
     
-      <img src="https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.6]-hash-for-needed-file.png" alt="recovering a deleted file after new commit" style="zoom:70%;" />
+      <img src="https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.5]-hash-for-needed-file.png" alt="recovering a deleted file after new commit" style="zoom:70%;" />
     
       You can either work with the last commit that still had the file, or the commit that deleted the file. In the first case, just checkout the file from that commit: 
     
@@ -73,18 +73,18 @@ We'll cover three scenarios: amending a commit, recovering a deleted file, and r
     
       `$ git checkout <deletion commit hash>~1 -- <filename>`
     
-      <img src="https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.6]recover-deleted-after-newcommit-p2.png" alt="recovering a deleted file after new commit" style="zoom:70%;" />
+      <img src="https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.5]recover-deleted-after-newcommit-p2.png" alt="recovering a deleted file after new commit" style="zoom:70%;" />
 
 3. **Demo: Reverting a commit**
 
-   ![revert](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.6]-revert.png)
+   ![revert](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.5]-revert.png)
 
     Sometimes you just need to go back to a previous version. Refactoring some code didn't head the direction you thought. You accidentally deleted some code that you actually needed. The layout changed in a way you didn't predict and you want a fresh take at it. Don't worry, you've been committing your work in strong reasonable chunks.
     `git revert HEAD` makes a change that's exactly the opposite of the last commit.
 
     ***See below demo scenario steps in picture***
 
-    <img src="https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.6]gitRevert.png" alt="git revert" style="zoom:85%;" /> 
+    <img src="https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.5]gitRevert.png" alt="git revert" style="zoom:85%;" /> 
 
 ***Note:*** `git revert HEAD` do the same as `git reset --hard HEAD^` but the second removes the most recent commit and history
 

@@ -24,8 +24,8 @@ Total time: 1.5 hour
 ## Session setup
 
 * [ ] Git installed
-  * [installation guide for Mac](./Pdfs/[ENG1.2]-Installing-Git-Mac.pdf)
-  * [installation guide for windows](./Pdfs/[ENG1.2]-Installing-Git-Windows)
+  * [installation guide for Mac](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/Pdfs/[ENG1.4]-Installing-Git-Mac.pdf)
+  * [installation guide for windows](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/Pdfs/[ENG1.4]-Installing-Git-Windows)
 * [ ] Prepared to demo commands in git using VS Code and the integrated terminal
   * Experiment the [integrated terminal](https://code.visualstudio.com/docs/editor/integrated-terminal) with VS code to execute some of git commands
 
@@ -69,7 +69,7 @@ Total time: 1.5 hour
     * It works locally, on your own computer, and offline
     * It makes having multiple branches, parallel worlds of code, easier
 
-       ![git workflow steps](./[ENG1.2]GitWorkFlowDynamic.gif)
+       ![git workflow steps](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.4]GitWorkFlowDynamic.gif)
 
 2. Git Gotchas
    * Git can mean several things - the name of the source control technology, the functionality built into VS Code, the file formats and protocols that underlie the system.
@@ -135,7 +135,7 @@ Total time: 1.5 hour
 
     **Remember**
 
-    ![git workflow](./[ENG1.2]GitWorkFlow.gif)
+    ![git workflow](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.4]GitWorkFlow.gif)
 
 #### ***Demo: Git in VS Code***
 
@@ -170,17 +170,17 @@ Total time: 1.5 hour
     * Check out the changes in Git Bash with `git log`
     * Show the different between `git log` and git `log --oneline`
 
- ![git log vs git log --oneline](./[ENG1.2]gitlog_gitlogoneline.gif)
+ ![git log vs git log --oneline](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.4]gitlog_gitlogoneline.gif)
 
 6. Make some changes to index.html.
    
 7. Show the Source Control tab and the file diffs.
 
-  ![file different](./[ENG1.2]-fileDiffVS.gif)
+  ![file different](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.4]-fileDiffVS.gif)
 
 8. Show how to read the git log view
 
-![git log view](./[ENG1.2]-GitLogCommandView.png)
+![git log view](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.4]-GitLogCommandView.png)
 
 ### Your Turn! review, and investigations
 
