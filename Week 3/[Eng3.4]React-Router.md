@@ -244,7 +244,7 @@ Now let’s talk a little bit about the components and some of the key props we 
 
 <table style="border: none">
     <tr align="center">
-        <td><img src="./Bootstrap-Navigation-Collapse.png" alt="Clone, Pull and Push" width="80%"> </td>
+        <td><img src="images/Bootstrap-Navigation-Collapse.png" alt="Clone, Pull and Push" width="80%"> </td>
 
 </tr>
 </table>
