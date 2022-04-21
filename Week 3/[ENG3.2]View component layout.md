@@ -1,6 +1,6 @@
 # View Component Layout
 
-## Week 2, Lesson 3
+## Week 3, Lesson 3
 
 This lesson introduces how to create components that can display a variety of data and distribute space dynamically.
 
@@ -56,7 +56,7 @@ Table is used to display tabular data using four container elements `<table>`, `
 
 Bring this into your project using `import Table from 'react-bootstrap/Table'`. You also need to do `import bootstrap/dist/css/bootstrap.min.css` in index.js.  
 
-![](./Bootstrap_Basic_Table.png)
+![](images/Bootstrap_Basic_Table.png)
 
     <Container>
     <Table striped bordered hover>
@@ -94,7 +94,7 @@ Bring this into your project using `import Table from 'react-bootstrap/Table'`. 
 
 Now that table was basic. What if we spice it up a bit with some real Bootstrap? The following displays the table as in a 'dark mode' style, with the added benefit of highlight over hover.
 
-![](./Bootstrap-Table-Dark.png)
+![](images/Bootstrap-Table-Dark.png)
 
     <Container>
     <Table striped bordered hover variant="dark">
@@ -131,7 +131,7 @@ Now that table was basic. What if we spice it up a bit with some real Bootstrap?
 ### React Bootstrap Layouts (10 minutes)
 The React Bootstrap Layout is akin to the CSS Flexbox Layout, which is an efficient way to layout and distribute child items in ANY parent container allowing for each child item to either take up more or less space based on the number of items in the collection and the UI requirements. This means as our screen gets bigger or smaller (think desktop to mobile), the items scale accordingly. Here is a basic example utilizing the `<Col/>` and `<Row/>` components from. Notice that since we didn't specify a specific width, all columns are of equal widths, each taking 4 or 6 "spaces" within the 12 column spaces allowable.
 
-![](./React_Bootstrap_autoLayout.png)
+![](images/React_Bootstrap_autoLayout.png)
 
     <Container>
       <Row>
@@ -148,7 +148,7 @@ The React Bootstrap Layout is akin to the CSS Flexbox Layout, which is an effici
 
 Now let's see it with variable widths:
 
-![](./React_Bootstrap_VariableLayout.png)
+![](images/React_Bootstrap_VariableLayout.png)
 
     <Container>
       <Row className="justify-content-md-center">
@@ -172,7 +172,7 @@ Now let's see it with variable widths:
     
 Finally, here is an example where the sizing scales to the device screen:
 
-![](./React_Bootstrap_ResponsiveLayout.png)
+![](images/React_Bootstrap_ResponsiveLayout.png)
 
     <Container>
       {/* Stack the columns on mobile by making one full-width and the other half-width */}
@@ -217,11 +217,11 @@ You can go to [Fluent UI](https://developer.microsoft.com/en-us/fluentui#/) to v
 
 In the case of `<Stack/>`, you can use it to neatly "stack" children components of a parent component. For example:
 
-![](./Fluent_Stack_Basic.png)
+![](images/Fluent_Stack_Basic.png)
 
     import { Component } from 'react'
     import { Stack } from '@fluentui/react'
-    import { Shape } from './Shape'
+    import { Shape } from 'images/Shape'
     
     class Example extends React.Component {
       constructor(props) {
@@ -263,7 +263,7 @@ The Bootstrap Grid is akin to the CSS Flexbox Layout, which is an efficient way 
 
 To use the original base Bootstrap library, you need to use `npm install sass` and `npm install bootstrap`
 
-![](./Bootstrap_Grid_Basic.png)
+![](images/Bootstrap_Grid_Basic.png)
 
     <div class="container">
       <div class="row">
@@ -281,9 +281,9 @@ To use the original base Bootstrap library, you need to use `npm install sass` a
 
 
 
-![](./Bootstrap_Grid_Options.png)
+![](images/Bootstrap_Grid_Options.png)
 
-![](./Bootstrap_Grid_DefinedColSize.png)
+![](images/Bootstrap_Grid_DefinedColSize.png)
 
     <div class="container">
       <div class="row">
@@ -312,7 +312,7 @@ To use the original base Bootstrap library, you need to use `npm install sass` a
     
     
     
-![](./Bootstrap_Grid_VariableColSize.png)
+![](images/Bootstrap_Grid_VariableColSize.png)
 
     <div class="container">
       <div class="row justify-content-md-center">
@@ -345,7 +345,7 @@ To use the original base Bootstrap library, you need to use `npm install sass` a
 
 An HTML Table is used to display tabular data using four container elements `<table>`, `<thead>`, `<tbody>` and **table rows** `<tr>` along with a two data elements **table header data**  `<th>`,  , and **table data** `<td>`. You can also add a `<caption>`
 
-![Table Layout diagram https://www.codewall.co.uk/how-to-build-accessible-html-tables/](./visual-html-table-structure.jpeg)
+![Table Layout diagram https://www.codewall.co.uk/how-to-build-accessible-html-tables/](images/visual-html-table-structure.jpeg)
 
 If you look at how these elements are used to create a table, you can see a repeating pattern in the format. From this pattern, we can build a template for a **table component** that can be reused with a variety of dynamic data. For example, below a basic **HTML Table Element** structure
 
@@ -387,7 +387,7 @@ We can convert the basic table element above into a table component using the te
         )
     }
 
-![Table Data Generation](./view-component-table.png)
+![Table Data Generation](images/view-component-table.png)
 
 ### CSS Flexbox layout (~8 minutes)
 
@@ -401,13 +401,13 @@ When configuring a Flexbox layout both the Parent Container and Child Items have
    To get started with flex, setting a container&#39;s ***display*** property to ***flex*** allows you to manipulate its children with their flex properties.
 2. ***flex-direction*: row || column**  
    The flex direction determines the axis the container is oriented on, horizontal or vertical.
-   ![flexDirection](./flexDirection.png)
+   ![flexDirection](images/flexDirection.png)
 3. ***flex-wrap*: wrap || no-wrap** (default)
    Child items will all try to fit on one line. Setting **flex-wrap** to **wrap** allows the items to flow to a new line rather than overflow the view
-   ![flexWrap](./flexWrap.png)
+   ![flexWrap](images/flexWrap.png)
 4. ***justify-content*: space-around || space-between || flex-start || flex-end**  
    Sets the alignment of the child items along the main axis
-   ![justifyContent](./justifyContent.PNG)
+   ![justifyContent](images/justifyContent.PNG)
 
 
 #### Child Item Property:
@@ -417,4 +417,4 @@ Setting a child's flex to an integer makes it try to fill as much of the contain
 
 This means if all the children's flex is set to 1 they will take up an equal amount of space. If a child is set to 2 and the rest are 1, it will take up twice the amount of space.
 
-![FlexGrowShrink](./flex-grow.svg)
+![FlexGrowShrink](images/flex-grow.svg)

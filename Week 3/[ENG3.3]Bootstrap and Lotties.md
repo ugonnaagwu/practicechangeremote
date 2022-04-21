@@ -1,4 +1,6 @@
-Week 3, Lesson 4
+# Bootstrap and Lotties
+
+## Week 3, Lesson 4
 
 ## Learning objectives
 

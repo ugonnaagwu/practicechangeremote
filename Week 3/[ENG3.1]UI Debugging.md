@@ -21,14 +21,14 @@ Total time: 1 hour
 ## Session Details
 
 ### Source Page
-![](Debugging_SourcePage.png)
+![](images/Debugging_SourcePage.png)
 
 ### Chrome Debugger Overview (5 minutes)
 
 The developer tools are best shown in action. For this section we'll look at a browser's console and developer tools.
 Open a website and review the panels:
 
-![](Debugging_Web_Console.png)
+![](images/Debugging_Web_Console.png)
 
 1. **Elements panel** - View and modify the DOM and CSS that is loaded in the browser memory
 2. **Console panel** - View messages, errors warnings and info, and run JS commands
@@ -38,7 +38,7 @@ Open a website and review the panels:
 
 ### Debug CSS: Elements Tool (5 minutes)
 
-![](Debugging_Web_CSS.png)
+![](images/Debugging_Web_CSS.png)
 
 
 ### Debug TypeScript/JS: Using VSCode (25 minutes)
@@ -72,13 +72,13 @@ Open a website and review the panels:
    ![image-20210628151431344](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/%5BENG1.1%5D%20Intro%20to%20VSCode%20and%20JavaScript.assets/image-20210628105425827.png)
 
 4. Using the area next to the line numbers, add break points to your code.
-    ![](./Debugging_Add_Breakpoint.png)
+    ![](images/Debugging_Add_Breakpoint.png)
 5. Add some variables to your watch.
 
-    ![](./Debugging_Watch.png)
+    ![](images/Debugging_Watch.png)
 6. See the value of variables. Try putting breakpoints in the constructor and render and see the call order.
 7. When your breakpoint has been hit then you have a few actions you can take:
-    ![](./Debugging_Command_Bar.png)
+    ![](images/Debugging_Command_Bar.png)
     * **Pause/Resume**: Stop and continue debugging
     * **Step Over**: Gives you the ability to "step over" a line of code
     * **Step Into**: Go further into a function call
@@ -92,7 +92,7 @@ Open a website and review the panels:
 Continue using the examples you were following along with, but open the React Debugging Tools
 (You will need to have installed the [React Dev Tools Extension on the Chrome browser](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) )
 
-![](./Debugging_React_Dev_Extension.jpg)
+![](./images/Debugging_React_Dev_Extension.jpg)
 
 - The Components tool shows the individual components, their nesting, their properties and state
 - The Profiler tool records the browser's execution of the app to identify performance issues. As you add more functionality to the app this becomes more interesting

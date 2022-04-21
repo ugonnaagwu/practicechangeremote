@@ -56,13 +56,13 @@ None
 First, let's look at [a project in GitHub by following this link https://github.com/tnt-summer-academy/Team00-AppPrototype](https://github.com/tnt-summer-academy/Team00-AppPrototype) 
 
 1. In that repo you'll find a tab labeled "Projects":
-   ![image-20200711171227457](images/%5BENG2.6%5DTeamProjectPractice/image-20200711171227457.png)
-2. Within the Projects list for this repo you'll see something for **ENG2.6: Team Project Practice**.  :
-   ![image-20200711171409650](images/%5BENG2.6%5DTeamProjectPractice/image-20200711171409650.png)
+   ![image-20200711171227457](images/%5BENG3.0%5DTeamProjectPractice/image-20200711171227457.png)
+2. Within the Projects list for this repo you'll see something for **ENG3.0: Team Project Practice**.  :
+   ![image-20200711171409650](images/%5BENG3.0%5DTeamProjectPractice/image-20200711171409650.png)
 3. Click on that to see the Kanban board
-   ![image-20200711171434869](images/%5BENG2.6%5DTeamProjectPractice/image-20200711171434869.png)
+   ![image-20200711171434869](images/%5BENG3.0%5DTeamProjectPractice/image-20200711171434869.png)
 4. Within the Kanban board you can click on a card to see it's details:
-   ![image-20200711171647362](images/%5BENG2.6%5DTeamProjectPractice/image-20200711171647362.png)
+   ![image-20200711171647362](images/%5BENG3.0%5DTeamProjectPractice/image-20200711171647362.png)
 
 Please notice a couple of things:
 
@@ -78,12 +78,12 @@ Please notice a couple of things:
 
 You can add a new card here a couple different ways.  The way that we're recommending is this:
 
-1. In a column (for example, the 'To do" column') click on the plus sign ( + ), then type the TITLE for the card into the text box:![image-20200711181028053](images/%5BENG2.6%5DTeamProjectPractice/image-20200711181028053.png)
+1. In a column (for example, the 'To do" column') click on the plus sign ( + ), then type the TITLE for the card into the text box:![image-20200711181028053](images/%5BENG3.0%5DTeamProjectPractice/image-20200711181028053.png)
 2. Once you've done that find the new card, click on the triple-dot menu, and select 'Convert to issue':
-   ![image-20200711181254783](images/%5BENG2.6%5DTeamProjectPractice/image-20200711181254783.png)
+   ![image-20200711181254783](images/%5BENG3.0%5DTeamProjectPractice/image-20200711181254783.png)
 3. Then type in the additional detail into the 'Body'.  
    Make sure that you start with a concise, clear, "Done when:" statement:
-   ![image-20200711181408638](images/%5BENG2.6%5DTeamProjectPractice/image-20200711181408638.png)
+   ![image-20200711181408638](images/%5BENG3.0%5DTeamProjectPractice/image-20200711181408638.png)
 
 ### Exercise: breaking down work (15 min)
 
@@ -117,7 +117,7 @@ Your instructor will walk you through a very brief example of breaking a page in
 Your team should choose a single YourShare page to work on together, breaking that page down into individual components.  For now y'all can work in a Markdown file instead of the Kanban cards to keep things quick.
 
 Create a Markdown document to be stored in your AppPrototype repo (within the YourShare folder).  You can do this directly within GitHub itself using the 'Add File' button:
-![image-20200711191232377](images/%5BENG2.6%5DTeamProjectPractice/image-20200711191232377.png)
+![image-20200711191232377](images/%5BENG3.0%5DTeamProjectPractice/image-20200711191232377.png)
 
 Think about what elements of the page are naturally grouped together (that grouping might make a good component), think about what you might want to move around on the page (those chunks of the page that you might want to move might each make a good component), and make sure to look for things that are repeated across different pages (such as the 'Cancel/< action >' button pairs )(they might be good as a component).
 
