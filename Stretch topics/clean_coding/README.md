@@ -177,7 +177,7 @@ export class PrimaryButton extends React.Component {
 
 ```
 
-While these decorators don't enforce strong typing like in Typescript, they do assist developers in understnading how to properly use functions and components properly. Often times, the largest source of error in Javascript is not passing in the correct parameters or using the return type correctly!
+While these decorators don't enforce strong typing like in Typescript, they do assist developers in understanding how to properly use functions and components properly. Often times, the largest source of error in Javascript is not passing in the correct parameters or using the return type correctly!
 
 In general though, each documentation decorator has three key portions:
 
