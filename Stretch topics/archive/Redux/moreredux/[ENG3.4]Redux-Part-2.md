@@ -229,7 +229,7 @@ The overall idea here is that when the user clicks on the 'Submit' button the ap
 
 Now that we've got all the 'plumbing' in place - our state can keep track of the information we need, we can create an action to allow someone to join the app, and we've got code in our reducer that will actually change the app's state - we can now use that action.  Specifically, on the SignupPage.tsx we'll create a form that look liks this:
 
-![image-20200721171329677](images/%5BENG3.4%5DRedux-Part-2/image-20200721171329677.png)
+![image-20200721171329677](images/image-20200721171329677.png)
 
 The code that generates this looks like this:
 
