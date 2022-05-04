@@ -48,7 +48,7 @@ Prepare for the session [here](https://github.com/tnt-summer-academy/Curriculum/
 
 There are four basic parts in Redux: Store, Actions, Reducer, and Connect. We will go over what each part does and provide an illustrative example. 
 
-![Why redux](./%5BENG2.4%5D%20whyredux.png)
+![Why redux](./%5BENG2.5%5D%20whyredux.png)
 
 [Picture from here](https://www.systango.com/blog/free-react-redux-starter-kit)
 
@@ -62,7 +62,7 @@ There are four basic parts in Redux: Store, Actions, Reducer, and Connect. We wi
 
 #### High level architecture view
 
-![redux architecture](./%5BENG2.4%5Dreduxhighlevelarchitecture.png)
+![redux architecture](./%5BENG2.5%5Dreduxhighlevelarchitecture.png)
 
 [Picture from here](https://www.kirupa.com/react/using_redux_with_react.htm)
 
@@ -91,7 +91,7 @@ There are four basic parts in Redux: Store, Actions, Reducer, and Connect. We wi
 
 #### Sample app with Redux in Action
 
-![https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%202/%5BENG2.4%5DReduxSample.gif]([ENG2.4]ReduxSample.gif)
+![https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%202/%5BENG2.5%5DReduxSample.gif]([ENG2.5]ReduxSample.gif)
 
 [Gif from here](http://slides.com/jenyaterpil/redux-from-twitter-hype-to-production)
 
@@ -108,7 +108,7 @@ To add Redux to an app:
 
 The code below covers a counter example. The screenshot shows the final result. The session uses redux-simple-counter [here](https://github.com/tnt-summer-academy/Samples/tree/main/Week_2).
 
-![counter example](./%5BENG2.4%5Dcounter-example-screenshot.png)
+![counter example](./%5BENG2.5%5Dcounter-example-screenshot.png)
 
 #### Installation
 
@@ -354,7 +354,7 @@ export default ConnectedComponent;
 
 # Post-session (60 minutes)
 
-See the post-session [here](https://github.com/tnt-summer-academy/Curriculum/wiki/%5BENG2.4%5D-Intro-to-Redux)
+See the post-session [here](https://github.com/tnt-summer-academy/Curriculum/wiki/%5BENG2.5%5D-Intro-to-Redux)
 
 # Stretch
 
