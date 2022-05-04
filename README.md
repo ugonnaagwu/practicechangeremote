@@ -74,7 +74,7 @@ Individual and team deliverables that span and unite concepts across the curricu
 
 Week 1 | Week 2 | Week 3 | Week 4 | Week 5 | Week 6
 --- | --- | --- | --- | --- | ---
-| To Do - all the basics| YourShare - team engineering | Final presentation intro| Presentation practice | Final presentation
+N/A | To Do - all the basics| YourShare - team engineering | Final presentation intro| Presentation practice | Final presentation
 | Usability testing | Spec | | | App demo |  Presentation summary
  | | | | | |
  | | | | | |
