@@ -117,7 +117,7 @@ To experiment with some code and exercises, you can use the following online edi
 
 [W3Schools Online Code editor](https://www.w3schools.com/tryit/)
 
-There's a bunch of these - some examples in clude [JSFiddle](https://jsfiddle.net/), [CodePen](https://codepen.io/), and [many others](https://www.bing.com/search?q=javascript+playground&qs=SS&pq=javascript+&sc=6-11&cvid=63CED364C7354662B32E7B5028427618&FORM=QBRE&sp=1&ghc=1).
+There's a bunch of these - some examples include [JSFiddle](https://jsfiddle.net/), [CodePen](https://codepen.io/), and [many others](https://www.bing.com/search?q=javascript+playground&qs=SS&pq=javascript+&sc=6-11&cvid=63CED364C7354662B32E7B5028427618&FORM=QBRE&sp=1&ghc=1).
 
 Early on these are great for testing out individual concepts / code snippets (such as when learning a new part of the JavaScript language).  Later on your programs will have too many parts to easily separate out just one part, at which point you'll need to use other debugging strategies.### 
 

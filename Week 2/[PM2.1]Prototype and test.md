@@ -23,7 +23,7 @@ Regroup as a team and share your walkthroughs.
 
 ### Combine walkthroughs
 
-1. Combine your walkthroughs as a team. Take the best from each individual walktrhough and draw updates to have a similar combined flow.
+1. Combine your walkthroughs as a team. Take the best from each individual walkthrough and draw updates to have a similar combined flow.
 2. To prioritize, focus on which tasks you want to get feedback on and how it ties back to your goals. You may have a few different options for a task or solutions to how a user need is meet. Consider different people drawing and later testing these different options.
 3. Add the tasks for the prototypes to your interview guide.
 4. Take pictures of the prototypes and add to your team's folder.

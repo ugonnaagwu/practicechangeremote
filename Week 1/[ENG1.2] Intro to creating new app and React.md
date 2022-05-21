@@ -56,12 +56,12 @@ Total time: 2 hours
 - `create-react-app my-app` is the command to run in the terminal to create my-app
 - Install `create-react-app` on the command line
   - create-react-app is a tool chain to generate a React app. It sets the environment and optimizes the app for production
-  - Intall create-react-app - `npm install -g create-react-app`
+  - Install create-react-app - `npm install -g create-react-app`
     - If this doesn't work then you might try putting the word 'sudo' before the rest of the command like so:
       `sudo npm install -g create-react-app`
     - sudo stands for 'super user do' - it'll ask you for your Mac password (NOT the v- Microsoft password) and then run the command as the administrator.
     - [![Funny Comic from XKCD about sudo.  No, really](https://imgs.xkcd.com/comics/sandwich.png)](https://xkcd.com/149/)
-- These gifs may be helpful to get you started with `create-react-app`
+- These GIFs may be helpful to get you started with `create-react-app`
   - [Install create-react-app](https://github.com/tnt-summer-academy/Curriculum/blob/master/Reference/InstallCreateReactAppSmall.gif)
   - [Create an app](https://github.com/tnt-summer-academy/Curriculum/blob/master/Reference/OpenCreateReactAppSmall.gif)
   - [Open the app](https://github.com/tnt-summer-academy/Curriculum/blob/master/Reference/CreateReactAppTestSmall.gif)

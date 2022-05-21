@@ -11,7 +11,7 @@ This section introduces the spec (specification) deliverable. It describes how a
 
 Revisit the purpose of the spec and as a team begin writing one for your solution. This first section should be familiar from last week.
 
-### Spec and spec in the product lifecyle
+### Spec and spec in the product lifecycle
 
 The spec (specification) describes what is going to be built and why. The spec process is usually led by the PM. Many members of the future crew contribute to the spec and the spec is represented of what was leaned and explored in the phases of design thinking.
 
@@ -27,7 +27,7 @@ The parts of the spec are:
 * Goals - what are you improving in the customer's life, how will you measure it
 * In scope scenarios - the user stories that the product will fulfill
 * Out of scope scenarios - the user stories that the app will not fulfill at this time, what the app is intentionally not including at this point, good ideas for the app but not part of the MVP
-* UX - walktrhoughs of the screens in the product
+* UX - walkthroughs of the screens in the product
 * Breakdown of work - engineering descriptions of how the app and features are being built, who's working on what
 * Compete analysis - who are the top competitors, what are the apps strengths, weaknesses, opportunities, and threats
 * Future opportunities - what would you build next? What's the big dream for the product?

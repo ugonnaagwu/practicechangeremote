@@ -114,7 +114,7 @@ There's more detail at [The Rules of Hooks](https://reactjs.org/docs/hooks-rules
 
 ## Exercises
 
-Here are some things to try doing in order to practie what you learned here today.
+Here are some things to try doing in order to practice what you learned here today.
 
 For all of the following, start with this lesson's function-based components, and modify the code so that the app includes the following features:
 

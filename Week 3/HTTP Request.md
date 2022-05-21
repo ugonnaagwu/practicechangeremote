@@ -20,7 +20,7 @@ Total time: 40 hour
 
 **What is an Http Request**
 
-This is a message sent from the client to the server to trigger some action on the server which typically results in an Http Response from the server to the client. An Http request is asynchronous meaning it doesn&#39;t have to stop the flow of the program making the request, after a request is sent the program proceeds normally without waiting for a response.
+This is a message sent from the client to the server to trigger some action on the server which typically results in an Http Response from the server to the client. An Http request is asynchronous meaning it doesn't have to stop the flow of the program making the request, after a request is sent the program proceeds normally without waiting for a response.
 
 **Types of requests**
 

@@ -110,7 +110,7 @@ There's a couple of important points to remember when working with JSON files:
 
 Normally when you run an instance of an app, it only has a local state that is usually wiped after each exit. A server can supplement that in the following ways:
 
-- It can return items, states, or statuses that you may want to chage independently of an app. Some examples are timed components like purchase windows or "drops". A person can manipulate the front-end of a website to potentially "unlock" timed features, but can't with a server and clock controlled by you. Can you think of other examples of this?
+- It can return items, states, or statuses that you may want to change independently of an app. Some examples are timed components like purchase windows or "drops". A person can manipulate the front-end of a website to potentially "unlock" timed features, but can't with a server and clock controlled by you. Can you think of other examples of this?
 
 - It can modularize your platform. Sometimes only client-end or server-end code needs to be updated. Having your code modularized and deployed separately can reduce downtime or need to bring entire applications down for minor changes. Why else would you want to separate the server functionality from the front-end?
 

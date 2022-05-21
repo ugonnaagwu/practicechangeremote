@@ -47,7 +47,7 @@ In Typescript, the snippet would look something like this:
     console.log(sumShift);
 ```
 
-While you have the option to define a type for a variable in Typescript, standard practice is if you declare a variable and you know what those variables are going to be, you explicitly give them a type. This applies not just for primitive types (number, string, array, etc...) but predefined objects and structures as well. This means that **Typescript is a strongly-typed language while Javscript is a duck-typed language**.
+While you have the option to define a type for a variable in Typescript, standard practice is if you declare a variable and you know what those variables are going to be, you explicitly give them a type. This applies not just for primitive types (number, string, array, etc...) but predefined objects and structures as well. This means that **Typescript is a strongly-typed language while Javascript is a duck-typed language**.
 
 
 #### Language Structure
@@ -96,7 +96,7 @@ export class ComponentClass extends React.Component {
 }
 ```
 
-These examples are a little exaggerated but the point here is that with Typescript, `interface` is a built in standard of the language as opposed to using odd workarounds to achieve the same funcationality in Javascript. What this also means is that when another component uses one that you have explicitly defined an interface for, your Typescript code will fail to compile because you miss a parameter when invoking a component or function. However, since Javascript is interpreted, it will not detect if have passed in all the necessary required parameters, only crashing when it attempted to access something not provided or defined. 
+These examples are a little exaggerated but the point here is that with Typescript, `interface` is a built in standard of the language as opposed to using odd workarounds to achieve the same functionality in Javascript. What this also means is that when another component uses one that you have explicitly defined an interface for, your Typescript code will fail to compile because you miss a parameter when invoking a component or function. However, since Javascript is interpreted, it will not detect if have passed in all the necessary required parameters, only crashing when it attempted to access something not provided or defined. 
 
 Besides the given examples, what other advantages/disadvantages does this approach have?
 

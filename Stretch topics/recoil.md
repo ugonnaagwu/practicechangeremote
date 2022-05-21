@@ -39,7 +39,7 @@ The code for this session is available [here](https://github.com/tnt-summer-acad
 
 ## Why do we need Recoil?
 
-React components accept artibrary inputs called props and return React elements to be rendered on the screen. Props are read-only and passed from a parent to its children. Components may also have (optional) states. State allows React components to change their rendering over time in response to user actions, network responses or anything else. State comes automatically with class components and can be added to function components using a state hook. Only the component itself can access its own state. To share states between components, the official React documentation says you need to share a piece of the state and lift it up a component that is above in the tree hierarchy and the state will be passed as props to children. This solution however comes with issues linked with maintaining the code and efficiency in terms of unnecessary re-rendeing. When you need to share the state or part of it with multiple components, you need to have a scaleable solution. 
+React components accept arbitrary inputs called props and return React elements to be rendered on the screen. Props are read-only and passed from a parent to its children. Components may also have (optional) states. State allows React components to change their rendering over time in response to user actions, network responses or anything else. State comes automatically with class components and can be added to function components using a state hook. Only the component itself can access its own state. To share states between components, the official React documentation says you need to share a piece of the state and lift it up a component that is above in the tree hierarchy and the state will be passed as props to children. This solution however comes with issues linked with maintaining the code and efficiency in terms of unnecessary re-rendering. When you need to share the state or part of it with multiple components, you need to have a scalable solution. 
 
 Recoil is a state management solution. There are others. For example, redux provides a global state to the entire application. Recoil is more efficient in that it optimize re-rendering. It is important to note that neither Redux nor Recoil are official React libraries.
 
@@ -66,7 +66,7 @@ ReactDOM.render(
   
 #### What is an Atom?
 
-* Atoms are **units /pieces of state**. They are updateable and subscribable. They can be used in place of React local component state. If an Atom is used from multiple components, all those components share the state
+* Atoms are **units /pieces of state**. They are updatable and subscribable. They can be used in place of React local component state. If an Atom is used from multiple components, all those components share the state
 
 * Atoms can be read from and written to from any component. Components that read the value of an Atom automatically subscribe to the Atom.
 
@@ -104,7 +104,7 @@ ReactDOM.render(
 ### Summary
 
 * **useRecoilState(state)**
-  * state can be an atom or a _wrietable_ selector
+  * state can be an atom or a _writeable_ selector
   * Returns a tuple where the first element is the value of state and the second element is a setter function that will update the value of the given state.
   * Subscribes the component to the given state.
 * **useRecoilValue(state)**

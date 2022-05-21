@@ -76,7 +76,7 @@ It's called a "pull request" because it's asking the main branch to pull in the 
 1. Download the extension from the [marketplace](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
 2. Reload VS Code after the installation by clicking the reload button next to the extension
 3. Open your desired GitHub repository
-4. If you're using version 0.5.0 of the extension or higher, a new viewlet should be added to the bottom of the activity bar. For older versions, the GitHub Pull Requests treeview will appear in the SCM Viewlet.
+4. If you're using version 0.5.0 of the extension or higher, a new viewlet should be added to the bottom of the activity bar. For older versions, the GitHub Pull Requests tree view will appear in the SCM Viewlet.
 5. You may need to configure the githubPullRequests.remotes setting. By default, the extension will look for Pull Requests for origin and upstream. If you have different remotes, add them to the remotes list.
 6. A notification should appear asking you to sign in to GitHub. Follow the directions to authenticate.
 7. You should be good to go!

@@ -42,7 +42,7 @@ Here's an outline of how to get started and conduct a competitor audit:
 2. After identifying the goals of what you want to learn, make a list of the competitors to investigate. Competitors may both be other apps, direct competitors, adjacent apps, apps that meet similar needs, or a solution that's not an app at all. Think about communication, let's say you're building a video sharing tool for small snippets, quick videos.
     * Competitors: SnapChat and TikTok. Looking at solutions that didn't last like Vine may also provide insight.
     * Adjacent competitors: consider solutions that also allow video sharing,like Instagram or Facebook. Another direction to go could be communication tools, an email app or Discord.
-    * Non-apps competitors: Gifs have wide saturation and are a short form of video.  You could look into a Gif platform like Giphy. It's helpful to stretch out of the app mindset. What did people do before apps? What does video sharing look like with CDs or VHSs?
+    * Non-apps competitors: GIFs have wide saturation and are a short form of video.  You could look into a Gif platform like Giphy. It's helpful to stretch out of the app mindset. What did people do before apps? What does video sharing look like with CDs or VHSs?
 
 3. Conduct the research. Learn about the competitors. Some places to look:
     * Product landing page - the website that describes the app may have the app's mission and vision. There might be a clearly articulated value prop.

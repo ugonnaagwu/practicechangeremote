@@ -19,7 +19,7 @@
 
 ## Pre-session (30 minutes)
 
-*Prepare for the session* [here](../../../wiki/[Stretch]-React-Boostrap)
+*Prepare for the session* [here](../../../wiki/[Stretch]-React-Bootstrap)
 
 ## Session Details
 
@@ -28,7 +28,7 @@
 There are a large number of React UI component libraries to choose from, each with a different history, focus, strengths and limitations. Some things to look for include:
 
 - **Built for React** - some JavaScript front-end libraries can be used with React, but are not built for React. This can lead to integration issues and challenges with installation
-- **TypeScript Support** - look for components and libraries that offer fully-supported TypeScript definitions, examples and demo projects to avoid suprises later on.
+- **TypeScript Support** - look for components and libraries that offer fully-supported TypeScript definitions, examples and demo projects to avoid surprises later on.
 - **Open Source Licensing** - Not all libraries are open source or free to use. Look for MIT Licensing for the most flexibility. Note that some free libraries offer paid support or charge for custom themes.
 - **Clearly Supported** - Pay attention to when the library's GitHub repo was last updated; look for clear documentation, well-thought out examples, and sample projects.
 - **Responsive, Accessible** - frontend components libraries should include a focus on responsive design (adapting to different screen sizes), and accessibility (adapting to different user abilities).
@@ -51,7 +51,7 @@ Some library components may have dependencies that also must be included for the
 
 ##### TypeScript Errors
 
-When trying to use a general React UI library, watch for TypeScript compille to e-time errors. You may be able to work around these by adjusting some of the tsconfig.json compiler options, like setting` "noImplicitAny": false`
+When trying to use a general React UI library, watch for TypeScript compile to e-time errors. You may be able to work around these by adjusting some of the tsconfig.json compiler options, like setting` "noImplicitAny": false`
 
 ##### Hooks 
 

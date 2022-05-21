@@ -227,6 +227,6 @@ This practice reinforces using the Git command line and VS Code together.
     - The exercises suggests using the sandbox. **Instead** use `Git in VS Code and the integrated terminal` to become more familiar with one of the tools we'll be using. There are lots of tools for using Git, just like there are lots of different places to save files or programs to edit text.
     - For this lesson complete all the but the fix simple mistake module and the last exercises.
 - Interested in how Git works under the hood? Learn about how [git works internally](https://medium.com/@shalithasuranga/how-does-git-work-internally-7c36dcb1f2cf).
-- Interested in security? Learn about how [git uses cyrptographic hashes](https://ericsink.com/vcbe/html/cryptographic_hashes.html).
+- Interested in security? Learn about how [git uses cryptographic hashes](https://ericsink.com/vcbe/html/cryptographic_hashes.html).
 - [xkcd](https://xkcd.com/1597/).
 - Want to learn more about all the amazing things you can do using bash? Check out [Linux Productivity Tools](https://www.usenix.org/sites/default/files/conference/protected-files/lisa19_maheshwari.pdf)

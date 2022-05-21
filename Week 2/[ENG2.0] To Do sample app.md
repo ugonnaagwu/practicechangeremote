@@ -33,7 +33,7 @@ Total time: 2 hours
 
 ## Stretch Exercise Setup - MyTNT App (15 minutes)
 
-- For this exercse you will work with your App Prototype team to Identify components and composition.
+- For this exercise you will work with your App Prototype team to Identify components and composition.
   You should NOT be writing any code for this - instead, think about what state should be stored where, and how that information should be passed to child components.
 
 - The finished app should look like the [MyTNT App](https://github.com/tnt-summer-academy/Exercises/tree/main/Week_2/ENG2.1-myTNT): 
@@ -163,7 +163,7 @@ It also sets things up so that when the user clicks on the checkbox the item wil
 - Highlight how we create a function (`toggleTargetItem`) that will check if the item it's given is the one we want to toggle.  If so, create a brand-new object literal with the `completed` field toggled; if it's not the item we want to toggle then hand that same object back via return.
 - Highlight how 'map' creates a new array; `toggleTargetItem` is used to get the unchanged original todo item or the brand-new copy of the toggled target item.
 - Highlight the object literal that we create and store into a local variable
-    - (This is easy to missin the 'everything jammed into a single statement' version - it's the { and } has a single field  inside it)
+    - (This is easy to missing the 'everything jammed into a single statement' version - it's the { and } has a single field  inside it)
 - Highlight how we set the 'todo' field in the object literal (because the new object needs to have the same shape as the existing state object)
 
 #### EXERCISE
@@ -277,7 +277,7 @@ Y'all are NOT expected to do all of these (or even most of these).  Work on stuf
 
 ### Common controls (10 minutes)
 
-Controls in a user interface (UI) follow familiar patterns of behavior. Customers using an app expect that certain controls behave in a certain way. For example - a checkbox allows you to select more than one option while a radio button only allows you to select one option. These affordances, when the quality or property of an object defines its possible uses or makes it clear how it can or should be used, increases ease of use. Many of these controls are provided by the platform or operating system as part of the developer experience.  
+Controls in a user interface (UI) follow familiar patterns of behavior. Customers using an app expect that certain controls behave in a certain way. For example - a checkbox allows you to select more than one option while a radio button only allows you to select one option. These model definitions, when the quality or property of an object defines its possible uses or makes it clear how it can or should be used, increases ease of use. Many of these controls are provided by the platform or operating system as part of the developer experience.  
 
 * NTs - Look at two apps on your phone or computer. What common controls or interaction patterns do you see?
 * Post one common control to the Teams channel.

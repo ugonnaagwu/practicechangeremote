@@ -1,6 +1,6 @@
 # Project Retrospective
 
-A project retrospective provides "an opportunity for your team to reflect on what has occured and to construct ways to become better going forward. " [The Ultimate Guide to Agile Retrospectives](https://www.retrium.com/ultimate-guide-to-agile-retrospectives/retrospectives-101). 
+A project retrospective provides "an opportunity for your team to reflect on what has occurred and to construct ways to become better going forward. " [The Ultimate Guide to Agile Retrospectives](https://www.retrium.com/ultimate-guide-to-agile-retrospectives/retrospectives-101). 
 
 The retrospective gives your team a chance to:
 

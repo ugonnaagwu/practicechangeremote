@@ -61,7 +61,7 @@ We'll now walk through the process of cloning a repository from GitHub. We'll be
 </table>
 
 3. Explain `.gitignore`
-4. Explain `Licence`
+4. Explain `License`
 5. Clone the remote repository to your local directory using `git clone` followed by the URL provided by GitHub.
 6. Show the folders and open the workspace in VS Code. You can also go in the directory and write `code .`
 
@@ -74,7 +74,7 @@ We'll now walk through the process of cloning a repository from GitHub. We'll be
 **Demo: Clone from VS Code**
 
 1.  It's also possible to clone a repository from VS Code.
-2.  Open the palette with Cmd+Shift+P for Mac OS / Ctrl+Shitf+P for Windows.
+2.  Open the palette with Cmd+Shift+P for Mac OS / Ctrl+Shift+P for Windows.
 3.  `Git: clone` prompts for a URL. You can paste the one from GitHub.
 
 **Demo: Make changes in VS Code and push changes**

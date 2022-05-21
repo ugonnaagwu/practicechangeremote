@@ -80,7 +80,7 @@ We are now ready to deploy to Azure Web Service
     ![deploy](./deploy-and-hosting-resources/deploy.png)
 
 3. Select *Deploy to Web App* and select your Azure Web App you created to deploy to
-    * It may present a message saying it will overwite existing files. Click *Deploy* to proceed.
+    * It may present a message saying it will overwrite existing files. Click *Deploy* to proceed.
 
     ![deploy-confirm](./deploy-and-hosting-resources/deploy-confirm.png)
 
@@ -92,4 +92,4 @@ We are now ready to deploy to Azure Web Service
 
 ## Practice: Deploy your React App to Azure (30 minutes)
 
-Using the steps above and help from the coaches instructors deploy either a newly created React app or an existin app to Azure Web Service.
+Using the steps above and help from the coaches instructors deploy either a newly created React app or an existing app to Azure Web Service.

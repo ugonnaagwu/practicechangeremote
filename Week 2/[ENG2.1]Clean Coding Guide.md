@@ -22,7 +22,7 @@ As we begin, if you don't put a single comment, function signature, or simply ha
 - Properly modularize components/sections
 - Refactoring, versioning, and deprecation
 
-It's understandable with simple apps that say "Hello World!" that it's harder to visualize some parts of clean coding. In fact, it is more than just putting comments in your code. Clean coding is about **how you structure, write, and explain** your solution. If this sounds familiar, then keep up with the interview prep! A good analogy is think of creating an app or managing a codebase as a newspaper (even a website or e-newspaper). Overall, fundamentally every codebase has the same core with a separate flavour on top. Newspapers have large broad sections (i.e. top-level structures like Models-Views-Controllers), in each section they have articles dedicated to the respective topic (i.e. a front-end page like 'Home' would likely be found in the 'Views' folder), every article has to be gramatically correct (i.e. proper syntax), the subject needs to be clear and concise (i.e. readable), if things outside the normal topic scope are mentioned, they need to be explained for your readers (i.e. comprehensible), and any good journalist (or software engineer) needs to be able to properly cite their sources (i.e. calling a function with the correct parameters and values based on the signature).
+It's understandable with simple apps that say "Hello World!" that it's harder to visualize some parts of clean coding. In fact, it is more than just putting comments in your code. Clean coding is about **how you structure, write, and explain** your solution. If this sounds familiar, then keep up with the interview prep! A good analogy is think of creating an app or managing a codebase as a newspaper (even a website or e-newspaper). Overall, fundamentally every codebase has the same core with a separate flavour on top. Newspapers have large broad sections (i.e. top-level structures like Models-Views-Controllers), in each section they have articles dedicated to the respective topic (i.e. a front-end page like 'Home' would likely be found in the 'Views' folder), every article has to be grammatically correct (i.e. proper syntax), the subject needs to be clear and concise (i.e. readable), if things outside the normal topic scope are mentioned, they need to be explained for your readers (i.e. comprehensible), and any good journalist (or software engineer) needs to be able to properly cite their sources (i.e. calling a function with the correct parameters and values based on the signature).
 
 ## Code Structure
 
@@ -118,13 +118,13 @@ If we were take those suggestions and apply that to our frankenfunction, it woul
     }
 ```
 
-Could this function or application be improved further? Absolutely. For example, why are we using string[] for hex values? If a function requires that, it is better to use a more acceptable format such as `#ffffff`, simply `ffffff`, or even an alias for a string with 6 characters with a hexidecimal range. However, compared from before to now, this function accomplishes three things:
+Could this function or application be improved further? Absolutely. For example, why are we using string[] for hex values? If a function requires that, it is better to use a more acceptable format such as `#ffffff`, simply `ffffff`, or even an alias for a string with 6 characters with a hexadecimal range. However, compared from before to now, this function accomplishes three things:
 
 - The code is much clearer on the inputs and output.
 - The code clearly describes what it is doing and what the references will do.
 - The code is comprehensible for the average developer to read and understand.
 
-Think of writing clean code like writing an essay. If you can barely understand what you wrote a week after doing it, chances are someone else has no idea what you wrote. Another way of thinking about it is if your code reads like Shakeperian English it proba bly justifies a rewrite. While it may take longer initially write cleaner code, the amount of time it saves upon a revisit or when someone attempts to understand what it does pales in comparision. Imagine if a developer for an NPM package gave all the function arbitrary names with little documentation. Chances are if another developer published a package with worse performance but clear documentation, that the clear one would be the more popular of the two.
+Think of writing clean code like writing an essay. If you can barely understand what you wrote a week after doing it, chances are someone else has no idea what you wrote. Another way of thinking about it is if your code reads like Shakespearian English it probably justifies a rewrite. While it may take longer initially write cleaner code, the amount of time it saves upon a revisit or when someone attempts to understand what it does pales in comparison. Imagine if a developer for an NPM package gave all the function arbitrary names with little documentation. Chances are if another developer published a package with worse performance but clear documentation, that the clear one would be the more popular of the two.
 
 ## Code References and Parameters
 
@@ -185,7 +185,7 @@ In general though, each documentation decorator has three key portions:
 - @params: These are the parameters the function or component accepts and uses. If a `?` is part of the type, it signifies this is optional. Anything else given is required to properly use the function or component. You may list as many @params as you wish
 - @returns: Coupled with `{type}`, it describes what is returned at the end of the function. If there is no return, it is highly suggested to list `{void}`.
 
-For more information on the full list of inline documation for Javascript/Typescript, see this [article by Wordpress](https://developer.wordpress.org/coding-standards/inline-documentation-standards/javascript/). 
+For more information on the full list of inline documentation for Javascript/Typescript, see this [article by Wordpress](https://developer.wordpress.org/coding-standards/inline-documentation-standards/javascript/). 
 
 ## Documentation
 

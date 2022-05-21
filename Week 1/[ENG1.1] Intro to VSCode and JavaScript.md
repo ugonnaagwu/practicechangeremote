@@ -92,7 +92,7 @@ Total time: 1 hour 30 min
 
 1. We're going to look at the JavaScript file that we'll be using for today's demonstrations, and make a tour of the file system.
 
-2. In order to set things up, you'lll need to do the following steps once each: (Once things are set up you can go straight to running the debugger, in the next step at this level, below)
+2. In order to set things up, you'll need to do the following steps once each: (Once things are set up you can go straight to running the debugger, in the next step at this level, below)
    1. Create a new folder for the project using the Finder.
 
    2. Launch VS Code if you haven't already, and then do the following steps in VSCode:
@@ -134,7 +134,7 @@ Total time: 1 hour 30 min
    ![image-20210628151431344](images/image-20210628151431344.png)
 
 4. At this point you may not see anything appear in VSCode, even though you can see the program start, run, and then end.
-   In order to see the results of the program you'll need to use the VSCode menu option for View / Appearance / Show Panel (shortcut: Comand/Control-J), at which point you should see something like this:
+   In order to see the results of the program you'll need to use the VSCode menu option for View / Appearance / Show Panel (shortcut: Command/Control-J), at which point you should see something like this:
    ![image-20210628105312213](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/%5BENG1.1%5D%20Intro%20to%20VSCode%20and%20JavaScript.assets/image-20210628105312213.png)
 5. Notice that you can see the 'Hello, World!' text that our console.log() line produced, above.
 6. This command ( `console.log`) can be useful for figuring out why your program isn't working the way you'd like.  The console.log messages can be quickly scanned to look for a particular message.  In general, console.log is good for displaying detailed information (the value of variables, typically).

@@ -136,7 +136,7 @@ For AppPrototype, it might make sense to just put all of this.state into the dat
 3. You can install the Firebase support in your terminal like this:
    `npm install firebase`
 
-   - Note: you do NOT need `npm install @types/firebase` - the firebase package includes type defitions for JavaScript (I believe the Firebase JavaScript API itself is written in JavaScript)
+   - Note: you do NOT need `npm install @types/firebase` - the firebase package includes type definitions for JavaScript (I believe the Firebase JavaScript API itself is written in JavaScript)
 
 4. Copy this into a new file (named, say, `myFirebase.js`) in your project:
 
@@ -220,7 +220,7 @@ For each of the following sections try doing the following:
 
 Useful for:
 
-- A new order on a ecommerce site
+- A new order on a e-commerce site
   In general, whenever you've got an HTML form that's adding new information to your database then you'll want to consider using a 'create' style method on your database
 - If you're replacing something wholesale.
   For example, if you're replacing your car you might completely replace the information about your current car with the information about the new car.
@@ -356,7 +356,7 @@ We'll ask Firebase for the current value of a particular part of the JSON docume
 
 It's important to understand that because Firebase is out there on the Internet / in The Cloud  that it will take some time for our request to arrive at the Firebase servers, some time for the Firebase servers to figure out their response, and it'll take some time for that response to arrive back at our computer.  We do NOT want our program to just stop and wait for all this to happen.  Instead what we'll do is we'll set up and send our request, JavaScript will give us an "IOU" ("I Owe You"), then we'll tell JavaScript to get back to us when we've gotten a response to that IOU.  The thing that JavaScript gives us is called a [Promise](https://www.freecodecamp.org/news/javascript-es6-promises-for-beginners-resolve-reject-and-chaining-explained/#:~:text=A%20promise%20in%20JavaScript%20is%20similar%20to%20a,kept%20when%20the%20time%20comes%2C%20or%20it%20won%E2%80%99t.).  We'll give JavaScript a function to call once we've received the response (aka "once the Promise has been resolved")
 
-Also remember that there's always the possibility that something goes wrong (we lose our connection to the Internet, or maybe just to Firebase, etc, etc) so we'll have to handle any potential erros.
+Also remember that there's always the possibility that something goes wrong (we lose our connection to the Internet, or maybe just to Firebase, etc, etc) so we'll have to handle any potential errors.
 
 ##### Example code providing this functionality, inside MyFirebase.js:
 
@@ -379,7 +379,7 @@ Also remember that there's always the possibility that something goes wrong (we 
     }
 ```
 
-The idea is that we'll pass in a location (such as "/users/1") to get a particular object, and we'll pass in a function to call once we've gotten the reponse for Firebase.  We'll call that function regardless of whether we get data or not, or get an error or not, so that the rest of our program can decide what it wants to do.  If we do get an error we'll pass null so that the callback function can know that something went wrong.
+The idea is that we'll pass in a location (such as "/users/1") to get a particular object, and we'll pass in a function to call once we've gotten the response for Firebase.  We'll call that function regardless of whether we get data or not, or get an error or not, so that the rest of our program can decide what it wants to do.  If we do get an error we'll pass null so that the callback function can know that something went wrong.
 
 The 'once' method is the method that actually asks the database for a piece of information.  Once will give us back a Promise, which we can then call methods on.
 
@@ -493,7 +493,7 @@ After checking for an error (which in this case would show up as an empty array)
 
 Useful for:
 
-- Changing *part* of an object in the database (in contrast to set, which r*eplaces the entire object with a new object*)
+- Changing *part* of an object in the database (in contrast to set, which *replaces the entire object with a new object*)
 
 ##### Example code providing this functionality, inside MyFirebase.js:
 

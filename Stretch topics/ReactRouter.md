@@ -64,9 +64,9 @@ Implementing navigation goes through:
 
 ### Router
 
-In the code below, the router is `<BrowserRouter>`. `<BrowserRouter>` is used for an app that will respond to dynamic requests (any possible urls). `<HashRouter>` is used for static websites (predifined urls).
+In the code below, the router is `<BrowserRouter>`. `<BrowserRouter>` is used for an app that will respond to dynamic requests (any possible urls). `<HashRouter>` is used for static websites (predefined urls).
 
-Router components can only have a signle child element. So, we use the `<App>` component to render the remainder of the application.
+Router components can only have a single child element. So, we use the `<App>` component to render the remainder of the application.
 
 ### Routes
   
@@ -153,7 +153,7 @@ We need to use `exact` if we only want to match `/contact`.
 
 ### Links
 
-Links tell the app how to navigate between pages. `<Link>` prevents from laoding the whole page. It only loads what is specified in the link. It is different from using the anchor tag `<a>`. It updated the url and renders the appropriate page.
+Links tell the app how to navigate between pages. `<Link>` prevents from loading the whole page. It only loads what is specified in the link. It is different from using the anchor tag `<a>`. It updated the url and renders the appropriate page.
 
 `<Link>` uses the prop `to` to describe the location to navigate to. 
 
@@ -235,7 +235,7 @@ const Contact = (props) => {
       )
 ```
 
-* **useHistory** - provides access to the history instance that may be used to navigate. history referes to the browser history.
+* **useHistory** - provides access to the history instance that may be used to navigate. history refers to the browser history.
 
 history objects have the following properties and methods:
 
@@ -253,7 +253,7 @@ history objects have the following properties and methods:
 * goForward() - (function) Equivalent to go(1)
 * block(prompt) - (function) Prevents navigation (see the history docs)
 
-In the code below, the state of the counter is passed to `Home` and the user is redirected to `Home`. In Home, we can now display the value relatedto the state. To do this, we need to use `props.location.state` or a `useHistory` hook.
+In the code below, the state of the counter is passed to `Home` and the user is redirected to `Home`. In Home, we can now display the value related to the state. To do this, we need to use `props.location.state` or a `useHistory` hook.
 
 Counter.js
 
@@ -331,7 +331,7 @@ fetch('https://fakestoreapi.com/products?limit=5')
             .then(json=>console.log(json))
 ```
 
-To use this in your component, you need to use `async` and `await`. `async` is used when you are accessing data from the web. `await` will wait for the end of the operation. However, the user will not be stoped and can use the app.
+To use this in your component, you need to use `async` and `await`. `async` is used when you are accessing data from the web. `await` will wait for the end of the operation. However, the user will not be stopped and can use the app.
 
 The JSon of an item is the following:
 

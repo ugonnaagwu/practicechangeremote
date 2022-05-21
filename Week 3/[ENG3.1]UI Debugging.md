@@ -83,7 +83,7 @@ Open a website and review the panels:
     * **Step Over**: Gives you the ability to "step over" a line of code
     * **Step Into**: Go further into a function call
     * **Step Out**: If you've decided to Step Into a line of code to go back you can Step Out to navigate back to your last line of code
-    * **Refresh**: Reloads the debuggign session
+    * **Refresh**: Reloads the debugging session
     * **End/Terminate**: Stops debugging mode, terminates current debug session
 
 

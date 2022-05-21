@@ -10,7 +10,7 @@ Placeholder for Firebase Auth
 * TNTs will understand the basics of authentication
 * TNTs will be able to setup a third-party auth tool
 * TNTs will be able to integrate a basic auth mechanism for their applications
-* TNTs will be able to add a new user, signin, sign out, and observe Auth status information in their React Application
+* TNTs will be able to add a new user, sign-in, sign out, and observe Auth status information in their React Application
 
 ## Instructional session (120 minutes)
 
@@ -22,7 +22,7 @@ Placeholder for Firebase Auth
 2. What *should* you use for Auth?
 3. How do we access the authentication service from code?
    1. How to set up Firebase Auth
-   2. Setting up your Firebase app rpoject (separate from your code)
+   2. Setting up your Firebase app project (separate from your code)
    3. Overview of our approach to using Firebase
 
 ### Let's look at Firebase:
@@ -94,7 +94,7 @@ For the purposes of this outline, we will be sticking to *email/password authent
 
 #### OAuth Consent Form
 
-Even though this runs through an example app, you still need to complete an OAuth consent form in order to use Firebase Auth. Normally you would fill out and complete this throughly in order to publish your app and help the reviewers approve your application. However, we will be doing the bare minimum. This will allow us to use Auth for test purposes. If we were to publish this project to the web, we would need to completely fill out the OAuth consent form in order to pass the external review teams.
+Even though this runs through an example app, you still need to complete an OAuth consent form in order to use Firebase Auth. Normally you would fill out and complete this thoroughly in order to publish your app and help the reviewers approve your application. However, we will be doing the bare minimum. This will allow us to use Auth for test purposes. If we were to publish this project to the web, we would need to completely fill out the OAuth consent form in order to pass the external review teams.
 
 1. Head over to the Google Cloud Platform Console. Do an internet search to get there, since there is no immediate access from the Firebase portal.
 2. Click *APIs and Services* from the menu

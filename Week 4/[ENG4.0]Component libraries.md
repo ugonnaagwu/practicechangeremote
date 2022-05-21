@@ -47,12 +47,12 @@ For a component library you're going to want to focus on how to find, figure out
 
 ## How to read documentation
 
-We will use Microsofts Fluent UI to practice using a component library.
+We will use Microsoft's Fluent UI to practice using a component library.
 Let's look at documentation for [DatePicker](https://developer.microsoft.com/en-us/fluentui#/controls/web/datepicker), which we'll use in our first example (below).
 
 - Oftentimes you can find a 'gallery' that shows off a lot of the components in one place, and is a great way to find what sort of component will be most useful for you.
 - Most (if not all) libraries will contain a "How to" section to quickly get started but may not include details on how to use all the components. This is a good place to start - it'll give you an overview of how the library works, and set you up with further reading based on what you're interested in.
-- Another important thing to look for in reading documentation are code examples or demos, many of which can be copy-and-pasted. Nowadays it's also pretty common to have online demonstrations of the code that you can edit & experiment with in your browser. These are great for trying out the specific features you're looking for, before trying to integrate this into your oveall app.
+- Another important thing to look for in reading documentation are code examples or demos, many of which can be copy-and-pasted. Nowadays it's also pretty common to have online demonstrations of the code that you can edit & experiment with in your browser. These are great for trying out the specific features you're looking for, before trying to integrate this into your overall app.
 - For FluentUI docs they show you a bunch of examples and then show you an 'interface', which is a list of methods, properties, and variables that you can use to customize the component (and/or to respond to user input, etc.)
 
 (There's [a lot of documentation for the FluentUI library](https://developer.microsoft.com/en-us/fluentui#/get-started), if you'd like to look for other components, learn more about how to use Fluent, etc.)
@@ -116,7 +116,7 @@ Some things to pay particular attention to:
 
 ### Reflect on demo code, read the docs
 
-[Skim through the docs to get a feel for what sort of widgets are available](https://developer.microsoft.com/en-us/fluentui#/controls/web). If you want to search online for more resources it can be useful to seach for "FluentUI _gallery_" or "FluentUI _screenshots_"
+[Skim through the docs to get a feel for what sort of widgets are available](https://developer.microsoft.com/en-us/fluentui#/controls/web). If you want to search online for more resources it can be useful to search for "FluentUI _gallery_" or "FluentUI _screenshots_"
 
 ## Second Example: Personas, responding to user input, using Fluent components in your components
 

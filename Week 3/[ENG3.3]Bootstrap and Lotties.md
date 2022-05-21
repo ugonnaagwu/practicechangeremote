@@ -17,13 +17,13 @@
   - 10 minutes - React-Bootstrap overview
   - 20 minutes - Going through Bootstrap components
   - 10 minutes - Lottie
-  - 45 minutes - Work on YourShare in your team, integrate Bootstract components and present your work
+  - 45 minutes - Work on YourShare in your team, integrate Bootstrap components and present your work
 
 ## Background
 
 * HTML, CSS and JavaScript overview for Web Apps 
 * Function components / Class Components
-* Adaptative layouts 
+* Adaptive layouts 
 * React Hooks
 
 ## Resources
@@ -134,7 +134,7 @@ Navbar is a powerful, responsive navigation header. It includes support for bran
 
 The Navbar below uses a primary-themed navbar that is at the top of the page and automatically collapses at the lg (large) breakpoint. `expand` needs to be set for the Navbar to collapse at all. The Navbar also uses a dark background colors.
 
-Nav is shared by all nagivation tabs. Each navigation tab is a Nav.Item that contains a Nav.Link. The base Nav component is built with flexbox.
+Nav is shared by all navigation tabs. Each navigation tab is a Nav.Item that contains a Nav.Link. The base Nav component is built with flexbox.
 
 
 ```
@@ -202,7 +202,7 @@ Other examples:
 
 #### Alert
 
-AlertspProvide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
+AlertsProvide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
 
 ```
 import { Alert } from 'react-bootstrap';
@@ -274,7 +274,7 @@ A nice tutorial is available [here](https://www.freakyjolly.com/react-bootstrap-
 
 ### What is a Lottie?
 
-A Lottie is a JSON-based animation file format enabled for any plateform - Android, iOS, web etc. It is a small file that works on different devices and scale easily.
+A Lottie is a JSON-based animation file format enabled for any platform - Android, iOS, web etc. It is a small file that works on different devices and scale easily.
 
 Lottie was developed by Airbnb. The top 500 apps on the App Store use Lottie to engage users and enhance conversations. It is 600% smaller than gif and 10x faster to ship.
 

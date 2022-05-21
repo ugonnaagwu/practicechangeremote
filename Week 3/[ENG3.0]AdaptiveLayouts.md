@@ -62,7 +62,7 @@ Though you can combine conditions using `and`, `or` and `not` to create more com
 When assigning a size to an element we typically use fixed units like pixels or inches. However for dynamic UI layout, we most often use **Relative Sizing** for images, layout containers, and font sizes. The relative units allow the items to display differently according to the size of their parent element, root element, or the viewport (screen size).
 
 1. **vw/vh** : Size changes relatively to the viewports width/height
-2. **Vmin**: Size changes relatively to the smaller of the viewport&#39;s dimensions (height or width)
+2. **vmin**: Size changes relatively to the smaller of the viewport&#39;s dimensions (height or width)
 3. **vmax**: Size changes relatively to the larger of the viewport's dimensions (height or width)
 4. **%**: Size changes relatively to the parent's size
 5. **Rem**: size changes relatively to the root element
