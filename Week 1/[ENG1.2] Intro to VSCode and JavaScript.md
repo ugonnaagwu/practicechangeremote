@@ -1,6 +1,6 @@
 # Intro to VS Code and JavaScript
 
-## Week 1, Lesson 2
+## Week 1, Lesson 3
 
 This lesson introduces Visual Studio Code (aka "VSCode") and JavaScript including why this set of technology is important, a tour and basics of using the IDE, and JavaScript fundamentals.
 

@@ -1,6 +1,6 @@
 # Components
 
-## Week 1, Lesson 4
+## Week 1, Lesson 5
 
 This lesson explores the purpose of a React component, how a component works and how its methods function
 

@@ -2,7 +2,7 @@
 
 *<u>REMINDER</u>: You'll need a working GitHub account in order to to do the TNT Lessons on git & Github.  Make sure that you've got a working account by going to https://github.com/ and clicking on "Sign Up" (to create a new account) or "Sign In" (if you've got a working account)(both are at the top right corner of the page).*
 
-## Week 1, Lesson 1
+## Week 1, Lesson 2
 
 This lesson provides an overview of how web apps work, HTML, CSS and JavaScript to lay the foundation for the prototypes NTs will build.
 

@@ -1,6 +1,6 @@
 # Intro to React and React Components
 
-## Week 1, Lesson 3
+## Week 1, Lesson 4
 
 This lesson covers React. It introduces how to create a new React App project. It describes generating the project with the React integrated tool chain, the pieces of the project, making changes, and running the project. It also goes through an example that permits to discover what React Components are.
 

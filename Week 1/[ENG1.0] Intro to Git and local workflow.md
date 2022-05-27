@@ -1,6 +1,6 @@
 # Introduction to Git and local workflow
 
-## Week 1, Lesson 5
+## Week 1, Lesson 1
 
 This lesson introduces the fundamentals of the Git workflow, Git Bash, and VS Code Git support for local repositories.
 
