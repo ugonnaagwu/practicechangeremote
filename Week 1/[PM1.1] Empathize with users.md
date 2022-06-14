@@ -4,7 +4,7 @@ The concepts of user needs is reinforced as your explore the problem space to de
 
 ## Objectives
 
-* Explore your problem area.
+* Explore your opportunity area.
 * Conduct investigations on user needs.
 * Practice skills for productive product discussions.
 
@@ -14,7 +14,7 @@ Read [Empathize with users](https://github.com/tnt-summer-academy/Curriculum/blo
 
 As a team:
 
-1. Spend a few minutes talking about your problem area. Share - are you excited? Thoughts after the weekend?
+1. Spend a few minutes talking about your opportunity area. Share - are you excited? Thoughts after the weekend?
 2. Dive into the strategies shared in the Empathize with uses document. Split them up and work individually or in pairs for the interview exercise.
     * Take notes in OneNote or a shared Word doc as you go.
 3. Reach out on Teams if you're blocked or have a question.
