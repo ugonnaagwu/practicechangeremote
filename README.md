@@ -35,9 +35,9 @@ HMW + Ideation | Spec introduction | | |
 
 Day | Week 1 | Week 2 | Week 3 | Week 4 | Week 5
 --- | --- | --- | --- | --- | ---
-Tuesday | Intro To Web Apps & Intro to VS Code and JS | To-Do Sample App & Clean Coding | Team Practice & UI Debugging | Component Libraries & YourShare Project | Firebase (Special Topic) & APIs with Maps and Calendar (Special Topic)
-Wednesday | Intro to React and React Components | To-Do Sample App & Remote Repositories and Github | UI Component Layouts with React Bootstrap & Lottie Animations | Database Integration and Firebase | User Authentication (Special Topic) & React Router (Special Topic)
-Thursday | Intro to Git and Version Control & Git Undoing and Backtracking | Git branching, merging, and conflicts & React Function Components & State Hooks | Intro to React Router | YourShare Retrospective | Recoil (Special Topic)/CSS & Component Layouts (Special Topic)
+Tuesday | Intro to Git and Version Control & Intro To Web Apps | Clean Coding & Remote Repositories and Github| Team Practice & UI Debugging | Component Libraries & YourShare Project | Firebase (Special Topic) & APIs with Maps and Calendar (Special Topic)
+Wednesday | Intro to VS Code and JS & Intro to React | To-Do Sample App | UI Component Layouts with React Bootstrap & Lottie Animations | Database Integration and Firebase | User Authentication (Special Topic) & React Router (Special Topic)
+Thursday | React Components & Git Undoing and Backtracking | Git branching, merging, and conflicts & React Function Components and State Hooks | Intro to React Router | YourShare Retrospective | Recoil (Special Topic)/CSS & Component Layouts (Special Topic)
 
  **Git and GitHub**
 
