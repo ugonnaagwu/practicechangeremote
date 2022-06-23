@@ -122,7 +122,7 @@ Total time: 1.5 hour
     * `git add  .` - stage the files to commit and tell get what files to track, "." selects all the new files or files with changes
     * `git commit index.html -m "New index file"` - add the changes to the repo with the named file, "-m" indicates message included
       * If you leave out the `-m "New Index file"` part then git will start your default editor and let you edit the message that way.  If you didn't do the `git config --global core.editor "code --wait"` command then git will use vim and you'll end up looking at something like this:
-        ![image-20210701225148183](images/image-20210701225148183.png)
+        ![image-20210701225148183](images/ThisIsVim.png)
       * Congratulations!  [You're now stuck in vim!](https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/)
       * If you do end up starting vim you can quick by doing the following:
         * Press the Escape key (Esc, in the top-left corner of your physical keyboard) several times.  4-7 should do the trick.  After this you should be in [vim's normal mode](https://www.freecodecamp.org/news/vim-editor-modes-explained/).
