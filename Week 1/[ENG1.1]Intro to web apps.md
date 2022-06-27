@@ -6,8 +6,8 @@
 
 This lesson provides an overview of how web apps work, HTML, CSS and JavaScript to lay the foundation for the prototypes NTs will build.
 
-NOTE: You may notice that the name of this file starts with "ENG1.0", as do many of the supporting files for this lesson - this is how the files were named in a previous iteration of the TNT program.  
-The 'new' name is now 'Week 1, Lesson 1'.  When you're figuring out what the order of the lessons is please ignore the "ENG1.0" part of the filename and instead use the 'Week 1, Lesson 1' lesson name instead.
+NOTE: You may notice that the name of this file starts with "ENG1.1", as do many of the supporting files for this lesson - this is how the files were named in a previous iteration of the TNT program.  
+The 'new' name is now 'Week 1, Lesson 2'.  When you're figuring out what the order of the lessons is please ignore the "ENG1.1" part of the filename and instead use the 'Week 1, Lesson 2' lesson name instead.
 
 ## Learning objectives
 
