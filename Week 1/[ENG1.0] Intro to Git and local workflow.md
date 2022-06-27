@@ -25,7 +25,7 @@ Total time: 1.5-ish hours
 * 10 minutes - Elaborate: best practices, trouble spots and talk about
 * 5 minutes - Explain Remote repositories and GitHub( Basics and Clone)
 * 10 minutes - Demo:  Clone a repository from GitHub using VSCode
-* [Additional background, info, and OPTIONAL exercises]([ENG1.0] Exercises for Intro to Git and local workflow.md)
+* [Additional background, info, and OPTIONAL exercises](<[ENG1.0] Exercises for Intro to Git and local workflow.md>)
 
 ## Session setup
 
@@ -215,4 +215,4 @@ We'll now walk through the process of cloning a repository from GitHub.
 * [Git Cheat Sheet](https://www.git-tower.com/blog/git-cheat-sheet)
     (Summary of a lot of git commands but doesn’t tell you which one to use when)
 
-## [Additional background, info, and OPTIONAL exercises]([ENG1.0] Exercises for Intro to Git and local workflow.md)
+## [Additional background, info, and OPTIONAL exercises](<[ENG1.0] Exercises for Intro to Git and local workflow.md>)
