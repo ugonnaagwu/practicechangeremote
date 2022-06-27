@@ -76,7 +76,7 @@ Total time: 1.5 hour
    * It’s both powerful (because it’s open-ended), plentiful (because it’s open source), and sometimes hard to use (because it’s open-ended).
    * It takes practice, it's a learned skill, it's not intuitive - ask your coaches about their Git disasters - everyone has a story.
 
-### background learning and research (10 minutes)
+### Background learning and research (10 minutes)
 
 1. Background about Version Control Systems( VCS)
     * [what is version control?](https://www.atlassian.com/git/tutorials/what-is-version-control)
@@ -130,12 +130,11 @@ Total time: 1.5 hour
           `:q!`  after that press the return key
         * That should quit vim.  If this doesn't work then do ask for questions - it's surprisingly easy to get stuck in vim :
           ![One does not simply exit vim](https://149351115.v2.pressablecdn.com/wp-content/uploads/2017/05/meme.jpeg)
-
-    
-
+          
     **Remember**
 
-    ![git workflow](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.4]GitWorkFlow.gif)
+    ![git workflow](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%201/images/%5BENG1.4%5DGitWorkFlow.gif)
+    
 
 #### ***Demo: Git in VS Code***
 
@@ -170,17 +169,17 @@ Total time: 1.5 hour
     * Check out the changes in Git Bash with `git log`
     * Show the different between `git log` and git `log --oneline`
 
- ![git log vs git log --oneline](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.4]gitlog_gitlogoneline.gif)
+ ![git log vs git log --oneline](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%201/images/%5BENG1.4%5Dgitlog_gitlogoneline.gif)
 
 6. Make some changes to index.html.
    
 7. Show the Source Control tab and the file diffs.
 
-  ![file different](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.4]-fileDiffVS.gif)
+  ![file different](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%201/images/%5BENG1.4%5D-fileDiffVS.gif)
 
 8. Show how to read the git log view
 
-![git log view](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.4]-GitLogCommandView.png)
+![git log view](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%201/images/%5BENG1.4%5D-GitLogCommandView.png)
 
 ### Your Turn! review, and investigations
 
