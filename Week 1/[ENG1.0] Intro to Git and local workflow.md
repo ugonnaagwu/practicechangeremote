@@ -69,7 +69,7 @@ _Please follow along as your instructor demonstrates (and walks you through) the
     * Next, start VSCode
               You can hold down the Command button and pressing the spacebar - this is usually written as Cmd+Space - and then typing “code” into the MacOS Spotlight search bar thingee)
     * In VSCode you should then open that folder that you created on your Desktop.
-              In the ‘File’ menu select the ‘Open Folder’ option (this is usually written similar to “File -> Open Folder”, or “File / Open Folder”, etc) ![VSCodeOpenFolder](images/%5BENG1.0%5DVSCodeOpenFolder.png)
+              In the ‘File’ menu select the ‘Open Folder’ option (this is usually written similar to “File -> Open Folder”, or “File / Open Folder”, etc) ![[ENG1.0]VSCodeOpenFolder](images/%5BENG1.0%5DVSCodeOpenFolder.png)
     * At this point you should start VSCode’s integrated terminal.
               Use the Terminal / New Terminal menu option: ![[ENG1.0]VSCodeNewTerminal](images/%5BENG1.0%5DVSCodeNewTerminal.png)
     * At this point the terminal that’s integrated into VSCode should have started up, and it should “be in” the folder that you just told VSCode to open (which is the folder you just created).
