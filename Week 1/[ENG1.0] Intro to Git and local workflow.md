@@ -77,6 +77,7 @@ _Please follow along as your instructor demonstrates (and walks you through) the
     * You will need to configure your git install before you can commit your changes.  Let’s do that now.
         * `git config --global user.email "youremail"`
         * `git config --global user.name "yourname"`
+        * `git config --global init.defaultBranch main` - this will ensure that all new repos you create use ‘main’ as the default branch (instead using the problematic ‘master’ for the default branch)(we’ll talk about branches later in the program so no worries if this doesn’make sense.  The tl;dr: is that setting this now will avoid problems later :)  )
         * `git config --global core.editor "code --wait"`
           * This last one will tell git to use VSCode as your default editor. This is important ensure that you don't [accidentally get yourself stuck in vim](https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/).  vim is an old-school editor which a lot of people swear by because of its power and flexibility, and lot of people swear at because of its obscure and difficult interface.
         * Telling git to use VSCode is half the solution - we also need to tell git where to find VSCode.  We can do this by adding VSCode to the “path”, which is a list of folders that MacOS should check whenever anyone tries to run a program (so this is the list of places that MacOS will check when `git` tries to run `code`).
