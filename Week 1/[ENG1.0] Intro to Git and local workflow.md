@@ -25,7 +25,7 @@ Total time: 1.5-ish hours
 * 10 minutes - Elaborate: best practices, trouble spots and talk about
 * 5 minutes - Explain Remote repositories and GitHub( Basics and Clone)
 * 10 minutes - Demo:  Clone a repository from GitHub using VSCode
-* [Additional background, info, and OPTIONAL exercises](<[ENG1.0] Exercises for Intro to Git and local workflow.md>)
+* [Additional background, info, and OPTIONAL exercises](eng1-0-exercises-for-intro-to-git-and-local-workflow)
 
 ## Session setup
 
@@ -51,7 +51,7 @@ Start by making sure that you have the most recent version of Git installed
    * It’s both powerful (because it’s open-ended), plentiful (because it’s open source), and sometimes hard to use (because it’s open-ended).
    * It takes practice, it's a learned skill, it's not intuitive. Assk your coaches about their Git disasters - everyone has a story.
 
-![The Internet-famous “XKCD” web comic, poking fun at how git often sounds great and yet is really hard to actually use](https://imgs.xkcd.com/comics/git.png/)
+![The Internet-famous “XKCD” web comic, poking fun at how git often sounds great and yet is really hard to actually use](https://imgs.xkcd.com/comics/git.png)
 
 > [Some Fun Facts about gIt’s name (from Wikipedia):](https://en.wikipedia.org/wiki/Git#Naming)
 > The name "git" was given by Linus Torvalds when he wrote the very first version. He described the tool as "the stupid content tracker" and the name as (depending on your way):
@@ -225,15 +225,17 @@ We'll now walk through the process of cloning a repository from GitHub.
 * [Git Cheat Sheet](https://www.git-tower.com/blog/git-cheat-sheet)
     (Summary of a lot of git commands but doesn’t tell you which one to use when)
 
-## Instructor Notes: 
-(TNTs please ignore this - this is just here to explain how to revoke access so that instructors can practice the authentication process :) )
-1. Go to GitHub
-2. user account (top-right) -> Settings
-3. Under the “Integrations” category (left-hand column)
-4. Click on ‘Applications’
-5. In the main area, click on ‘Authorized OAuth Apps’
-6. GitHub for VSCode - revoke this and neither the GUI nor the integrated terminal will be able to authenticate.  
-7. VSCode will NOT re-authenticate you until you log out of your GitHub account in VSCode. In VSCode log out of GitHub (lower-left corner - the ‘Accounts’ button, then your GitHub account & Sign Out)
-8. Then, the next time you push/pull (either from GUI or integrated terminal)   and it’ll run you through the authentication dance listed above
-
 ## [Additional background, info, and OPTIONAL exercises](eng1-0-exercises-for-intro-to-git-and-local-workflow)
+
+
+
+
+To revoke access:
+GitHub, 
+then your user account (top-right) -> Settings
+Under the “Integrations” category (left-hand column)
+Click on ‘Applications’
+In the main area, click on ‘Authorized OAuth Apps’
+GitHub for VSCode - revoke this and neither the GUI nor the integrated terminal will be able to authenticate.
+In VSCode log out of GitHub (lower-left corner - the ‘Accounts’ button, then your GitHub account & Sign Out)
+Then, the next time you push/pull (either from GUI or integrated terminal)   and it’ll run you through the authentication dance listed above
