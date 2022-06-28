@@ -25,7 +25,7 @@ Total time: 1.5-ish hours
 * 10 minutes - Elaborate: best practices, trouble spots and talk about
 * 5 minutes - Explain Remote repositories and GitHub( Basics and Clone)
 * 10 minutes - Demo:  Clone a repository from GitHub using VSCode
-* [Additional background, info, and OPTIONAL exercises](eng1-0-exercises-for-intro-to-git-and-local-workflow)
+* [Additional background, info, and OPTIONAL exercises](%5BENG1.0%5D%20Exercises%20for%20Intro%20to%20Git%20and%20local%20workflow.md)
 
 ## Session setup
 
@@ -239,6 +239,6 @@ To revoke access:
 7. In VSCode log out of GitHub (lower-left corner - the ‘Accounts’ button, then your GitHub account & Sign Out)
 8. Then, the next time you push/pull (either from GUI or integrated terminal)   and it’ll run you through the authentication dance listed above
 
-## [Additional background, info, and OPTIONAL exercises](eng1-0-exercises-for-intro-to-git-and-local-workflow)
+## [Additional background, info, and OPTIONAL exercises](%5BENG1.0%5D%20Exercises%20for%20Intro%20to%20Git%20and%20local%20workflow.md)
 
 
