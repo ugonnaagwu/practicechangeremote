@@ -193,23 +193,23 @@ We'll now walk through the process of cloning a repository from GitHub.
 
 1. [Go to the practice repo on GitHub](https://github.com/tnt-summer-academy/RepoToPracticeCloning)
 2. Click on the green button (1), make sure that HTTPS is selected (2), and then copy the URL (3): ![[ENG1.0]GitHubCloneURL](images/%5BENG1.0%5DGitHubCloneURL.png)
-3. Note to instructor: explain `.gitignore`
-    * **IMPORTANT:** _You and your team should make sure that your repo has a .gitignore before you start collaborating on the code._  It’s tricky and time-consuming to remove files later but easy to ignore them at the start.
-4. In VSCode open the Command Pallette using Cmd+Shift+P, then type **clone** to get VSCode to suggest possible commands, then use the `Git: Clone` command.
-5. VSCode will then ask for the URL, and you should paste the URL that you got from the green button.
-6. VSCode will then ask you to pick a folder.  For right now putting this on your desktop is fine.  WARNING: This step just sorta pops up a ‘file open’ dialog with much explanation so it takes a while to realize that it’s asking you where to put the repo :)
-7. Next, VSCode will need to verify that you’re allowed to access this private, TNT-only repository.  VSCode itself has no idea if you’re allowed to or not, so VSCode will ask GitHub (which does know).  
+3. In VSCode open the Command Pallette using Cmd+Shift+P, then type **clone** to get VSCode to suggest possible commands, then use the `Git: Clone` command.
+4. VSCode will then ask for the URL, and you should paste the URL that you got from the green button.
+5. VSCode will then ask you to pick a folder.  For right now putting this on your desktop is fine.  WARNING: This step just sorta pops up a ‘file open’ dialog with much explanation so it takes a while to realize that it’s asking you where to put the repo :)
+6. Next, VSCode will need to verify that you’re allowed to access this private, TNT-only repository.  VSCode itself has no idea if you’re allowed to or not, so VSCode will ask GitHub (which does know).  
     * In computer security the process of figuring out if you’re allowed to use something or not is called **authorization** (as in, “Are you authorized to access that private, TNT-only repo?”).  
     * Before GitHub can figure out if you’re authorized to access this repo it need to make sure that you really are the person you’re claiming to be, which is called **authentication**.  Logging into your Mac by clicking on your user name and then typing in your password is one form of authentication.
     * VSCode will start by asking if it’ok to authenticate you using GitHub using this dialog.  You should click on Allow. ![[ENG1.0]VSCodeOkToAuthenticate](images/%5BENG1.0%5DVSCodeOkToAuthenticate.png)
     * Next, VSCode will send you to the GitHub website (this will appear in your browser).  It should look something like the following.  You should click the green button that says “Authorize Visual Studio Code” ![[ENG1.0]GitHubOkToIntegrate](images/%5BENG1.0%5DGitHubOkToIntegrate.png)
     * Once that’s done you’ll be sent back to VSCode, where you must confirm that it’k for VSCode to open a URL.  You should agree to Open the URL, as pictured here: ![[ENG1.0]VSCodeOkToOpenGHURL](images/%5BENG1.0%5DVSCodeOkToOpenGHURL.png)
     * [Here’s a short (1:66) YouTube video demonstrating this process](https://www.youtube.com/watch?v=bz1KauFlbQI)
-8. OPTIONAL SIDE-NOTE: It’s good to know that there’s several other ways to authenticate yourself to GitHub (mostly so that if you’re looking for help online you can separate out the different approaches web pages may be telling ou about).
+7. OPTIONAL SIDE-NOTE: It’s good to know that there’s several other ways to authenticate yourself to GitHub (mostly so that if you’re looking for help online you can separate out the different approaches web pages may be telling ou about).
     * One way is using SSH keys, which is the way that the git command line client first did authentication (and is still very commonly used).  
     * Another option is [creating a Personal Access Token, which you can do on the GitHub website](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) - this can be used with the git command line client, and is also used by the IntelliJ IDE (e.g., PyCharm for Python)
-9. After authenticating yourself to GitHub (and having GitHub authorize you to clone the repo) VSCode will clone (download) the repo to your personal computer.
-10. Lastly, VSCode gives you the choice about how to open the new repo.  Either ‘Open’ or ‘Open In New Window’ are both fine.  Try cloning several times so that you can try the different options, if you’d like.
+8. After authenticating yourself to GitHub (and having GitHub authorize you to clone the repo) VSCode will clone (download) the repo to your personal computer.
+9. Lastly, VSCode gives you the choice about how to open the new repo.  Either ‘Open’ or ‘Open In New Window’ are both fine.  Try cloning several times so that you can try the different options, if you’d like.
+10. Note to instructor: explain `.gitignore`
+    * **IMPORTANT:** _You and your team should make sure that your repo has a .gitignore before you start collaborating on the code._  It’s tricky and time-consuming to remove files later but easy to ignore them at the start.
 
 ## References
 
