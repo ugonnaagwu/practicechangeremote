@@ -224,17 +224,19 @@ We'll now walk through the process of cloning a repository from GitHub.
 * [Git Cheat Sheet](https://www.git-tower.com/blog/git-cheat-sheet)
     (Summary of a lot of git commands but doesn’t tell you which one to use when)
 
+### PRIVATE NOTES FOR INSTRUCTORS
+TNTs: Please ignore this.  It’s only here so that instructors can practice the log-in process for GitHub.
+To revoke access:
+
+1. Log in to GitHub.cokm
+2. then your user account (top-right) -> Settings
+3. Under the “Integrations” category (left-hand column)
+4. Click on ‘Applications’
+5. In the main area, click on ‘Authorized OAuth Apps’
+6. GitHub for VSCode - revoke this and neither the GUI nor the integrated terminal will be able to authenticate.  NOTE: VSCode will not re-authenticate you until you log out
+7. In VSCode log out of GitHub (lower-left corner - the ‘Accounts’ button, then your GitHub account & Sign Out)
+8. Then, the next time you push/pull (either from GUI or integrated terminal)   and it’ll run you through the authentication dance listed above
+
 ## [Additional background, info, and OPTIONAL exercises](eng1-0-exercises-for-intro-to-git-and-local-workflow)
 
 
-
-
-To revoke access:
-GitHub, 
-then your user account (top-right) -> Settings
-Under the “Integrations” category (left-hand column)
-Click on ‘Applications’
-In the main area, click on ‘Authorized OAuth Apps’
-GitHub for VSCode - revoke this and neither the GUI nor the integrated terminal will be able to authenticate.
-In VSCode log out of GitHub (lower-left corner - the ‘Accounts’ button, then your GitHub account & Sign Out)
-Then, the next time you push/pull (either from GUI or integrated terminal)   and it’ll run you through the authentication dance listed above
