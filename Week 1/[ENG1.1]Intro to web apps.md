@@ -89,8 +89,8 @@ There's likely a range of familiarity with web pages, web apps, and how they wor
    | Programming Language   | HTML, CSS, JavaScript |
    | Web framework          | React                 |
    | Project setup          | React create app tool |
-   | Server environment     | Node.js, npm          |
-   | Package manager        | Yarn                  |
+   | Server environment     | Node.js               |
+   | Package manager        | npm (instead of Yarn) |
    | Source control         | Git                   |
    | Source control tools   | Command line, VS Code |
    | Testing infrastructure | Jest                  |
