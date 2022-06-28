@@ -139,7 +139,7 @@ _Please follow along as your instructor demonstrates (and walks you through) the
 5. In the above picture you’ll see some plus signs ( + ).  The bottom one allows you to stage that individual file (this means that if you had changed multiple files that you could stage and commit only some of those files).  The top plus only appears when you move the mouse pointer over the ‘Changes’ row; the top plus stages ALL the changes.
 Click on the plus (either one) to stage your change.
 You should then see the file moved from the ‘Changes’ area to the ‘Staged Changes’ area.
-6. After staging is Committing changes.  First type a commit message in the box labeled “Message”, then click on the check mark right above it (if you forget to type the message than VSCode will ask you for the message.  Don’t worry, there’s no risk of accidentally getting stuck in vim! :)  ) ![[ENG1.0]VSCodeCommit]($resource/%5BENG1.0%5DVSCodeCommit.png)
+6. After staging is Committing changes.  First type a commit message in the box labeled “Message”, then click on the check mark right above it (if you forget to type the message than VSCode will ask you for the message.  Don’t worry, there’s no risk of accidentally getting stuck in vim! :)  ) ![[ENG1.0]VSCodeCommit](images/%5BENG1.0%5DVSCodeCommit.png)
 
 ### How to write good commit messages
 
