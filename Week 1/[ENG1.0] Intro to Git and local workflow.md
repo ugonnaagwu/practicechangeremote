@@ -62,17 +62,9 @@ Start by making sure that you have the most recent version of Git installed
 
 ## Explore: Git Demo Using VS Code integrated Terminal
 
-# PLEASE FOLLOW ALONG AS YOUR INSTRUCTOR DEMONSTRATES THE FOLLOWING:
+_Please follow along as your instructor demonstrates (and walks you through) the following:_
 
-1. Configure your git
-      * `git config --global user.email "youremail"`
-      * `git config --global user.name "yourname"`
-      * `git config --global core.editor "code --wait"`
-        * This last one will tell git to use VSCode as your default editor.
-          This is important ensure that you don't [accidentally get yourself stuck in vim](https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/).
-          vim is an old-school editor which a lot of people swear by because of it's power and flexibility,
-          and lot of people swear at because of it's obscure and difficult interface.
-2. Create a new directory (folder) for your repo, then create the repo inside thate folder, and then do your initial commit:
+1. Create a new directory (folder) for your repo, then create the repo inside thate folder, and then do your initial commit:
     * Start by creating a new folder using the MacOS Finder (i.e, using the normal Mac windows and such). It doesn’t matter what you name it as long as you remember the name.  The name “GitTest” is fine.
     * Next, start VSCode
               You can hold down the Command button and pressing the spacebar - this is usually written as Cmd+Space - and then typing “code” into the MacOS Spotlight search bar thingee)
@@ -81,9 +73,14 @@ Start by making sure that you have the most recent version of Git installed
     * At this point you should start VSCode’s integrated terminal.
               Use the Terminal / New Terminal menu option: ![[ENG1.0]VSCodeNewTerminal](images/%5BENG1.0%5DVSCodeNewTerminal.png)
     * At this point the terminal that’s integrated into VSCode should have started up, and it should “be in” the folder that you just told VSCode to open (which is the folder you just created).
-              You can confirm that you’re in the correct folder by typing **pwd** into the terminal and then pressing the return key.  It _should_ tell you that you’re at `/Users/<your Mad login>/Desktop/GitTest` (or whatever you named the new folder, if you didn’t use GitTest in the prior step). It should similar to the following: 
+              You can confirm that you’re in the correct folder by typing **pwd** into the terminal and then pressing the return key.  It _should_ tell you that you’re at `/Users/<your Mac login>/Desktop/GitTest` (or whatever you named the new folder, if you didn’t use GitTest in the prior step). It should similar to the following: 
 ![[ENG1.0]TerminalPrintWorkingDirectory]($resource/%5BENG1.0%5DTerminalPrintWorkingDirectory.png)
-      * If you wanted to, you could create a new directory inside the termina by typing `mkdir SampleApp` and then return (to create a new folder named SampleApp), followed by typing `cd SampleApp<return>` to move into the SampleApp folder
+    * You will need to configure your git install before you can commit your changes.  Let’s do that now.
+        * `git config --global user.email "youremail"`
+        * `git config --global user.name "yourname"`
+        * `git config --global core.editor "code --wait"`
+          * This last one will tell git to use VSCode as your default editor. This is important ensure that you don't [accidentally get yourself stuck in vim](https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/).  vim is an old-school editor which a lot of people swear by because of its power and flexibility, and lot of people swear at because of its obscure and difficult interface.
+      * If you wanted to, you could create a new directory inside the terminal by typing `mkdir SampleApp` and then return (to create a new folder named SampleApp), followed by typing `cd SampleApp<return>` to move into the SampleApp folder
     * `git init` - initialize the repository
     * `git status` - view the repository status (it should say that there are no commits yet, and there’s nothing to commit)
     * `touch index.html` - create a new file
@@ -132,7 +129,9 @@ Start by making sure that you have the most recent version of Git installed
           </html>
 
 * Make sure that you save your file!  File/Save or Command-S work well.
-* Note that a file that has been changed but NOT saved has a circle in it’s tab (to tell you that it’s not saved): ![[ENG1.0]VSCodeNOTSaved](images/%5BENG1.0%5DVSCodeNOTSaved.png) but once you’ve saved the file it changes to an ‘x’: ![[ENG1.0]VSCodeSaved](images/%5BENG1.0%5DVSCodeSaved.png)
+* Note that a file that has been changed but NOT saved has a circle in it’s tab (to tell you that it’s not saved): ![[ENG1.0]VSCodeNOTSaved](images/%5BENG1.0%5DVSCodeNOTSaved.png) but once you’ve saved the file it changes to an ‘x’: ![[ENG1.0]VSCodeSaved](images/%5BENG1.0%5DVSCodeSaved.png).
+* However, there’s an even better option: you can tell VSCode to automatically save your files after you change them.  You can do this using the File/AutoSave option.  Click on it to enable auto-save.  When autosave is enabled the menu item will have a check mark next to it, like so:
+![[ENG1.0]VSCodeEnableAutoSave](images/%5BENG1.0%5DVSCodeEnableAutoSave.png)
 3. Next, open the Source Control panel  (in the Activity Bar):
 ![[ENG1.0]SourceControlActivityBar](images/%5BENG1.0%5DSourceControlActivityBar.png)
 4.  Having made a change we need to stage the change.  Before we do that let’s proofread / double-check our change.  Within the Source Control panel click on the file that you modified.  VSCode will show you a ‘before and after’ view of the file (also known as showing you the difference between the versions, which is called a diff for short).  I can never remember which side is which so instead I look for my changes - that side must be the ‘new’ side, and the other side is the ‘original’ side:
@@ -200,7 +199,18 @@ We'll now walk through the process of cloning a repository from GitHub.
 4. In VSCode open the Command Pallette using Cmd+Shift+P, then type **clone** to get VSCode to suggest possible commands, then use the `Git: Clone` command.
 5. VSCode will then ask for the URL, and you should paste the URL that you got from the green button.
 6. VSCode will then ask you to pick a folder.  For right now putting this on your desktop is fine.  WARNING: This step just sorta pops up a ‘file open’ dialog with much explanation so it takes a while to realize that it’s asking you where to put the repo :)
-7. VSCode then gives you the choice about how to open the new repo.  Either ‘Open’ or ‘Open In New Window’ are both fine.  Try cloning several times so that you can try the different options, if you’d like.
+7. Next, VSCode will need to verify that you’re allowed to access this private, TNT-only repository.  VSCode itself has no idea if you’re allowed to or not, so VSCode will ask GitHub (which does know).  
+    * In computer security the process of figuring out if you’re allowed to use something or not is called **authorization** (as in, “Are you authorized to access that private, TNT-only repo?”).  
+    * Before GitHub can figure out if you’re authorized to access this repo it need to make sure that you really are the person you’re claiming to be, which is called **authentication**.  Logging into your Mac by clicking on your user name and then typing in your password is one form of authentication.
+    * VSCode will start by asking if it’ok to authenticate you using GitHub using this dialog.  You should click on Allow. ![[ENG1.0]VSCodeOkToAuthenticate](images/%5BENG1.0%5DVSCodeOkToAuthenticate.png)
+    * Next, VSCode will send you to the GitHub website (this will appear in your browser).  It should look something like the following.  You should click the green button that says “Authorize Visual Studio Code” ![[ENG1.0]GitHubOkToIntegrate](images/%5BENG1.0%5DGitHubOkToIntegrate.png)
+    * Once that’s done you’ll be sent back to VSCode, where you must confirm that it’k for VSCode to open a URL.  You should agree to Open the URL, as pictured here: ![[ENG1.0]VSCodeOkToOpenGHURL]($resource/%5BENG1.0%5DVSCodeOkToOpenGHURL.png)
+    * [Here’s a short (1:66) YouTube video demonstrating this process](https://www.youtube.com/watch?v=bz1KauFlbQI)
+8. OPTIONAL SIDE-NOTE: It’s good to know that there’s several other ways to authenticate yourself to GitHub (mostly so that if you’re looking for help online you can separate out the different approaches web pages may be telling ou about).
+    * One way is using SSH keys, which is the way that the git command line client first did authentication (and is still very commonly used).  
+    * Another option is [creating a Personal Access Token, which you can do on the GitHub website](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) - this can be used with the git command line client, and is also used by the IntelliJ IDE (e.g., PyCharm for Python)
+9. After authenticating yourself to GitHub (and having GitHub authorize you to clone the repo) VSCode will clone (download) the repo to your personal computer.
+10. Lastly, VSCode gives you the choice about how to open the new repo.  Either ‘Open’ or ‘Open In New Window’ are both fine.  Try cloning several times so that you can try the different options, if you’d like.
 
 ## References
 
@@ -215,4 +225,15 @@ We'll now walk through the process of cloning a repository from GitHub.
 * [Git Cheat Sheet](https://www.git-tower.com/blog/git-cheat-sheet)
     (Summary of a lot of git commands but doesn’t tell you which one to use when)
 
-## [Additional background, info, and OPTIONAL exercises](<[ENG1.0] Exercises for Intro to Git and local workflow.md>)
+## Instructor Notes: 
+(TNTs please ignore this - this is just here to explain how to revoke access so that instructors can practice the authentication process :) )
+1. Go to GitHub
+2. user account (top-right) -> Settings
+3. Under the “Integrations” category (left-hand column)
+4. Click on ‘Applications’
+5. In the main area, click on ‘Authorized OAuth Apps’
+6. GitHub for VSCode - revoke this and neither the GUI nor the integrated terminal will be able to authenticate.  
+7. VSCode will NOT re-authenticate you until you log out of your GitHub account in VSCode. In VSCode log out of GitHub (lower-left corner - the ‘Accounts’ button, then your GitHub account & Sign Out)
+8. Then, the next time you push/pull (either from GUI or integrated terminal)   and it’ll run you through the authentication dance listed above
+
+## [Additional background, info, and OPTIONAL exercises](eng1-0-exercises-for-intro-to-git-and-local-workflow)
