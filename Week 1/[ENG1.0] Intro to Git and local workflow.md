@@ -73,8 +73,7 @@ _Please follow along as your instructor demonstrates (and walks you through) the
     * At this point you should start VSCode’s integrated terminal.
               Use the Terminal / New Terminal menu option: ![[ENG1.0]VSCodeNewTerminal](images/%5BENG1.0%5DVSCodeNewTerminal.png)
     * At this point the terminal that’s integrated into VSCode should have started up, and it should “be in” the folder that you just told VSCode to open (which is the folder you just created).
-              You can confirm that you’re in the correct folder by typing **pwd** into the terminal and then pressing the return key.  It _should_ tell you that you’re at `/Users/<your Mac login>/Desktop/GitTest` (or whatever you named the new folder, if you didn’t use GitTest in the prior step). It should similar to the following: 
-![[ENG1.0]TerminalPrintWorkingDirectory]($resource/%5BENG1.0%5DTerminalPrintWorkingDirectory.png)
+              You can confirm that you’re in the correct folder by typing **pwd** into the terminal and then pressing the return key.  It _should_ tell you that you’re at `/Users/<your Mac login>/Desktop/GitTest` (or whatever you named the new folder, if you didn’t use GitTest in the prior step). It should similar to the following:  ![[ENG1.0]TerminalPrintWorkingDirectory](images/%5BENG1.0%5DTerminalPrintWorkingDirectory.png)
     * You will need to configure your git install before you can commit your changes.  Let’s do that now.
         * `git config --global user.email "youremail"`
         * `git config --global user.name "yourname"`
