@@ -194,7 +194,7 @@ We'll now walk through the process of cloning a repository from GitHub.
 1. [Go to the practice repo on GitHub](https://github.com/tnt-summer-academy/RepoToPracticeCloning)
 2. Click on the green button (1), make sure that HTTPS is selected (2), and then copy the URL (3): ![[ENG1.0]GitHubCloneURL](images/%5BENG1.0%5DGitHubCloneURL.png)
 3. Note to instructor: explain `.gitignore`
-    * ++**IMPORTANT:**++ _You and your team should make sure that your repo has a .gitignore before you start collaborating on the code._  It’s tricky and time-consuming to remove files later but easy to ignore them at the start.
+    * **IMPORTANT:** _You and your team should make sure that your repo has a .gitignore before you start collaborating on the code._  It’s tricky and time-consuming to remove files later but easy to ignore them at the start.
 4. In VSCode open the Command Pallette using Cmd+Shift+P, then type **clone** to get VSCode to suggest possible commands, then use the `Git: Clone` command.
 5. VSCode will then ask for the URL, and you should paste the URL that you got from the green button.
 6. VSCode will then ask you to pick a folder.  For right now putting this on your desktop is fine.  WARNING: This step just sorta pops up a ‘file open’ dialog with much explanation so it takes a while to realize that it’s asking you where to put the repo :)
