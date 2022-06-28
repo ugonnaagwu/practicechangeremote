@@ -192,7 +192,7 @@ We will learn together how to clone a repository using `git clone` so that you c
 We'll now walk through the process of cloning a repository from GitHub.
 
 1. [Go to the practice repo on GitHub](https://github.com/tnt-summer-academy/RepoToPracticeCloning)
-2. Click on the green button (1), make sure that HTTPS is selected (2), and then copy the URL (3): ![[ENG1.0]GitHubCloneURL]($resource/%5BENG1.0%5DGitHubCloneURL.png)
+2. Click on the green button (1), make sure that HTTPS is selected (2), and then copy the URL (3): ![[ENG1.0]GitHubCloneURL](images/%5BENG1.0%5DGitHubCloneURL.png)
 3. Note to instructor: explain `.gitignore`
     * ++**IMPORTANT:**++ _You and your team should make sure that your repo has a .gitignore before you start collaborating on the code._  It’s tricky and time-consuming to remove files later but easy to ignore them at the start.
 4. In VSCode open the Command Pallette using Cmd+Shift+P, then type **clone** to get VSCode to suggest possible commands, then use the `Git: Clone` command.
@@ -203,7 +203,7 @@ We'll now walk through the process of cloning a repository from GitHub.
     * Before GitHub can figure out if you’re authorized to access this repo it need to make sure that you really are the person you’re claiming to be, which is called **authentication**.  Logging into your Mac by clicking on your user name and then typing in your password is one form of authentication.
     * VSCode will start by asking if it’ok to authenticate you using GitHub using this dialog.  You should click on Allow. ![[ENG1.0]VSCodeOkToAuthenticate](images/%5BENG1.0%5DVSCodeOkToAuthenticate.png)
     * Next, VSCode will send you to the GitHub website (this will appear in your browser).  It should look something like the following.  You should click the green button that says “Authorize Visual Studio Code” ![[ENG1.0]GitHubOkToIntegrate](images/%5BENG1.0%5DGitHubOkToIntegrate.png)
-    * Once that’s done you’ll be sent back to VSCode, where you must confirm that it’k for VSCode to open a URL.  You should agree to Open the URL, as pictured here: ![[ENG1.0]VSCodeOkToOpenGHURL]($resource/%5BENG1.0%5DVSCodeOkToOpenGHURL.png)
+    * Once that’s done you’ll be sent back to VSCode, where you must confirm that it’k for VSCode to open a URL.  You should agree to Open the URL, as pictured here: ![[ENG1.0]VSCodeOkToOpenGHURL](images/%5BENG1.0%5DVSCodeOkToOpenGHURL.png)
     * [Here’s a short (1:66) YouTube video demonstrating this process](https://www.youtube.com/watch?v=bz1KauFlbQI)
 8. OPTIONAL SIDE-NOTE: It’s good to know that there’s several other ways to authenticate yourself to GitHub (mostly so that if you’re looking for help online you can separate out the different approaches web pages may be telling ou about).
     * One way is using SSH keys, which is the way that the git command line client first did authentication (and is still very commonly used).  
