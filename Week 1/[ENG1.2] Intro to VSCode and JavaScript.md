@@ -106,7 +106,8 @@ Total time: 1 hour 30 min
       ```javascript
        console.log('Hello, World!')
        console.log('Welcome TNTs!')
-       console.log('Hello, JavaScript!')console.log('Hello, World!')   
+       console.log('Hello, JavaScript!')
+       console.log('Hello, World!')   
       ```
    
    6. In the activity bar on the left, click on the 'Debugger' icon, which looks like this like a play button with a small bug on it: ![image-20210628105448064](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/%5BENG1.1%5D%20Intro%20to%20VSCode%20and%20JavaScript.assets/image-20210628105448064.png)
