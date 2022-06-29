@@ -149,7 +149,7 @@ At its simplest, a component is an object that returns a Javascript XML Element 
 
 These are methods that are triggered through out a components existence from when they're constructed to when they are dismissed.
 
-![LifeCycleDiagram](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/Lifecycle-methods.png)
+[Life Cycle Diagram](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/Lifecycle-methods.png)
 
 [https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
 
