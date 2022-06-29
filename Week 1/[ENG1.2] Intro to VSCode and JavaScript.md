@@ -9,7 +9,7 @@ This lesson introduces Visual Studio Code (aka "VSCode") and JavaScript includin
 ## Learning objectives
 
 - TNTs will be able to navigate Visual Studio Code (VSCode).
-- TNTs will be able to open VSCode's Integrated Terminal in a specific folder (directory), and then type in simple commands (such as `dir`)
+- TNTs will be able to open VSCode's Integrated Terminal in a specific folder (directory), and then type in common linux commands (such as `ls` and `cd`)
 - TNTs will be able to create a new HTML & JavaScript file and run it.
 - TNTs will learn the basics of JavaScript.
 - TNTs will learn the basics of JavaScript support for functional programming, specifically those parts that are commonly used by React.
