@@ -1,4 +1,4 @@
-`cdconsole.log("Hello, World!");
+console.log("Hello, World!");
 
 /************************************************************************
  * Variables
