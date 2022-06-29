@@ -77,7 +77,6 @@ Total time: 1 hour 30 min
         - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - this will help find JavaScript errors and show them to you.
         - [Open In Browser](https://marketplace.visualstudio.com/items?itemName=techer.open-in-browser) - this will allow you to open an HTML file in your browser, which is useful for previewing the file that you've written
         - [GitGraph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) - shows you a nice graph of branches and commits in your repos.
-        - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) - more tools for interacting with git and GitHub
     - WARNING: You may need to turn Prettier on to get it to format your files.  You can do that by following these steps:
         1. In VSCode, click on the **Code -> Preferences -> Settings** menu item
         2. In the search box at the top, type in **formatter**
