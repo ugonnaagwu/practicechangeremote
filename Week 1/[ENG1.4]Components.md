@@ -100,7 +100,7 @@ Usage: <Title name="a name" id="an id" width="15" height="30" />
         }
      }
 
-Usage: <Homepage />
+Usage: <Homepage/>
 
 #### Function Component
 
@@ -213,6 +213,6 @@ In your team channels, discuss the following; be prepared to share an insight or
 
 ## Resources
 
-- Read ![this short chapter](https://leanpub.com/reactjsforthevisuallearner/read#leanpub-auto-chapter-2--what-is-react-and-why-is-it-cool) (Chapter 2) describing the way React uses Component to create website Views.
-- ![Rubber Duck Debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging)
-- ![VS Code Live Share Extension for Pair Programming](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack)
+- Read [this short chapter](https://leanpub.com/reactjsforthevisuallearner/read#leanpub-auto-chapter-2--what-is-react-and-why-is-it-cool) (Chapter 2) describing the way React uses Component to create website Views.
+- [Rubber Duck Debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging)
+- [VS Code Live Share Extension for Pair Programming](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack)
