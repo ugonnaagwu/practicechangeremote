@@ -29,7 +29,7 @@ At its simplest, a component is an object that returns a Javascript XML Element 
 
 #### Key Component Ideas
 
-- Stateless Components
+- Stateless / Stateful Components
 - Component Data: _Properties_, _State_, _Children_
 - Types of Components: _Class vs. Function_
 - Component Lifecycle Methods
@@ -41,13 +41,15 @@ At its simplest, a component is an object that returns a Javascript XML Element 
 
 #### Class Component
 
+Class components are called stateful components.
+
 1. Render (required): This method returns the JSX element to be displayed by the class. It runs whenever the component's view updates.
 2. Properties (optional): They are arguments passed into the component from its parent components. They cannot be changed by the component.
-3. State (optional): They only exist within the components. Changing them causes the component to update.
-4. Children (optional): Components nested inside the parent's JSX tags
+3. State (optional): It only exists within the component. Changing it causes the component to update.
+4. Children (optional): Components nested inside the parent's JSX tags.
 5. Besides _render()_, class can include a constructor, lifecycle method calls and other additional methods.
 
-#### Class Component Example
+##### Class Component Example
 
      class Tile extends React.Component {
 
@@ -56,12 +58,13 @@ At its simplest, a component is an object that returns a Javascript XML Element 
         }
       }
 
+Usage: <Title></Title> or <Title />
 
-#### Stateful Component With Props and Common Lifecycle Method
+##### Stateful Component With Props 
 
      class Tile extends React.Component {
 
-          //this is called first (1)
+          // Constructor
           constructor(props) {
               super(props)
               this.state = {
@@ -69,46 +72,21 @@ At its simplest, a component is an object that returns a Javascript XML Element 
               }
           }
           
-          //DO NOT USE THIS, IT HAS BEEN DEPRECATED AND UNSAFE
-          //when it existed, this was called second (2)
-          componentWillMount() {
-              //do stuff here before component is mounted in DOM tree
-          }
-          
-          //this is called fourth (4)
-          componentDidMount() {
-              //Do stuff here after component is mounted in DOM tree
-          }
-          
-          //this is called sixth (6)
-          componentDidUpdate() {
-              //Do stuff here after component state has changed in DOM tree
-              //Ex: this.setState({size: 0})
-          }
-          
-          //this is called eight (8)
-          componentWillUnmount() {
-              //Do stuff here after component is unmounted
-              //Could be cleanup or service calls
-              //Ex: log("User destroyed the tile. Maybe it's alive somewhere else")
-              //Ex: this.database.tileDestroyed(userId, Date.now())
-          }
-
-          //during first pass this is called third (3)
-          //during second pass (after componentDidMount), it is called fifth (5)
-          //after an update, this is called seventh (7)
           render() {
               return ( <div>This is tile {this.props.name} with ID {this.props.id} of size {this.state.size} </div>)
           }
       }
 
-#### Rendering Other Components in a Component
+Usage: <Title name="a name" id="an id" width="15" height="30" />
+
+##### Rendering Other Components in a Component
 
     import React, { Component } from "react"
     import { Header } from "./Header"
     import { PhotoGrid } from "./PhotoGrid"
 
-    //assume each import is a separate component that was built
+    // Assume each import is a separate component that was built
+    // Homepage will render Header and PhotoGrid
 
     class HomePage extends React.Component {
 
@@ -122,16 +100,17 @@ At its simplest, a component is an object that returns a Javascript XML Element 
         }
      }
 
-
-
+Usage: <Homepage />
 
 #### Function Component
 
+Function components are called stateless components.
+
 1. Originally simple, stateless components; expected to return the JSX element to be displayed.
 2. Properties (optional): These arguments are passed in from the component's parent similarly to passing parameters to a function. They cannot be changed in the component.
-3. UseState: A hook function that returns a state variable, giving function components a way to manipulate a state the way class components do.
+3. UseState: A hook function that permits to provide a state to a function component. It returns a state variable, giving function components a way to manipulate a state the way class components do.
 
-#### Function Components Examples (two common syntax)
+#### Function Components Examples (two common syntax - with and without lambda function)
 
 ##### A. Standard Function Syntax
 
@@ -147,12 +126,53 @@ At its simplest, a component is an object that returns a Javascript XML Element 
 
 ### LifeCycle Methods (10 minutes)
 
-These are methods that are triggered through out a components existence from when they're constructed to when they are dismissed.
+Every component has *lifecycle methods*. They specify the behavior of the component when it goes through a phase of its lifecycle - when the compoenent is constructed or dismissed. Examples of phases could be: when the component is just about to render on the screen, when it has rendered on the screen, or when it is updated/modified in response to a change.
+
+These methods are: *componenetDidMount*, *componenetDidUpdate*, *componentWillUnmount*. For example, componentDidMount is executed just after the React Component is mounted on the DOM.
 
 ![Life Cycle Diagram](images/Lifecycle-methods.png)
 
-[https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
+Source: [https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
 
+#### Stateful Component With Props and Common Lifecycle Method
+
+     class Tile extends React.Component {
+
+          // This is called 1st
+          constructor(props) {
+              super(props)
+              this.state = {
+                  size: props.width * props.height
+              }
+          }
+          
+          // This is called 3rd
+          componentDidMount() {
+              //Do stuff here after component is mounted in DOM tree
+          }
+          
+          //this is called 5th
+          componentDidUpdate() {
+              //Do stuff here after component state has changed in DOM tree
+              //Ex: this.setState({size: 0})
+          }
+          
+          //this is called 7th
+          componentWillUnmount() {
+              //Do stuff here after component is unmounted
+              //Could be cleanup or service calls
+              //Ex: log("User destroyed the tile. Maybe it's alive somewhere else")
+              //Ex: this.database.tileDestroyed(userId, Date.now())
+          }
+
+          // During first pass this is called 2nd
+          // Dduring second pass (after componentDidMount), it is called 4th
+          // After an update, this is called 6th
+          render() {
+              return ( <div>This is tile {this.props.name} with ID {this.props.id} of size {this.state.size} </div>)
+          }
+      }
+      
 ### Session Discussion (30 minutes | 15 minutes in groups, 15 minutes as a class)
 
 In your team channels, discuss the following; be prepared to share an insight or example with the class. Keep in mind the following:
@@ -173,21 +193,23 @@ In your team channels, discuss the following; be prepared to share an insight or
 
 ![completed MyTNT App layout](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/MyTNT-component-model.png)
 
-- Review GitHub process: Clone•Branch•Commit•Push•Pull Request
+<!-- - Review GitHub process: Clone•Branch•Commit•Push•Pull Request -->
 
 - Explore Code
   - Identify Function and Class Components, props, state, and children
-  - Examine use of TypeScript Interfaces with Properties and State
+  - Examine the Properties and State
   - Examine the use of the state value **count** in the _Counter_ component and **map** function
   - Review HTML/CSS including `<ul>`, `<li>` and `<a>` elements
 
 ## Stretch
 
-- Use pair programming in Live Share to complete the [_My TNT_ Exercise](https://github.com/tnt-summer-academy/Exercises/tree/main/Week_2/ENG2.1-myTNT)
-- Push your work to GitHub and submit a Pull Request (one per pair)
+* Use pair programming in Live Share to complete the [_My TNT_ Exercise](https://github.com/tnt-summer-academy/Exercises/tree/main/Week_2/ENG2.1-myTNT)
 
-Continue coding on the _My TNT_ Exercise Stretch Goals (See Exercises)
-Explore the purpose of React components, how to identify them and why they are used
+* Push your work to GitHub <!-- and submit a Pull Request (one per pair)-->
+
+* Continue coding on the _My TNT_ Exercise Stretch Goals (See Exercises)
+
+* Explore the purpose of React components, how to identify them and why they are used
 
 ## Resources
 
