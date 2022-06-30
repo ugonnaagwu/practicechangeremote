@@ -171,7 +171,7 @@ In your team channels, discuss the following; be prepared to share an insight or
 
 - Identify components and composition: Tile, Card, Item in the [MyTNT App](https://github.com/tnt-summer-academy/Exercises/tree/main/Week_2/ENG2.1-myTNT) layout
 
-![completed MyTNT App layout](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/MyTNT-component-model.png)
+![completed MyTNT App layout](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/MyTNT-component-model.png)
 
 - Review GitHub process: Clone•Branch•Commit•Push•Pull Request
 
