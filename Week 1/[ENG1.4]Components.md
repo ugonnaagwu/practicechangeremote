@@ -58,7 +58,7 @@ Class components are called stateful components.
         }
       }
 
-Usage: <Title></Title> or <Title />
+Usage: `<Title></Title>` or `<Title />`
 
 ##### Stateful Component With Props 
 
@@ -77,7 +77,7 @@ Usage: <Title></Title> or <Title />
           }
       }
 
-Usage: <Title name="a name" id="an id" width="15" height="30" />
+Usage: `<Title name="a name" id="an id" width="15" height="30" />`
 
 ##### Rendering Other Components in a Component
 
