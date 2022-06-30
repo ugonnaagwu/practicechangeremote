@@ -100,7 +100,7 @@ Usage: <Title name="a name" id="an id" width="15" height="30" />
         }
      }
 
-Usage: <Homepage/>
+Usage: `<Homepage/>`
 
 #### Function Component
 
