@@ -192,12 +192,16 @@ It's called a "pull request" because it's asking the main branch to pull in the 
     ***Share your solutions for Week 1 exercises with us on Github***
 
     * Clone the [Exercise repository](https://github.com/tnt-summer-academy/Exercises) on Github to your local machine
-    * Create a branch with the following name: Team#-Week#Lesson#-FirstNames (e.g. Team14-Week1Lesson5-AliceBob). Please follow the naming convention as coaches and instructors will look for these specific name formats.
-    * Prepare your local repository to move forward. Commit any pending changes.
+    * Clone your team  scratch repository to your local machine. You can use the Repositories search functionality to local your team repo. Such as Search for Team12-2022-ScratchRepo.
+    * Create a work directory with the following name: FirstNamesLastIntial (e.g. AliceB). Please follow the naming convention as coaches and instructors will look for these specific name formats.
+    * Prepare your local work directory and move it inside the cloned team repository to move forward. Stage and Commit any pending changes.
+    * Create a branch and switch to it.
     * Push your solutions to the following week 1 exercises to your branch:
       * [JavaScript Practice](https://github.com/tnt-summer-academy/Exercises/blob/main/Week_1/ENG1.1/%5BENG1.1%5DJavaScriptPractice.js)
       * [Extended input-app with a submit button](https://github.com/tnt-summer-academy/Samples/tree/main/Week_1/input-app-javascript)
+      * [My TNT Exercise](https://github.com/tnt-summer-academy/Exercises/tree/main/Week_2/ENG2.1-myTNT)
     * Name the files and directories appropriately for easy identification
     * Create a pull request to your branch
-    * Title the pull request with your name and the names of anyone else who worked on the code. Again, please follow the requested formats
-    * Add two labels (on the right of the page) for your team number and exercise number
+    * Title the pull request with your name and the names of anyone else who worked on the code. Again, please follow the requested formats.
+    * Merge the pull request to the main.
+   
