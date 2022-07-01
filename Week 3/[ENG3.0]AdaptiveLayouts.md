@@ -1,6 +1,6 @@
 # Adaptive Layouts
 
-## Week 3, Lesson 2
+## Week 3, Lesson 1
 
 This lesson explains how to make your content's position adapt to the user's screen size and orientation
 
