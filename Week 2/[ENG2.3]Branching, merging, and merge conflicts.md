@@ -1,6 +1,6 @@
 # Branching, merging, and merge conflicts
 
-## Week 2, Lesson 3
+## Week 2, Lesson 2
 
 This lesson introduces branching and merging for team collaboration. Conflict resolution will be covered. This is how you work together on projects!
 
