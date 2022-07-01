@@ -1,4 +1,4 @@
-# Adaptive Layouts
+# Adaptive Layouts and Team Practice
 
 ## Week 3, Lesson 1
 
