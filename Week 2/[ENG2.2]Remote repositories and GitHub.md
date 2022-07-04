@@ -1,6 +1,6 @@
 # Remote repositories and GitHub
 
-## Week 2, Lesson 2
+## Week 2, Lesson 1
 
 This lesson introduces the core concepts for collaborating with Git and working with a remote repository.
 
@@ -16,11 +16,11 @@ This lesson introduces the core concepts for collaborating with Git and working 
 
 Total time: 1 hour
 
-    * 5 minutes - Explain Remote repositories and GitHub( Create, Clone, Pull and Push)
+    * 5 minutes - Explain Remote repositories and GitHub(Create, Clone, Pull and Push)
     * 10 minutes - Explore: create and use a repo on GitHub
-    * 5 minutes - Explain Branching
-    * 5 minutes - Explain git Stash
-    * 15 minutes - Explore: create and use local Branching and on GitHub
+    * 5 minutes - Explain branching
+    * 5 minutes - Explain git stash
+    * 15 minutes - Explore: create and use local branching and branches on GitHub
     * 20 minutes - Elaborate: review trouble spots
 
 ## References
@@ -111,7 +111,7 @@ Watch this short video to know what branches means in Git and how it works
 6. Pop Stashed work using `git stash pop`
 7. Finish Edit, add and commit your files.
 
-**Demo 3: Push Branch to remote repository**
+**Demo 3: Push branch to remote repository**
 
 1. Push your branch to the remote repository: `git push -u origin feature_branch_name` and check the remote repository in GitHub.
    - the `-u` flag (upstream) when you make your first push to track a remote branch
