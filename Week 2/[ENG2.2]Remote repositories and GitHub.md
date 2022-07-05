@@ -25,7 +25,7 @@ Total time: 1 hour
 
 ## References
 
-- [learn about working with branches](https://www.youtube.com/watch?v=JTE2Fn_sCZs)
+- [Learn about working with branches](https://www.youtube.com/watch?v=JTE2Fn_sCZs)
 - [GitHub workflow](https://guides.github.com/introduction/flow/)
 
 - Interactive online tutorial for practicing Git branching
