@@ -84,6 +84,8 @@ N/A | To Do - all the basics| YourShare - team engineering | Final presentation 
 
 Quick guides describing tech stack, Git, acronyms, and other useful topics.
 
+You may also consult with your instructor on how to proceed with course material.
+
 ## How to contribute
 
 Contributions are encouraged and appreciated to fix spelling, grammar, and formatting. Each lesson also has a reference section where you can add your favorite learning resources. The curriculum evolves as we learn. For larger topics and changes, open an issue for discussion. See the CONTRIBUTING.md for more details.
