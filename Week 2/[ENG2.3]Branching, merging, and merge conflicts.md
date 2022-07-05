@@ -54,14 +54,18 @@ It's called a "pull request" because it's asking the main branch to pull in the 
  **Demo: Cloning, branching, committing a repo from GitHub and open pull request**
 
     1. We're going to review the basics of creating a branch and merging it in GitHub.
-    2. Clone the NameandFavFood repository.
-    3. Create a new branch and checkout to the branch.
-    4. Open and edit the file in VS Code, adding your name and favorite food.
-    5. Commit the changes to the branch.
-    6. Push your branch with the changes to GitHub.
-    7. Notice Compare and Pull Request in GitHub.
-    8. Open a Pull Request to merge to main.
-    9. Look at the pull request and complete the pull request and merge.
+    2. Clone the NameandFavFood repository in [Samples](https://github.com/tnt-summer-academy/Samples/tree/main/Week_2/NameandFavFood)
+    3. Create a new remote repository on your GitHub
+    4. Change the remote origin in the NameandFavFood cloned directory to the new created remote repository 
+**`git remote set-url origin <the URL for the created repo on your GitHub>`**
+
+    5. Create a new branch and checkout to the branch.
+    6. Open and edit the file in VS Code, adding your name and favorite food.
+    7. Commit the changes to the branch.
+    8. Push your branch with the changes to GitHub.
+    9. Notice Compare and Pull Request in GitHub.
+    10. Open a Pull Request to merge to main.
+    11. Look at the pull request and complete the pull request and merge.
 
 <table style="border: none">
     <tr align="center">
