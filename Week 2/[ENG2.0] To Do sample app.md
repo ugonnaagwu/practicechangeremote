@@ -31,25 +31,15 @@ Total time: 2 hours
   Veeeeeery different.
   You have been warned.
 
-## Stretch Exercise Setup - MyTNT App (15 minutes)
+## Obtaining the sample
 
-- For this exercise you will work with your App Prototype team to Identify components and composition.
-  You should NOT be writing any code for this - instead, think about what state should be stored where, and how that information should be passed to child components.
+[View the code of this session here](https://github.com/tnt-summer-academy/Exercises/tree/main/Week_2/ENG2.0-todos-via-classes)
 
-- The finished app should look like the [MyTNT App](https://github.com/tnt-summer-academy/Exercises/tree/main/Week_2/ENG2.1-myTNT): 
-  ![Example of the finished app](https://github.com/tnt-summer-academy/Exercises/raw/main/Week_2/MyTNT-view-components.png)
-  
-  - Keep in mind that we'd like to set this up so that you can dynamically add more categories (in addition to 'New Technologist', 'Instructor', and 'Coach'), and that we'd like to allow the user to dynamically add individuals to any of the categories.  Currently there's no way to do this (there's no input forms), but we'd like to set up the code so that's possible in the future.
+For this lesson we'd like to allow y'all to make changes to the starter app BUT we don't want everyone to try and change the starter repo in GitHub.  We'll solve this by having one person in each team ***fork*** the overall Exercises repo, which will create (yet another :) ) repo on GitHub.  Each person should then clone the repo for their team.  After that you can work on your team's fork without any worries about changing other team's forks (repos).  Here's a picture showing the overall goal  here:
 
-- In order to help guide your approach we're going to suggest using the following structure.
-  For each of the following components (Tile, Card, Item, Counter) talk with your team and ask what state each one should have (if any - not all of these need their own separate state)?
-  What information should be passed from a parent component (like Tile) to a child component (like Card) (for example - what props should the Card have, that the Tile assigns to the Card)?
-  
-  ![completed MyTNT App layout](images/MyTNT-component-model.png)
 
-### Obtaining the sample
 
-[View the code of this session here](https://github.com/tnt-summer-academy/Exercises/tree/main/Week_1/ENG1.4/todos-via-classes)
+![](/Users/mike/Library/Application%20Support/marktext/images/2022-07-05-17-44-55-image.png)
 
 MAKE SURE THAT YOU FORK THE REPO!!!  You can then have everyone in your small group (your App Prototype group) clone that one, forked copy.  This way everyone in the App Prototype small group can merge their changes while doing the exercises at the end of this lesson.
 
@@ -57,7 +47,8 @@ How to fork a repo:
 
 - This site has a set by step guide: https://www.digitalocean.com/community/tutorials/fork-clone-make-changes-push-to-github
 - Go to the Github website.
-- Go to the specific repo you want to fork. You'll see three buttons in row, watch/unwatch, star, and fork.
+- Go to the specific repo you want to fork. You'll see three buttons in row, watch/unwatch, star, and fork:
+  ![](/Users/mike/Desktop/Curriculum-2022/Week%202/images/ForkButton.png)
 - Click fork. This will create a copy in your own repo for you to use and modify.
 - Go to your own repositories under your Github account. The forked repo should appear there.
 - Use `git clone` to clone this git repo to your personal machine.
