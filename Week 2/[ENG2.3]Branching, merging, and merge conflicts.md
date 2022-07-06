@@ -21,7 +21,6 @@ Total time: 1 hour
     * 20 minutes - explore: try it: GiHub Game
     * 10 minutes - elaborate: regroup and review
 
-
 ## References
 
 * Watch this [video](https://channel9.msdn.com/Events/Microsoft-Azure/Azure-DevOps-Launch-2018/A107?ocid=player) to start to use Pull Request within VS Code
@@ -52,18 +51,19 @@ Here's how the team development process is applied with GitHub: [Understanding t
 It's called a "pull request" because it's asking the main branch to pull in the changes.
 
  **Demo: Cloning, branching, committing a repo from GitHub and open pull request**
- 1. We're going to review the basics of creating a branch and merging it in GitHub.
- 2. Clone the NameandFavFood repository in [Samples](https://github.com/tnt-summer-academy/Samples/tree/main/Week_2/NameandFavFood)
- 3. Create a new remote repository on your GitHub
- 4. Change the remote origin in the NameandFavFood cloned directory to the new created remote repository 
-**`git remote set-url origin <the URL for the created repo on your GitHub>`**
-5. Create a new branch and checkout to the branch.
-6. Open and edit the file in VS Code, adding your name and favorite food
-7. Commit the changes to the branch.
-8. Push your branch with the changes to GitHub.
-9. Notice Compare and Pull Request in GitHub.
-10. Open a Pull Request to merge to main.
-11. Look at the pull request and complete the pull request and merge.
+
+1. We're going to review the basics of creating a branch and merging it in GitHub.
+2. Clone the NameandFavFood repository in [Samples](https://github.com/tnt-summer-academy/Samples/tree/main/Week_2/NameandFavFood)
+3. Create a new remote repository on your GitHub
+4. Change the remote origin in the NameandFavFood cloned directory to the new created remote repository 
+   **`git remote set-url origin <the URL for the created repo on your GitHub>`**
+   5. Create a new branch and checkout to the branch.
+   6. Open and edit the file in VS Code, adding your name and favorite food
+   7. Commit the changes to the branch.
+   8. Push your branch with the changes to GitHub.
+   9. Notice Compare and Pull Request in GitHub.
+   10. Open a Pull Request to merge to main.
+   11. Look at the pull request and complete the pull request and merge.
 
 <table style="border: none">
     <tr align="center">
@@ -71,25 +71,7 @@ It's called a "pull request" because it's asking the main branch to pull in the 
     </tr>
 </table>
 
- **Demo: Show Pull Request in VS Code**
-
-### To get started follow these steps:
-
-1. Download the extension from the [marketplace](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
-2. Reload VS Code after the installation by clicking the reload button next to the extension
-3. Open your desired GitHub repository
-4. If you're using version 0.5.0 of the extension or higher, a new viewlet should be added to the bottom of the activity bar. For older versions, the GitHub Pull Requests tree view will appear in the SCM Viewlet.
-5. You may need to configure the githubPullRequests.remotes setting. By default, the extension will look for Pull Requests for origin and upstream. If you have different remotes, add them to the remotes list.
-6. A notification should appear asking you to sign in to GitHub. Follow the directions to authenticate.
-7. You should be good to go!
- *Open the created Pull Request from the previous Demo in VS Code*
-<table style="border: none">
-    <tr>
-        <td><img src="./VSCode-PullRequestView.png" alt="Open pull request"></td>
-    </tr>
-</table>
-
-## Explain Git Conflict
+ **## Explain Git Conflict
 
 **Demo: Show a merge conflict**
 
@@ -128,11 +110,13 @@ It's called a "pull request" because it's asking the main branch to pull in the 
 (20 minutes to explain and start playing a few rounds)
 
 1. Together we're going to create a whole bunch of merge conflicts
-2. Navigate to the **GitHub Game** repository that you have access to it
-3. Play the game using these TWO RULES
 
-    - You will **ONLY** edit the file when on your **feature branch**!
-    - You will **NEVER** commit changes when on the **main branch**!
+2. Navigate to the **GitHub Game** repository that you have access to it
+
+3. Play the game using these TWO RULES
+   
+   - You will **ONLY** edit the file when on your **feature branch**!
+   - You will **NEVER** commit changes when on the **main branch**!
 
 **Setup in VS Code and use VS Code integrated Terminal**
 
@@ -147,14 +131,14 @@ It's called a "pull request" because it's asking the main branch to pull in the 
 
 7. Make a Pull Request from your branch to main to push changes
 8. Resolve the merge conflicts, if there is any. (Check Pull-Merge-Commit-Push details below)
-    * Be mindful not to delete other people's response
-    * You may have to deal with merge conflicts more than once through this process.
+   * Be mindful not to delete other people's response
+   * You may have to deal with merge conflicts more than once through this process.
 
 ### Pull-Merge-Commit-Push (repeat this part)
 
 *(NOTE: you will need to do this several times since the main branch will be changing using other TNT's Pull Requests )*
 
- #### From VS Code Integrated Terminal
+#### From VS Code Integrated Terminal
 
 1. Be sure you are in the directory for this project
 2. Type "**git status**" to make sure you are on your **feature** branch and it is clean
@@ -185,25 +169,55 @@ It's called a "pull request" because it's asking the main branch to pull in the 
 ## Stretch
 
 * Complete the module: [Edit code through branching and merging in Git](https://docs.microsoft.com/en-us/learn/modules/branch-merge-git/)
+  
   * Use the sandbox for this exercise to preserve your local git configuration
   * Create branches with git
   * Merge branches with git
 
 * Use VS Code and the integrated terminal to complete the work below
-
+  
     ***Share your solutions for Week 1 exercises with us on Github***
+  
+  * Clone the [Exercise repository](https://github.com/tnt-summer-academy/Exercises) on Github to your local machine
+  * Clone **your team scratch repository** to your local machine. You can use the Repositories search functionality to locate your team repo. Such as Search for Team12-2022-ScratchRepo.
+  * Create a work directory with the following name: **FirstNamesLastIntial** (e.g. AliceB). Please follow the naming convention as coaches and instructors will look for these specific name formats.
+  * Prepare your local work directory and move it inside the cloned team repository to move forward. Stage and Commit any pending changes.
+  * Create a branch and switch to it.
+  * Push your solutions to the following week 1 exercises to your branch:
+    * [JavaScript Practice](https://github.com/tnt-summer-academy/Exercises/blob/main/Week_1/ENG1.1/%5BENG1.1%5DJavaScriptPractice.js)
+    * [Extended input-app with a submit button](https://github.com/tnt-summer-academy/Samples/tree/main/Week_1/input-app-javascript)
+    * [My TNT Exercise](https://github.com/tnt-summer-academy/Exercises/tree/main/Week_2/ENG2.1-myTNT)
+  * Name the files and directories appropriately for easy identification
+  * Create a pull request to your branch
+  * Title the pull request with your name and the names of anyone else who worked on the code. Again, please follow the requested formats.
+  * Merge the pull request to the main branch.
 
-    * Clone the [Exercise repository](https://github.com/tnt-summer-academy/Exercises) on Github to your local machine
-    * Clone **your team scratch repository** to your local machine. You can use the Repositories search functionality to locate your team repo. Such as Search for Team12-2022-ScratchRepo.
-    * Create a work directory with the following name: **FirstNamesLastIntial** (e.g. AliceB). Please follow the naming convention as coaches and instructors will look for these specific name formats.
-    * Prepare your local work directory and move it inside the cloned team repository to move forward. Stage and Commit any pending changes.
-    * Create a branch and switch to it.
-    * Push your solutions to the following week 1 exercises to your branch:
-      * [JavaScript Practice](https://github.com/tnt-summer-academy/Exercises/blob/main/Week_1/ENG1.1/%5BENG1.1%5DJavaScriptPractice.js)
-      * [Extended input-app with a submit button](https://github.com/tnt-summer-academy/Samples/tree/main/Week_1/input-app-javascript)
-      * [My TNT Exercise](https://github.com/tnt-summer-academy/Exercises/tree/main/Week_2/ENG2.1-myTNT)
-    * Name the files and directories appropriately for easy identification
-    * Create a pull request to your branch
-    * Title the pull request with your name and the names of anyone else who worked on the code. Again, please follow the requested formats.
-    * Merge the pull request to the main branch.
+
+
+# UNUSED:
+
+(Ignore everything below the  'Unused' line.  It's stuff that we aren't using but we don't want to delete )
+
+
+
+## Pull Request via VS Code Extension
+
+**Demo: Show pull request**
+
+### To get started follow these steps:
+
+1. Download the extension from the [marketplace](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
+
+2. Reload VS Code after the installation by clicking the reload button next to the extension
+
+3. Open your desired GitHub repository
+
+4. If you're using version 0.5.0 of the extension or higher, a new viewlet should be added to the bottom of the activity bar. For older versions, the GitHub Pull Requests tree view will appear in the SCM Viewlet.
+
+5. You may need to configure the githubPullRequests.remotes setting. By default, the extension will look for Pull Requests for origin and upstream. If you have different remotes, add them to the remotes list.
+
+6. A notification should appear asking you to sign in to GitHub. Follow the directions to authenticate.
+
+7. You should be good to go! *Open the created Pull Request from the previous Demo in VS Code*
    
+   ![Open pull request](./VSCode-PullRequestView.png)

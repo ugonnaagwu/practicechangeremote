@@ -37,9 +37,7 @@ Total time: 2 hours
 
 For this lesson we'd like to allow y'all to make changes to the starter app BUT we don't want everyone to try and change the starter repo in GitHub.  We'll solve this by having one person in each team ***fork*** the overall Exercises repo, which will create (yet another :) ) repo on GitHub.  Each person should then clone the repo for their team.  After that you can work on your team's fork without any worries about changing other team's forks (repos).  Here's a picture showing the overall goal  here:
 
-
-
-![](/Users/mike/Library/Application%20Support/marktext/images/2022-07-05-17-44-55-image.png)
+![](./images/2022-07-05-17-44-55-image.png)
 
 MAKE SURE THAT YOU FORK THE REPO!!!  You can then have everyone in your small group (your App Prototype group) clone that one, forked copy.  This way everyone in the App Prototype small group can merge their changes while doing the exercises at the end of this lesson.
 
@@ -72,7 +70,7 @@ Note: You specifically want the `todos-via-classes` folder, not any other todo f
   - After that you should type in `npm start` to actually start the app
   - Sometimes it takes several minutes for the app to actually start; feel free to read through these directions and/or do something else productive and/or take some deep breadths and remind yourself that it's really an opportunity to work on your patience just like this author does :)
 
-[# Conceptual overview of how the app works](./ENG2.0-ToDoSample.pptx)
+# [Conceptual overview of how the app works](./ENG2.0-ToDoSample.pptx)
 
 ## How the list is displayed in the sample app:
 
