@@ -72,6 +72,8 @@ Note: You specifically want the `todos-via-classes` folder, not any other todo f
   - After that you should type in `npm start` to actually start the app
   - Sometimes it takes several minutes for the app to actually start; feel free to read through these directions and/or do something else productive and/or take some deep breadths and remind yourself that it's really an opportunity to work on your patience just like this author does :)
 
+[# Conceptual overview of how the app works](./ENG2.0-ToDoSample.pptx)
+
 ## How the list is displayed in the sample app:
 
 - React Components divides the app up into properties (**props**) which never change and **state** which does change.
