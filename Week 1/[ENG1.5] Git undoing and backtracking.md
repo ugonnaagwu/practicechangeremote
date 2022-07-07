@@ -46,7 +46,7 @@ We'll cover three scenarios: amending a commit, recovering a deleted file, and r
 
     * ***Case 2: I deleted a file and committed the deletion***
     
-        ![resetting](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.5]-resetting.png)
+        ![resetting](./images/[ENG1.5]-resetting.png)
     
         You made a commit deleting a file, but then realized you wanted to keep the file around after all? 
         Do a * *reset** to go back to the state before your commit `$ git reset --hard HEAD~1` (be careful: the "--hard" option means the command will discard changes to tracked files after the specified commit — you can also leave this option out in which case the file deletion will show up as an un-staged change along with any other changes you’ve made in your working tree. The file can then be restored as in the previous scenario)
