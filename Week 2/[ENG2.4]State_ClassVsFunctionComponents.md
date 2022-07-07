@@ -23,6 +23,7 @@ Total time: 2 hours
 * [The React useState hook](https://reactjs.org/docs/hooks-state.html)
 * [The Rules of Hooks](https://reactjs.org/docs/hooks-rules.html) - when to use them, when not to use them, etc
 * [Presentational vs. Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
+* [ToDo List via Functions Code](https://github.com/tnt-summer-academy/Exercises/tree/main/Week_2/ENG2.7-todo-via-functions)
 
 
 ## How to compare specific files in VSCode
