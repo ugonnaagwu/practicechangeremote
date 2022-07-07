@@ -77,7 +77,7 @@ We'll cover three scenarios: amending a commit, recovering a deleted file, and r
 
 3. **Demo: Reverting a commit**
 
-   ![revert](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/[ENG1.5]-revert.png)
+   ![revert](./images/[ENG1.5]-revert.png)
 
     Sometimes you just need to go back to a previous version. Refactoring some code didn't head the direction you thought. You accidentally deleted some code that you actually needed. The layout changed in a way you didn't predict and you want a fresh take at it. Don't worry, you've been committing your work in strong reasonable chunks.
     `git revert HEAD` makes a change that's exactly the opposite of the last commit.
