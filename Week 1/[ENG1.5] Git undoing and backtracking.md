@@ -24,6 +24,7 @@ Total time: 1.5 hours
 
 * Git Bash
 * VS Code
+* [Free Code Camp's guide to git reset and git revert](https://www.freecodecamp.org/news/the-ultimate-guide-to-git-reset-and-git-revert/)
 
 ## Lesson details
 
