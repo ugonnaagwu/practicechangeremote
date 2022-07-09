@@ -269,7 +269,7 @@ It's called a "pull request" because it's asking the main branch to pull in the 
 
 8. At this point go back to VSCode, and in the terminal you want to run the following commands:
    `git status` - specifically, you want to **make sure that you're still on your personal branch** and NOT on main
-   `git pull origin main--no-rebase`  - <mark>note that the --no-rebase is new</mark>.  if everyone adds their changes to the end of the file then you should see several error messages here
+   `git pull origin main--no-rebase`  - <span style="background-color:yellow">note that the --no-rebase is new</span>.  if everyone adds their changes to the end of the file then you should see several error messages here
    `git status` - you should still see errors (and several hints/suggestions
 
 9. At this point open up the sign-in.txt file in VSCode.  VSCode will highlight the merge markers in the file so it will look something like this:
@@ -289,10 +289,10 @@ It's called a "pull request" because it's asking the main branch to pull in the 
     `git add .`
     `git status`
     `git commit -m "Added my name (YourNameHere)"` - this is the same as the prior commit message
-    At this point we've told git that we've resolved the conflict.  There should be no need to use the git rebase command.
+    At this point we've told git that we've resolved the conflict.  <span style="background-color:yellow">There should be no need to use the git rebase command.
 
 14. Ghe last thing we need to do is to upload (push) our changes to GitHub and check if all our merge conflicts have been resolved
-     `git push`<mark> - note that we only need the `-u origin sign-in-YourName` the first time.  After that we can just use `git push` by itself.</mark>
+     `git push`<span style="background-color:yellow"> - note that we only need the `-u origin sign-in-YourName` the first time.  After that we can just use `git push` by itself.</span>
      `git status` 
 
 15. At this point go back to the GitHub website, click on 'Pull Requests', find your pull request: ![](./images/FindingYourExistingPullRequest.png)
