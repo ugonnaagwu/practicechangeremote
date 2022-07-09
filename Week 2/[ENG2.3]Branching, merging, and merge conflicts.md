@@ -261,7 +261,8 @@ It's called a "pull request" because it's asking the main branch to pull in the 
     </tr>
    </table>
 
-6. Next, fill in a brief description of your pull request:
+6. Next, fill in a brief description of your pull request, and click the green 'Create Pull Request' button to create the pull request.
+   (For now it's fine if you're getting the error message about "Can't automatically merge".  We'll need to fix that, but for now it's fine)
       ![Open pull request](./OpenPullRequestWithConflict.png)
 
 7. If someone has modified the repo that you cloned (since you last cloned or pulled from it) then you will see the following: 
@@ -289,7 +290,7 @@ It's called a "pull request" because it's asking the main branch to pull in the 
     `git add .`
     `git status`
     `git commit -m "Added my name (YourNameHere)"` - this is the same as the prior commit message
-    At this point we've told git that we've resolved the conflict.  <span style="background-color:yellow">There should be no need to use the git rebase command.
+    At this point we've told git that we've resolved the conflict.  <span style="background-color:yellow">There should be no need to use the git rebase command.</span>
 
 14. Ghe last thing we need to do is to upload (push) our changes to GitHub and check if all our merge conflicts have been resolved
      `git push`<span style="background-color:yellow"> - note that we only need the `-u origin sign-in-YourName` the first time.  After that we can just use `git push` by itself.</span>
