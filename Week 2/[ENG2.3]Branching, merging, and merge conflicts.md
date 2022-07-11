@@ -209,9 +209,15 @@ It's called a "pull request" because it's asking the main branch to pull in the 
 
 3. Each person should [clone their own copy of the repo,](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%201/%5BENG1.0%5D%20Intro%20to%20Git%20and%20local%20workflow.md#demo--clone-a-repository-from-github-using-vscode).  
    **Make sure that you clone your team's fork and NOT the original repo**
+   
+   1. You can confirm that the repo you're cloning is the fork because it will say "forked from..." in the top-left corner, right under the name of the repo itself:
+      ![](/Users/mike/Desktop/Curriculum-2022/Week%202/images/ForkedFrom.png)
 
-4. Once everyone on the team has cloned the repo (and ONLY after everyone has finished their clone) then 1 person should go into GitHub and modify the `sign-in.txt` file by adding a made-up, workplace appropriate, name to the END of the file.
-   (Doing this will ensure that everyone gets a merge conflict)
+4. Once everyone on the team has cloned the repo (and ONLY after everyone has finished their clone) then 1 person should go into GitHub and modify the `sign-in.txt` file by adding the phrase "Added on GitHub" to the END of the file (this way when you merge your changes it will be clear that this change was made on the GitHub website).
+   Doing this will ensure that everyone gets a merge conflict - even the very first person to go through the next set of steps.
+
+5. Next, each person on the team should go through the following steps.
+   **PLEASE IGNORE THE INSTRUCTIONS IN THE REPO ITSELF - use the following instructions instead!**
 
 ## Stuff Each Person Needs To Do, One Person At A Time (With The Support Of Their Team):
 
@@ -221,21 +227,24 @@ It's called a "pull request" because it's asking the main branch to pull in the 
 2. The person should create a create a new branch
    Call it **sign-in*-yourName*** (this will be your ***feature branch***) and check out this new branch using git checkout.  
    Here's an example  (please replace YourNameHere with, y'know, your name :)  )
-   `git checkout -b sign-in-YourNameHere`
-   `git status`  (to confirm that it worked, of course)
+    `git checkout -b sign-in-YourNameHere`
+    `git status`  (to confirm that it worked, of course)
 
 3. In VSCode, modify the *sign-in.txt* code to add your name and the v-account to the END of the file
-   4- Stage the changes locally, to the local branch
-   `git add .`
-   `git status`
-   5- Commit the changes locally, to the local branch
-   `git commit -m "Added my name (YourNameHere)"` (change this to be your name, of course)
-   `git status`
-   6- Push your feature branch to Github using 
-   `git push -u origin sign-in-YourNameHere` (warning - you can choose a different branch name on GitHub but people almost never do.  People DO make typos, so watch out for that)
-   `git status`
 
-4. Switch over to the GitHub website, where you should see something asking if you'd like to create a pull request:
+4. 4- Stage the changes locally, to the local branch
+    `git add .`
+    `git status`
+
+5. 5- Commit the changes locally, to the local branch
+    `git commit -m "Added my name (YourNameHere)"` (change this to be your name, of course)
+    `git status`
+
+6. 6- Push your feature branch to Github using 
+    `git push -u origin sign-in-YourNameHere` (warning - you can choose a different branch name on GitHub but people almost never do.  People DO make typos, so watch out for that)
+    `git status`
+
+7. Switch over to the GitHub website, where you should see something asking if you'd like to create a pull request:
    Click on the 'Compare & pull request' button
    
    <table style="border: none">
@@ -244,7 +253,7 @@ It's called a "pull request" because it's asking the main branch to pull in the 
     </tr>
    </table>
 
-5. Steps to create the pull request:
+8. Steps to create the pull request:
    First, make sure that you're trying to merge your code into the correct repo.  For some reason GitHub seems to enjoy telling you to merge into the original, instructor-created repo and *not the forked copy of that repo (y'know, the one that you cloned)*.
    Warning sign #1: GitHub says that it's fine to merge these two branches, even though you know that you put conflicting changes in.
    Warning sign #2: If you can see the 'base repository' and 'head repository' listed then GitHub is trying to let you merge from your team's forked repo into the original, instructor-created repo.  That situation looks like this, and is your warning that it's trying to merge/pull request to the wrong place:
@@ -261,53 +270,54 @@ It's called a "pull request" because it's asking the main branch to pull in the 
     </tr>
    </table>
 
-6. Next, fill in a brief description of your pull request, and click the green 'Create Pull Request' button to create the pull request.
+9. Next, fill in a brief description of your pull request, and click the green 'Create Pull Request' button to create the pull request.
    (For now it's fine if you're getting the error message about "Can't automatically merge".  We'll need to fix that, but for now it's fine)
       ![Open pull request](./OpenPullRequestWithConflict.png)
 
-7. If someone has modified the repo that you cloned (since you last cloned or pulled from it) then you will see the following: 
-   ![Pull Request with Conflict](./GitHubPullRequestWithConflict.png)
+10. If someone has modified the repo that you cloned (since you last cloned or pulled from it) then you will see the following: 
+    ![Pull Request with Conflict](./GitHubPullRequestWithConflict.png)
 
-8. At this point go back to VSCode, and in the terminal you want to run the following commands:
-   `git status` - specifically, you want to **make sure that you're still on your personal branch** and NOT on main
-   `git pull origin main--no-rebase`  - <span style="background-color:yellow">note that the --no-rebase is new</span>.  if everyone adds their changes to the end of the file then you should see several error messages here
-   `git status` - you should still see errors (and several hints/suggestions
+11. At this point go back to VSCode, and in the terminal you want to run the following commands:
+    `git status` - specifically, you want to **make sure that you're still on your personal branch** and NOT on main
+    `git pull origin main--no-rebase`  - <span style="background-color:yellow">note that the --no-rebase is new</span>.  if everyone adds their changes to the end of the file then you should see several error messages here
+    `git status` - you should still see errors (and several hints/suggestions
 
-9. At this point open up the sign-in.txt file in VSCode.  VSCode will highlight the merge markers in the file so it will look something like this:
-   ![](../assets/2022-07-05-23-47-50-image.png)
+12. At this point open up the sign-in.txt file in VSCode.  VSCode will highlight the merge markers in the file so it will look something like this:
+    ![](../assets/2022-07-05-23-47-50-image.png)
 
-10. Git considers the merge conflict to be resolved once we've deleted the line that starts with `<<<<<<<`, the one with `=======`, and the one with `>>>>>>>`.
+13. Git considers the merge conflict to be resolved once we've deleted the line that starts with `<<<<<<<`, the one with `=======`, and the one with `>>>>>>>`.
     HOWEVER
     We need to make the text file actually work - it needs to list ALL the names here, including both your name and the names of everyone who committed before you.  So in this example we'll change it to look like this:
     ![](../assets/2022-07-05-23-51-28-image.png)
 
-11. IMPORTANT: You'll need to do this for ALL the merge conflicts in this file.  In our sign-in.txt file there's probably only one, but it's very common for source code files to have multiple conflicts in each file.
+14. IMPORTANT: You'll need to do this for ALL the merge conflicts in this file.  In our sign-in.txt file there's probably only one, but it's very common for source code files to have multiple conflicts in each file.
 
-12. (If any other files have merge conflicts then you'll need to repeat these steps for each of the files that have merge conflicts)
+15. (If any other files have merge conflicts then you'll need to repeat these steps for each of the files that have merge conflicts)
 
-13. Once all the merges have been resolved, you should stage and commit your changes:
+16. Once all the merges have been resolved, you should stage and commit your changes:
     `git status`
     `git add .`
     `git status`
     `git commit -m "Added my name (YourNameHere)"` - this is the same as the prior commit message
     At this point we've told git that we've resolved the conflict.  <span style="background-color:yellow">There should be no need to use the git rebase command.</span>
 
-14. Ghe last thing we need to do is to upload (push) our changes to GitHub and check if all our merge conflicts have been resolved
-     `git push`<span style="background-color:yellow"> - note that we only need the `-u origin sign-in-YourName` the first time.  After that we can just use `git push` by itself.</span>
-     `git status` 
+17. Ghe last thing we need to do is to upload (push) our changes to GitHub and check if all our merge conflicts have been resolved
+    `git push`<span style="background-color:yellow"> - note that we only need the `-u origin sign-in-YourName` the first time.  After that we can just use `git push` by itself.</span>
+    `git status` 
 
-15. At this point go back to the GitHub website, click on 'Pull Requests', find your pull request: ![](./images/FindingYourExistingPullRequest.png)
+18. At this point go back to the GitHub website, click on 'Pull Requests', find your pull request: ![](./images/FindingYourExistingPullRequest.png)
 
-16. See if it's ok to merge your changes in - it's ok if GitHub is showing you a green button labeled "Merge pull request".
+19. See if it's ok to merge your changes in - it's ok if GitHub is showing you a green button labeled "Merge pull request".
     If it's ok then you should click the green button to merge your pull request into main.
+    (Note: If you don't see any changes then it wouldn't hurt to refresh the page ( ⌘ - r on a Mac, or the refresh button next to the address bar - ↻ ).  This is especially good to do if you didn't have to open up the Pull Request again because it was already open in your browser.
     ![](assets/2022-07-09-00-18-54-image.png)
 
-17. At this point confirm that your changes are, in fact, in GitHub by opening the `sign-in.txt` file:
+20. At this point confirm that your changes are, in fact, in GitHub by opening the `sign-in.txt` file:
     ![](./images/SignInFile.png)
 
-18. At this point the person currently working through the merge conflicts should be done, so have the team decide on the next person and go through the process again, adding their name.
+21. At this point the person currently working through the merge conflicts should be done, so have the team decide on the next person and go through the process again, adding their name.
 
-19. Repeat until everyone's name has been added to the team's forked repo
+22. Repeat until everyone's name has been added to the team's forked repo
 
 # UNUSED:
 
