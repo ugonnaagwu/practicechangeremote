@@ -47,7 +47,7 @@ Check-in on where your team is in understanding the spec process. Topics to cove
 * The spec brings together work from all phases of the design lifecycle. From their definition of the problem statement, to customer research, SWOT analysis, it all comes together in the spec.
 * Discuss the engineering work break down using the prioritized list of user scenarios from the walkthrough. For the engineering work there should be a screen and a technical description of how it's built.
 * Talk about how the team is working on the spec together. Everyone should write some portion of the spec and do engineering work break down.
-* If they're still working on the walk though, no problem. That piece can come last.
+* If they're still working on the walk through, no problem. That piece can come last.
 
 The spec introduces metrics through goals. The NTs think through how they'll measure success in whether the app is meeting the user needs. We don't have too much time in the program to spend on metrics and measuring outcomes. This is a good chance to dive in and bring the real world engineering.
 
