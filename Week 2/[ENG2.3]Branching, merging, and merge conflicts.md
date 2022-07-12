@@ -211,7 +211,7 @@ It's called a "pull request" because it's asking the main branch to pull in the 
    **Make sure that you clone your team's fork and NOT the original repo**
    
    1. You can confirm that the repo you're cloning is the fork because it will say "forked from..." in the top-left corner, right under the name of the repo itself:
-      ![](/Users/mike/Desktop/Curriculum-2022/Week%202/images/ForkedFrom.png)
+      ![](./images/ForkedFrom.png)
 
 4. Once everyone on the team has cloned the repo (and ONLY after everyone has finished their clone) then 1 person should go into GitHub and modify the `sign-in.txt` file by adding the phrase "Added on GitHub" to the END of the file (this way when you merge your changes it will be clear that this change was made on the GitHub website).
    Doing this will ensure that everyone gets a merge conflict - even the very first person to go through the next set of steps.
