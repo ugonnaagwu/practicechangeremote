@@ -55,14 +55,13 @@ The spec introduces metrics through goals. The NTs think through how they'll mea
 * In the spec process help NTs pick solid engagement metrics.
 * There's not a focus on funding or revenue in product development curriculum. We don't want this to block big ideas from the get go and time is limited in what we can cover. Future opportunities in the spec is a good place for NTs to include this. Stakeholders might ask questions on this topic. Have a discussion at some point this week and jump start some thinking on business models - ads, subscriptions, freemium. Again, not a focus of the program but an important consideration for product managers and a real world thing.
 
-The goal is spec sign-off by end of Tuesday, 7/20. For sign-off specs must:
+The goal is spec sign-off by end of Tuesday, 7/19. For sign-off specs must:
 
 * Have all sections
 * Have the problem statement well articulated
 * Clearly breakdown the work with UX mock, engineering description, and who's building what
      * Everyone should have a core engineering contribution
      * Everyone should have an engineering stretch goal
-* Be in OneNote or a Word document. It should be saved in their team folder.
 * Have contributions from everyone.
 * Once ready, both coaches should say so and post in the team's team channel that they sign-off.
 
