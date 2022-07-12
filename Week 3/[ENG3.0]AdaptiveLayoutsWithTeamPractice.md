@@ -69,7 +69,9 @@ When assigning a size to an element we typically use fixed units like pixels or 
 
 ### Setup YourShare Teamwork practice (5 minutes)
 
-Update your Team project for YourShare to identify any new work items (GitHub Issues) coming from today's lesson. Create the GitHub issue with a clear "Done when" statement for the ones you will 
+Update your Team project for YourShare to identify any new work items (GitHub Issues) coming from today's lesson. Create the GitHub issue with a clear "Done when" statement for the screens that you will replicate.
+
+[The already done spec for YourShare is available here](../Reference/Sample%20spec%20-%20YourShare.md)
 
 ## Post-session (60 minutes)
 
