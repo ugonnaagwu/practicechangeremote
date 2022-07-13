@@ -220,6 +220,13 @@ First we need to make sure to add react-bootstrap to the project node modules.
 npm install react-bootstrap bootstrap@4.6.0
 ```
 
+At the top of your App.js file you'll want to include the following:
+
+```JSX
+import 'bootstrap/dist/css/bootstrap.min.css'; // without this the navbar won't look right (or work :) )
+import {Navbar, Nav, NavDropdown} from "react-bootstrap"
+```
+
 ### React Navbar
 
 A powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more
