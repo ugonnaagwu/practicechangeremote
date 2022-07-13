@@ -1,6 +1,6 @@
 # React Router
 
-## Week 3, Lesson 5
+## Week 3, Lesson 3
 
 React router is a library that allows you to handle routes in a web app, using dynamic routing. Dynamic routing takes place as the app is rendering on your machine.
 
@@ -39,7 +39,7 @@ There are three primary categories of components in React Router:
 
 * [ ] First, install create-react-app and make a new project with it. ```npx create-react-app demo-app```
 * [ ] Install React Router from the public npm registry with either `npm or yarn`. Since we’re building a web app, we’ll use react-router-dom
-```npm install react-router-dom```
+```npm install react-router-dom@5.3.3``` We are using 5.3.3 version.
 
 ### Example 1
 
