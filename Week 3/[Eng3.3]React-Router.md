@@ -144,8 +144,8 @@ After adding navigation you will see the routes are rendered on the screen. if y
 A `<Switch>` looks through its children `<Route>s` and renders the first one that matches the current URL when path matches otherwise it fallbacks to the not found component..
 
 ```JSX
-<Switch>
-    <Router>
+<Router>
+  <Switch>
     <Route exact path="/">
             <Home />
         </Route> 
@@ -154,9 +154,20 @@ A `<Switch>` looks through its children `<Route>s` and renders the first one tha
         </Route>
         <Route path="/users">
             <Users />
-        </Route>    
-    </Router>
-<Switch>
+        </Route>
+        <Route>
+            <PageNotFound />
+        </Route>
+  </Switch>
+</Router>
+```
+
+We'll need to define the `PageNotFound` component, too:
+
+```JSX
+function PageNotFound() {
+  return <h2>Page not found!</h2>;
+}
 ```
 
 Still in our index.js file, we are going to wrap our App component with the Router component.
