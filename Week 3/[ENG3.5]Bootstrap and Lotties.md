@@ -34,7 +34,7 @@
 * [Bootstrap: Front-end UI toolkit](https://react-bootstrap.github.io/getting-started/introduction)
 * Be aware of the different versions of Bootstrap and the difference between Bootstrap and React-Bootstrap
 
-### React Hooks Intro
+### React Hooks for UI
 
 * [React Hooks](https://reactjs.org/docs/hooks-overview.html) are sometimes used in React UI components
 
@@ -54,7 +54,6 @@ RABBIT HOLE WARNING: Can't find the component that you need in these lists? Chec
 
 * [Lottiefiles.com](https://lottiefiles.com)
 * [An example of using Lottie in React](https://lottiefiles.com/blog/working-with-lottie/how-to-use-lottie-in-react-app)
-* [Another example of using Lottie in React](https://dev.to/proiacm/lottie-animations-for-react-1c9l)
 * [Lottie editor](https://edit.lottiefiles.com/)
 
 ## Choosing a UI Component Library
@@ -92,7 +91,7 @@ Pick and choose a component from [here](https://react-bootstrap.github.io/compon
 * Install react-bootstrap using `npm install react-bootstrap bootstrap@4.6.0`. We will use Bootstrap 4.6.0.
 * Install Holder.js `npm install holderjs`. We will use [holder.js](http://holderjs.com/) to render image placeholders entirely in the browser. Placeholders can have custom colors, fonts, resizing behavior, and rendering engine (Canvas/SVG).
 * Install react-router-dom `npm install react-router-dom` to run our demo example as it uses React Router.
-* The example uses pictures from https://picsum.photos.  
+* The example uses sample pictures from https://picsum.photos.  
 
 ### Imports
 
@@ -124,7 +123,7 @@ import { Image } from 'react-bootstrap';
 import myimage from "../images/myimage.png";
 ```
 
-Be sure to check the path!
+Be sure to check the path! Lots of missing images come from errors in the path.
 
 ### Looking at some components
 
