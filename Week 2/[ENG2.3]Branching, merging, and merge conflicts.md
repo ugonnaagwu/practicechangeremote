@@ -198,6 +198,13 @@ It's called a "pull request" because it's asking the main branch to pull in the 
 
 <u>Instructor Note:</u> Make sure that the **main** branch in GitHub has branch protections to prevent people from committing directly to **main**
 
+### CHANGE FOR NEXT TIME:
+1. Have each person take turns, both here and during their YourShare/AppPrototype work
+2. Start by pulling updates into main, and merging that (since you're taking turns this means that the merge conflicts will be fixed locally, before you get to GitHub.  As currently written you need to cycle through the pull-update-push thing, which is confusing and extra work)
+3. pull: switch to main, pull to there, then switch back to feature branch & do the update
+4. Pushing smaller changes more often 
+5. git stash can be useful
+
 ## Stuff Each App Prototype Team Needs To Do, Once:
 
 1. First, the instructor will give you the URL for the repo to use.
