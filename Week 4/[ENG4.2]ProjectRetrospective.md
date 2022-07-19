@@ -38,7 +38,7 @@ Your team will have **10 minutes to present your work + 5 minutes to answer ques
 
 ### Guidelines to what to include in your presentation
 
-Start the presentaion as if this is the first time anyone has heard of it. You can use a mix of slides and demos.
+Start the presentation as if this is the first time anyone has heard of it. You can use a mix of slides and demos.
 
 1. Introduce yourselves and introduce the team
 2. Introduce YourShare
