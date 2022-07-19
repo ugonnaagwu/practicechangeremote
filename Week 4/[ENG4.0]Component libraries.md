@@ -22,6 +22,9 @@ This lesson provides an overview of component libraries (specifically Fluent UI)
 ## Links to the app for this lesson
 
 - [Demo of Data Picker, Persona and Theme in FluentUI](https://github.com/tnt-summer-academy/Samples/tree/main/Week_3/component-library-fluent)
+- The app will have a menu like depicted on the screenshot below
+
+![](images/fluentuidemo.png)
 
 # Session
 
@@ -65,6 +68,8 @@ Using an existing project in the terminal use `npm` to install the component lib
 ## First Example: Adding Code From The Docs Into Your App
 
 Adding a DatePicker to your App.js and responding when the user changes the first day of the week to present the DatePicker
+
+![](images/datepickerfluentui.png)
 
 - Looking over the docs for the [DatePicker](https://developer.microsoft.com/en-us/fluentui#/controls/web/datepicker), you can see that there's a lot of examples. We're going to look at the first example they give, and try and add it into our program.
 - Notice that there's both an option to "Export To CodePen" (to immediately try this out online, in your browser) and there's a tab for 'Code'. Definitely try out both - here we're going to go directly to the 'Code' tab.
@@ -124,6 +129,8 @@ Some things to pay particular attention to:
 
 For this example we're going to use a [Stack](https://developer.microsoft.com/en-us/fluentui#/controls/web/stack) to show a vertical list of [Personas](https://developer.microsoft.com/en-us/fluentui#/controls/web/persona).
 
+![](images/personafluentui.png)
+
 Note that this time we're going to create our own, custom component (the `PersonaWithClickCounter`). A `PersonaWithClickCounter` is called the following way:
 
 ```jsx
@@ -182,6 +189,8 @@ constructor(props) {
    onClick={this.increaseCounter}
    ```
 
+![](images/personademofluentui.png)
+
 ## Third example: Styling Your FluentUI Components With Your Own Theme
 
 Let's look at documentation for [the Persona component](https://developer.microsoft.com/en-us/fluentui#/controls/web/persona).
@@ -215,3 +224,4 @@ The components of FluentUI are called within the `<ThemeProvider>` component and
    <Toggle label="Disabled" disabled={true} />
 </ThemeProvider>
 ```
+![](images/themedemofluentui.png)
