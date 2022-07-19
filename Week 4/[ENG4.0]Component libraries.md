@@ -120,37 +120,37 @@ Some things to pay particular attention to:
 
 [Skim through the docs to get a feel for what sort of widgets are available](https://developer.microsoft.com/en-us/fluentui#/controls/web). If you want to search online for more resources it can be useful to search for "FluentUI _gallery_" or "FluentUI _screenshots_"
 
-## Second Example: Personas, creating a custom component, responding to user input
+## Second Example: Personas, Creating A Custom Component, and Responding to User Input
 
 For this example we're going to use a [Stack](https://developer.microsoft.com/en-us/fluentui#/controls/web/stack) to show a vertical list of [Personas](https://developer.microsoft.com/en-us/fluentui#/controls/web/persona).
 
 Note that this time we're going to create our own, custom component (the `PersonaWithClickCounter`). A `PersonaWithClickCounter` is called the following way:
 
-   ```jsx
-      <PersonaWithClickCounter
-         imageUrl="https://www.bing.com/th?id=OIP.kqk76MIGNb-kPWlnTk8bHQHaJq&w=76&h=106&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
-	 text="Harry Potter"
-	 secondaryText="The Boy Who Lived"
-      />
+```jsx
+   <PersonaWithClickCounter
+      imageUrl="https://www.bing.com/th?id=OIP.kqk76MIGNb-kPWlnTk8bHQHaJq&w=76&h=106&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
+      text="Harry Potter"
+      secondaryText="The Boy Who Lived"
+   />
 ```
 
 The custom component is described using the `Persona` component of FluentUI. It also has event handling (via the onClick handler).
 
-   ```jsx
-      <Persona
-         imageUrl={this.props.imageUrl}
-	 text={this.props.text}
-	 secondaryText={
-	    this.props.secondaryText +
-	    " | You clicked this " +
-	    this.state.click_count.toString() +
-	    " times!"
-	 }
-         onClick={this.increaseCounter}
-      />
+```jsx
+   <Persona
+      imageUrl={this.props.imageUrl}
+      text={this.props.text}
+      secondaryText={
+      this.props.secondaryText +
+      " | You clicked this " +
+      this.state.click_count.toString() +
+      " times!"
+      }
+      onClick={this.increaseCounter}
+   />
 ```
 
-![Yo Dawg joke: Yo Dawg I heard you like components so I put a component inside your component, So you can reuse your components while reusing the library's components](images/YoDawg_Components.jpg)
+![Yo Dawg joke: Yo Dawg I heard you like components so I put a component inside your component, So you can reuse your components while reusing the library's components](images/YoDawg_Components.jpeg)
 
 A couple of notes on the code:
 
@@ -182,10 +182,36 @@ constructor(props) {
    onClick={this.increaseCounter}
    ```
 
-## Third example: Styling Your FluentUI Components
+## Third example: Styling Your FluentUI Components With Your Own Theme
 
 Let's look at documentation for [the Persona component](https://developer.microsoft.com/en-us/fluentui#/controls/web/persona).
 
 The [FluentUI Resources page](https://developer.microsoft.com/en-us/fluentui#/resources) includes a link to a [theme designer](https://fluentuipr.z22.web.core.windows.net/heads/master/theming-designer/index.html). Once you're done adjusting the settings there's an 'Export' button in the top-right. Export this to code and you can copy-and-paste that into your file.
 
 Don't forget to wrap the JSX in a `<ThemeProvider>` (also part of the `@fluentui/react` library) - you can give it the `myTheme` variable that the theme designer exported to code.
+
+```javascript
+import { createTheme } from "@fluentui/react";
+import {
+  ThemeProvider,
+} from "@fluentui/react";
+```
+
+```javascript
+const myTheme = createTheme({
+  palette: {
+    themePrimary: "#006603", 
+    ...
+   },
+});
+```
+
+The components of FluentUI are called within the `<ThemeProvider>` component and styled with 'myTheme`.
+```javascript
+<ThemeProvider theme={myTheme}>
+   <DefaultButton text="DefaultButton" />
+   <PrimaryButton text="PrimaryButton" />
+   <Toggle label="Enabled" />
+   <Toggle label="Disabled" disabled={true} />
+</ThemeProvider>
+```
