@@ -34,7 +34,7 @@
 * [Bootstrap: Front-end UI toolkit](https://react-bootstrap.github.io/getting-started/introduction)
 * Be aware of the different versions of Bootstrap and the difference between Bootstrap and React-Bootstrap
 
-### React Hooks Intro
+### React Hooks for UI
 
 * [React Hooks](https://reactjs.org/docs/hooks-overview.html) are sometimes used in React UI components
 
@@ -54,7 +54,6 @@ RABBIT HOLE WARNING: Can't find the component that you need in these lists? Chec
 
 * [Lottiefiles.com](https://lottiefiles.com)
 * [An example of using Lottie in React](https://lottiefiles.com/blog/working-with-lottie/how-to-use-lottie-in-react-app)
-* [Another example of using Lottie in React](https://dev.to/proiacm/lottie-animations-for-react-1c9l)
 * [Lottie editor](https://edit.lottiefiles.com/)
 
 ## Choosing a UI Component Library
@@ -92,7 +91,7 @@ Pick and choose a component from [here](https://react-bootstrap.github.io/compon
 * Install react-bootstrap using `npm install react-bootstrap bootstrap@4.6.0`. We will use Bootstrap 4.6.0.
 * Install Holder.js `npm install holderjs`. We will use [holder.js](http://holderjs.com/) to render image placeholders entirely in the browser. Placeholders can have custom colors, fonts, resizing behavior, and rendering engine (Canvas/SVG).
 * Install react-router-dom `npm install react-router-dom` to run our demo example as it uses React Router.
-* The example uses pictures from https://picsum.photos.  
+* The example uses sample pictures from https://picsum.photos.  
 
 ### Imports
 
@@ -124,7 +123,7 @@ import { Image } from 'react-bootstrap';
 import myimage from "../images/myimage.png";
 ```
 
-Be sure to check the path!
+Be sure to check the path! Lots of missing images come from errors in the path.
 
 ### Looking at some components
 
@@ -177,6 +176,14 @@ Nav is shared by all navigation tabs. Each navigation tab is a Nav.Item that con
               </Navbar>
 ```
 
+Larger screens
+
+![navbar large](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%203/images/ENG3.5/Bootstrap-navbar-large.png)
+
+Smaller screens
+
+![navbar small](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%203/images/ENG3.5/Bootstrap-navbar-small.png)
+
 #### Button
 
 `variant` is used to style a button.
@@ -186,6 +193,8 @@ import { Button } from "react-bootstrap";
 ...
 <Button variant="primary" onClick={this.saveDate}>Save the date!</Button>
 ```
+
+![button](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%203/images/ENG3.5/Bootstrap-button.png)
 
 Other examples:
 
@@ -211,6 +220,7 @@ import { Alert } from 'react-bootstrap';
    The date is saved!
 </Alert >
 ```
+![alert](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%203/images/ENG3.5/Bootstrap-alert.png)
 
 #### Image
 
@@ -220,6 +230,7 @@ import myimage from "../images/myimage.png";
 ...
 <Image src={myimage} className="border border-primary" roundedCircle />
 ```
+![image](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%203/images/ENG3.5/Bootstrap-image.png)
 
 #### Carousel
 
@@ -269,6 +280,8 @@ import { Carousel } from 'react-bootstrap';
 ```
 
 A nice tutorial is available [here](https://www.freakyjolly.com/react-bootstrap-carousel-example-tutorial/).
+
+![carousel](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%203/images/ENG3.5/Bootstrap-carousel.png)
 
 ## Lottie
 
@@ -337,6 +350,8 @@ const LottieAnimation = (props) => {
 
 export default LottieAnimation;
 ```
+
+![lottie](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%203/images/ENG3.5/Bootstrap-lottie.png)
 
 You can edit lotties in the [editor](https://lottiefiles.com/editor).
 

@@ -73,6 +73,8 @@ Update your Team project for YourShare to identify any new work items (GitHub Is
 
 [The already done spec for YourShare is available here](../Reference/Sample%20spec%20-%20YourShare.md)
 
+<!-- 
 ## Post-session (60 minutes)
 
 - View the post-session [here](../../../wiki/[ENG3.0]-Adaptive-layouts)
+-->

@@ -47,7 +47,7 @@ Check-in on where your team is in understanding the spec process. Topics to cove
 * The spec brings together work from all phases of the design lifecycle. From their definition of the problem statement, to customer research, SWOT analysis, it all comes together in the spec.
 * Discuss the engineering work break down using the prioritized list of user scenarios from the walkthrough. For the engineering work there should be a screen and a technical description of how it's built.
 * Talk about how the team is working on the spec together. Everyone should write some portion of the spec and do engineering work break down.
-* If they're still working on the walk though, no problem. That piece can come last.
+* If they're still working on the walk through, no problem. That piece can come last.
 
 The spec introduces metrics through goals. The NTs think through how they'll measure success in whether the app is meeting the user needs. We don't have too much time in the program to spend on metrics and measuring outcomes. This is a good chance to dive in and bring the real world engineering.
 
@@ -55,14 +55,13 @@ The spec introduces metrics through goals. The NTs think through how they'll mea
 * In the spec process help NTs pick solid engagement metrics.
 * There's not a focus on funding or revenue in product development curriculum. We don't want this to block big ideas from the get go and time is limited in what we can cover. Future opportunities in the spec is a good place for NTs to include this. Stakeholders might ask questions on this topic. Have a discussion at some point this week and jump start some thinking on business models - ads, subscriptions, freemium. Again, not a focus of the program but an important consideration for product managers and a real world thing.
 
-The goal is spec sign-off by end of Tuesday, 7/20. For sign-off specs must:
+The goal is spec sign-off by end of Tuesday, 7/19. For sign-off specs must:
 
 * Have all sections
 * Have the problem statement well articulated
 * Clearly breakdown the work with UX mock, engineering description, and who's building what
      * Everyone should have a core engineering contribution
      * Everyone should have an engineering stretch goal
-* Be in OneNote or a Word document. It should be saved in their team folder.
 * Have contributions from everyone.
 * Once ready, both coaches should say so and post in the team's team channel that they sign-off.
 

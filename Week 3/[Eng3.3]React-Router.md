@@ -1,6 +1,6 @@
 # React Router
 
-## Week 3, Lesson 5
+## Week 3, Lesson 3
 
 React router is a library that allows you to handle routes in a web app, using dynamic routing. Dynamic routing takes place as the app is rendering on your machine.
 
@@ -39,7 +39,7 @@ There are three primary categories of components in React Router:
 
 * [ ] First, install create-react-app and make a new project with it. ```npx create-react-app demo-app```
 * [ ] Install React Router from the public npm registry with either `npm or yarn`. Since we’re building a web app, we’ll use react-router-dom
-```npm install react-router-dom```
+```npm install react-router-dom@5.3.3``` We are using 5.3.3 version.
 
 ### Example 1
 
@@ -144,8 +144,8 @@ After adding navigation you will see the routes are rendered on the screen. if y
 A `<Switch>` looks through its children `<Route>s` and renders the first one that matches the current URL when path matches otherwise it fallbacks to the not found component..
 
 ```JSX
-<Switch>
-    <Router>
+<Router>
+  <Switch>
     <Route exact path="/">
             <Home />
         </Route> 
@@ -154,9 +154,20 @@ A `<Switch>` looks through its children `<Route>s` and renders the first one tha
         </Route>
         <Route path="/users">
             <Users />
-        </Route>    
-    </Router>
-<Switch>
+        </Route>
+        <Route>
+            <PageNotFound />
+        </Route>
+  </Switch>
+</Router>
+```
+
+We'll need to define the `PageNotFound` component, too:
+
+```JSX
+function PageNotFound() {
+  return <h2>Page not found!</h2>;
+}
 ```
 
 Still in our index.js file, we are going to wrap our App component with the Router component.
@@ -207,6 +218,13 @@ First we need to make sure to add react-bootstrap to the project node modules.
 
 ```JSX
 npm install react-bootstrap bootstrap@4.6.0
+```
+
+At the top of your App.js file you'll want to include the following:
+
+```JSX
+import 'bootstrap/dist/css/bootstrap.min.css'; // without this the navbar won't look right (or work :) )
+import {Navbar, Nav, NavDropdown} from "react-bootstrap"
 ```
 
 ### React Navbar

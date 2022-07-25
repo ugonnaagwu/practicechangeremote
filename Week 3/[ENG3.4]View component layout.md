@@ -255,6 +255,7 @@ In the case of `<Stack/>`, you can use it to neatly "stack" children components 
 
 Continue coding on the *Layout* Exercise Stretch Goals. You may also review the following.
 
+<!--
 # Material Not Used
 
 ### Layout using an Bootstrap Grids (10 minutes)
@@ -418,3 +419,4 @@ Setting a child's flex to an integer makes it try to fill as much of the contain
 This means if all the children's flex is set to 1 they will take up an equal amount of space. If a child is set to 2 and the rest are 1, it will take up twice the amount of space.
 
 ![FlexGrowShrink](images/flex-grow.svg)
+-->
