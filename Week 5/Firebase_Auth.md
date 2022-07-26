@@ -117,16 +117,42 @@ Even though this runs through an example app, you still need to complete an OAut
    ![](firebase_auth_assets/firebase_auth_oath_consent_adtl_info.png)
 9. You will now see a summary page. You can now use Firebase Auth in your application!
 
-### Setting up your React app
+### Trying out your React app
 
 1. [Take a look at the sample app](https://github.com/tnt-summer-academy/Samples/tree/main/Week_3/firebase_auth)
 2. Paste your Firebase app config (aka, your API keys) into the App.js file, replacing the placeholder.
 3. Run the app.
 4. Create an account. Once you do, you will now be signed in.
+   1. NOTE: You must use an email address for the username, and a strong password.
+   2. The code uses console.log to print out errors so you can see the results of *not* using these by showing the dev tools' console
 5. Look under the users tab of the Firebase Auth service, you will now see the account there.  (If the page was already open *before* you created the new user account then you will need to refresh the page to see the change - to see the new user account)
 6. If you press 'Sign Out' in the app, you will return to the sign in page.
 7. Now, if you attempt to sign back in, you will be routed back to the welcome page.
 8. To see that this Auth is actually working, stop running the React App and restart it. Your login credentials should be saved.
+
+### Overview of the source code
+
+Essentially: we collect up username (email address) and password using an on-page form.  Our JavaScript code must then call methods on Firebase to see if the username/password actually works to log in.  If it does then our code will decide to show the "Welcome" page and if the user's credentials (username/password) do not work then our code must instead decide to show the page that asks for the credentials.  NOTE: This does mean that if we code this up wrong our code might accidentally show the private Welcome page to someone who's not actually logged in, so be careful!
+
+
+
+### Tour of the source code
+
+1. Start w/ App.js
+   - Note that we could/should put the authentication stuff into myFirebase, but instead we're going to set it up separately.
+   - We're using React Router (Version 5) to decide what to show on the page
+     - Route is the normal, anyone-can-see-this page.
+     - PrivateRoute is a custom component that we created.  It will refuse to show the page UNLESS the user has logged in.  PrivateRoute knows whether you've logged in by asking the Firebase Authentication library/component.
+   - onAuthStateChanged exists to tell React to re-render the page if we log in or log out.  We pass this to the two pages (CredentialsPage and WelcomePage) so that they can trigger a re-render.
+     - NOTE: This means that each page must call our App.js/onAuthStateChanged whenever the user logs in / logs out / creates a new account / etc (in addition to actually using Firebase to log in / log out / etc)
+2. Routes/PrivateRoute.js
+   - If the Firebase Auth produces a user object then show the private page, otherwise redirect back to /
+   - Let's see how the Auth class works
+3. Auth/Auth.js
+   - Call the Firebase methods to check if the user is authenticated (logged in) or not.
+   - If the user has logged in then we then try to go to the `/welcome` page using the `src/History.js` file.
+     - (This should probably be done elsewhere, so that could use these routines to log in and the rest of the app can figure out where the person should actually go)
+   - (Remember that whoever calls these must call onAuthStateChange in order to get React to re-render the page afterwards)
 
 # MISC
 
