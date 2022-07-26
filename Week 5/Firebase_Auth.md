@@ -119,7 +119,7 @@ Even though this runs through an example app, you still need to complete an OAut
 
 ### Trying out your React app
 
-1. [Take a look at the sample app](https://github.com/tnt-summer-academy/Samples/tree/main/Week_3/firebase_auth)
+1. [Take a look at the sample app]([https://github.com/tnt-summer-academy/Samples/tree/main/Week_3/firebase_auth](https://github.com/tnt-summer-academy/Samples/tree/main/Week_5/firebase_auth))
 2. Paste your Firebase app config (aka, your API keys) into the App.js file, replacing the placeholder.
 3. Run the app.
 4. Create an account. Once you do, you will now be signed in.
