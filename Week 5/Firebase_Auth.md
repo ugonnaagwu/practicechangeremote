@@ -104,7 +104,7 @@ Even though this runs through an example app, you still need to complete an OAut
 3. Once you've opened the "APIs and Services" panel you should make sure that you've got the correct app selected, as indicated at the top of the page.  If that's not the app you want (for example, if you created several Firebase projects and the one you're currently using isn't te one listed there) then you should click on the down-arrow next to the name of the app.
    ![](/Users/mike/Desktop/Curriculum-2022/Week%205/firebase_auth_assets/ChooseYourApp.png)
    1. Depending on how many Firebase projects (and what Google considers to be 'recent') you may benefit from clicking on the 'All' tab:
-      ![](/Users/mike/Desktop/Curriculum-2022/Week%205/firebase_auth_assets/GoogleConsoleShowAllApps.png)
+      ![](./firebase_auth_assets/GoogleConsoleShowAllApps.png)
 4. Configure your consent screen for the app
    ![](firebase_auth_assets/firebase_auth_oath_consent_get_started.png)
 5. Select the user type *External* and save
@@ -134,5 +134,5 @@ Even though this runs through an example app, you still need to complete an OAut
 
 [JavaScript and React Context](https://www.carlrippon.com/react-context-with-JavaScript-p1/)
 
-// The official docs:
-// https://firebase.google.com/docs/web/setup?authuser=0#node.js-apps
+The official docs:
+https://firebase.google.com/docs/web/setup?authuser=0#node.js-apps
