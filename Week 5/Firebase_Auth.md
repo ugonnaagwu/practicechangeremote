@@ -24,7 +24,7 @@ Placeholder for Firebase Auth
 
 ### Let's look at Firebase:
 
-1. [There's an example solution available in the Samples folder](https://github.com/tnt-summer-academy/Samples/tree/main/Week_3/firebase_auth); you'll need to update the FirebaseConfig in src/App.js with the info for your particular Firebase instance (otherwise you'll receive *400* errors for not having a valid API key)
+1. [There's an example solution available in the Samples folder](https://github.com/tnt-summer-academy/Samples/tree/main/Week_5/firebase_auth); you'll need to update the FirebaseConfig in src/App.js with the info for your particular Firebase instance (otherwise you'll receive *400* errors for not having a valid API key)
 
 2. [Sign up for Firebase on their website.](https://firebase.google.com/)
    (It's free)
@@ -67,7 +67,11 @@ Try to add the Firebase Auth to your project
 
 ### Auth Providers and Enabling Them
 
-You can use a whole host of third-party sign-in options with Firebase Auth. Some notable ones:
+Once you've gotten the sample React app configured (by editting the App.js file in VSCode) you can open the page for Authentication in the Firebase website by clicking on the 'Home' button near the top of the left-most column, and then clicking on the 'Authentication' panel, as pictured here.  
+
+<img title="" src="./firebase_auth_assets/WhereIsFirebaserAuth.png" alt="image-20200725225822787" style="zoom:50%;">
+
+On the next page you can then click on the 'Get Started' button and it'll show you the list of authentication providers that you might use.  You can use a whole host of third-party sign-in options with Firebase Auth. Some notable ones:
 
 - Microsoft
 - Github
@@ -82,7 +86,7 @@ For the purposes of this outline, we will be sticking to *email/password authent
 
 #### Enable a specific provider (email)
 
-1. Click on the email/password provider from the list of sign-in providers
+1. Click on the **Email/Password** provider from the list of sign-in providers
 
 2. Toggle the switch to "Enable"
    ![](firebase_auth_assets/firebase_auth_email_setup.png)
@@ -94,20 +98,24 @@ For the purposes of this outline, we will be sticking to *email/password authent
 
 Even though this runs through an example app, you still need to complete an OAuth consent form in order to use Firebase Auth. Normally you would fill out and complete this thoroughly in order to publish your app and help the reviewers approve your application. However, we will be doing the bare minimum. This will allow us to use Auth for test purposes. If we were to publish this project to the web, we would need to completely fill out the OAuth consent form in order to pass the external review teams.
 
-1. Head over to the Google Cloud Platform Console. Do an internet search to get there, since there is no immediate access from the Firebase portal.
+1. Head over to the Google Cloud Console. [Do an internet search to get there](https://www.bing.com/search?q=google%20cloud%20console&qs=n&form=QBRE&=%25eManage%20Your%20Search%20History%25E&sp=-1&pq=google%20cloud%20console&sc=6-20&sk=&cvid=05E08C7EFF62421AB9E47E5AFCDEDADD&ghsh=0&ghacc=0&ghpl=), since there is no immediate access from the Firebase portal.
 2. Click *APIs and Services* from the menu
    ![](firebase_auth_assets/firebase_auth_gcp_menu.png)
-3. Configure your consent screen for the app
+3. Once you've opened the "APIs and Services" panel you should make sure that you've got the correct app selected, as indicated at the top of the page.  If that's not the app you want (for example, if you created several Firebase projects and the one you're currently using isn't te one listed there) then you should click on the down-arrow next to the name of the app.
+   ![](/Users/mike/Desktop/Curriculum-2022/Week%205/firebase_auth_assets/ChooseYourApp.png)
+   1. Depending on how many Firebase projects (and what Google considers to be 'recent') you may benefit from clicking on the 'All' tab:
+      ![](/Users/mike/Desktop/Curriculum-2022/Week%205/firebase_auth_assets/GoogleConsoleShowAllApps.png)
+4. Configure your consent screen for the app
    ![](firebase_auth_assets/firebase_auth_oath_consent_get_started.png)
-4. In the app registration screen, add your contact email to the required spots. Normally you would fill this out completely so when someone does "Sign In With...", they are shown who you are, what you want to access, your terms of service, and privacy policy. We can skip most of this since this isn't going to be published online, but in standard development using OAuth YOU MUST FILL THIS OUT COMPLETELY.
-   ![](firebase_auth_assets/firebase_auth_oath_consent_registration.png)
 5. Select the user type *External* and save
    ![](firebase_auth_assets/firebase_auth_oath_consent_type.png)
-6. The scopes page is how you can configure access to particular data with a given token. For now, we can skip this.
+6. In the app registration screen, add your contact email to the required spots. Normally you would fill this out completely so when someone does "Sign In With...", they are shown who you are, what you want to access, your terms of service, and privacy policy. We can skip most of this since this isn't going to be published online, but in standard development using OAuth YOU MUST FILL THIS OUT COMPLETELY.
+   ![](firebase_auth_assets/firebase_auth_oath_consent_registration.png)
+7. The scopes page is how you can configure access to particular data with a given token. For now, we can skip this.
    ![](firebase_auth_assets/firebase_auth_oath_consent_scopes.png)
-7. The additional email page is for OAuth reviewers to get more information about your use of OAuth before they approve or reject your use. We can skip filling this out since it doesn't apply to us, but if you were to fully integrate OAuth, you would normally be required to fill out all this information so your usage can easily pass review.
+8. The additional email page is for OAuth reviewers to get more information about your use of OAuth before they approve or reject your use. We can skip filling this out since it doesn't apply to us, but if you were to fully integrate OAuth, you would normally be required to fill out all this information so your usage can easily pass review.
    ![](firebase_auth_assets/firebase_auth_oath_consent_adtl_info.png)
-8. You will now see a summary page. You can now use Firebase Auth in your application!
+9. You will now see a summary page. You can now use Firebase Auth in your application!
 
 ### Setting up your React app
 
@@ -115,7 +123,7 @@ Even though this runs through an example app, you still need to complete an OAut
 2. Paste your Firebase app config (aka, your API keys) into the App.js file, replacing the placeholder.
 3. Run the app.
 4. Create an account. Once you do, you will now be signed in.
-5. Look under the users tab of the Firebase Auth service, you will now see the account there.
+5. Look under the users tab of the Firebase Auth service, you will now see the account there.  (If the page was already open *before* you created the new user account then you will need to refresh the page to see the change - to see the new user account)
 6. If you press 'Sign Out' in the app, you will return to the sign in page.
 7. Now, if you attempt to sign back in, you will be routed back to the welcome page.
 8. To see that this Auth is actually working, stop running the React App and restart it. Your login credentials should be saved.
