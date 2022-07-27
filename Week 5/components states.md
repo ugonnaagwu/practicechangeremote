@@ -128,7 +128,7 @@ In the code below,
       </House>
 ```
 
-For Room to display its props called name, we use **props.name** withing a `<div>` tag and with _{}_. 
+For Room to display its props called name, we use **props.name** within a `<div>` tag and with _{}_. 
 
 ```
 let Room = (props) => (
