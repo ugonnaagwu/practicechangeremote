@@ -480,3 +480,5 @@ Reference: https://dev.to/ruppysuppy/redux-vs-context-api-when-to-use-them-4k3p
 ![reduxrecoil](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%205/components_states_assets/recoilversusredux.png)
 
 Reference:https://javascript.plainenglish.io/moving-from-redux-to-recoil-42aa9d9cfaad
+
+![reduxrecoiltable](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%205/components_states_assets/reduxrecoiltable.png)
