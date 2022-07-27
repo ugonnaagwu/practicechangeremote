@@ -97,7 +97,7 @@ Usage: `<Hello></Hello>` or `<Hello />`
 
 **Is the use of function components the new standard?**
 
-## Class Components, Props, Children and States 
+## Class Components and States 
 
 Review of the counter example.
 
