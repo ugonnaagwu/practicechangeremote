@@ -482,3 +482,5 @@ Reference: https://dev.to/ruppysuppy/redux-vs-context-api-when-to-use-them-4k3p
 Reference:https://javascript.plainenglish.io/moving-from-redux-to-recoil-42aa9d9cfaad
 
 ![reduxrecoiltable](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%205/components_states_assets/reduxrecoiltable.png)
+
+Reference: https://blog.joshsoftware.com/2021/12/07/can-recoil-replace-redux-state-management-in-react/
