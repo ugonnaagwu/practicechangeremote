@@ -20,19 +20,24 @@
 2 hours
 
 * [10 Minutes]: Review of class and function components
-* [20 Minutes]: Review of states and state hooks via the counter demo
-* [10 Minutes]: More general solutions for state management
+* [20 Minutes]: Review of states and state hooks 
+* [5 Minutes]: More general solutions for state management
 * [30 Minutes]: Recoil, atom, selectors and Recoil hooks
 * [5 Minutes]: Getting the demo code and setting up
 * [10 minutes]: Example 1 - Number of characters in an input string
-* [30 Minutes]: Example 2 - Todolist with filter and stats 
+* [20 Minutes]: Example 2 - Todolist with filter and stats 
+* [10 Minutes]: Other solutions - React Redux and Context, comparison
 * [Remainder of the time]: Apply the knowledge in your own app
   
 ## References
 
+* [React components](https://reactjs.org/docs/components-and-props.html)
 * [React State](https://reactjs.org/docs/faq-state.html)
 * [Recoil](https://recoiljs.org)
 * [Recoil for beginners](https://youtu.be/tMQaxZl_MqY)
+* [Redux basic tutorial](https://redux.js.org/basics/basic-tutorial)
+* [Videos on React with Redux - Parts 1 to 11](https://www.youtube.com/watch?v=DiLVAXlVYR0)
+* [React Context](https://reactjs.org/docs/context.html)
 
 ## Class and Function Components
 
