@@ -41,15 +41,58 @@
 
 ## Class and Function Components
 
-**Class components**
+A component is an object that returns a Javascript XML Element (JSX Element) which is rendered on the screen. Components are the building blocks of a React App, independent and reusable, much like HTML elements are for web pages.
 
-**Function components**
+Key components ideas:
+- Stateless / Stateful Components
+- Component Data: _Properties_ (props), _State_, _Children_
+- Types of Components: _Class vs. Function_
+- Component Lifecycle Methods
+
+### Class components**
+
+Class components are called **stateful** components.
+
+1. Render (required): This method returns the JSX element to be displayed by the class. It runs whenever the component's view updates.
+2. Properties (optional): They are arguments passed into the component from its parent components. They cannot be changed by the component.
+3. State (optional): It only exists within the component. Changing it causes the component to update.
+4. Children (optional): Components nested inside the parent's JSX tags.
+5. Besides _render()_, class can include a constructor, lifecycle method calls and other additional methods.
+
+     class Hello extends React.Component {
+
+        render() {
+            return ( <div>Hello World</div>)
+        }
+      }
+
+Usage: `<Hello></Hello>` or `<Hello />`
+
+### Function components
+
+Function components are called **stateless** components.
+
+1. Originally simple, stateless components; expected to return the JSX element to be displayed.
+2. Properties (optional): These arguments are passed in from the component's parent similarly to passing parameters to a function. They cannot be changed in the component.
+3. UseState: A hook function that permits to provide a state to a function component. It returns a state variable, giving function components a way to manipulate a state the way class components do.
+
+**Standard Function Syntax**
+
+    function Hello() {
+
+        return <div>Hello World</div>
+
+    }
+
+**Lambda Function (Arrow Function) Syntax**
+
+    let Hello = () => <div>Hello World</div>
 
 **When to use class or function components?**
 
 **Is the use of function components the new standard?**
 
-## Class Components and States 
+## Class Components, Props and States 
 
 Review of the counter example.
 
