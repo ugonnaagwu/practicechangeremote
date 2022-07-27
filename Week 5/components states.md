@@ -1,5 +1,5 @@
 
-# Components, States and More
+# Components, States and Solutions for State Management
 
 # Week 5 - Review Session 
 
