@@ -38,7 +38,16 @@
 * [Videos on React with Redux - Parts 1 to 11](https://www.youtube.com/watch?v=DiLVAXlVYR0)
 * [React Context](https://reactjs.org/docs/context.html)
 
+## Code
+
+* Components and states: [house-app sample](https://github.com/tnt-summer-academy/Samples/tree/main/Week_5/house-app)
+* Recoil [recoil-todo-javascript](https://github.com/tnt-summer-academy/Samples/tree/main/Stretch/recoil-todo-javascript)
+
 ## Class and Function Components
+
+### Code
+
+The code for this session is available [here](https://github.com/tnt-summer-academy/Samples/tree/main/Week_5/house-app)
 
 ### Components
 
@@ -268,7 +277,7 @@ Recoil is a state management solution. There are others. For example, Redux prov
 
 ### Code
 
-The code for this session is available [here](https://github.com/tnt-summer-academy/Samples/tree/main/Stretch/recoil-todo-javascript)
+The code for this part is available [here](https://github.com/tnt-summer-academy/Samples/tree/main/Stretch/recoil-todo-javascript)
 
 ### Installation
 
