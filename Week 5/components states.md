@@ -101,8 +101,8 @@ Usage: `<Hello></Hello>` or `<Hello />`
 
 In the code below, 
 
-- Room, CounterClass and CounterLambda components are **children** of House.
-- name is a **props** of Room.
+- name is a **props** of Room
+- Room, CounterClass and CounterLambda components are **children** of House
 
 ```
      <House>
@@ -114,11 +114,24 @@ In the code below,
       </House>
 ```
 
-For House to render its children, we need to use props.children within a <div> tag. 
+For Room to display its props called name, we use **props.name** withing a `<div>` tag and with _{}_. 
+
+```
+let Room = (props) => (
+  <div>
+    <div>{props.name}</div>
+    <div>{props.children}</div>
+  </div>
+);
+```
+
+For House to render its children (whose number and types vary), we need to use **props.children** within a `<div>` tag and with _{}_. 
 
 ```
 let House = (props) => <div>{props.children}</div>;
 ```
+
+If we would like the state of a component to be passed to a child, we will need to add the state as a props in the parent.
 
 ## Class Components and States 
 
