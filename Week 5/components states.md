@@ -1,26 +1,32 @@
 
-# Components, States and Solutions for State Management
+# Week 5 - Review Session
 
-# Week 5 - Review Session 
+# Components, States and Solutions for State Management
 
 ## Learning objectives
 
 * TNTs will review class and function components
-* TNTs will states and state hooks
+* TNTs will review states and state hooks
 * TNTs will learn about state management in a React app
-* TNTs will understand why we need a more general solution to deal with states
+* TNTs will understand why we need a more general solution to manage states
 * TNTs will learn what Recoil is
 * TNTs will experiment with Recoil
+* TNTs will learn about other solutions and how they compare to Recoil
+
+**Warning** You are encouraged to learn about state management with Recoil, Redux or Context, but you may not have the time to implement these solutions in your app prototype.
 
 ## Time required and pace
 
-* [10 Minutes]: Review of component state
-* [10 Minutes]: Why do we need Recoil?
+2 hours
+
+* [10 Minutes]: Review of class and function components
+* [20 Minutes]: Review of states and state hooks via the counter demo
+* [10 Minutes]: More general solutions for state management
 * [30 Minutes]: Recoil, atom, selectors and Recoil hooks
-* [5 Minutes]: Getting the code and setting up
+* [5 Minutes]: Getting the demo code and setting up
 * [10 minutes]: Example 1 - Number of characters in an input string
 * [30 Minutes]: Example 2 - Todolist with filter and stats 
-* [Remainder of the time]: Use React Router in your own app and get help
+* [Remainder of the time]: Apply the knowledge in your own app
   
 ## References
 
@@ -29,6 +35,10 @@
 * [Recoil for beginners](https://youtu.be/tMQaxZl_MqY)
 
 ## Class and Function Components
+
+**Class components**
+
+**Function components**
 
 **When to use class or function components?**
 
@@ -41,6 +51,8 @@ Review of the counter example.
 ## Function Components and State Hooks
 
 Review of the counter example.
+
+## Conversting Class/Function Components to Function/Class Components
 
 ## Why do we need more general solutions to deal with states?
 
