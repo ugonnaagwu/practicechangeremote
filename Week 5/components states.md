@@ -59,12 +59,13 @@ Class components are called **stateful** components.
 4. Children (optional): Components nested inside the parent's JSX tags.
 5. Besides _render()_, class can include a constructor, lifecycle method calls and other additional methods.
 
-     class Hello extends React.Component {
-
-        render() {
-            return ( <div>Hello World</div>)
-        }
-      }
+```
+class Hello extends React.Component {
+   render() {
+      return (<div>Hello World</div>)
+   }
+}
+```
 
 Usage: `<Hello></Hello>` or `<Hello />`
 
@@ -84,9 +85,13 @@ Function components are called **stateless** components.
 
     }
 
+Usage: `<Hello></Hello>` or `<Hello />`
+
 **Lambda Function (Arrow Function) Syntax**
 
     let Hello = () => <div>Hello World</div>
+
+Usage: `<Hello></Hello>` or `<Hello />`
 
 **When to use class or function components?**
 
