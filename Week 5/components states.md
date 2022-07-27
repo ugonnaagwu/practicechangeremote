@@ -1,7 +1,7 @@
 
-# Stretch: Recoil
+# Components, States and More
 
-## Week 5
+# Week 5 - Stretch Session 
 
 ## Learning objectives
 
