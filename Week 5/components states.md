@@ -55,7 +55,7 @@ Class components are called **stateful** components.
 
 1. Render (required): This method returns the JSX element to be displayed by the class. It runs whenever the component's view updates.
 2. Properties (optional): They are arguments passed into the component from its parent components. They cannot be changed by the component.
-3. State (optional): It only exists within the component. Changing it causes the component to update.
+3. State (optional): It only exists within the component. Changing it causes the component to update and render. The state of a component saves different information about that component. 
 4. Children (optional): Components nested inside the parent's JSX tags.
 5. Besides _render()_, class can include a constructor, lifecycle method calls and other additional methods.
 
@@ -97,9 +97,42 @@ Usage: `<Hello></Hello>` or `<Hello />`
 
 **Is the use of function components the new standard?**
 
+## Props and Children
+
+In the code below, 
+
+- Room, CounterClass and CounterLambda components are **children** of House.
+- name is a **props** of Room.
+
+```
+     <House>
+        <Room name="Bedroom"></Room>
+        <Room name="Living room"></Room>
+        <Room name="Kitchen"></Room>
+        <CounterClass></CounterClass>
+        <CounterLambda></CounterLambda>
+      </House>
+```
+
+For House to render its children, we need to use props.children within a <div> tag. 
+
+```
+let House = (props) => <div>{props.children}</div>;
+```
+
 ## Class Components and States 
 
-Review of the counter example.
+Review of the counter example: _CounterClass_.
+
+Things to review in the code below:
+- Use of a constructor where the state is defined and initialized
+- Declaration of the state with an object literal
+- Required _render_ function (instance function/method)
+- Function increase defined in the class (instance function/method) 
+- Function increased called with _this.increase_
+- Access to the state with _this.state_
+- Display the state with _{this.state.count}_ (_{}_ are required)
+- Use of _setState_ with a lambda function to change the state (required). _setState_ will trigger the rendering of the component
 
 ```
 import React from "react";
@@ -131,7 +164,24 @@ export default CounterClass;
 
 ## Function Components and State Hooks
 
-Review of the counter example.
+A **Hook** is a special function that lets you “hook into” React features. For example, **useState** is a Hook that lets you add React state to function components. 
+
+If you write a function component and realize you need to add some state to it, previously you had to convert it to a class. Now you can use a Hook inside the existing function component. 
+
+**useState** returns a pair represented by an array of size 2, composed of the current state and a function that updates it. This is called array destructuring.
+
+In a program, we can use several useState hooks. useState hooks are defined at the top of the function. They cannot be in a loop or if statement.
+
+Review of the counter example: _CounterLambda_.
+
+Things to review in the code below:
+- Declaration of the _useState_ hook with _count_ as the state variable and _setCount_ as the function to update the state. _count_ is initialized with _0_
+- _useState_ and _increase_ are inside _{}_ in the lambda function
+- Need to use _return_ to render the component
+- Display the counter with _{count}_ (_{}_ are required)
+- Function increase defined in the function 
+- Function increased called with _increase_ only (no use of _this_)
+- Use of _setCount_ with arguments to change the state. _setCount_ will trigger the rendering of the component
 
 ```
 import React, { useState } from "react";
@@ -154,7 +204,9 @@ export default CounterLambda;
 
 ```
 
-## Conversting Class/Function Components to Function/Class Components
+### Comparing the 2 Implementations of Counter
+
+[picture to integrate]
 
 ## Why do we need more general solutions to deal with states?
 
