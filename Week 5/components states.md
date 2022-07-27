@@ -1,13 +1,15 @@
 
 # Components, States and More
 
-# Week 5 - Stretch Session 
+# Week 5 - Review Session 
 
 ## Learning objectives
 
-* TNTs will understand why we need Recoil
-* TNTs will learn what Recoil is
+* TNTs will review class and function components
+* TNTs will states and state hooks
 * TNTs will learn about state management in a React app
+* TNTs will understand why we need a more general solution to deal with states
+* TNTs will learn what Recoil is
 * TNTs will experiment with Recoil
 
 ## Time required and pace
