@@ -40,6 +40,8 @@
 
 ## Class and Function Components
 
+### Components
+
 A component is an object that returns a Javascript XML Element (JSX Element) which is rendered on the screen. Components are the building blocks of a React App, independent and reusable, much like HTML elements are for web pages.
 
 Key components ideas:
@@ -93,9 +95,9 @@ Usage: `<Hello></Hello>` or `<Hello />`
 
 Usage: `<Hello></Hello>` or `<Hello />`
 
-**When to use class or function components?**
+### When to use class or function components?
 
-They're both equally usable for any components that you want to make, so for the TNT program it's probably best for each team to pick one and then try to be consistent about using that one format AND make sure that you're able to 'translate' from class components to function components and back (so that you can convert examples that you find online into whichever one that your team has decided on)
+They're both equally usable for any components that you want to make, so for the TNT program it's probably best for each team to pick one and then try to be consistent about using that one format AND make sure that you're able to 'translate / convert' from class components to function components and back (so that you can convert examples that you find online into whichever one that your team has decided on)
 
 Here are a couple of good articles comparing and contrasting the two approaches:
 
@@ -103,11 +105,13 @@ Here are a couple of good articles comparing and contrasting the two approaches:
 
 2. [Differences between Functional Components and Class Components in React - GeeksforGeeks](https://www.geeksforgeeks.org/differences-between-functional-components-and-class-components-in-react/) - this has a nice table comparing function and class components side by side.
 
-**Is the use of function components the new standard?**
+### Is the use of function components the new standard?
 
-For a while class components were more popular than function components (because functions couldn't maintain state).  Now they can both be used for state so they will both will be used in React for the foreseeable future.
+For a while class components were more popular than function components (because functions couldn't maintain state.  Now they can both be used for state so they will both will be used in React for the foreseeable future.
 
 ## Props and Children
+
+Props are properties of components. They are passed to children and immutable.
 
 In the code below, 
 
@@ -140,8 +144,6 @@ For House to render its children (whose number and types vary), we need to use *
 ```
 let House = (props) => <div>{props.children}</div>;
 ```
-
-If we would like the state of a component to be passed to a child, we will need to add the state as a props in the parent.
 
 ## Class Components and States
 
@@ -184,6 +186,28 @@ class CounterClass extends React.Component {
 }
 
 export default CounterClass;
+```
+
+If we would like the state of a component to be passed to a child, we will need to add the state as a props in the parent.
+
+In the code below, we pass _count_ to a component _Visit1_ with a _props_ called _counter_.
+```
+class CounterClass extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { count: 0 };
+  }
+  
+  render() {
+    return (
+      <div>
+        <div>Counter - Number of visits (class version)</div>
+        <div>{this.state.count}</div>
+        <button onClick={this.increase}>+</button>
+        <Visit1 counter={this.state.count}></Visit1>
+      </div>
+    );
+  }
 ```
 
 ## Function Components and State Hooks
@@ -230,13 +254,15 @@ export default CounterLambda;
 
 ### Comparing the 2 Implementations of Counter
 
+We used the _Select to Compare_ and _Compare Selected_ utility of VS Code.
+
 ![comparing components](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%205/components_states_assets/functionclasscomponent.png)
 
 ## Why do we need more general solutions to deal with states?
 
 React components accept arbitrary inputs called props and return React elements to be rendered on the screen. Props are read-only and passed from a parent to its children. Components may also have (optional) states. State allows React components to change their rendering over time in response to user actions, network responses or anything else. State comes automatically with class components and can be added to function components using a state hook. Only the component itself can access its own state. To share states between components, the official React documentation says you need to share a piece of the state and lift it up a component that is above in the tree hierarchy and the state will be passed as props to children. This solution however comes with issues linked with maintaining the code and efficiency in terms of unnecessary re-rendering. When you need to share the state or part of it with multiple components, you need to have a scalable solution. 
 
-Recoil is a state management solution. There are others. For example, redux provides a global state to the entire application. Recoil is more efficient in that it optimize re-rendering. It is important to note that neither Redux nor Recoil are official React libraries.
+Recoil is a state management solution. There are others. For example, Redux provides a global state to the entire application. This is also the idea of Context Recoil is more efficient in that it optimize re-rendering. It is important to note that neither Redux nor Recoil are official React libraries. Context is a built-in API of React.
 
 ## Recoil
 
@@ -435,8 +461,22 @@ In a way, Redux is like Context, but with a lot more features.
 
 The upside is that Redux is very powerful, and can be used for large and/or complicated programs.
 
-The downside is that Redux is very complicated, both conceptually and syntactically.  The Redux's starting page for docs itself encourages people to ask whether they really need Redux or not  😂)
+The downside is that Redux is very complicated, both conceptually and syntactically.  The Redux's starting page for docs itself encourages people to ask whether they really need Redux or not 😂)
 
 ### Comparing Recoil / Redux and Context
 
 Recoil is a nice mid-way point between Context and Redux.  Not as complicated as Redux and yet more flexible/powerful than Context.
+
+#### Comparing Redux and Context
+
+![reduxcontext](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%205/components_states_assets/reduxversuscontext.png)
+
+![reduxcontextcode](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%205/components_states_assets/reduxversuscontextcode.png)
+
+Reference: https://dev.to/ruppysuppy/redux-vs-context-api-when-to-use-them-4k3p
+
+#### Compearing Redux and Recoil
+
+![reduxrecoil](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%205/components_states_assets/recoilversusredux.png)
+
+Reference:https://javascript.plainenglish.io/moving-from-redux-to-recoil-42aa9d9cfaad
