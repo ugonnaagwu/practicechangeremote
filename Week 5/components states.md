@@ -1,4 +1,3 @@
-
 # Week 5 - Review Session (with Some Stretch)
 
 # Components, States and Solutions for State Management
@@ -28,7 +27,7 @@
 * [20 Minutes]: Example 2 - Todolist with filter and stats 
 * [10 Minutes]: Other solutions - React Redux and Context, comparison
 * [Remainder of the time]: Apply the knowledge in your own app
-  
+
 ## References
 
 * [React components](https://reactjs.org/docs/components-and-props.html)
@@ -44,6 +43,7 @@
 A component is an object that returns a Javascript XML Element (JSX Element) which is rendered on the screen. Components are the building blocks of a React App, independent and reusable, much like HTML elements are for web pages.
 
 Key components ideas:
+
 - Stateless / Stateful Components
 - Component Data: _Properties_ (props), _State_, _Children_
 - Types of Components: _Class vs. Function_
@@ -51,7 +51,7 @@ Key components ideas:
 
 ### Class components
 
-Class components are called **stateful** components.
+Class components are called **stateful** components because they used to be the only way to create a component with state.  
 
 1. Render (required): This method returns the JSX element to be displayed by the class. It runs whenever the component's view updates.
 2. Properties (optional): They are arguments passed into the component from its parent components. They cannot be changed by the component.
@@ -71,7 +71,7 @@ Usage: `<Hello></Hello>` or `<Hello />`
 
 ### Function components
 
-Function components are called **stateless** components.
+Function components are called **stateless** components, because they used to not be able to store/change state of their own.  Nowadays React Hooks allow functions to create, use, and change their own state.
 
 1. Originally simple, stateless components; expected to return the JSX element to be displayed.
 2. Properties (optional): These arguments are passed in from the component's parent similarly to passing parameters to a function. They cannot be changed in the component.
@@ -80,9 +80,9 @@ Function components are called **stateless** components.
 **Standard Function Syntax**
 
     function Hello() {
-
+    
         return <div>Hello World</div>
-
+    
     }
 
 Usage: `<Hello></Hello>` or `<Hello />`
@@ -95,7 +95,17 @@ Usage: `<Hello></Hello>` or `<Hello />`
 
 **When to use class or function components?**
 
+They're both equally usable for any components that you want to make, so for the TNT program it's probably best for each team to pick one and then try to be consistent about using that one format AND make sure that you're able to 'translate' from class components to function components and back (so that you can convert examples that you find online into whichever one that your team has decided on)
+
+Here are a couple of good articles comparing and contrasting the two approaches:
+
+1. [React Class Component vs. Functional Component: What’s the Difference](https://www.telerik.com/blogs/react-class-component-vs-functional-component-how-choose-whats-difference)
+
+2. [Differences between Functional Components and Class Components in React - GeeksforGeeks](https://www.geeksforgeeks.org/differences-between-functional-components-and-class-components-in-react/) - this has a nice table comparing function and class components side by side.
+
 **Is the use of function components the new standard?**
+
+For a while class components were more popular than function components (because functions couldn't maintain state).  Now they can both be used for state so they will both will be used in React for the foreseeable future.
 
 ## Props and Children
 
@@ -133,11 +143,12 @@ let House = (props) => <div>{props.children}</div>;
 
 If we would like the state of a component to be passed to a child, we will need to add the state as a props in the parent.
 
-## Class Components and States 
+## Class Components and States
 
 Review of the counter example: _CounterClass_.
 
 Things to review in the code below:
+
 - Use of a constructor where the state is defined and initialized
 - Declaration of the state with an object literal
 - Required _render_ function (instance function/method)
@@ -188,6 +199,7 @@ In a program, we can use several useState hooks. useState hooks are defined at t
 Review of the counter example: _CounterLambda_.
 
 Things to review in the code below:
+
 - Declaration of the _useState_ hook with _count_ as the state variable and _setCount_ as the function to update the state. _count_ is initialized with _0_
 - _useState_ and _increase_ are inside _{}_ in the lambda function
 - Need to use _return_ to render the component
@@ -214,7 +226,6 @@ let CounterLambda = () => {
 };
 
 export default CounterLambda;
-
 ```
 
 ### Comparing the 2 Implementations of Counter
@@ -260,7 +271,7 @@ ReactDOM.render(
 ```
 
 #### Atoms
-  
+
 ##### What is an Atom?
 
 * Atoms are **units /pieces of state**. They are updatable and subscribable. They can be used in place of React local component state. If an Atom is used from multiple components, all those components share the state
@@ -301,14 +312,19 @@ ReactDOM.render(
 #### Summary
 
 * **useRecoilState(state)**
+  
   * state can be an atom or a _writeable_ selector
   * Returns a tuple where the first element is the value of state and the second element is a setter function that will update the value of the given state.
   * Subscribes the component to the given state.
+
 * **useRecoilValue(state)**
+  
   * state can be an atom or selector
   * Returns the value of the given state.
   * Subscribes the component to the given state.
+
 * **useSetRecoilState(state)**
+  
   * state is an atom or a _writeable_ selector 
   * Returns a setter function for updating the value of writeable Recoil state.  
 
@@ -342,7 +358,7 @@ The code below shows how to create and use Recoil Atoms and Selectors.
 ```
   function TextInput() {
     const [text, setText] = useRecoilState(textState);
-  
+
     const onChangeText = (event) => {
       setText(event.target.value);
     };
@@ -373,7 +389,7 @@ The code below shows how to create and use Recoil Atoms and Selectors.
   }
 ```
 
-### Example 2 - Todolist with filter and stats 
+### Example 2 - Todolist with filter and stats
 
 The code is available [here](https://github.com/tnt-summer-academy/Samples/tree/main/Stretch/recoil-todo-javascript)
 
@@ -391,8 +407,36 @@ Atoms and Selectors are depicted here:
 
 ## Are there other solutions?
 
+### [Context](https://reactjs.org/docs/context.html)
+
+From the web page: "Context provides a way to pass data through the component tree without having to pass props down manually at every level."  This is ideal for 'global' state, such as theme (dark mode vs. light mode). 
+
+If you want something deep in the tree to change the state then you can pass a function (much like with regular, top-level state).
+
+Note: The docs contain
+
+- [A good example of prop-drilling](https://reactjs.org/docs/context.html#before-you-use-context)
+
+- [A good example of passing a value to a bottom-most component *without* putting it into each of the intermediary components](https://reactjs.org/docs/context.html#when-to-use-context) 
+
 ### Redux
 
-### Context
+In a way, Redux is like Context, but with a lot more features.  
+
+- Redux also tries to let you put all your state into one place  (called the "Store")
+
+- AND it also lets you define all the possible changes that you might want to make (by defining "Actions", objects that mean something like "increment counter" or "decrement counter")
+
+- AND it lets you define how to actually make the change happen (via "Reducers", which are methods that actually make the change)
+
+- AND you need to provide some 'glue code' that actually connects the Redux-specific stuff to your state.
+
+![Diagram of how Redux parts interact](https://github.com/tnt-summer-academy/Curriculum-2022/raw/de4d806e2a19d21d7b5e0941da64d6ab6f2b569a/Stretch%20topics/archive/Redux/moreredux/%5BENG2.5%5DReduxSample.gif)
+
+The upside is that Redux is very powerful, and can be used for large and/or complicated programs.
+
+The downside is that Redux is very complicated, both conceptually and syntactically.  The Redux's starting page for docs itself encourages people to ask whether they really need Redux or not  😂)
 
 ### Comparing Recoil / Redux and Context
+
+Recoil is a nice mid-way point between Context and Redux.  Not as complicated as Redux and yet more flexible/powerful than Context.
