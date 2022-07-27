@@ -49,7 +49,7 @@ Key components ideas:
 - Types of Components: _Class vs. Function_
 - Component Lifecycle Methods
 
-### Class components**
+### Class components
 
 Class components are called **stateful** components.
 
@@ -97,13 +97,62 @@ Usage: `<Hello></Hello>` or `<Hello />`
 
 **Is the use of function components the new standard?**
 
-## Class Components, Props and States 
+## Class Components, Props, Children and States 
 
 Review of the counter example.
+
+```
+import React from "react";
+
+class CounterClass extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { count: 0 };
+  }
+
+  increase = () => {
+    console.log("increase - class version");
+    this.setState((state, props) => ({ count: this.state.count + 1 }));
+  };
+
+  render() {
+    return (
+      <div>
+        <div>Counter - Number of visits (class version)</div>
+        <div>{this.state.count}</div>
+        <button onClick={this.increase}>+</button>
+      </div>
+    );
+  }
+}
+
+export default CounterClass;
+```
 
 ## Function Components and State Hooks
 
 Review of the counter example.
+
+```
+import React, { useState } from "react";
+
+let CounterLambda = () => {
+  const [count, setCount] = useState(0);
+
+  let increase = () => setCount(count + 1);
+
+  return (
+    <div>
+      <div>Counter - Number of visits (function version)</div>
+      <div>{count}</div>
+      <button onClick={increase}>+</button>
+    </div>
+  );
+};
+
+export default CounterLambda;
+
+```
 
 ## Conversting Class/Function Components to Function/Class Components
 
