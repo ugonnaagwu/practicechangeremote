@@ -219,7 +219,7 @@ export default CounterLambda;
 
 ### Comparing the 2 Implementations of Counter
 
-[comparing components](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%205/components_states_assets/functionclasscomponent.png)
+(comparing components)[https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%205/components_states_assets/functionclasscomponent.png]
 
 ## Why do we need more general solutions to deal with states?
 
