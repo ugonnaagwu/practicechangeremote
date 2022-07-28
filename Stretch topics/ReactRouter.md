@@ -307,6 +307,8 @@ The code is available [here](https://github.com/tnt-summer-academy/Samples/tree/
 
 If you want to follow along the live demo, you can use the skeleton of the code [here](https://github.com/tnt-summer-academy/Samples/tree/main/Stretch/router-javascript-demo-skeleton).
 
+![routerdemohooks](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%205/router_assets/routerdemohooks.png)
+
 ### Example 2
 
 This is a more comprehensive example `FabShop` that presents a store selling diverse items. The app permits to register, displays all the items of the store, provides detail information on each item, and presents the developers of the app.
@@ -314,6 +316,8 @@ This is a more comprehensive example `FabShop` that presents a store selling div
 The items from the store will be retrieved from [fakeStoreApi](https://fakestoreapi.com/).
 
 The code is available [here](https://github.com/tnt-summer-academy/Samples/tree/main/Stretch/router-nav-demo).
+
+![routerfabshop](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%205/router_assets/routerfabshop.png)
 
 In this example, you will be able to practice:
 
