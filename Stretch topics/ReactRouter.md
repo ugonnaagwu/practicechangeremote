@@ -378,7 +378,7 @@ The new version of React Router is v6.
 Here are some changes that were introduced in v6:
 
 * Enhanced path pattern matching algorithm. React Router has a better algorithm for loading the best route for a particular URL, the order of defining does not really matters now
-* Bbundle size reduced by almost 58%
+* Bundle size reduced by almost 58%
 * Switch is replaced by Routes
 * exact is not needed anymore
 * useHistory is replaced by useNavigate
