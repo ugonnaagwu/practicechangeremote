@@ -3,10 +3,10 @@
 
 ## Week 5
 
-React Router is a library of navigational components. It is a declarative way of implementing navigation. The way we implemented navigation from one page to the other in YourShare using a state and props was not standard; it was highly manual. It is particular important for single-page applications developed with React. React Router enables routing from one page component to the other. Routing is the ability of showing to the user different pages based on an url or by clicking on an element. React Router allows static and dynamic routing. 
+React Router is a library of navigational components. It is a declarative way of implementing navigation. The way we implemented navigation from one page to the other in YourShare using a state and props was not standard; it was highly manual. It is particularly important for single-page applications developed with React to have a robust routing feature. React Router enables routing from one page component to the other. Routing is the ability of showing to the user different pages based on an url or by clicking on an element. React Router allows static and dynamic routing. 
 
 * Static routing means that the routes are declared as part of the app initialization before any rendering takes place.
-* Dynamic routing means that that routing takes place as the app is rendering, not outside the running app. More than one piece of dynamic data can be passed to determine the route. With dynamic routing, the app can know how to respond to any possible url.
+* Dynamic routing means that that routing takes place as the app is rendering, not outside the running app. More than one piece of dynamic data can be passed to determine the route. With dynamic routing, the app can know how to respond to any possible url. Think about showing an item information based on its id.
 
 React Router provides different routing components in the following categories: 
 
@@ -20,9 +20,12 @@ React Router provides different routing components in the following categories:
 * TNTs will experiment with dynamic routing 
 * TNTs will learn how data can be passed from one page to the next one
 * TNTs will learn about how React Router Hooks provide specific ways of handling the router state
+* TNTs will see how to use a navigation bar and implement routing with it
 * TNTs will put React Router to work 
 
 ## Time required and pace
+
+2-hour session
 
 * [10 Minutes]: Review of React Router and main components
 * [10 Minutes]: React Router hooks 
@@ -49,9 +52,9 @@ React Router provides different routing components in the following categories:
 
 ## Installation
 
-* Be sure to be in the correct directory.
+* Be sure to be in the correct directory when using the npm instructions.
 * ```npm install```
-* Install react-router-dom in the app, ```npm install react-router-dom```
+* Install react-router-dom in the app, ```npm install react-router-dom@5.3.3```
 * As we will be using Bootstrap React, we will need to install react-bootstrap ```npm install react-bootstrap bootstrap@4.6.0``` 
 * For fetching data online in the fakeStoreApi, we will need to install react-asyn ```npm install react-async --save``` 
 
@@ -94,7 +97,7 @@ Here are 2 dynamic route urls:
 
 In the dynamic routes, `/about` and `/contact` are the path and do not change. `:name` and `:city` change based on user's actions such as clicking a link or typing an input. They are `params` and can be accessed using `props.match.params.name` and `props.match.params.city`.
 
-We will be able to use: `localhost:3000/about/John` or `localhost:3000/contact/John/NYC`. The fist route has one route parameter while the other one has two.
+We will be able to use: `localhost:3000/about/John` or `localhost:3000/contact/John/NYC`. The first route has one route parameter while the other one has two.
 
 Here is a route defined using the `render` prop. All urls that do not match the routes will result in a 404 error message.
 
@@ -147,13 +150,13 @@ If we consider the url `localhost:3000/contact` or `localhost:3000/contact/John`
 We need to use `exact` if we only want to match `/contact`.
 
 ```JSX
-<Route path="/contact" component={DefaultContact} />
+<Route exact path="/contact" component={DefaultContact} />
 <Route path="/contact/:name/:city" component={Contact} />
 ```
 
 ### Links
 
-Links tell the app how to navigate between pages. `<Link>` prevents from loading the whole page. It only loads what is specified in the link. It is different from using the anchor tag `<a>`. It updated the url and renders the appropriate page.
+Links tell the app how to navigate between pages. `<Link>` prevents from loading the whole page. It only loads what is specified in the link. It is different from using the anchor tag `<a>`. It updates the url and renders the appropriate page.
 
 `<Link>` uses the prop `to` to describe the location to navigate to. 
 
@@ -363,3 +366,95 @@ The JSon of an item is the following:
     ...
  }
 ```
+
+### Router 5.3.3 versus Router 6
+
+The new version of React Router is v6. 
+
+Here are some changes that were introduced in v6:
+
+* Enhanced path pattern matching algorithm. React Router has a better algorithm for loading the best route for a particular URL, the order of defining does not really matters now
+* Bbundle size reduced by almost 58%
+* Switch is replaced by Routes
+* exact is not needed anymore
+* useHistory is replaced by useNavigate
+* Redirect is replaced by Navigate component
+
+#### Example of Routes
+
+Version 5:
+
+```
+import { Switch, Route } from "react-router-dom";
+
+<Switch>
+    <Route path="/">
+        <Home/>
+    </Route>
+    <Route exact path="/cryptocurrencies">
+        <Cryptocurrencies/>
+    </Route>
+    <Route exact path="/crypto/:coinId">
+        <CryptoDetails/>
+    </Route>
+    <Route exact path="/exchanges">
+        <Exchanges />
+    </Route>
+</Switch>
+```
+
+Version 6:
+
+```
+import { Routes, Route } from "react-router-dom";
+
+<Routes>
+   <Route path="/" element={<Home />} />
+   <Route path="/crypto/:coinId" element={<CryptoDetails />} />
+   <Route path="/cryptocurrencies" element={<Cryptocurrencies />} />
+
+   <Route path="/exchanges" element={<Exchanges />} />
+</Routes>
+```
+
+### Example of useNavigate
+
+Version 5:
+
+```
+import { useHistory } from "react-router-dom";
+
+function News() {
+  let history = useHistory();
+  function handleClick() {
+    history.push("/home");
+  }
+  return (
+    <div>
+      <button onClick={()=>{
+           history.push("/home");
+      }}>Home</button>
+    </div>
+  );
+}
+```
+
+Version 6:
+
+```
+import { useNavigate } from "react-router-dom";
+
+function News() {
+  let navigate = useNavigate();
+
+  return (
+    <div>
+      <button onClick={()=>{
+          navigate("/home");
+      }}>go home</button>
+    </div>
+  );
+}
+```
+
+More infos are available here: https://dev.to/arunavamodak/react-router-v5-vs-v6-dp0
