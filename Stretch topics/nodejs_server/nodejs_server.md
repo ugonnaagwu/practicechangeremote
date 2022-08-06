@@ -1,7 +1,5 @@
 # Using Node.js/Express.js API Server
 
-
-
 ## Learning objectives
 
 * TNTs will understand the difference between front-end and back-end components
@@ -28,7 +26,6 @@
 
 Node.js is a Javascript server engine built on top of the Chrome V8 Javascript Engine. What Node.js does is it allows you to set up an API server for anything you build to interact with. While you can use Node.js servers to return static data or responses, you can think of them as a way for your front-end application to pass the responsibility, delegation, and the working with certain requests. Some apps/websites do work by internally implementing the middleware, but it is dependent on the development team and their architectural preferences. What are some examples of reasons you would use a Node.js API server?
 
-
 Ex: Returning static information blocks, route requests to the correct service (i.e. authentication, profile info, storage, microservices), compound and modularize requests (i.e. when you send a request to the API server it has multiple endpoints that should be hit to build a response back to the client). 
 
 ### What is Express.js?
@@ -41,28 +38,29 @@ Express is a framework built on top of Node.js. As described by Express.js, "Exp
 
 2. Now we need to create a new project for our server. On your computer, create a folder/directory where we will initialize this. For example, let's call it nodejs_practice. This can be done in terminal using the `mkdir nodejs_practice` command. Once created, use `cd nodejs_practice`. 
 
-3. In that folder, run the command `npx express-generator`. If `express` cannot be found, run `npm install -g express-generator` and then `express -h` to verify it's working.
+3. Next, we want to create an Express.js application from a template.  We can use one of two approaches - try the first one first, and only use the second approach if the first one doesn't work.
+   
+   - Approach #1: In the `nodejs_practice` folder, run the commands `mkdir nodejs_practice_app`, `cd nodejs_practice_app`, and then `npx express-generator`. This should create our Express.js application off the boilerplate template (good thing we don't have to do this ourselves right?).  If we use this approach then our terminal will end up in the application folder (which is good for the next step).
+     
+     - NOTE: If this doesn't work and you want to try Approach #2 then you will need to run `cd ..` to move the terminal up to the `nodejs_practice` folder BEFORE you start approach #2.
+   
+   - Approach #2: Another approach is to run `npm install -g express-generator` and then `express -h` to verify it's working.  Make sure that your terminal is in the `nodejs_practice` folder (and *not* the `nodejs_practice**_app**` folder) followed by `express --view=pug nodejs_practice_app`. This should create the `nodejs_practice_app` folder. If we use this approach then we'll need to get into our application by calling `cd nodejs_practice_app` (which the next step requires)
 
-4. Run the command `express --view=pug nodejs_practice_app`. This will create our Express.js application off the boilerplate template (good thing we don't have to do this ourselves right?).
+4. Once in the application folder, run `npm install` to get all the dependencies that are needed.
 
-5. Let's get into our application. Call `cd nodejs_practice_app`.
+5. If you want to see what we have so far, run `npm start` to spin up the Express.js server. Check out http://localhost:3000 - what do you see?
 
-6. Once in the application folder, run `npm install` to get al the dependencies that are needed.
+6. If you go to any other endpoint, like http://localhost:3000/help/, what do you see? What about http://localhost:3000/users/?
 
-7. If you want to see what we have so far, run `npm start` to spin up the Express.js server. Check out https://localhost:3000 and what you see!
+7. Before we proceed with linking up, let's make one minor change. `Ctrl+C` to end the session. In the `bin` folder, look for a file called `www`. On line 15, change the port number from 3000 to 3010. You can change it to whichever port you choose, but we want to make sure it is distinct from the default ports on React to avoid any collision when we launch in localhost.
 
-8. If you go to any other endpoint, like https://localhost:3000/help/, what do you see? What about https://localhost:3000/users/?
-
-9. Before we proceed with linking up, let's make one minor change. `Ctrl+C` to end the session. In the `bin` folder, look for a file called `www`. On line 15, change the port number from 3000 to 3010. You can change it to whichever port you choose, but we want to make sure it is distinct from the default ports on React to avoid any collision when we launch in localhost.
-
-10. To get started now, let's add an endpoint for later. Add the following code snippet to the `routes/index.js` file:
+8. To get started now, let's add an endpoint for later. Add the following code snippet to the `routes/index.js` file:
 
 ```js
 router.get("/home", (req, res) => {
   res.json({ message: "The home endpoint has been hit." });
 });
 ```
-
 
 #### Exercise:
 
@@ -76,16 +74,16 @@ The 'tree view' of the document (in our document database) is a typical example 
 There's a couple of important points to remember when working with JSON files:
 
 1. JSON files are very similar to object literals in JavaScript (and therefore similar-ish to object literals in JavaScript) but there are differences.  For example, and object literal in JS does not need to put quotes around the field names...
-
+   
    ```javascript
    let objectLiteral = {
      name: "A",
      email: "A@A.com"
    }
    ```
-
+   
    ...but JSON files do need the quotes::
-
+   
    ```json
    {
      "name": "A",
@@ -94,15 +92,16 @@ There's a couple of important points to remember when working with JSON files:
    ```
 
 2. There's no rules enforcing a certain structure, nor limiting what you can do with this.
-
+   
    - On the one hand this is nice because you can add extra information or fields to any given part of the document, which can be handy (especially in web application development, because the browser will send the server a bunch of strings and these strings may or may not be consistent each time).
    - On the other hand computers are best at doing the exact same thing over and over, so when you've got a document that may have variations in the structure that may complicate your code
 
 3. You CANNOT have circular references in the document
-
+   
    - There are ways around this.  For example, instead of a reference you could put in an ID number, and then put stuff into the document in way that allows you to look up objects by ID number.
 
 4. You CANNOT put comments into JSON files (at least officially)
+   
    - Because this was intended as a format for one program to send information to another program there's no way to add comments.  :(
    - Some developers, if they are sending/receiving JSON objects internally, may have patterns and practices to pass "comments" around. One example is defining a particular property that contains "comments" for the object but this is not a customary or standard practice.
 
@@ -147,7 +146,6 @@ In the render, add this:
 5. Start up both your Express.js server and your React app with `npm start`. Note that you will need to run this within the directory of each.
 
 6. Look at `localhost:3000` and see your changes!
-
 
 ### How do we send things to the server? (POST Request)
 
