@@ -2,12 +2,12 @@
 
 *<u>REMINDER</u>: You'll need a working GitHub account in order to to do the TNT Lessons on git & Github.  Make sure that you've got a working account by going to https://github.com/ and clicking on "Sign Up" (to create a new account) or "Sign In" (if you've got a working account)(both are at the top right corner of the page).*
 
-## Week 1, Lesson 2
+## Week 1, Lesson 1
 
 This lesson provides an overview of how web apps work, HTML, CSS and JavaScript to lay the foundation for the prototypes NTs will build.
 
-NOTE: You may notice that the name of this file starts with "ENG1.1", as do many of the supporting files for this lesson - this is how the files were named in a previous iteration of the TNT program.  
-The 'new' name is now 'Week 1, Lesson 2'.  When you're figuring out what the order of the lessons is please ignore the "ENG1.1" part of the filename and instead use the 'Week 1, Lesson 2' lesson name instead.
+<!--NOTE: You may notice that the name of this file starts with "ENG1.1", as do many of the supporting files for this lesson - this is how the files were named in a previous iteration of the TNT program.  
+The 'new' name is now 'Week 1, Lesson 1'.  When you're figuring out what the order of the lessons is please ignore the "ENG1.1" part of the filename and instead use the 'Week 1, Lesson 1' lesson name instead.-->
 
 ## Learning objectives
 
@@ -20,8 +20,8 @@ The 'new' name is now 'Week 1, Lesson 2'.  When you're figuring out what the ord
 Total time: 1 hour, 15 minutes
 
 - Background and Overview (15 minutes)
-- Demo and explore (30 minutes)
-- Group activities: review and investigation (30 minutes)
+- Demo and explore (15 minutes)
+- Group activities: review and investigation (45 minutes)
 
 ## References
 
