@@ -43,4 +43,4 @@ In the spec you should prioritize the user stories and the engineering work you 
 * A P2 is an user story with a medium priority. If all goes well you will likely get to all of these before you ship.
 * A P3 is a user story with low priority. It's unlikely you'll get to any of these, but if you do they're nice to have. For our purposes and the limited development time we have for the prototypes, move P3 and the remaining user stories to the Out of Scope section.
 
-Review the sample [YourShare spec](https://github.com/tnt-summer-academy/Curriculum/blob/main/Reference/Sample%20spec%20-%20YourShare.md).
+Review the sample [YourShare spec](https://github.com/tnt-summer-academy/Curriculum-2023/blob/main/Reference/Sample%20spec%20-%20YourShare.md).
