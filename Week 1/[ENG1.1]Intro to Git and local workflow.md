@@ -1,6 +1,6 @@
 # Introduction to Git and local workflow
 
-## Welcome to Week 1, Lesson 1!
+## Welcome to Week 1, Lesson 2!
 
 This lesson introduces the fundamentals of the Git workflow, Git Bash, VS Code support for Git, for local repositories.  
 In addition, you will learn enough about cloning (downloading) a repo from GitHub to be able to get the course materials that you’ll need in other lessons.
