@@ -10,7 +10,7 @@ This session introduces value propositions (value prop) and methods for pitching
 
 ## Actions
 
-Read [Value prop and pitching](https://github.com/tnt-summer-academy/Curriculum/blob/main/Reference/Product%20decks/2.2%20-%20Value%20prop%20and%20pitch.pdf). The deck introduces what value proposition is, a value prop framework for creating a value prop for your app, why it's important, and tips for pitching.
+Read [Value prop and pitching](https://github.com/tnt-summer-academy/Curriculum-2023/blob/main/Reference/Product%20decks/2.2%20-%20Value%20prop%20and%20pitch.pdf). The deck introduces what value proposition is, a value prop framework for creating a value prop for your app, why it's important, and tips for pitching.
 
 ### Develop value prop
 
