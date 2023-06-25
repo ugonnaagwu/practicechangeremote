@@ -10,7 +10,7 @@ The concepts of user needs is reinforced as your explore the problem space to de
 
 ## Action
 
-Read [Empathize with users](https://github.com/tnt-summer-academy/Curriculum/blob/main/Reference/Product%20decks/1.1%20-%20Empathize%20with%20users.pdf). This document introduces the user researcher and kicks off the empathize phase of the design sprint. The document also has instructions for the activities below to do as a team.
+Read [Empathize with users](https://github.com/tnt-summer-academy/Curriculum-2023/blob/main/Reference/Product%20decks/1.1%20-%20Empathize%20with%20users.pdf). This document introduces the user researcher and kicks off the empathize phase of the design sprint. The document also has instructions for the activities below to do as a team.
 
 As a team:
 
