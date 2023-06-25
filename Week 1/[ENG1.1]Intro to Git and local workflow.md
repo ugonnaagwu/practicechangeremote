@@ -31,8 +31,8 @@ Total time: 1.5-ish hours
 
 Start by making sure that you have the most recent version of Git installed
 
-* [Installation guide for Mac using HomeBrew](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%201/Pdfs/%5BENG1.2%5D-Installing-Git-Mac.pdf)
-  (NOTE: MacOS comes with a version of git already installed.  It’s _probably_ ok to use that one, but it’s better to use the most recent version so please do install this version of git
+<!--* [Installation guide for Mac using HomeBrew](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%201/Pdfs/%5BENG1.2%5D-Installing-Git-Mac.pdf)
+  (NOTE: MacOS comes with a version of git already installed.  It’s _probably_ ok to use that one, but it’s better to use the most recent version so please do install this version of git-->
 * [Installation guide for windows](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%201/Pdfs/%5BENG1.2%5D-Installing-Git-Windows.pdf)
 
 ## Explain - Git basics
@@ -65,15 +65,15 @@ Start by making sure that you have the most recent version of Git installed
 _Please follow along as your instructor demonstrates (and walks you through) the following:_
 
 1. Create a new directory (folder) for your repo, then create the repo inside thate folder, and then do your initial commit:
-    * Start by creating a new folder using the MacOS Finder (i.e, using the normal Mac windows and such). It doesn’t matter what you name it as long as you remember the name.  The name “GitTest” is fine.
+    * Start by creating a new folder. It doesn’t matter what you name it as long as you remember the name.  The name “GitTest” is fine.
     * Next, start VSCode
-              You can hold down the Command button and pressing the spacebar - this is usually written as Cmd+Space - and then typing “code” into the MacOS Spotlight search bar thingee)
+              <!--You can hold down the Command button and pressing the spacebar - this is usually written as Cmd+Space - and then typing “code” into the MacOS Spotlight search bar thingee)-->
     * In VSCode you should then open that folder that you created on your Desktop.
               In the ‘File’ menu select the ‘Open Folder’ option (this is usually written similar to “File -> Open Folder”, or “File / Open Folder”, etc) ![[ENG1.0]VSCodeOpenFolder](images/%5BENG1.0%5DVSCodeOpenFolder.png)
     * At this point you should start VSCode’s integrated terminal.
               Use the Terminal / New Terminal menu option: ![[ENG1.0]VSCodeNewTerminal](images/%5BENG1.0%5DVSCodeNewTerminal.png)
     * At this point the terminal that’s integrated into VSCode should have started up, and it should “be in” the folder that you just told VSCode to open (which is the folder you just created).
-              You can confirm that you’re in the correct folder by typing **pwd** into the terminal and then pressing the return key.  It _should_ tell you that you’re at `/Users/<your Mac login>/Desktop/GitTest` (or whatever you named the new folder, if you didn’t use GitTest in the prior step). It should similar to the following:  ![[ENG1.0]TerminalPrintWorkingDirectory](images/%5BENG1.0%5DTerminalPrintWorkingDirectory.png)
+              You can confirm that you’re in the correct folder by typing **pwd** into the terminal and then pressing the return key.  It _should_ tell you that you’re at `C:\Users\v-accountname\MyWorkDir` (or whatever you named the new folder, if you didn’t use GitTest in the prior step). It should similar to the following:  ![[ENG1.0]TerminalPrintWorkingDirectory](images/%5BENG1.0%5DTerminalPrintWorkingDirectory.png)
     * You will need to configure your git install before you can commit your changes.  Let’s do that now.
         * `git config --global user.email "youremail"`
         * `git config --global user.name "yourname"`
@@ -85,7 +85,7 @@ _Please follow along as your instructor demonstrates (and walks you through) the
       * If you wanted to, you could create a new directory inside the terminal by typing `mkdir SampleApp` and then return (to create a new folder named SampleApp), followed by typing `cd SampleApp<return>` to move into the SampleApp folder
     * `git init` - initialize the repository
     * `git status` - view the repository status (it should say that there are no commits yet, and there’s nothing to commit)
-    * `touch index.html` - create a new file
+    * `type nul > index.html` - create a new file
     * `git status` - view the repository status (still no commits, but now it should list index.html as a new file that git isn’t keep track of)
             PRO TIP: _Always_ return `git status` after every other git command so that you can check that things are working the way that you’d like them to.
     * `git add  .` - stage the files to commit and tell get what files to track, "." selects all the new files or files with changes
@@ -226,7 +226,7 @@ We'll now walk through the process of cloning a repository from GitHub.
     (free, online, oftentimes very technical)
 * [Git Cheat Sheet](https://www.git-tower.com/blog/git-cheat-sheet)
     (Summary of a lot of git commands but doesn’t tell you which one to use when)
-
+<!--
 ### PRIVATE NOTES FOR INSTRUCTORS
 TNTs: Please ignore this.  It’s only here so that instructors can practice the log-in process for GitHub.
 To revoke access:
@@ -239,6 +239,7 @@ To revoke access:
 6. GitHub for VSCode - revoke this and neither the GUI nor the integrated terminal will be able to authenticate.  NOTE: VSCode will not re-authenticate you until you log out
 7. In VSCode log out of GitHub (lower-left corner - the ‘Accounts’ button, then your GitHub account & Sign Out)
 8. Then, the next time you push/pull (either from GUI or integrated terminal)   and it’ll run you through the authentication dance listed above
+-->
 
 ## [Additional background, info, and OPTIONAL exercises](%5BENG1.0%5D%20Exercises%20for%20Intro%20to%20Git%20and%20local%20workflow.md)
 
