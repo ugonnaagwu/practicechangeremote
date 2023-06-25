@@ -106,7 +106,7 @@ There's likely a range of familiarity with web pages, web apps, and how they wor
 
 ## Demo and explore
 
-### [Meet Your Instructors page](https://github.com/tnt-summer-academy/Exercises/tree/main/Week_1/ENG1.0/meet-your-Instructors)
+### [My Roses](./samples/my-roses/index.html)
 
 - Show a demo and walk through the HTML tags and CSS files
 - Ask students to clone or download and experiment with different CSS properties to see different effects
@@ -153,7 +153,7 @@ The following process is recommended (so as to maximize the amount of learning y
 
  If you are familiar with HTML and CSS - find new topic tutorials and try it out. Push yourself to discover something you didn't know before. Here are a few suggestions for you
 
-Modify, [Meet Your Instructors](https://github.com/tnt-summer-academy/Exercises/tree/main/Week_1/ENG1.0/meet-your-Instructors) page:
+Modify, [My Roses](./samples/my-roses/index.html) page:
 * So that it does an animated 3D flip of an image with text instead of static tile
-* Add simple script to the button to make it clickable to show a popup alert window with the contact email address [some hints found here](https://www.w3schools.com/howto/howto_js_popup.asp)
+* Add simple script to the button to make it clickable to show a popup alert window with the page url address [some hints found here](https://www.w3schools.com/howto/howto_js_popup.asp)
 * Change the page layout to use different [CSS layout](https://www.w3schools.com/css/css_templates.asp)
