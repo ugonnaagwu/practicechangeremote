@@ -10,11 +10,11 @@ Explore ideas through prototyping, starting with low fidelity options.
 
 ## Action
 
-Read [Prototype and test](https://github.com/tnt-summer-academy/Curriculum/blob/main/Reference/Product%20decks/2.1%20-%20Prototype%20and%20test.pdf). This document builds on the ideate design phases, getting into more app details with a paper prototype. It introduces the role of UX designer. Large screen vs. small screen considerations are discussed. It introduces different tools for creating prototypes and describes the value of prototyping.
+Read [Prototype and test](https://github.com/tnt-summer-academy/Curriculum-2023/blob/main/Reference/Product%20decks/2.1%20-%20Prototype%20and%20test.pdf). This document builds on the ideate design phases, getting into more app details with a paper prototype. It introduces the role of UX designer. Large screen vs. small screen considerations are discussed. It introduces different tools for creating prototypes and describes the value of prototyping.
 
 ### Create low-fidelity prototypes
 
-1. Individually, pick one solution you want to explore further from Crazy 8s, or something related to your leading problem statement. Share with your team what you're working on.
+1. Individually, pick one solution you want to explore further from  8s, or something related to your leading problem statement. Share with your team what you're working on.
 2. Draw the high-level, low-fidelity screens or flow of the experience. Considering whether this should be a mobile or large screen experience.
 3. You might have multiple options for a given task or user job. If you're not sure yet, draw the other options.
 4. Take pictures of your prototype and add to your team's folder.
