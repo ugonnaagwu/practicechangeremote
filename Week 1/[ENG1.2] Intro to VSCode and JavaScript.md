@@ -20,8 +20,8 @@ Total time: 1 hour 30 min
 
 - Getting Started: Make sure that VSCode and NPM are installed (5 minutes)
 - Overview of VSCode and 'Hello World' example (20 minutes)
-- Introduction to JavaScript ([ENG1.2]Intro_To_JavaScript.html]([ENG1.1]Intro_To_JavaScript.html)) (40 minutes)
-- Exercise: Fix and complete the code sample ([[ENG1.1]JavaScriptPractice.html]([ENG1.1]JavaScriptPractice.html)) (25 minutes)
+- Introduction to JavaScript ([ENG1.2]Intro_To_JavaScript]([ENG1.2]Intro_To_JavaScript.js)) (40 minutes)
+- Exercise: Fix and complete the code sample ([[ENG1.2]JavaScriptPractice](./Exercises/%5BENG1.2%5DJavaScriptPractice.js)) (25 minutes)
 
 ## References
 
@@ -204,7 +204,7 @@ Here are the topics that we'll be covering in the separate file (the links below
 
 ### Exercise: Fix and complete the code sample
 
-- Fix and complete the code sample [[ENG1.2]JavaScriptPractice.html](https://github.com/tnt-summer-academy/Exercises/blob/main/Week_1/ENG1.1/%5BENG1.1%5DJavaScriptPractice.js), only going as far as the topics we've covered above
+- Fix and complete the code sample [[ENG1.2]JavaScriptPractice.html](./Exercises/%5BENG1.2%5DJavaScriptPractice.js), only going as far as the topics we've covered above
   - Open the file.
   - Read through the code comments and identify what the code is trying to do.
   - Fix the code and complete the sample.
@@ -294,7 +294,7 @@ Once you're done, your terminal should look something like this:
 
 
 
-
+<!--
 
 # Unused Material That I Didn't Want To Delete (Please ignore this :) )
 
@@ -353,3 +353,5 @@ Once you're done, your terminal should look something like this:
 
    - IntelliSense - code completion, hover info, and signature information.
    - [Snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets) - chunks of JS (try typing in the for `for`, and then looking for the 'For loop' completion in the list of completions (if you don't see the list of completions then press `CTRL+space` to bring it up).
+
+   -->
