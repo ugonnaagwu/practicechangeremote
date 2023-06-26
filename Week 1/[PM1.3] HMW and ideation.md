@@ -24,13 +24,13 @@ Together read [HMW and Ideation](https://github.com/tnt-summer-academy/Curriculu
 5. Pick two themes. Build two concise problem statements from the groups you've created.
     * The problem statements should be meaningful, actionable, and human-centric.
 
-### Kick off crazy 8s
+### Kick off 8s
 
-Next we're moving on to crazy 8s. You're responsible for keeping your own time. Focus on high-level solutions and move beyond just an app or technology. Anything is possible. There is no limit.
+Next we're moving on to 8s. You're responsible for keeping your own time. Focus on high-level solutions and move beyond just an app or technology. Anything is possible. There is no limit.
 
-### Two rounds of crazy 8s and sharing
+### Two rounds of 8s and sharing
 
-2 x Crazy 8s
+2 x  8s
 
 1. Fold a paper into eight sections and pick one of the How Might We problem statements to start with.
 2. Start a timer for 5 minutes. Draw something in each section.
@@ -39,7 +39,7 @@ Next we're moving on to crazy 8s. You're responsible for keeping your own time. 
 
 Wrap up:
 
-* Take a picture of each of your crazy 8s. Add it to the folder in your Team's channel.
+* Take a picture of each of your 8s. Add it to the folder in your Team's channel.
 * You can repeat this as needed to keep ideating.
 
 ## Follow up
