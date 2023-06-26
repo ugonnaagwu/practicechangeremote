@@ -22,7 +22,7 @@ As a team:
 5. Come back together and create an empathy map as a team:
     * Regroup as a team.
     * Walk through your findings together, build on one another and expand, don't shut anything down.
-    * Pull your research together into an empathy map. Create one empathy map. Use Miro or PowerPoint to create your empathy map.
+    * Pull your research together into an empathy map. Create one empathy map. Use Whiteboard or PowerPoint to create your empathy map.
 
 ## Follow up
 
