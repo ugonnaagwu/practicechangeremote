@@ -37,7 +37,7 @@ A walkthrough is a mockup that describes the end to end app flow. It is represen
 1. Start by defining the user scenarios you want to include in your walkthrough.
       * Consider the prototypes you've iterated on. Take into consideration the feedback you've gotten.
 2. Prioritize and order your user scenarios.
-3. Create together or independently with the shared PowerPoint template. Divide up the screens or user stories.
+3. Divide up the screens or user stories. Create in PowerPoint or Figma.
 4. When you're done you should have a walk through that describes each screen and feature of your app.
 
 ## Follow up
