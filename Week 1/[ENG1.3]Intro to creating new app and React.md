@@ -15,13 +15,13 @@ This lesson covers React. It introduces how to create a new React App project. I
 
 ## Time required and pace
 
-Total time: 2 hours
+Total time: 1:30 hours
 
-- What is React? First look at components. (20 minutes)
-- Learn how to create a React app with create-react-app (20 minutes)
-- App architecture discussion and review of basic ideas (20 minutes)
-- Create a first app (my-app) (30 minutes)
-- Extend my-app with a textbox that updates the welcome message based on an input text (30 minutes)
+- What is React? First look at components. (15 minutes)
+- Learn how to create a React app with create-react-app (15 minutes)
+- App architecture discussion and review of basic ideas (15 minutes)
+- Create a first app (my-app) (20 minutes)
+- Extend my-app with a textbox that updates the welcome message based on an input text (25 minutes)
 
 ## References
 
@@ -49,7 +49,7 @@ Total time: 2 hours
   - Change some things in the live editor (e.g., change text, add HTML tags, change the value of the name attribute etc.) and observe the instantaneous results.
   - Check the box to use and not use JSX and observe.
 
-### Created an app with create-react-app (20 minutes)
+### Created an app with create-react-app (15 minutes)
 
 - `create-react-app` is a tool chain that permits to create a one-page React web app
 - More info on [https://reactjs.org/docs/create-a-new-react-app.html](create-react-app)
@@ -127,7 +127,7 @@ Total time: 2 hours
 
 ![Architecture to discuss](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/BasicArchitecture.png)
 
-### Going further: input-app-javascript (30 minutes)
+### Going further: input-app-javascript (25 minutes)
 
 - We will go together through th creation of a small app
 - You can start with `my-app` or create a new React app
