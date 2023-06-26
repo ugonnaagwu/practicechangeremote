@@ -45,8 +45,6 @@ With the problem statements, the goal is to go from the vague high-level group p
     * Save the white board.
     * Take a screenshot and post it to your team.
 
-There are no right or wrong answers. This is a first take. We'll revisit and iterate. It's ok to have a few options early in the week. Choose one direction by Friday.
-
 ## Follow up
 
 Share your problem statement with your coaches. By the end of the week, narrow it down to one.
