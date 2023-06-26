@@ -127,13 +127,13 @@ Total time: 1:30 hours
 
 ![Architecture to discuss](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/BasicArchitecture.png)
 
-### Going further: input-app-javascript (25 minutes)
+### Going further: input-app-javascript (20 minutes)
 
 - We will go together through th creation of a small app
 - You can start with `my-app` or create a new React app
 - The goal is create an app that updates a welcome string based on input text
 - We will need to add a textbox for the user to enter text and listen on it. When it will change, the welcome text will be updated
-- The finished code is available [here](https://github.com/tnt-summer-academy/Samples/tree/main/Week_1/input-app-javascript) (input-app-javascript)
+-**The finished code is available [here](./samples/input-app-javascript/) (input-app-javascript)**
 - (You can clone or download Samples to get the code)
 - Be sure to run `npm install`
 - We are going over the App.js code step by step
@@ -153,9 +153,9 @@ Total time: 1:30 hours
 
 ![React input app screenshot](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/reactappjsinputapp.png)
 
-## Your turn: input-app-button-javascript (30 minutes)
+## Your turn: input-app-button-javascript (25 minutes)
 
-Extend [`input-app-javascript`](https://github.com/tnt-summer-academy/Samples/tree/main/Week_1/input-app-javascript) by using a form. The Welcome text changes, when the Submit button is clicked
+Extend [`input-app-javascript`](./samples/input-app-javascript/) by using a form. The Welcome text changes, when the Submit button is clicked
 
 ## Stretch
 
