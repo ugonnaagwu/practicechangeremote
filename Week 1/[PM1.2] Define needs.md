@@ -11,7 +11,7 @@ This session enters the define phase of design thinking. It's the first step of 
 
 ## Actions
 
-Read [Define needs](https://github.com/tnt-summer-academy/Curriculum/blob/main/Reference/Product%20decks/1.2%20-%20Define%20needs.pdf). This document introduces target audiences, personas, user journey maps and how to create a problem statement.
+Read [Define needs](https://github.com/tnt-summer-academy/Curriculum-2023/blob/main/Reference/Product%20decks/1.2%20-%20Define%20needs.pdf). This document introduces target audiences, personas, user journey maps and how to create a problem statement.
 
 After reading Define needs, come together as a team and discuss potential target audiences based on your user pain points and user needs investigations from the empathize phase. Make a list together. Pick two potential target audiences to create user journey maps for, everyone will make their own user journey map for one of the target audiences.
 

@@ -10,7 +10,7 @@ This topic introduces the roles of program (product) manager (PM) and gives an o
 
 ## Action
 
-Read [Intro to PM and Design thinking](https://github.com/tnt-summer-academy/Curriculum/blob/main/Reference/Product%20decks/1.0%20-%20Intro%20to%20pm%20and%20design%20thinking.pdf). This document introduces the role of the program manager (PM) and the design thinking phases. The design thinking phases will help determine what to build, breaking down the problem statement, understanding the user, and evaluating solutions to best meet the needs.
+Read [Intro to PM and Design thinking](https://github.com/tnt-summer-academy/Curriculum-2023/blob/main/Reference/Product%20decks/1.0%20-%20Intro%20to%20pm%20and%20design%20thinking.pdf). This document introduces the role of the program manager (PM) and the design thinking phases. The design thinking phases will help determine what to build, breaking down the problem statement, understanding the user, and evaluating solutions to best meet the needs.
 
 ## Follow up
 
