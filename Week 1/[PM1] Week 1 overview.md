@@ -3,7 +3,7 @@
 Welcome to week 1. This week is focused on the empathize and define phases and at the end of the week some ideation. You'll explore the needs of your target audience and refine the problem statement further.
 
 ## Recommended schedule
-It’s up to the team to work through the design phases together. The resources can be found in: https://github.com/tnt-summer-academy/Curriculum-2023/tree/main/Week%201. 
+It’s up to the team to work through the design phases together. The resources can be found in: [Week 1](/Week%201). 
 
 Here’s a recommended schedule:
 
