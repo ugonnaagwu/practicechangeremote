@@ -62,11 +62,11 @@ Total time: 1:30 hours
     - sudo stands for 'super user do' - it'll ask you for your Mac password (NOT the v- Microsoft password) and then run the command as the administrator.
     - [![Funny Comic from XKCD about sudo.  No, really](https://imgs.xkcd.com/comics/sandwich.png)](https://xkcd.com/149/)
 - These GIFs may be helpful to get you started with `create-react-app`
-  - [Install create-react-app](https://github.com/tnt-summer-academy/Curriculum/blob/master/Reference/InstallCreateReactAppSmall.gif)
-  - [Create an app](https://github.com/tnt-summer-academy/Curriculum/blob/master/Reference/OpenCreateReactAppSmall.gif)
-  - [Open the app](https://github.com/tnt-summer-academy/Curriculum/blob/master/Reference/CreateReactAppTestSmall.gif)
+  - [Install create-react-app](./images/InstallCreateReactAppSmall.gif)
+  - [Create an app](./images/OpenCreateReactAppSmall.gif)
+  - [Open the app](./images/CreateReactAppTestSmall.gif)
 - Demo of create-react-app
-  - `create-react-app my-app` is the command to run in the terminal
+  - `npx create-react-app my-app` is the command to run in the terminal
   - Breaking down the command:
     - create-react-app - library for generating the environment
     - my-app - name of the app
@@ -112,11 +112,11 @@ Total time: 1:30 hours
     _ Observe the app re-render in the browser
     _ This is React in action!
 
-![React index.html](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/reactindexhtml.png)
+![React index.html](./images/%5BENG1.3%5Dreactindexhtml.png)
 
-![React index.js](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/reactindexjs.png)
+![React index.js](./images/%5BENG1.3%5Dreactindexjs.png)
 
-![React App.js](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/reactappjs.png)
+![React App.js](./images/%5BENG1.3%5Dreactappjs.png)
 
 ### App architecture (15 minutes)
 
@@ -125,7 +125,7 @@ Total time: 1:30 hours
   - TNT groups talk through the functions of the different parts of a web app and how they connect
 - Re-group and walk through architecture thus far together - HTML, CSS, React, Node...
 
-![Architecture to discuss](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/BasicArchitecture.png)
+![Architecture to discuss](./images/%5BENG1.3%5DBasicArchitecture.png)
 
 ### Going further: input-app-javascript (20 minutes)
 
@@ -133,7 +133,7 @@ Total time: 1:30 hours
 - You can start with `my-app` or create a new React app
 - The goal is create an app that updates a welcome string based on input text
 - We will need to add a textbox for the user to enter text and listen on it. When it will change, the welcome text will be updated
--**The finished code is available [here](./samples/input-app-javascript/) (input-app-javascript)**
+-**The finished code is available [here](./samples/input-app/) (input-app-javascript)**
 - (You can clone or download Samples to get the code)
 - Be sure to run `npm install`
 - We are going over the App.js code step by step
@@ -150,12 +150,14 @@ Total time: 1:30 hours
 - You can look at the following links for help with creating forms
   - [React forms on reactjs.org](https://reactjs.org/docs/forms.html)
   - [React forms on w3schools](https://www.w3schools.com/react/react_forms.asp)
-
+<!-- old Screenshot using Class Component
 ![React input app screenshot](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/reactappjsinputapp.png)
+>
+-->
 
 ## Your turn: input-app-button-javascript (25 minutes)
 
-Extend [`input-app-javascript`](./samples/input-app-javascript/) by using a form. The Welcome text changes, when the Submit button is clicked
+Extend [`input-app-javascript`](./samples/input-app/) by using a form. The Welcome text changes, when the Submit button is clicked
 
 ## Stretch
 
