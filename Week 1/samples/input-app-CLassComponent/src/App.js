@@ -3,6 +3,7 @@ import './App.css';
 import React from "react";
 
 class App extends React.Component {
+  //Class State
   state = {
     name: "",
   };
@@ -19,17 +20,7 @@ class App extends React.Component {
     let newName = e.currentTarget.value;
     this.setState((state, props) => ({ name: newName }));
   };
-  
-//Mike way
-  // onChangeEventHandler = (eventInfo) => {
-  //   let newName = eventInfo.currentTarget.value;
 
-  //   let fnx = (state, props) => {
-  //     return { name: newName };
-  //   };
-
-  //   this.setState(fnx);
-  // };
 
   render() {
     return (

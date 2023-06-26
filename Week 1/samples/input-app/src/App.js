@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 
 function App() {
+  //function component state hook
   const[name, setName]= useState("");
   
   return (

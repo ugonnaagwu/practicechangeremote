@@ -150,14 +150,15 @@ Total time: 1:30 hours
 - You can look at the following links for help with creating forms
   - [React forms on reactjs.org](https://reactjs.org/docs/forms.html)
   - [React forms on w3schools](https://www.w3schools.com/react/react_forms.asp)
+
 <!-- old Screenshot using Class Component
-![React input app screenshot](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/reactappjsinputapp.png)
+![React input app screenshot](./images/%5BENG1.3%5Dreactappjsinputapp.png)
 >
 -->
 
 ## Your turn: input-app-button-javascript (25 minutes)
 
-Extend [`input-app-javascript`](./samples/input-app/) by using a form. The Welcome text changes, when the Submit button is clicked
+Extend [`input-app`](./samples/input-app/) or [`input-app-ClassComponent`](./samples/input-app-CLassComponent/) by using a form. The Welcome text changes, when the Submit button is clicked
 
 ## Stretch
 
