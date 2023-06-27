@@ -163,7 +163,7 @@ Syntactically ("what do I type?"), JavaScript is very similar to other languages
 
 Semantically ("What does this mean?"), JavaScript can be written in ways that are similar to any of the **C** languages mentioned above, or **Python**, or **Fortran**, or **Matlab**, so if you're wondering how to approach the task of writing a program in JavaScript (what steps your program should do, and in what order) you might a similar approach to what you would have done in whichever language you're previously familiar with.
 
-*Please open the file [[ENG1.2]Intro_To_JavaScript.js]([ENG1.2]Intro_To_JavaScript.js), which includes both code AND a description of what the code does and/or what to focus on in the code itself.*
+*Please open the file [[ENG1.2]Intro_To_JavaScript.js](./samples/[ENG1.2]Intro_To_JavaScript.js), which includes both code AND a description of what the code does and/or what to focus on in the code itself.*
 
 We're going to review those parts of JavaScript that you're most likely to have seen in another programming language first by having you look over the code and discuss the code amongst yourselves while the instructor circulates and helps out with any tricky parts. Here are the instructions:
 
@@ -175,7 +175,7 @@ We're going to review those parts of JavaScript that you're most likely to have 
 
 3. Within Team X, please divide up into two mini-groups of people (each mini-group should be a pair or a triple of people)
 
-4. Have both mini-groups work through the 'Variables' section of of the [[ENG1.2]Intro_To_JavaScript.js]([ENG1.2]Intro_To_JavaScript.js) file.  Examine the code using the VSCode debugger to walk through it, line by line.  Make sure that you're clear on what the code's doing and why - ask yourself, your other mini-group members, and the instructor any questions you've got about what the code is doing and why.
+4. Have both mini-groups work through the 'Variables' section of of the [[ENG1.2]Intro_To_JavaScript.js](./samples/[ENG1.2]Intro_To_JavaScript.js) file.  Examine the code using the VSCode debugger to walk through it, line by line.  Make sure that you're clear on what the code's doing and why - ask yourself, your other mini-group members, and the instructor any questions you've got about what the code is doing and why.
 
 5. Next, look for comments in this section (Variables) that read "// WHAT DOES THE FOLLOWING LINE PR INT, AND WHY?".  For each line walk the debugger over that line, see what the output is, and see if you can figure out why that line of code produced the output that you saw.  Be prepared to report out to your entire App Prototype team ('Team X') with a summary and/or any unresolved questions you've got.
 
@@ -183,7 +183,7 @@ We're going to review those parts of JavaScript that you're most likely to have 
 
 6. Remember the mindful compassion.  You're not expected to know all the answers!
 
-7. Repeat for the remaining sections of the [[ENG1.2]Intro_To_JavaScript.js]([ENG1.2]Intro_To_JavaScript.js) file - working in a mini-group go through a section, discussing what the program is doing and why.  Once you've gone through a section as a mini-group report out to the larger App Prototype team.
+7. Repeat for the remaining sections of the [[ENG1.2]Intro_To_JavaScript.js](./samples/[ENG1.2]Intro_To_JavaScript.js) file - working in a mini-group go through a section, discussing what the program is doing and why.  Once you've gone through a section as a mini-group report out to the larger App Prototype team.
 
    - *Stop when you get to the comment that reads* 
      *"//////////////////////////////////////// **React-Focused Stuff Starts Here** ////////////////////"*
@@ -222,7 +222,7 @@ The following topics typically are NOT covered in first year programming classes
 
 ### Exercise: Fix and complete the code sample
 
-- Finish the task of fixing and completing the code sample [[ENG1.2]JavaScriptPractice.html](https://github.com/tnt-summer-academy/Exercises/blob/main/Week_1/ENG1.1/%5BENG1.1%5DJavaScriptPractice.js), focusing on the React-specific topics covered above
+- Finish the task of fixing and completing the code sample [[ENG1.2]JavaScriptPractice.html](./Exercises/%5BENG1.2%5DJavaScriptPractice.js), focusing on the React-specific topics covered above
   - Open the file.
   - Read through the code comments and identify what the code is trying to do.
   - Fix the code and complete the sample.

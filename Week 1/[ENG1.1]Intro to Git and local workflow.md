@@ -241,6 +241,6 @@ To revoke access:
 8. Then, the next time you push/pull (either from GUI or integrated terminal)   and it’ll run you through the authentication dance listed above
 -->
 
-## [Additional background, info, and OPTIONAL exercises](%5BENG1.0%5D%20Exercises%20for%20Intro%20to%20Git%20and%20local%20workflow.md)
+## [Additional background, info, and OPTIONAL exercises](./Exercises/%5BENG1.0%5DExercises%20for%20Intro%20to%20Git%20and%20local%20workflow.md)
 
 
