@@ -189,9 +189,9 @@ In your team channels, discuss the following; be prepared to share an insight or
 
 ### Stretch Exercise Setup - MyTNT App (15 minutes)
 
-- Identify components and composition: Tile, Card, Item in the [MyTNT App](https://github.com/tnt-summer-academy/Exercises/tree/main/Week_2/ENG2.1-myTNT) layout
+- Identify components and composition: Tile, Card, Item in the [MyTNT App](./samples/mytnt-layout/) layout
 
-![completed MyTNT App layout](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%201/images/MyTNT-component-model.png)
+![completed MyTNT App layout](./images/MyTNT-component-model.png)
 
 <!-- - Review GitHub process: Clone•Branch•Commit•Push•Pull Request -->
 
@@ -203,7 +203,7 @@ In your team channels, discuss the following; be prepared to share an insight or
 
 ## Stretch
 
-* Use pair programming in Live Share to complete the [_My TNT_ Exercise](https://github.com/tnt-summer-academy/Exercises/tree/main/Week_2/ENG2.1-myTNT)
+* Use pair programming in Live Share to complete the [_My TNT_ Exercise](./Exercises/mytnt-exercises/)
 
 * Push your work to GitHub <!-- and submit a Pull Request (one per pair)-->
 
