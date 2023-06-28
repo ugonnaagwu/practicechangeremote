@@ -78,7 +78,7 @@ Total time: 1 hour 30 min
         - [Open In Browser](https://marketplace.visualstudio.com/items?itemName=techer.open-in-browser) - this will allow you to open an HTML file in your browser, which is useful for previewing the file that you've written
         - [GitGraph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) - shows you a nice graph of branches and commits in your repos.
     - WARNING: You may need to turn Prettier on to get it to format your files.  You can do that by following these steps:
-        1. In VSCode, click on the **Code -> Preferences -> Settings** menu item
+        1. In VSCode, click on the **file -> Preferences -> Settings** menu item
         2. In the search box at the top, type in **formatter**
         3.  Look for the configuration option that's entitled "Editor: Default Formatter" and make sure to pick Prettier from the list.
             Note: The list may be long and it does not appear to be sorted. You have my sympathies in advance.
