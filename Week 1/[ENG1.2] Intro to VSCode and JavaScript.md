@@ -71,7 +71,7 @@ Total time: 1 hour 30 min
             ![image-20210628003954801](images/image-20210628003954801.png)
     - As of this writing, the following extensions are recommended:
         - [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) - This will allow you to use the VSCode debugger on your JavaScript code, even though it's running in your Chrome browser.
-        - [Live Share Extension Pack](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack) - DEFINITELY INSTALL THIS!!!
+        - [Live Share Extension Pack](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare) - DEFINITELY INSTALL THIS!!!
             This will allow you to collaborate with other TNTs in VSCode just like multiple people can change the same file in Google Docs.  It's awesome!  Get it!  Get it now! :)
         - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - Install this, and then every time you save a file it'll autoformat it for you
         - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - this will help find JavaScript errors and show them to you.
