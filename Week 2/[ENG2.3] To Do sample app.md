@@ -33,7 +33,7 @@ Total time: 2 hours
 
 ## Obtaining the sample
 
-[View the code of this session here](https://github.com/tnt-summer-academy/Exercises/tree/main/Week_2/ENG2.0-todos-via-classes)
+[View the code of this session here](./Samples/todos-via-classes/)
 
 For this lesson we'd like to allow y'all to make changes to the starter app BUT we don't want everyone to try and change the starter repo in GitHub.  We'll solve this by having one person in each team ***fork*** the overall Exercises repo, which will create (yet another :) ) repo on GitHub.  Each person should then clone the repo for their team.  After that you can work on your team's fork without any worries about changing other team's forks (repos).  Here's a picture showing the overall goal  here:
 
@@ -46,7 +46,6 @@ How to fork a repo:
 - This site has a set by step guide: https://www.digitalocean.com/community/tutorials/fork-clone-make-changes-push-to-github
 - Go to the Github website.
 - Go to the specific repo you want to fork. You'll see three buttons in row, watch/unwatch, star, and fork:
-  ![](/Users/mike/Desktop/Curriculum-2022/Week%202/images/ForkButton.png)
 - Click fork. This will create a copy in your own repo for you to use and modify.
 - Go to your own repositories under your Github account. The forked repo should appear there.
 - Use `git clone` to clone this git repo to your personal machine.
