@@ -1,6 +1,6 @@
 # Sample app - bringing JS, React, HTML, and CSS together
 
-## Week 2, Lesson 1
+## Week 2, Lesson 3
 
 In this lesson NTs will build on top of a sample ToDo List app that demonstrates how the core technologies work together. In future lessons the same sample app will be used for more advanced topics.
 
