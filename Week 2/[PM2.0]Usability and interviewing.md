@@ -29,4 +29,4 @@ As a team draft an interview guide. Later, the prototype and task portion will b
 
 ## Additional references
 
-![How to talk to customers](QuickTips_TalkingToCustomers.png)
+![How to talk to customers](./images/QuickTips_TalkingToCustomers.png)

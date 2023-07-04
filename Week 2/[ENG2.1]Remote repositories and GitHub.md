@@ -41,7 +41,7 @@ We will learn together how to clone a repository using `git clone` and contribut
 
 <table style="border: none">
     <tr align="center">
-        <td><img src="./remotes.png" alt="Clone, Pull and Push" width="80%"> </td>
+        <td><img src="./images/remotes.png" alt="Clone, Pull and Push" width="80%"> </td>
     </tr>
 </table>
 
@@ -56,8 +56,8 @@ We will now walk through the process of cloning a repository from GitHub. We wil
 
 <table style="border: none">
     <tr>
-        <td><img src="./CreateRemoteRepo.gif" alt="Create Remote Repo"> </td>
-        <td><img src="./CloneURL.gif" alt="Clone URL"></td>
+        <td><img src="./images/CreateRemoteRepo.gif" alt="Create Remote Repo"> </td>
+        <td><img src="./images/CloneURL.gif" alt="Clone URL"></td>
     </tr>
 </table>
 
@@ -68,7 +68,7 @@ We will now walk through the process of cloning a repository from GitHub. We wil
 
 <table style="border: none">
     <tr align="center">
-        <td><img src="./VSCodeRemoteClone.gif" width="75%" alt= "VS Code Clone"> </td> 
+        <td><img src="./images/VSCodeRemoteClone.gif" width="75%" alt= "VS Code Clone"> </td> 
  </tr>
 </table>
 
@@ -91,7 +91,8 @@ We will now walk through the process of cloning a repository from GitHub. We wil
 
 Watch this short video to know what branches means in Git and how it works
 
-[![Branches](https://yt-embed.herokuapp.com/embed?v=LShNJtuW8lY)](https://youtu.be/LShNJtuW8lY)
+
+[![Branches](./images/Branching.png)](https://youtu.be/LShNJtuW8lY)
 
 ## Exploring how to create and use local branching and branching on GitHub
 
@@ -117,7 +118,7 @@ Watch this short video to know what branches means in Git and how it works
 
 1. Push your branch to the remote repository: `git push -u origin feature_branch` and check the remote repository in GitHub.
    - the `-u` flag (upstream) when you make your first push to track a remote branch
-2. Pull from the remote branch: `git pull --rebase origin <Branch-Name>`
+2. Pull from the remote branch: `git pull origin <Branch-Name>`
 3. View the branches 
    - To view the branches in a Git repository, run the command: `git branch` 
    - To view both remote-tracking branches and local branches, run the command: `git branch -a`
@@ -143,7 +144,7 @@ The goal is to create a repo on GitHub, clone the repository, make changes in VS
 
 <table style="border: none">
     <tr align="center">
-        <td><img src="./commitHistory.png" alt="commit History"> </td>
+        <td><img src="./images/commitHistory.png" alt="commit History"> </td>
     </tr>
 </table>
 

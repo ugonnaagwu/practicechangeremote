@@ -43,7 +43,7 @@ Here's how the team development process is applied with GitHub: [Understanding t
 
 <table style="border: none">
     <tr align="center">
-        <td><img src="./GitHubWorkFlow.gif" width="75%" alt="GitHub work flow]"> 
+        <td><img src="./images//GitHubWorkFlow.gif" width="75%" alt="GitHub work flow]"> 
     </td>
  </tr>
 </table>
@@ -67,7 +67,7 @@ It's called a "pull request" because it's asking the main branch to pull in the 
 
 <table style="border: none">
     <tr align="center">
-        <td><img src="./GitHub-PullRequest.png" width="75%" alt="GitHub work flow]"> </td> 
+        <td><img src="./images/GitHub-PullRequest.png" width="75%" alt="GitHub work flow]"> </td> 
     </tr>
 </table>
 
@@ -85,13 +85,13 @@ It's called a "pull request" because it's asking the main branch to pull in the 
 
 <table style="border: none">
     <tr>
-        <td><img src="./OpenPullRequestWithConflict.png" alt="Open pull request"></td>
-        <td><img src="./GitHubPullRequestWithConflict.png" alt="Pull Request with Conflict"> </td>
+        <td><img src="./images/OpenPullRequestWithConflict.png" alt="Open pull request"></td>
+        <td><img src="./images/GitHubPullRequestWithConflict.png" alt="Pull Request with Conflict"> </td>
     </tr>
 </table>
 <table style="border: none">
     <tr>
-        <td><img src="./ReadConflict.png" alt="Read Conflict"></td>
+        <td><img src="./images/ReadConflict.png" alt="Read Conflict"></td>
     </tr>
 </table>
 
@@ -178,15 +178,15 @@ It's called a "pull request" because it's asking the main branch to pull in the 
   
     ***Share your solutions for Week 1 exercises with us on Github***
   
-  * Clone the [Exercise repository](https://github.com/tnt-summer-academy/Exercises) on Github to your local machine
-  * Clone **your team scratch repository** to your local machine. You can use the Repositories search functionality to locate your team repo. Such as Search for Team12-2022-ScratchRepo.
+  * Clone the **[23-TNTPracticeExercise repository]** <!--(https://github.com/tnt-summer-academy/Exercises) -->on Github to your local machine
+  <!--* Clone **your team scratch repository** to your local machine. You can use the Repositories search functionality to locate your team repo. Such as Search for Team12-2022-ScratchRepo.-->
   * Create a work directory with the following name: **FirstNamesLastIntial** (e.g. AliceB). Please follow the naming convention as coaches and instructors will look for these specific name formats.
   * Prepare your local work directory and move it inside the cloned team repository to move forward. Stage and Commit any pending changes.
   * Create a branch and switch to it.
   * Push your solutions to the following week 1 exercises to your branch:
-    * [JavaScript Practice](https://github.com/tnt-summer-academy/Exercises/blob/main/Week_1/ENG1.1/%5BENG1.1%5DJavaScriptPractice.js)
-    * [Extended input-app with a submit button](https://github.com/tnt-summer-academy/Samples/tree/main/Week_1/input-app-javascript)
-    * [My TNT Exercise](https://github.com/tnt-summer-academy/Exercises/tree/main/Week_2/ENG2.1-myTNT)
+    * [JavaScript Practice](https://github.com/tnt-summer-academy/Curriculum-2023/blob/4be0ebd988fe3226fefeabf0b0960595d2cb0293/Week%201/Exercises/%5BENG1.2%5DJavaScriptPractice.js)
+    * [Extended input-app with a submit button](https://github.com/tnt-summer-academy/Curriculum-2023/tree/4be0ebd988fe3226fefeabf0b0960595d2cb0293/Week%201/samples/input-app)
+    * [My TNT Exercise](https://github.com/tnt-summer-academy/Curriculum-2023/tree/4be0ebd988fe3226fefeabf0b0960595d2cb0293/Week%201/Exercises/mytnt-exercises)
   * Name the files and directories appropriately for easy identification
   * Create a pull request to your branch
   * Title the pull request with your name and the names of anyone else who worked on the code. Again, please follow the requested formats.
@@ -257,7 +257,7 @@ It's called a "pull request" because it's asking the main branch to pull in the 
    
    <table style="border: none">
     <tr align="center">
-        <td><img src="./GitHub-PullRequest.png" width="75%" alt="GitHub work flow]"> </td> 
+        <td><img src="./images/GitHub-PullRequest.png" width="75%" alt="GitHub work flow]"> </td> 
     </tr>
    </table>
 
@@ -280,10 +280,10 @@ It's called a "pull request" because it's asking the main branch to pull in the 
 
 9. Next, fill in a brief description of your pull request, and click the green 'Create Pull Request' button to create the pull request.
    (For now it's fine if you're getting the error message about "Can't automatically merge".  We'll need to fix that, but for now it's fine)
-      ![Open pull request](./OpenPullRequestWithConflict.png)
+      ![Open pull request](./images/OpenPullRequestWithConflict.png)
 
 10. If someone has modified the repo that you cloned (since you last cloned or pulled from it) then you will see the following: 
-    ![Pull Request with Conflict](./GitHubPullRequestWithConflict.png)
+    ![Pull Request with Conflict](./images/GitHubPullRequestWithConflict.png)
 
 11. At this point go back to VSCode, and in the terminal you want to run the following commands:
     `git status` - specifically, you want to **make sure that you're still on your personal branch** and NOT on main
@@ -326,7 +326,7 @@ It's called a "pull request" because it's asking the main branch to pull in the 
 21. At this point the person currently working through the merge conflicts should be done, so have the team decide on the next person and go through the process again, adding their name.
 
 22. Repeat until everyone's name has been added to the team's forked repo
-
+<!--
 # UNUSED:
 
 (Stuff that we aren't using but we don't want to delete )
@@ -352,3 +352,4 @@ It's called a "pull request" because it's asking the main branch to pull in the 
 7. You should be good to go! *Open the created Pull Request from the previous Demo in VS Code*
    
    ![Open pull request](./VSCode-PullRequestView.png)
+-->

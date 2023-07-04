@@ -129,7 +129,7 @@ For all of the following, start with this lesson's function-based components, an
 
 
 
-
+<!--
 
 ---------------
 
@@ -173,3 +173,4 @@ For all of the following, start with this lesson's function-based components, an
   * While you've in the Preferences panel you can change the font size by clicking on 'File Windows' (not the sub-items, but File Windows itself) and the top-most configuration item (on the right) will be 'Choose a Font'
 
   * Pick the same folder in both apps (say, the `src` folder) and DiffMerge will show you the list of files that have the same name, and whether they're different or not.
+-->
