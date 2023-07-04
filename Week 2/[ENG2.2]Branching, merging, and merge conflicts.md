@@ -191,7 +191,7 @@ It's called a "pull request" because it's asking the main branch to pull in the 
   * Create a pull request to your branch
   * Title the pull request with your name and the names of anyone else who worked on the code. Again, please follow the requested formats.
   * Merge the pull request to the main branch.
-
+<!--
 # Summary of GitHub Game:
 
 (Note - this is slightly different than the above version, in that you take turns and help each other through the process)
@@ -223,10 +223,10 @@ It's called a "pull request" because it's asking the main branch to pull in the 
 
 4. Once everyone on the team has cloned the repo (and ONLY after everyone has finished their clone) then 1 person should go into GitHub and modify the `sign-in.txt` file by adding the phrase "Added on GitHub" to the END of the file (this way when you merge your changes it will be clear that this change was made on the GitHub website).
    Doing this will ensure that everyone gets a merge conflict - even the very first person to go through the next set of steps.
-
+   
 5. Next, each person on the team should go through the following steps.
-   **PLEASE IGNORE THE INSTRUCTIONS IN THE REPO ITSELF - use the following instructions instead!**
-
+   **PLEASE IGNORE THE INSTRUCTIONS IN THE REPO ITSELF - use the following instructions instead if it gets too complicated and you always have a conflict!**
+-->
 ## Stuff Each Person Needs To Do, One Person At A Time (With The Support Of Their Team):
 
 1. The team should decide on who's going next, and everyone on the team should help and support that person
