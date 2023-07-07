@@ -34,7 +34,7 @@ Total time: 3 hours, 45 instruction, remaining work time
 ## NT Deliverables:
 
 1. Within your team's AppPrototype repo in GitHub, create a new Project to organize your work on YourShare
-   - [Spec for YourShare](https://github.com/tnt-summer-academy/Curriculum/blob/main/Reference/Sample%20spec%20-%20YourShare.md)
+   - [Spec for YourShare](https://github.com/tnt-summer-academy/Curriculum-2023/blob/main/Reference/Sample%20spec%20-%20YourShare.md)
 2. Within that project find the Kanban board and create Cards, with 1 card per screen/page in the spec, in order to break down the overall work into specific steps
    - Each card must start with "Done when"
    - Each card must be assigned to a specific person.
@@ -100,7 +100,7 @@ When you're done, you'll have the shell of the app that navigates between the ma
 
 1. Within your team's AppPrototype repo in GitHub, have someone create a new Project to organize your work on YourShare
 2. Within your team's AppPrototype repo in GitHub, you will find a folder named *YourShare*.  
-   Within that folder have someone put [a copy of the YourShare spec](https://github.com/tnt-summer-academy/Curriculum/blob/main/Reference/Sample%20spec%20-%20YourShare.md) in your repo.
+   Within that folder have someone put [a copy of the YourShare spec](https://github.com/tnt-summer-academy/Curriculum-2023/blob/main/Reference/Sample%20spec%20-%20YourShare.md) in your repo.
 3. Examine the YourShare spec as a team, paying particular attention to the various pages and the navigation between them.
    As a team, create 1 card per page of the YourShare app in order to break down the overall work into specific steps
    - **Each card must start with "Done when"**
