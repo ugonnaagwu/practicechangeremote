@@ -6,11 +6,7 @@ export class TodoItem extends Component {
     // that our JSX will use:
     const { id, title } = this.props.todo;
     const cssStyle = {
-      color: this.props.todo.completed ? "gray" : "white",
-      fontWeight: this.props.todo.completed ? "600" : "200",
       textDecoration: this.props.todo.completed ? "line-through" : "none",
-      fontFamily: "sagegreen",
-      display: this.props.todo.completed ? "gray" : "block",
     };
 
     // Now generate the JSX (the HTML & JS)
