@@ -51,7 +51,7 @@ In the spec you should prioritize the user stories and the engineering work you 
 As a team you'll write one spec together.
 
 1. Have handy all your work from the design phases.
-2. Use the SpecTemplate.md in the reference folder to get started.
+2. Use the [SpecTemplate.md](https://github.com/tnt-summer-academy/Curriculum-2023/blob/main/Reference/SpecTemplate.md) in the reference folder to get started.
 3. Create the spec as an .md file, Word document, or OneNote. Make sure it's saved in your team's files in Teams.
 4. Link to your walk through, include images of the screens side by side with the engineering breakdown.
 5. Break up sections or work through all of it together. Figure out what works best for your team. Everyone should be able to point to contributions they've made in the spec.
