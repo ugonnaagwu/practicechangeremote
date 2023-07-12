@@ -4,9 +4,11 @@ import { NavLink } from "react-router-dom";
 import { useLocation, useNavigate} from "react-router-dom";
 
 
-const Details = (props) => {
+const Details = () => {
+ 
+  //const navigate = useNavigate();
+
   const location = useLocation();
-  const navigate = useNavigate();
   const { username, email, city, phone } = 
     location.state;
   ;

@@ -4,7 +4,7 @@ import { Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 
-const UserForm = (props) => {
+const UserForm = () => {
     let navigate = useNavigate();
   const [state, setState] = useState({
     username: "",
