@@ -157,7 +157,6 @@ function Users() {
 
 Now if you enter manually localhost:3000/users you will see *Users* component is rendered.
 
-## Add a note that we don't need to use exact any more##
 
 ***Adding Navigation using Link component***
 React Router provides a `<Link>` component to create links in your application. Wherever you render a `<Link>`, an anchor `(<a>)` will be rendered in your HTML document.
@@ -185,10 +184,10 @@ After adding navigation you will see the routes are rendered on the screen. if y
 </ul>
 ```
 
-***Route Matcherst***
+***Route Matcher***
 
 
-in React Route V6 `Routes` replaced `<Switch>`to prevents bugs due to manually putting routes in the wrong order in a `<Switch>`. It includes features like relative routing and linking, automatic route ranking, nested routes, and layouts. 
+In React Route v6 `Routes` replaced `<Switch>`to prevents bugs due to manually putting routes in the wrong order in a `<Switch>`. It includes features like relative routing and linking, automatic route ranking, nested routes, and layouts. 
 
 ```JSX
 // in v5
@@ -223,7 +222,7 @@ or
 ```
 
 ``` JSX
-// in V6
+// in v6
 <Router>
   <Routes>
     <Route path="/" element={<Home />} />
