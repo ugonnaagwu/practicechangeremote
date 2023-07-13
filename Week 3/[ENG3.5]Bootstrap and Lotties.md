@@ -178,11 +178,11 @@ Nav is shared by all navigation tabs. Each navigation tab is a Nav.Item that con
 
 Larger screens
 
-![navbar large](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%203/images/ENG3.5/Bootstrap-navbar-large.png)
+![navbar large](./images/ENG3.5/Bootstrap-navbar-large.png)
 
 Smaller screens
 
-![navbar small](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%203/images/ENG3.5/Bootstrap-navbar-small.png)
+![navbar small](./images/ENG3.5/Bootstrap-navbar-small.png)
 
 #### Button
 
@@ -194,7 +194,7 @@ import { Button } from "react-bootstrap";
 <Button variant="primary" onClick={this.saveDate}>Save the date!</Button>
 ```
 
-![button](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%203/images/ENG3.5/Bootstrap-button.png)
+![button](./images/ENG3.5/Bootstrap-button.png)
 
 Other examples:
 
@@ -220,7 +220,7 @@ import { Alert } from 'react-bootstrap';
    The date is saved!
 </Alert >
 ```
-![alert](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%203/images/ENG3.5/Bootstrap-alert.png)
+![alert](./images/ENG3.5/Bootstrap-alert.png)
 
 #### Image
 
@@ -230,7 +230,7 @@ import myimage from "../images/myimage.png";
 ...
 <Image src={myimage} className="border border-primary" roundedCircle />
 ```
-![image](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%203/images/ENG3.5/Bootstrap-image.png)
+![image](./images/ENG3.5/Bootstrap-image.png)
 
 #### Carousel
 
@@ -281,7 +281,7 @@ import { Carousel } from 'react-bootstrap';
 
 A nice tutorial is available [here](https://www.freakyjolly.com/react-bootstrap-carousel-example-tutorial/).
 
-![carousel](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%203/images/ENG3.5/Bootstrap-carousel.png)
+![carousel](./images/ENG3.5/Bootstrap-carousel.png)
 
 ## Lottie
 
@@ -351,7 +351,7 @@ const LottieAnimation = (props) => {
 export default LottieAnimation;
 ```
 
-![lottie](https://github.com/tnt-summer-academy/Curriculum-2022/blob/main/Week%203/images/ENG3.5/Bootstrap-lottie.png)
+![lottie](./images/ENG3.5/Bootstrap-lottie.png)
 
 You can edit lotties in the [editor](https://lottiefiles.com/editor).
 
