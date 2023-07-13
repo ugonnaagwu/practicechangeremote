@@ -1,4 +1,4 @@
-# Bootstrap and Lotties
+# React Bootstrap
 
 ## Week 3, Lesson 5
 
@@ -50,11 +50,14 @@ RABBIT HOLE WARNING: Can't find the component that you need in these lists? Chec
 * [Awesome Components](https://github.com/brillout/awesome-react-components)
 * [Awesome React Component Library list](https://github.com/enaqx/awesome-react#react-component-libraries)
 
+<!--
 ### Lottie
 
 * [Lottiefiles.com](https://lottiefiles.com)
 * [An example of using Lottie in React](https://lottiefiles.com/blog/working-with-lottie/how-to-use-lottie-in-react-app)
 * [Lottie editor](https://edit.lottiefiles.com/)
+
+-->
 
 ## Choosing a UI Component Library
 
@@ -283,6 +286,13 @@ A nice tutorial is available [here](https://www.freakyjolly.com/react-bootstrap-
 
 ![carousel](./images/ENG3.5/Bootstrap-carousel.png)
 
+
+### Demo Code
+
+[Sample code for Bootstrap React UI Components demo](https://github.com/tnt-summer-academy/Curriculum-2023/tree/main/Week%203/Samples/react-bootstrap)
+
+
+<!-- remove lottie from this year curriculum
 ## Lottie
 
 ### What is a Lottie?
@@ -290,10 +300,6 @@ A nice tutorial is available [here](https://www.freakyjolly.com/react-bootstrap-
 A Lottie is a JSON-based animation file format enabled for any platform - Android, iOS, web etc. It is a small file that works on different devices and scale easily.
 
 Lottie was developed by Airbnb. The top 500 apps on the App Store use Lottie to engage users and enhance conversations. It is 600% smaller than gif and 10x faster to ship.
-
-### Demo Code
-
-[Sample code for Bootstrap React UI Components demo](https://github.com/tnt-summer-academy/Samples/tree/main/Week_3/react-bootstrap-javascript)
 
 ### How to use a lottie?
 
@@ -354,6 +360,8 @@ export default LottieAnimation;
 ![lottie](./images/ENG3.5/Bootstrap-lottie.png)
 
 You can edit lotties in the [editor](https://lottiefiles.com/editor).
+
+-->
 
 ## Your turn
 
