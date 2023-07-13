@@ -1,6 +1,6 @@
 # View Component Layout
 
-## Week 3, Lesson 3
+## Week 3, Lesson 4
 
 This lesson introduces how to create components that can display a variety of data and distribute space dynamically.
 
