@@ -430,24 +430,19 @@ The `catch` method will be called if the promise is broken - for example, if we'
     </li>
 ```
 
-Essentially, we're asking for the JSON object at `/users/1` (whether that's a single string or a large complex object) and we're asking JavaScript to call `this.displayUser1NameOnPage` for us once it's got a response.  Let's look at `this.displayUser1NameOnPage` next:
+Essentially, we're asking for the JSON object at `/users/1` (whether that's a single string or a large complex object) and we're asking JavaScript to call `displayUser1NameOnPage` for us once it's got a response.  Let's look at `displayUser1NameOnPage` next:
 
 ```javascript
-  displayUser1NameOnPage = (newUser1) => {
+  const displayUser1NameOnPage = (newUser1) => {
     if (newUser1 === null) {
-      alert("Error - didn't receive an object!")
+      alert("Error - didn't receive an object!");
       return;
     }
-    this.setState((state, props) => {
-      return {
-        ...state,
-        user1: newUser1
-      }
-    });
-  }
+    setUser1(newUser1);
+  };
 ```
 
-This method is pretty short - once we've (finally) got the value from the database we call this.setState (unless something went wrong, in which case we display an alert and then end the method early)
+This method is pretty short - once we've (finally) got the value from the database we call setUser1 State hook (unless something went wrong, in which case we display an alert and then end the method early)
 
 #### CRUD operations: Read A-List
 
