@@ -456,18 +456,19 @@ Useful for:
     // READ:
     // read a list of objects
     // https://firebase.google.com/docs/database/web/read-and-write?authuser=0#read_data_once
-    getListOfObjects(location, callWhenFinished) {
-        let ref = firebase.database().ref(location);
-        ref.once('value').then(
-            (snapshot) => {
-                var listOfUsers = snapshot.val() || []; // Either we got the users, or else we have an empty list
-                callWhenFinished(Object.values(listOfUsers));
-            })
-            .catch((error) => {
-                console.log("Couldn't get list of objects: " + error);
-                callWhenFinished([])
-            });
-    }
+      const getListOfObjects = (location, callWhenFinished) => {
+      let listRef = ref(db, location);
+      get(listRef)
+      .then((snapshot) => {
+        var listOfUsers = snapshot.val() || [];
+        callWhenFinished(Object.values(listOfUsers));
+      })
+      .catch((error) => {
+        console.log("Couldn't get list of objects: " + error);
+        callWhenFinished([]);
+      });
+  };
+ 
 ```
 
 This method looks really similar to the other method.  So similar that we could probably get away with a single version instead of having two separate methods for this :)
