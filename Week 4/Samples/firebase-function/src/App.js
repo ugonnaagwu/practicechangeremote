@@ -71,7 +71,7 @@ export default function App() {
     }
 
     alert("Successfully removed the user!");
-
+    // Reset user1 state to default values
     setUser1({
       username: "NO NAME",
       email: "NO EMAIL",

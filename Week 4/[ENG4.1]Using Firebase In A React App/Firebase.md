@@ -1,7 +1,5 @@
 # Using Firebase In A React App
 
-
-
 ## Learning objectives
 
 * TNTs will understand what a document-oriented database is (e.g., Cosmos DB, MongoDB, Firebase)
@@ -28,7 +26,7 @@
 
 ### Let's look at Firebase:
 
-1. [There's an example solution available in the Samples folder](https://github.com/tnt-summer-academy/Samples/tree/main/Week_3/firebase); you'll need to update src/myFirebase.js with the info for your particular database (otherwise you'll be using the instructor's example DB, and may end up clobbering (destroying) someone else's data (or having your data in the DB getting clobbered by someone else))
+1. [There's an example solution available in the Samples folder](../Samples/firebase-function/); you'll need to update src/myFirebase.js with the info for your particular database (otherwise you'll be using the instructor's example DB, and may end up clobbering (destroying) someone else's data (or having your data in the DB getting clobbered by someone else))
    
 2. [Sign up for Firebase on their website.](https://firebase.google.com/)
    (It's free)
@@ -134,33 +132,34 @@ For AppPrototype, it might make sense to just put all of this.state into the dat
 2. Let's start this by opening at your app in VSCode (or by opening [the sample project in the Samples repo](https://github.com/tnt-summer-academy/Samples/tree/main/Stretch/firebase))
 
 3. You can install the Firebase support in your terminal like this:
-   `npm install firebase`
+   `npm install firebase` and 
+   `npm @firebase/database`
 
-   - Note: you do NOT need `npm install @types/firebase` - the firebase package includes type definitions for JavaScript (I believe the Firebase JavaScript API itself is written in JavaScript)
+- Install `npm @firebase/database` package separately from NPM, and import the necessary functions directly from the modular package. By using the modular version of the Firebase Realtime Database package, you should be able to import the necessary functions correctly.
+
+-Note: you do NOT need `npm install @types/firebase` - the firebase package includes type definitions for JavaScript (I believe the Firebase JavaScript API itself is written in JavaScript)
+
 
 4. Copy this into a new file (named, say, `myFirebase.js`) in your project:
 
    ```javascript
-   import firebaseApp from 'firebase/app'
-   import firebase from 'firebase'
-   
+   import { initializeApp } from "firebase/app";
+   import { getDatabase, ref, set, push, get, update, remove } from "@firebase/database";;
+
+    
    const firebaseConfig = {
-       apiKey: "AIzaSyCzUTWQpoVu956eV_6AQtI5ENtwyxjt",   // REPLACE THIS WITH YOUR INFO!!!
-       authDomain: "tnt-2020-fireb-demo.firebaseapp.com",  // REPLACE THIS WITH YOUR INFO!!!
-       databaseURL: "https://tnt-2020-fireb-demo.firebaseio.com",  // REPLACE THIS WITH YOUR INFO!!!
-       projectId: "tnt-2020-fibase-demo",  // REPLACE THIS WITH YOUR INFO!!!
-       storageBucket: "tnt-2020-frebas-demo.appspot.com",  // REPLACE THIS WITH YOUR INFO!!!
-       messagingSenderId: "3510673140",  // REPLACE THIS WITH YOUR INFO!!!
-       appId: "1:351067380140:web:7fcb50dc0a72bf84209"  // REPLACE THIS WITH YOUR INFO!!!
+       apiKey: "REPLACE THIS WITH THE CODE YOU COPIED FROM THE FIREBASE WEBSITE",
+       authDomain:  "REPLACE THIS WITH THE CODE YOU COPIED FROM THE FIREBASE WEBSITE",
+       databaseURL:  "REPLACE THIS WITH THE CODE YOU COPIED FROM THE FIREBASE WEBSITE",
+       projectId: "REPLACE THIS WITH THE CODE YOU COPIED FROM THE FIREBASE WEBSITE",
+       storageBucket: "REPLACE THIS WITH THE CODE YOU COPIED FROM THE FIREBASE WEBSITE",
+       messagingSenderId: "REPLACE THIS WITH THE CODE YOU COPIED FROM THE FIREBASE WEBSITE",
+       appId: "REPLACE THIS WITH THE CODE YOU COPIED FROM THE FIREBASE WEBSITE",
    };
    
    
-   export class MyFirebase {
-       constructor() {
-           if (firebase.apps.length === 0) {
-               firebaseApp.initializeApp(firebaseConfig);
-           }
-       }
+    initializeApp(firebaseConfig);
+    const db = getDatabase();
    }
    ```
 
@@ -171,44 +170,46 @@ For AppPrototype, it might make sense to just put all of this.state into the dat
      It's fine to do this for your app prototype AND it's the sort of thing where if you get asked about it then it's good to be clear that you were told it's ok for the prototype and to then talk about how it's not ok for a production application.
      There are ways to store this information in other files (for example, .env files, which are loaded into environment variables); you can then store those files outside of source control
      
-   - Firebase wants us to initialize the connection to the database, but it wants us to do that *exactly once* in the program.  We can make this easy by putting the following code into the constructor:
+   - Firebase wants us to initialize the connection to the database, but it wants us to do that *exactly once* in the program.  We can make this easy by putting the following code into myFirebase.js file with the configuation:
 
      ```javascript
-     if (firebase.apps.length === 0) {
-     		firebaseApp.initializeApp(firebaseConfig);
-     }
+        initializeApp(firebaseConfig);
+        const db = getDatabase();
      ```
 
-     If we've initialized our app already then the firebaseApp.apps array will have an entry in it, so it's length / size will be greater than zero.  If we have NOT initialized the app then that array will be empty, and have a length of 0.
-     Here in JavaScript/JavaScript we ask if the array is empty (if it has a length of zero) and if so then we call the initializeApp() method with the configuration information that we copied from the Firebase website.
+     We call the `initializeApp()` method with the configuration information that we copied from the Firebase website.
 
-5. Then, inside any other file that you want to use Firebase in you'll need to put this at the top of the file:
+     After that you'll need to create an object to get access to the database and pass this object method / function that you want to use it in.
 
-   ```javascript
-   import { MyFirebase } from './myFirebase';
-   ```
+     ```javascript
+     const usersRef = ref(db, "users");
+      // db is the database const variable return from getDataase() 
+     ```
 
-   After that you'll need to create the database in each method / function that you want to use it in, like so:
+5. Since the MyFirebase function is defined outside the App component and exported, you can access its functions by calling `myFirebase().functionName()` within the App component. For example:
 
-   ```javascript
-     let db = new MyFirebase();
-     // After this you can then call methods on your 'MyFirebase' object
-   ```
+```jsx
+myFirebase().createUser1("Alice", "Alice@A.com", "https://....");
+
+```
+This way, you can use the MyFirebase functions inside the App component.
+
 
 #### Overview of our approach to using Firebase
 
-We've already got a class that will connect to Firebase for us.  We're going to add a method to that class for each action you want to do on the DB.  Each time you ask (query) for information, or add / update / remove information, etc - each action gets their own method.   
-This way you can then say something like "`db.addUser(firstname, lastname, etc, etc);`" in the rest of your app, and this one class is the only thing that needs to worry about how to interact with the database.
+We've already got a javascript function that will connect to Firebase for us.  We're going to add a method to that javascript file for each action you want to do on the DB.  Each time you ask (query) for information, or add / update / remove information, etc - each action gets their own method.   
+This way you can then say something like "`myFirebase.addUser(firstname, lastname, etc, etc);`" in the rest of your app, and this one javascript file   is the only thing that needs to worry about how to interact with the database.
 
 In each case we're going to follow the same general set of steps, whether it's adding information to our database or reading a list out.  More-or-less, we'll do the following:
 
-1. Create a MyFirebase object (this will connect to Firebase, if we haven't done so already)
-2. Create a method on the MyFirebase class to interact with the database for our component.
-   That method will then do the following:
+1. Create a db object (this will connect to Firebase, if we haven't done so already)
+2. Create a method on the MyFirebase javascript file to interact with the database for our component.
+
+That method will then do the following:
    1. From the firebase package, get a reference to the place in the Firebase database (the JSON document) that you want to modify
-   2. Call the appropriate method on that reference (e.g., set / push /  once / update / remove )
+   2. Call the appropriate method on that reference (e.g., set / get / update / remove )
    3. Use Promise.then to run code once the database operation is finished
-   4. In that code we'll call this.setState in order to update React / update the page that we're showing to the user
+   4. In the App component JS file, we'll call the State hook in order to update React / update the page that we're showing to the user when needed
 
 For each of the following sections try doing the following:
 
@@ -216,7 +217,7 @@ For each of the following sections try doing the following:
 2. Verify / visualize what change(s) have been made in the database by using the Firebase website
 3. Look through code in detail
 
-#### CRUD operations: Create
+### CRUD operations: Create
 
 Useful for:
 
@@ -232,29 +233,35 @@ Useful for:
     // // CREATE:
     // // basic write
     // // https://firebase.google.com/docs/database/web/read-and-write?authuser=0
-    createUser1(name, eml, profilePicURL) {
-        let newUserRef = firebase.database().ref('users/1');
-        newUserRef.set({
-            username: name,
-            email: eml,
-            profile_picture: profilePicURL
-        }).then(
-            () => { console.log("Added the new user successfully!"); },
-            (reason) => (console.log("ERROR: Did NOT add the user.  Reason: " + reason))
-        );;
-    }
+
+    const createUser1 = (name, eml, profilePicURL) => {
+    let newUserRef = ref(db, "users/1"); // Generate a new child node with an auto-generated ID
+    set(newUserRef, {
+      username: name,
+      email: eml,
+      profile_picture: profilePicURL,
+    })
+      .then(() => {
+        console.log("Added the new user successfully!");
+      })
+      .catch((reason) => {
+        console.log("ERROR: Did NOT add the user. Reason: " + reason);
+      });
+  };
+
 ```
 
 Notice that this will create a new JSON object within the overall database at the `users/1` location.  Typically the '1' would be an ID identifying a particular user.  This does mean that if we run this method twice then the second time this method will replace the contents of `users/1` during that second time that it runs.
 
-We do this by following the steps we listed above.  First we get a reference to the object that we want to create (it's ok that it doesn't exist yet) using the line `et newUserRef = firebase.database().ref('users/1');`
+We do this by following the steps we listed above.  
+1. First we get a reference to the object that we want to create (it's ok that it doesn't exist yet) using the line `let newUserRef = ref(db, "users/1"); `
 
-Next, we call the set method and hand it a JavaScript object literal, starting on this line: ` newUserRef.set({`
+2. Next, we call the set method and hand it a JavaScript object literal, starting on this line: ` newUserRef.set({`
 
-Finally, on to the third step.  
+3. Finally, on to the third step.  
 How do we know if the operation succeeded or not?  There's any number of reasons why this might not work.  We might experience some sort of connection issue across the internet, or we might run out of space in the database (particularly for the 'free' plan), or, or, or.  So how do we check that things worked out ok?  This is complicated by the fact that it may take a while to get the response back from the Firebase server out there on the Internet and we'd like our program to do something productive in the meantime.
 
-We'll solve these two problems (did my DB operation work ok?  how can I do something else while I'm waiting for the answer?) by using JavaScript Promises.  This is that `.then()` method call with the two arrow functions inside it:
+We'll solve these two problems***(did my DB operation work ok?  how can I do something else while I'm waiting for the answer?)*** by using JavaScript Promises.  This is that `.then()` method call with the two arrow functions inside it:
 
 ```javascript
 					// < snip > - left out to focus on this detail :)
@@ -270,24 +277,27 @@ Essentially, if things went ok then the first function will be called (in our ca
 
 <u>It's really important to understand that if you want to run code only when you know for sure that the database operation has succeeded then you must run it inside that first arrow function.</u>
 
-##### Here's how we might call the code inside, say, a render method of a component:
+##### Here's how we might call the code inside, say, a return method of a function component:
 
-```javascript
-render() {
-
-    let db = new MyFirebase();
-
-    return (
-      <div className="App">
-        <header className="App-header">
-          <h1>Firebase Demo</h1>
-        Options:
-        <ul>
-            <li><button onClick={() => db.createUser1("Alice", "Alice@A.com", "https://....")}>Create User #1</button></li>
-            <li>
+```jsx
+ return (
+    <div className="App">
+      <header className="App-header">
+        <h1>Firebase Demo</h1>
+        Examples:
+        <ol>
+          <p>
+            <button
+              onClick={() =>
+                MyFirebase().createUser1("Alice", "Alice@A.com", "https://....")
+              }
+            >
+              Create User #1
+            </button>
+          </p>
 ```
 
-You only need to do the line that starts with `let db =` *once* for each method.  If you wanted to do multiple database operations you can use and reuse the `db` variable.
+You only need to do the line that starts with `const db =` *once* in myFirebase configuration file.  If you wanted to do multiple database operations you can use and reuse the `db` variable.
 
 #### What about adding *another* user (instead of always overwriting user #1)?
 
@@ -296,55 +306,72 @@ We can ask Firebase to create a new node using the `push()` method, which will a
 Here's the method that we'll add to MyFirebase.js:
 
 ```javascript
-    createANOTHERUser(name, eml, profilePicURL) {
-      let newUserRef = firebase.database().ref('users');
-      newUserRef.push().set(
-          {
-              username: name,
-              email: eml,
-              profile_picture: profilePicURL
-          }
-      ).then(
-          () => { console.log("Added the BRAND NEW new user successfully!"); },
-          (reason) => (console.log("ERROR: Did NOT add the brand new user.  Reason: " + reason))
-      );
-    }
+    /*By using push directly on the usersRef, you generate a new child node with an auto-generated ID. 
+  Then, you can use the set function on the newUserRef 
+  to set the user data under that newly created node.*/
+
+  const createANOTHERUser = (name, eml, profilePicURL) => {
+    const usersRef = ref(db, "users");
+    const newUserRef = push(usersRef); // Generate a new child node with auto-generated ID
+    set(newUserRef, {
+      username: name,
+      email: eml,
+      profile_picture: profilePicURL,
+    })
+      .then(() => {
+        console.log("Added the BRAND NEW new user successfully!");
+      })
+      .catch((reason) => {
+        console.log("ERROR: Did NOT add the brand new user. Reason: " + reason);
+      });
+  };
 ```
 
 This is very similar to the first version - we obtain a reference to the right place in the Firebase DB (but this time we want a reference to the parent of the place where we want to add the new object - we're using `users` here, not `users/1`)(which makes sense, since we don't know what the ID number should be).
 
 Next, we call `.push()` to ask Firebase to create a new object underneath the `users` location.  Firebase will also assign a unique ID to it, as well.
 
-Once we've done that we'll call `.set()` on the new object that we got back from Firebase to actually set up the new object the way we want.
+Once we've done that we'll call `.set()`
+We use the set function on the newUserRef to set the user data under that newly created node to actually set up the new object the way we want.
 
 The last step is to handle any errors in the `.then()`
 
-In the App.js file we make use of this through two parts of the code.  The first is inside the JSX/HTML that we return from the render function (note that we are using uncontrolled form elements here, which [we've looked at previously](https://github.com/tnt-summer-academy/Curriculum/blob/main/Week%204/%5BENG3.4%5DRedux-Part-2.md#step-53-gather-the-information))
+#### In the App.js #### 
+  We make use of this through two parts of the code.  The first is inside the JSX/HTML that we return from the render function (note that we are using uncontrolled form elements here.
 
 ```jsx
-<li><button onClick={() => db.createUser1("Alice", "Alice@A.com", "https://....")}>Create User #1</button></li>
-<li>
-  <form onSubmit={this.submitHandler}>
-    User's name: <input type="text" ref={this.nameRef} /><br />
-    User's email: <input type="text" ref={this.emailRef} /><br />
-    <input type="submit" value="Click to add another user, with this info!" />
-  </form>
-</li>
+   <p>
+    <form onSubmit={submitHandler}>
+      User's name: <input type="text" ref={nameRef} />
+      <br />
+        User's email: <input type="text" ref={emailRef} />
+      <br />
+        <input
+            type="submit"
+            value="Click to add another user, with this info!"
+          />
+    </form>
+  </p>
 ```
 
 The second is the 'submitHandler function:
 
 ```javascript
-  submitHandler = (event) => {
+ const submitHandler = (event) => {
     event.preventDefault();
-    console.log("Name: " + this.nameRef.current.value + " Email: " + this.emailRef.current.value);
+    console.log(
+      "Name: " + nameRef.current.value + " Email: " + emailRef.current.value
+    );
 
-    let db = new MyFirebase();
-    db.createANOTHERUser(this.nameRef.current.value, this.emailRef.current.value, "");
-  }
+    MyFirebase().createANOTHERUser(
+      nameRef.current.value,
+      emailRef.current.value,
+      ""
+    );
+  };
 ```
 
-#### CRUD operations: Read
+### CRUD operations: Read
 
 Useful for:
 
@@ -364,30 +391,31 @@ Also remember that there's always the possibility that something goes wrong (we 
     // READ:
     // basic read
     // https://firebase.google.com/docs/database/web/read-and-write?authuser=0#read_data_once
-    getAnObject(location, callWhenFinished) {
-        let ref = firebase.database().ref(location);
-        ref.once('value').then(
-            (snapshot) => {
-                var objectToGet = snapshot.val() || null; // if we don't find anything then return an empty object
-                console.log("read this value in the original handler: " + objectToGet);
-                callWhenFinished(objectToGet);
-            })
-            .catch((error) => {
-                console.log("Couldn't get the object: " + error);
-                callWhenFinished(null)
-            });
-    }
+     const getAnObject = (location, callWhenFinished) => {
+    let objRef = ref(db, location);
+    get(objRef)
+      .then((snapshot) => {
+        var objectToGet = snapshot.val() || null;
+        console.log("read this value in the original handler: " + objectToGet);
+        callWhenFinished(objectToGet);
+      })
+      .catch((error) => {
+        console.log("Couldn't get the object: " + error);
+        callWhenFinished(null);
+      });
+  };
+
 ```
 
-The idea is that we'll pass in a location (such as "/users/1") to get a particular object, and we'll pass in a function to call once we've gotten the response for Firebase.  We'll call that function regardless of whether we get data or not, or get an error or not, so that the rest of our program can decide what it wants to do.  If we do get an error we'll pass null so that the callback function can know that something went wrong.
+The idea is that we'll pass in a location `(such as "/users/1")` to get a particular object, and we'll pass in a function to call once we've gotten the response for Firebase.  We'll call that function regardless of whether we get data or not, or get an error or not, so that the rest of our program can decide what it wants to do.  If we do get an error we'll pass null so that the callback function can know that something went wrong.
 
-The 'once' method is the method that actually asks the database for a piece of information.  Once will give us back a Promise, which we can then call methods on.
+The `get` method is the method that actually asks the database for a piece of information.  Once will give us back a Promise, which we can then call methods on.
 
-The 'then' method is a method on Promise objects.  We tell JavaScript what function to call once the promise resolves (i.e., once we get the response to our request).  In this case we're giving it an anonymous arrow function.  Weirdly, "then" returns the Promise.  It's weird but handy - it means that we can call more Promise methods, one after the other, in a chain.
+The `then` method is a method on Promise objects.  We tell JavaScript what function to call once the promise resolves (i.e., once we get the response to our request).  In this case we're giving it an anonymous arrow function.  Weirdly, "then" returns the Promise.  It's weird but handy - it means that we can call more Promise methods, one after the other, in a chain.
 
-The ''catch" method will be called if the promise is broken - for example, if we've lost our connection to the Internet the program will eventually notice when our program 'times out' and stops waiting for a response.
+The `catch` method will be called if the promise is broken - for example, if we've lost our connection to the Internet the program will eventually notice when our program 'times out' and stops waiting for a response.
 
-##### Here's how we might call the code inside, say, a render method of a component:
+##### Here's how we might call the code inside, say, a return method of a component function:
 
 ```jsx
 <li><p>User #1's name: {this.state.user1.username}</p><button onClick={() => db.getAnObject('/users/1', this.displayUser1NameOnPage)}>Get User #1's name</button></li>
@@ -440,54 +468,52 @@ Useful for:
 
 This method looks really similar to the other method.  So similar that we could probably get away with a single version instead of having two separate methods for this :)
 
-##### Here's how we might call the code inside, say, a render method of a component:
+##### Here's how we might call the code inside, say, a return method of a function component:
 
+***In App.js***
 ```javascript
-            <li><button onClick={() => db.getListOfObjects('/users', this.displayUserListOnPage)}>Get all Users</button></li>
-            {
-              Object.values(this.state.allUsers).map((nextUser) => (<li key={nextUser.username}><b>{nextUser.username}</b><ul>
-                <li>{nextUser.email}</li>
-                <li>{nextUser.profile_picture ? nextUser.profile_picture : "No picture available"}</li>
-              </ul></li>))
-            }
+     <p>
+        <button
+            onClick={() => MyFirebase().getListOfObjects("/users", displayUserListOnPage)
+              }
+            >
+            Get all Users
+        </button>
+      </p>
+        {allUsers.map((nextUser) => (
+          <ul key={nextUser.username}>
             <li>
+              <b>{nextUser.username}</b>
+              <ul>
+                <li>{nextUser.email}</li>
+                <li>{nextUser.profile_picture
+                      ? nextUser.profile_picture
+                      : "No picture available"}
+                </li>
+              </ul>
+            </li>
+          </ul>
+        ))}
 ```
-There's two parts here - call the 'getListOfObjects' method, specifying where to find the list in the JSON document / database, and specifying the function to call once we've gotten our response from the database.
+There's two parts here - call the `getListOfObjects` method, specifying where to find the list in the JSON document / database, and specifying the function to call once we've gotten our response from the database.
 
-The JSX / HTML then displays that list on the page (which will happen once we've called setState with the new list)
+The JSX / HTML then displays that list on the page (which will happen once we've called the allUers State with the new list)
 
 ```javascript
-  displayUserListOnPage = (users) => {
+
+   const displayUserListOnPage = (users) => {
     if (users.length === 0) {
-      alert("Error - didn't receive the list of users!")
+      alert("Error - didn't receive the list of users!");
       return;
     }
 
-    users = Object.values(users);
-    console.log("Users: " + users);
-    for (var iUser in users) {
-
-      const user = users[iUser];
-      console.log("User: " + user);
-      for (var iAttr in user) {
-        const attr = user[iAttr];
-        console.log("\t " + iAttr + ": " + attr);
-      }
-
-    }
-
-    this.setState((state, props) => {
-      return {
-        ...state,
-        allUsers: users
-      }
-    })
+    setAllUsers(Object.values(users));
   };
 ```
 
 This is the function that actually updates the React state with the new list.
 
-After checking for an error (which in this case would show up as an empty array) we print the contents of the array to the console and then call setState to re-render the page.
+After checking for an error (which in this case would show up as an empty array) and then call setAllUsers State hook to re-render the page.
 
 #### CRUD operations: Update
 
@@ -502,23 +528,29 @@ Useful for:
     // this will only change the things that we give it, instead of replacing the object & all children
     // https://firebase.google.com/docs/database/web/read-and-write?authuser=0#update_specific_fields
     // Get a key for a new Post.
-    updateObject(location, updates, callWhenFinished) {
-        let ref = firebase.database().ref(location);
-        ref.update(updates, callWhenFinished); // This will call the 'callWhenFinished' function for us
+   const updateObject = (location, updates, callWhenFinished) => {
+    let objRef = ref(db, location);
+    update(objRef, updates).then(callWhenFinished).catch(callWhenFinished);
+     }; // This will call the 'callWhenFinished' function for us
     }
 ```
 
-Given a spot in the database and a partially filled in object, we'll call the Firebase .update() method and then wait for .update() to call our callback function when it's done.
+Given a spot in the database and a partially filled in object, we'll call the Firebase `.update()` method and then wait for `.update()` to call our callback function when it's done.
 
-##### Here's how we might call the code inside, say, a render method of a component:
+***Please Note: `callWhenFinished()` is not a built-in method. It is actually a callback function that is passed as a parameter to some of the methods in the MyFirebase class. The purpose of this callback function is to be called when a certain operation is completed, usually an 
+asynchronous operation like fetching data from the Firebase database.***
+
+##### Here's how we might call the code inside, say, a return method of a function component:
 
 ```javascript
-            <li>
-              <form onSubmit={this.updateSubmitHandler}>
-                Change the name of user #1 <input type="text" ref={this.updateNameRef} /><br />
-                <input type="submit" value="Update user #1 to user this name!" />
-              </form>
-            </li>
+    <p>
+       <form onSubmit={updateSubmitHandler}>
+        Change the name of user #1{" "}
+          <input type="text" ref={updateNameRef} />
+            <br />
+          <input type="submit" value="Update user #1 to use this name!" />
+        </form>
+    </p>
 ```
 
 
@@ -526,17 +558,29 @@ Given a spot in the database and a partially filled in object, we'll call the Fi
 ##### Example code for updateSubmitHandler():
 
 ```javascript
-  updateSubmitHandler = (event) => {
+  const updateSubmitHandler = (event) => {
     event.preventDefault();
-    console.log("Name: " + this.nameRef.current.value + " Email: " + this.emailRef.current.value);
+    console.log(
+      "Name: " + nameRef.current.value + " Email: " + emailRef.current.value
+    );
 
-    let db = new MyFirebase();
-    db.updateObject("/users/1", { username: this.updateNameRef.current.value }, this.displayUserUpdate);
-  }
+    
+    MyFirebase().updateObject(
+      "/users/1",
+      { username: updateNameRef.current.value },
+      () => {
+        alert("Updated the user's name!");
+        setUser1((prevState) => ({
+          ...prevState,
+          username: updateNameRef.current.value,
+        }));
+      }
+    );
+  };
 ```
 
-We're using the React uncontrolled form elements here, too.  We make sure that we stop the default action for the 'submit' button (which causes a page refresh), and then call the updateObject method that we defined in our Firebase file, handing it the displayUserUpdate function to call when it's done.
-
+We're using the React uncontrolled form elements here, too.  We make sure that we stop the default action for the `submit` button (which causes a page refresh), and then call the `updateObject` method that we defined in our Firebase file.
+<!--
 ##### Example code for displayUserUpdate():
 
 ```javascript
@@ -554,10 +598,10 @@ We're using the React uncontrolled form elements here, too.  We make sure that w
   }
 
 ```
-
+-->
 Here we update React's copy of the information in the database.  This will trigger a re-render of the page, which will cause user #1's name to show up because of our previous HTML/JSX
 
-#### CRUD operations: Delete
+### CRUD operations: Delete
 
 Useful for:
 
@@ -569,55 +613,59 @@ Useful for:
 ```javascript
     // DELETE
     // https://firebase.google.com/docs/reference/node/firebase.database.Reference#remove
-    deleteObject(location, callWhenFinished) {
-        firebase.database().ref(location).remove()
-            .then(callWhenFinished)
-            .catch(callWhenFinished);
-    }
+     const deleteObject = (location, callWhenFinished) => {
+    let objRef = ref(db, location);
+    remove(objRef).then(callWhenFinished).catch(callWhenFinished);
+  };
 ```
 
 
 
-##### Here's how we might call the code inside, say, a render method of a component:
+##### Here's how we might call the code inside, say, a return method of a function component:
+***In App.js***
 
 ```javascript
-   <li><button onClick={() => db.deleteObject("users/1", this.displayRemoveUserResult)}>Remove user 1</button></li>
+    <li>
+       <button
+           onClick={() =>
+            MyFirebase().deleteObject("users/1", displayRemoveUserResult)
+              }
+            >
+              Remove user #1
+        </button>
+     </li>
 ```
 
 
 
-##### Example code providing displayRemoveUserResult:
+##### Example code providing displayRemoveUserResult: 
+***In App.js***
 
 ```javascript
- displayRemoveUserResult = (err) => {  
+  const displayRemoveUserResult = (err) => {
     if (err === null) {
       alert("Something went wrong when trying to remove the user!" + err);
       return;
     }
 
     alert("Successfully removed the user!");
-
-    this.setState(
-      (prevState, props) => {
-        let newState = { ...prevState };
-        newState.user1 = {
-          username: "NO NAME",
-          email: "NO EMAIL",
-          profile_picture: "NO PICTURE"
-        };
-        return newState;
-      }
+    // Reset user1 state to default values
+    setUser1({
+      username: "NO NAME",
+      email: "NO EMAIL",
+      profile_picture: "NO PICTURE",
+    });
+  };
     
 ```
+we use the `useState` hook to create state variables user1 and allUsers, and the corresponding setter functions `setUser1` and `setAllUsers`. The displayRemoveUserResult function now uses setUser1 to reset the `user1` state when a user is successfully removed.
 
 # MISC
 
-[Useful tutorial on React Context](https://www.robinwieruch.de/react-context)
+- [Useful tutorial on React Context](https://www.robinwieruch.de/react-context)
 
-[JavaScript and React Context](https://www.carlrippon.com/react-context-with-JavaScript-p1/)
+- [JavaScript and React Context](https://www.carlrippon.com/react-context-with-JavaScript-p1/)
 
-// The official docs:
-// https://firebase.google.com/docs/web/setup?authuser=0#node.js-apps
+- [The official docs](https://firebase.google.com/docs/web/setup?authuser=0#node.js-apps)
 
-// Read from / write to DB:
-// https://firebase.google.com/docs/database/web/read-and-write?authuser=0
+- [Read from / write to DB](https://firebase.google.com/docs/database/web/read-and-write?authuser=0)
