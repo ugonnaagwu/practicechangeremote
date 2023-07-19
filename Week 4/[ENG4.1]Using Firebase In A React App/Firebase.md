@@ -26,7 +26,7 @@
 
 ### Let's look at Firebase:
 
-1. [There's an example solution available in the Samples folder](../Samples/firebase-function/); you'll need to update src/myFirebase.js with the info for your particular database (otherwise you'll be using the instructor's example DB, and may end up clobbering (destroying) someone else's data (or having your data in the DB getting clobbered by someone else))
+1. [There's an example solution available in the Samples folder](../Samples/firebase-function/); you'll need to update src/myFirebase.js with the info for your particular database (otherwise, you'll be using the instructor's example DB, and may end up clobbering (destroying) someone else's data (or having your data in the DB getting clobbered by someone else))
    
 2. [Sign up for Firebase on their website.](https://firebase.google.com/)
    (It's free)
@@ -37,8 +37,8 @@
    - Pick a name
    - Say 'No' to Google Analytics :)
 
-4. Next, the left-hand column open up the 'Develop' tab and click on 'Realtime Database':
-   (We're going to use the "Realtime Database", NOT Firestore database)
+4. Next, the left-hand column opens up the 'Develop' tab, and click on 'Realtime Database':
+   (We're going to use the "Realtime Database", NOT the Firestore database)
 
    ![image-20210712213407895](images/createRealtimeDB.png)
 
@@ -49,10 +49,10 @@
 
    ![image-20210712213552895](images/SetupDB_Locationpng.png)
 
-7. For now let's use "test mode", since it will be easier to connect to.  (You can change this later on if you'd like).  Click 'Enable' and we'll go to the next step after a short delay.
+7. For now, let's use "test mode" since it will be easier to connect to.  (You can change this later on if you'd like).  Click 'Enable', and we'll go to the next step after a short delay.
    ![image-20210712213845254](images/Setup_TestMode.png)
 
-8. Your database will start out empty, if you move the mouse over an element you'll be given the option to add sub-items or to remove the item:
+8. Your database will start out empty; if you move the mouse over an element, you'll be given the option to add sub-items or to remove the item:
    ![image-20210712214524501](images/RTDB_AddRemove_Manually.png)
 
 #### Exercise:
@@ -64,9 +64,9 @@ Try to re-create the picture above in your own Firebase DB.
 There's a [rather lengthy article in Wikipedia about JSON which includes a lot of solid examples to browse through](https://en.wikipedia.org/wiki/JSON).  
 The 'tree view' of the document (in our document database) is a typical example of how to think about JSON files.  
 
-There's a couple of important points to remember when working with JSON files:
+There are a couple of important points to remember when working with JSON files:
 
-1. JSON files are very similar to object literals in JavaScript (and therefore similar-ish to object literals in JavaScript) but there are differences.  For example, and object literal in JS does not need to put quotes around the field names...
+1. JSON files are very similar to object literals in JavaScript (and therefore similar-ish to object literals in JavaScript), but there are differences.  For example, an object literal in JS does not need to put quotes around the field names...
 
    ```javascript
    let objectLiteral = {
@@ -84,23 +84,23 @@ There's a couple of important points to remember when working with JSON files:
    }
    ```
 
-2. There's no rules enforcing a certain structure, nor limiting what you can do with this.
+2. There are no rules enforcing a certain structure nor limiting what you can do with this.
 
-   - On the one hand this is nice because you can add extra information or fields to any given part of the document, which can be handy (especially in web application development, because the browser will send the server a bunch of strings and these strings may or may not be consistent each time).
-   - On the other hand computers are best at doing the exact same thing over and over, so when you've got a document that may have variations in the structure that may complicate your code
+   - On the one hand, this is nice because you can add extra information or fields to any given part of the document, which can be handy (especially in web application development because the browser will send the server a bunch of strings, and these strings may or may not be consistent each time).
+   - On the other hand, computers are best at doing the exact same thing over and over, so when you've got a document that may have variations in the structure that may complicate your code
 
 3. You CANNOT have circular references in the document
 
-   - There are ways around this.  For example, instead of a reference you could put in an ID number, and then put stuff into the document in way that allows you to look up objects by ID number.
+   - There are ways around this.  For example, instead of a reference, you could put in an ID number and then put stuff into the document in a way that allows you to look up objects by ID number.
 
 4. You CANNOT put comments into JSON files (at least officially)
-   Because this was intended as a format for one program to send information to another program there's no way to add comments.  :(
+   Because this was intended as a format for one program to send information to another program, there's no way to add comments.  :(
 
 ### What *should* you put in a DB?
 
-Normally you'd only store data that you want to save across runs of your program.  Things like user account information (so the next time the user logins in you'll have their name, email, etc, available), or the items for sale in your store, or what a given user has ordered that you're still putting together to ship to them, etc, etc.
+Normally you'd only store data that you want to save across runs of your program.  Things like user account information (so the next time the user logins in, you'll have their name, email, etc, available), or the items for sale in your store, or what a given user has ordered that you're still putting together to ship to them, etc, etc.
 
-For AppPrototype, it might make sense to just put all of this.state into the database.  It's not really ideal but would mean that when you close the browser's window for your app it'll have everything saved and you can pick up where you left off next time.
+For AppPrototype, it might make sense to just put all of this. state into the database.  It's not really ideal, but it would mean that when you close the browser's window for your app, it'll have everything saved, and you can pick up where you left off next time.
 
 ### How do we access the database from code?
 
@@ -112,11 +112,11 @@ For AppPrototype, it might make sense to just put all of this.state into the dat
 2. Notice that there's an option for iOS and another for Android - we'll use the web application option:
    ![image-20210712215108733](images/ChooseWebApp.png)
 
-3. When Firebase asks make sure that you do give it a name but do NOT host your solution on Firebase
+3. When Firebase asks, make sure that you do give it a name but do NOT host your solution on Firebase
 
-4. Once you've done that it'll show you a Wall of Code.  Copy it and paste it into a new file (just so you don't lose it on the clipboard)
+4. Once you've done that, it'll show you a Wall of Code.  Copy it and paste it into a new file (just so you don't lose it on the clipboard)
 
-   - If you need this code again you can find it in your Project Overview > Project Settings page:
+   - If you need this code again, you can find it in your Project Overview > Project Settings page:
      ![image-20200725225541750](images/FindingProjectSettings.png)
 
    - On the 'General' tab (in the Project Overview > Project settings page) scroll down to the 'Your Apps' section, and you'll find that same info (clicking on the 'Config' button will even give you usable JavaScript/JavaScript):
@@ -129,11 +129,11 @@ For AppPrototype, it might make sense to just put all of this.state into the dat
 
    The approach we're going to use is to create a class that all your components can use.  This way we can centralize repetitive logic in a single place.
 
-2. Let's start this by opening at your app in VSCode (or by opening [the sample project in the Samples repo](https://github.com/tnt-summer-academy/Samples/tree/main/Stretch/firebase))
+2. Let's start this by opening your app in VSCode (or by opening [the sample project in the Samples repo](https://github.com/tnt-summer-academy/Samples/tree/main/Stretch/firebase))
 
 3. You can install the Firebase support in your terminal like this:
    `npm install firebase` and 
-   `npm @firebase/database`
+   `npm install @firebase/database`
 
 - Install `npm @firebase/database` package separately from NPM, and import the necessary functions directly from the modular package. By using the modular version of the Firebase Realtime Database package, you should be able to import the necessary functions correctly.
 
@@ -167,10 +167,10 @@ For AppPrototype, it might make sense to just put all of this.state into the dat
      
    - Note: Checking all this info into GitHub isn't particularly secure.
      
-     It's fine to do this for your app prototype AND it's the sort of thing where if you get asked about it then it's good to be clear that you were told it's ok for the prototype and to then talk about how it's not ok for a production application.
-     There are ways to store this information in other files (for example, .env files, which are loaded into environment variables); you can then store those files outside of source control
+     It's fine to do this for your app prototype, AND it's the sort of thing where if you get asked about it then it's good to be clear that you were told it's ok for the prototype and to then talk about how it's not ok for a production application.
+     There are ways to store this information in other files (for example, .env files, which are loaded into environment variables); you can then store those files outside of the source control.
      
-   - Firebase wants us to initialize the connection to the database, but it wants us to do that *exactly once* in the program.  We can make this easy by putting the following code into myFirebase.js file with the configuation:
+   - Firebase wants us to initialize the connection to the database, but it wants us to do that *exactly once* in the program.  We can make this easy by putting the following code into myFirebase.js file with the configuration:
 
      ```javascript
         initializeApp(firebaseConfig);
@@ -197,37 +197,37 @@ This way, you can use the MyFirebase functions inside the App component.
 
 #### Overview of our approach to using Firebase
 
-We've already got a javascript function that will connect to Firebase for us.  We're going to add a method to that javascript file for each action you want to do on the DB.  Each time you ask (query) for information, or add / update / remove information, etc - each action gets their own method.   
-This way you can then say something like "`myFirebase.addUser(firstname, lastname, etc, etc);`" in the rest of your app, and this one javascript file   is the only thing that needs to worry about how to interact with the database.
+We've already got a javascript function that will connect to Firebase for us.  We're going to add a method to that javascript file for each action you want to do on the DB.  Each time you ask (query) for information, or add/ update/ remove information, etc - each action gets their own method.   
+This way, you can then say something like "`myFirebase.addUser(firstname, lastname, etc, etc);`" in the rest of your app, and this one javascript file   is the only thing that needs to worry about how to interact with the database.
 
-In each case we're going to follow the same general set of steps, whether it's adding information to our database or reading a list out.  More-or-less, we'll do the following:
+In each case, we're going to follow the same general set of steps, whether it's adding information to our database or reading a list out.  More-or-less, we'll do the following:
 
-1. Create a db object (this will connect to Firebase, if we haven't done so already)
+1. Create a db object (this will connect to Firebase if we haven't done so already)
 2. Create a method on the MyFirebase javascript file to interact with the database for our component.
 
 That method will then do the following:
-   1. From the firebase package, get a reference to the place in the Firebase database (the JSON document) that you want to modify
-   2. Call the appropriate method on that reference (e.g., set / get / update / remove )
+   1. From the Firebase package, get a reference to the place in the Firebase database (the JSON document) that you want to modify
+   2. Call the appropriate method on that reference (e.g., set/ get/ update/ remove )
    3. Use Promise.then to run code once the database operation is finished
    4. In the App component JS file, we'll call the State hook in order to update React / update the page that we're showing to the user when needed
 
-For each of the following sections try doing the following:
+For each of the following sections, try doing the following:
 
 1. Watch the new feature work in the browser
-2. Verify / visualize what change(s) have been made in the database by using the Firebase website
-3. Look through code in detail
+2. Verify/visualize what change(s) have been made in the database by using the Firebase website
+3. Look through the code in detail
 
 ### CRUD operations: Create
 
 Useful for:
 
-- A new order on a e-commerce site
-  In general, whenever you've got an HTML form that's adding new information to your database then you'll want to consider using a 'create' style method on your database
+- A new order on an e-commerce site
+  In general, whenever you've got an HTML form that's adding new information to your database, then you'll want to consider using a 'create' style method on your database.
 - If you're replacing something wholesale.
-  For example, if you're replacing your car you might completely replace the information about your current car with the information about the new car.
+  For example, if you're replacing your car, you might completely replace the information about your current car with the information about the new car.
 - When you initialize the DB with some starting values (for example, when the app is first installed)
 
-##### Example code providing this functionality, inside MyFirebase.js:
+##### Example code providing this functionality inside MyFirebase.js:
 
 ```javascript
     // // CREATE:
@@ -254,7 +254,7 @@ Useful for:
 Notice that this will create a new JSON object within the overall database at the `users/1` location.  Typically the '1' would be an ID identifying a particular user.  This does mean that if we run this method twice then the second time this method will replace the contents of `users/1` during that second time that it runs.
 
 We do this by following the steps we listed above.  
-1. First we get a reference to the object that we want to create (it's ok that it doesn't exist yet) using the line `let newUserRef = ref(db, "users/1"); `
+1. First, we get a reference to the object that we want to create (it's ok that it doesn't exist yet) using the line `let newUserRef = ref(db, "users/1"); `
 
 2. Next, we call the set method and hand it a JavaScript object literal, starting on this line: ` newUserRef.set({`
 
@@ -327,7 +327,7 @@ Here's the method that we'll add to MyFirebase.js:
   };
 ```
 
-This is very similar to the first version - we obtain a reference to the right place in the Firebase DB (but this time we want a reference to the parent of the place where we want to add the new object - we're using `users` here, not `users/1`)(which makes sense, since we don't know what the ID number should be).
+This is very similar to the first version - we obtain a reference to the right place in the Firebase DB (but this time we want a reference to the parent of the place where we want to add the new object - we're using `users` here, not `users/1`)(which makes sense since we don't know what the ID number should be).
 
 Next, we call `.push()` to ask Firebase to create a new object underneath the `users` location.  Firebase will also assign a unique ID to it, as well.
 
@@ -385,7 +385,7 @@ It's important to understand that because Firebase is out there on the Internet 
 
 Also remember that there's always the possibility that something goes wrong (we lose our connection to the Internet, or maybe just to Firebase, etc, etc) so we'll have to handle any potential errors.
 
-##### Example code providing this functionality, inside MyFirebase.js:
+##### Example code providing this functionality inside MyFirebase.js:
 
 ```javascript
     // READ:
@@ -440,13 +440,13 @@ Essentially, we're asking for the JSON object at `/users/1` (whether that's a si
 
 This method is pretty short - once we've (finally) got the value from the database we call this.setState (unless something went wrong, in which case we display an alert and then end the method early)
 
-#### CRUD operations: Read A List
+#### CRUD operations: Read A-List
 
 Useful for:
 
 - Getting a list of users, or items, etc
 
-##### Example code providing this functionality, inside MyFirebase.js:
+##### Example code providing this functionality inside MyFirebase.js:
 
 ```javascript
     // READ:
@@ -495,7 +495,7 @@ This method looks really similar to the other method.  So similar that we could 
           </ul>
         ))}
 ```
-There's two parts here - call the `getListOfObjects` method, specifying where to find the list in the JSON document / database, and specifying the function to call once we've gotten our response from the database.
+There are two parts here - call the `getListOfObjects` method, specifying where to find the list in the JSON document/ database, and specifying the function to call once we've gotten our response from the database.
 
 The JSX / HTML then displays that list on the page (which will happen once we've called the allUers State with the new list)
 
@@ -521,11 +521,11 @@ Useful for:
 
 - Changing *part* of an object in the database (in contrast to set, which *replaces the entire object with a new object*)
 
-##### Example code providing this functionality, inside MyFirebase.js:
+##### Example code providing this functionality inside MyFirebase.js:
 
 ```javascript
     // UPDATE:
-    // this will only change the things that we give it, instead of replacing the object & all children
+    //This will only change the things that we give it, instead of replacing the object & all children
     // https://firebase.google.com/docs/database/web/read-and-write?authuser=0#update_specific_fields
     // Get a key for a new Post.
    const updateObject = (location, updates, callWhenFinished) => {
@@ -535,7 +535,7 @@ Useful for:
     }
 ```
 
-Given a spot in the database and a partially filled in object, we'll call the Firebase `.update()` method and then wait for `.update()` to call our callback function when it's done.
+Given a spot in the database and a partially filled-in object, we'll call the Firebase `.update()` method and then wait for `.update()` to call our callback function when it's done.
 
 ***Please Note: `callWhenFinished()` is not a built-in method. It is actually a callback function that is passed as a parameter to some of the methods in the MyFirebase class. The purpose of this callback function is to be called when a certain operation is completed, usually an 
 asynchronous operation like fetching data from the Firebase database.***
@@ -606,9 +606,9 @@ Here we update React's copy of the information in the database.  This will trigg
 Useful for:
 
 - Removing an object from the database
-- When a user deletes their account, or cancels an order, or your store decides to stop stocking an item then you might decide to delete the object in the database that represents the user's account / order / item info.
+- When a user deletes their account or cancels an order, or your store decides to stop stocking an item then you might decide to delete the object in the database that represents the user's account/order/item info.
 
-##### Example code providing this functionality, inside MyFirebase.js:
+##### Example code providing this functionality inside MyFirebase.js:
 
 ```javascript
     // DELETE
