@@ -31,7 +31,7 @@ As a team, quickly brainstorm a list of things that went well during the project
 
 ### YourShare Project Presentation
 
-Your team will have **10 minutes to present your work + 5 minutes to answer questions** during the session. 
+Your team will have **5 minutes to present your work + 2 minutes to answer questions** during the session. 
 
 - **Each Team member** shares some part of the project development work that they would like to showcase. 
 - **One Team member** summarizes what your team learned from the retrospective.
