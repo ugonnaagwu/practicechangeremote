@@ -418,7 +418,16 @@ The `catch` method will be called if the promise is broken - for example, if we'
 ##### Here's how we might call the code inside, say, a return method of a component function:
 
 ```jsx
-<li><p>User #1's name: {this.state.user1.username}</p><button onClick={() => db.getAnObject('/users/1', this.displayUser1NameOnPage)}>Get User #1's name</button></li>
+  <li>
+    <p>User #1's name: {user1.username}</p>
+       <button
+          onClick={() =>
+          MyFirebase().getAnObject("/users/1", displayUser1NameOnPage)
+              }
+           >
+            Get User #1's name
+        </button>
+    </li>
 ```
 
 Essentially, we're asking for the JSON object at `/users/1` (whether that's a single string or a large complex object) and we're asking JavaScript to call `this.displayUser1NameOnPage` for us once it's got a response.  Let's look at `this.displayUser1NameOnPage` next:
