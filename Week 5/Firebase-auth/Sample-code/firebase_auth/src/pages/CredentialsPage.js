@@ -1,6 +1,6 @@
 import React from "react";
 import { Auth } from "../Auth/Auth";
-
+import './CredentialsPage.css'
 
 export class CredentialsPage extends React.Component {
 
@@ -24,6 +24,14 @@ export class CredentialsPage extends React.Component {
         auth.signUpWithEmailPassword(this.usernameRef.current.value, this.passwordRef.current.value )
         this.props.onAuthStateChanged()
       };
+
+      submitGoogleSigninHandler = (event) => {
+        event.preventDefault();
+        
+        let auth = new Auth()
+        auth.signInUsingGoogle();
+        this.props.onAuthStateChanged()
+      };
     
       submitAccountLoginHandler = (event) => {
         event.preventDefault();
@@ -41,36 +49,53 @@ export class CredentialsPage extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1>Firebase Demo</h1>
-          Examples:
-          <ol>
-            <li>
+        <div className="overallContainer">
+          <h1>Firebase Auth examples</h1>
+          <div className="container">
+            <div className="form form1">
               <form onSubmit={this.submitAccountSignupHandler}>
-                Username: <input type="text" ref={this.usernameRef} />
-                <br />
-                Password: <input type="password" ref={this.passwordRef} />
-                <br />
+                <div className="formelement">
+                  <div>Username</div>
+                  <input type="text" ref={this.usernameRef} />
+                </div>
+                <div className="formelement spaceabove">
+                  <div className="passwordblock">Password</div>
+                  <input type="password" ref={this.passwordRef} />
+                </div>
                 <input
                   type="submit"
                   value="Click to create a user account!"
                 />
               </form>
-            </li>
-            <li>
+            </div>
+
+            <div className="form form2">
               <form onSubmit={this.submitAccountLoginHandler}>
-                Username: <input type="text" ref={this.loginUsernameRef} />
-                <br />
-                Password: <input type="password" ref={this.loginPasswordRef} />
-                <br />
+                <div className="formelement">
+                  <div>Username</div>
+                  <input type="text" ref={this.loginUsernameRef} />
+                </div>
+                <div className="formelement spaceabove">
+                  <div className="passwordblock">Password</div>
+                  <input type="password" ref={this.loginPasswordRef} />
+                </div>
                 <input
                   type="submit"
                   value="Login"
                 />
               </form>
-            </li>
-          </ol>
-        </header>
+            </div>
+
+            <div className="form form3">
+              <form onSubmit={this.submitGoogleSigninHandler}>
+                <input
+                  type="submit"
+                  value="Sign in using Google"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
