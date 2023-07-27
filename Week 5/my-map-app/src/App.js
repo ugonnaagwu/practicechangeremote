@@ -4,15 +4,16 @@ import { BingMap } from './BingMap';
 import data from './data/places.json';
 //import lotsOfData from './data/Landmarks.json';
 
+let map = new BingMap();
+window.onload = () => {
+  map.init();
+  map.loadMarkers(data);
+}
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Map Tutorial
-        </p>
-      </header>
+      <div id="myMap"></div>
     </div>
   );
 }
