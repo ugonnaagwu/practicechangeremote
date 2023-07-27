@@ -1,5 +1,5 @@
 # Google maps and FullCalender Demo in JavaScript
-
+** This code for older version of the react-google-maps librray. Please check the updated version [here](https://www.npmjs.com/package/@react-google-maps/api)
 ## For Google maps: Install
 
 ```zsh
