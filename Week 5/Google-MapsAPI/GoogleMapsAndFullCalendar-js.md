@@ -71,8 +71,8 @@ There are a large number of React Maps API libraries to choose from, each with a
   * [Samples](https://developers.google.com/maps/documentation/javascript/examples)
   * [Demos](https://react-google-maps-api-gatsby-demo.netlify.app/)
 * react-google-maps-api
-  * react-google-maps-api [documentation](https://react-google-maps-api-docs.netlify.app/#section-introduction)
-  * react-google-maps-npm [installation](https://www.npmjs.com/package/@react-google-maps/api)
+  * react-google-maps-api [documentation](https://tomchentw.github.io/react-google-maps/)
+  * react-google-maps-npm [installation](https://tomchentw.github.io/react-google-maps/#installation)
 * google-map-react
 
   * [google-map-react npm](https://www.npmjs.com/package/google-map-react)
@@ -85,7 +85,7 @@ We are going to use [**react-google-maps-api**]()
 
 #### NPM installation
 
-Look for the "Getting Started" or "Installation" section on the [library website](https://react-google-maps-api-docs.netlify.app/#section-introduction) to find the npm library name. You can also [search npm packages directly](https://www.npmjs.com/) for "React" components by name.
+Look for the "Getting Started" or "Installation" section on the [library website](https://tomchentw.github.io/react-google-maps/#introduction) to find the npm library name. You can also [search npm packages directly](https://www.npmjs.com/) for "React" components by name.
 
 ***Install @react-google-maps/api***
 
