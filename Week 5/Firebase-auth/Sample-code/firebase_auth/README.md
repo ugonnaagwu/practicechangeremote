@@ -1,4 +1,5 @@
 # Getting Started with Create React App
+![Alt text](../../firebase_auth_assets/firebase-auth-ui.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
