@@ -88,51 +88,32 @@ Usage: `<Homepage/>`
 
 ### LifeCycle Methods (10 minutes)
 
-Every component has _lifecycle methods_. They specify the behavior of the component when it goes through a phase of its lifecycle - when the compoenent is constructed or dismissed. Examples of phases could be: when the component is just about to render on the screen, when it has rendered on the screen, or when it is updated/modified in response to a change.
-
-These methods are: _componenetDidMount_, _componenetDidUpdate_, _componentWillUnmount_. For example, componentDidMount is executed just after the React Component is mounted on the DOM.
-
-![Life Cycle Diagram](images/Lifecycle-methods.png)
-
-Source: [https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
+Every component has a lifecycle - mounting, updating, and unmounting. React provides a hook _useEffect_ to create lifecycle methods. useEffect methods specify the behavior of the component when it goes through a phase of its lifecycle - when the component is constructed or dismissed. Examples of phases could be: when the component is just about to render on the screen, when it has rendered on the screen, or when it is updated/modified in response to a change.
 
 #### Stateful Component With Props and Common Lifecycle Method
 
-     class Tile extends React.Component {
+     const Tile = (props) => {
 
-          // This is called 1st
-          constructor(props) {
-              super(props)
-              this.state = {
-                  size: props.width * props.height
-              }
-          }
+        // This is called 1st
+        const [size, setSize] = React.useState(props.width * props.height);
 
-          // This is called 3rd
-          componentDidMount() {
-              //Do stuff here after component is mounted in DOM tree
-          }
+        useEffect(() => {
+            // Do stuff here after component is mounted in DOM tree
+            return () => {
+                //Do stuff here after component is unmounted
+                //Could be cleanup or service calls
+                //Ex: log("User destroyed the tile. Maybe it's alive somewhere else")
+                //Ex: this.database.tileDestroyed(userId, Date.now())
+            };
+        },[]);
 
-          //this is called 5th
-          componentDidUpdate() {
-              //Do stuff here after component state has changed in DOM tree
-              //Ex: this.setState({size: 0})
-          }
+        useEffect(() => {
+          //Do stuff here after component state has changed in DOM tree
+          //Ex: setSize(0);
+        }); // note the lack of a dependency array here, this will run after every render of the component
 
-          //this is called 7th
-          componentWillUnmount() {
-              //Do stuff here after component is unmounted
-              //Could be cleanup or service calls
-              //Ex: log("User destroyed the tile. Maybe it's alive somewhere else")
-              //Ex: this.database.tileDestroyed(userId, Date.now())
-          }
+        return ( <div>This is tile {props.name} with ID {props.id} of size {size} </div>)
 
-          // During first pass this is called 2nd
-          // Dduring second pass (after componentDidMount), it is called 4th
-          // After an update, this is called 6th
-          render() {
-              return ( <div>This is tile {this.props.name} with ID {this.props.id} of size {this.state.size} </div>)
-          }
       }
 
 ### Session Discussion (30 minutes | 15 minutes in groups, 15 minutes as a class)
@@ -178,3 +159,4 @@ In your team channels, discuss the following; be prepared to share an insight or
 - [Rubber Duck Debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging)
 - [VS Code Live Share Extension for Pair Programming](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack)
 - [React useState documentation](https://react.dev/reference/react/useState)
+- [React useEffect documentation](https://react.dev/reference/react/useEffect)
