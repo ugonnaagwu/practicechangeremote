@@ -20,7 +20,7 @@ Connecting to a Maps API will be an essential skill when working on apps which n
 ## References
 
 * react-google-maps-api 
-  * [documentation](https://react-google-maps-api-docs.netlify.app/#section-introduction)
+  * [documentation](https://web.archive.org/web/20230701010714mp_/https://react-google-maps-api-docs.netlify.app/)
   * [installation](https://www.npmjs.com/package/@react-google-maps/api)
 * [google-map-react npm](https://www.npmjs.com/package/google-map-react) and [documentation](https://github.com/google-map-react/google-map-react/blob/HEAD/DOC.md)
 * Google Maps JavaScript API [Samples](https://developers.google.com/maps/documentation/javascript/examples)
