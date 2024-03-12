@@ -35,33 +35,29 @@ const myTheme = createTheme({
   },
 });
 
-class ThemedExample extends React.Component {
-  render() {
-    return (
-      <div style={{ padding: 15 }}>
-        <ThemeProvider theme={myTheme}>
-          <DefaultButton text="DefaultButton" />
-          <PrimaryButton text="PrimaryButton" />
-          <Toggle label="Enabled" />
-          <Toggle label="Disabled" disabled={true} />
-        </ThemeProvider>
-      </div>
-    );
-  }
-}
-
-class NormalExample extends React.Component {
-  render() {
-    return (
-      <div style={{ padding: 15 }}>
+const ThemedExample = () => {
+  return (
+    <div style={{ padding: 15 }}>
+      <ThemeProvider theme={myTheme}>
         <DefaultButton text="DefaultButton" />
         <PrimaryButton text="PrimaryButton" />
         <Toggle label="Enabled" />
         <Toggle label="Disabled" disabled={true} />
-      </div>
-    );
-  }
-}
+      </ThemeProvider>
+    </div>
+  );
+};
+
+const NormalExample = () => {
+  return (
+    <div style={{ padding: 15 }}>
+      <DefaultButton text="DefaultButton" />
+      <PrimaryButton text="PrimaryButton" />
+      <Toggle label="Enabled" />
+      <Toggle label="Disabled" disabled={true} />
+    </div>
+  );
+};
 
 const headacheTheme = createTheme({
   palette: {
@@ -90,32 +86,29 @@ const headacheTheme = createTheme({
   },
 });
 
-class HeadacheExample extends React.Component {
-  render() {
-    return (
-      <div style={{ padding: 15 }}>
-        <ThemeProvider theme={headacheTheme}>
-          <DefaultButton text="DefaultButton" />
-          <PrimaryButton text="PrimaryButton" />
-          <Toggle label="Enabled" />
-          <Toggle label="Disabled" disabled={true} />
-        </ThemeProvider>
-      </div>
-    );
-  }
-}
-class ThirdExample extends React.Component {
-  render() {
-    return (
-      <div>
-        <Separator>'Normal', unstyled FluentUI:</Separator>
-        <NormalExample />
-        <Separator>Styled FluentUI:</Separator>
-        <ThemedExample />
-        <Separator>Headache Inducing Style:</Separator>
-        <HeadacheExample />
-      </div>
-    );
-  }
-}
+const HeadacheExample = () => {
+  return (
+    <div style={{ padding: 15 }}>
+      <ThemeProvider theme={headacheTheme}>
+        <DefaultButton text="DefaultButton" />
+        <PrimaryButton text="PrimaryButton" />
+        <Toggle label="Enabled" />
+        <Toggle label="Disabled" disabled={true} />
+      </ThemeProvider>
+    </div>
+  );
+};
+
+const ThirdExample = () => {
+  return (
+    <div>
+      <Separator>'Normal', unstyled FluentUI:</Separator>
+      <NormalExample />
+      <Separator>Styled FluentUI:</Separator>
+      <ThemedExample />
+      <Separator>Headache Inducing Style:</Separator>
+      <HeadacheExample />
+    </div>
+  );
+};
 export default ThirdExample;
