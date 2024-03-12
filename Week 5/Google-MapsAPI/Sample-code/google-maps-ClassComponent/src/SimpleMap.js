@@ -92,7 +92,7 @@ class SimpleMap extends Component {
           },
           name: "Space Needle",
           description:
-            "Built for the 1962 Seattle World’s Fair, the Space Needle has come to symbolize the Emerald City more than anything else. At 605 feet (184 meters) tall, it dominates Seattle’s skyline. A revolving observation tower sits at 520 feet above the ground, offering ever-changing views of Seattle for miles around, including Puget Sound and the far-off Olympic Mountains. A revolving restaurant is on a lower level. Sunset is a good time to ride the elevator, which climbs at the speed of 10 miles per hour, to the top to see a twinkling Seattle below.",
+            "Built for the 1962 Seattle World's Fair, the Space Needle has come to symbolize the Emerald City more than anything else. At 605 feet (184 meters) tall, it dominates Seattle's skyline. A revolving observation tower sits at 520 feet above the ground, offering ever-changing views of Seattle for miles around, including Puget Sound and the far-off Olympic Mountains. A revolving restaurant is on a lower level. Sunset is a good time to ride the elevator, which climbs at the speed of 10 miles per hour, to the top to see a twinkling Seattle below.",
           imgSrc:
             "https://cdn1.iconfinder.com/data/icons/landmarks-of-the-usa-2/128/USA_Seattle-Space_Needle-512.png",
           address: "400 Broad St, Seattle, WA 98109",
@@ -104,7 +104,7 @@ class SimpleMap extends Component {
   }
 
   render() {
-    let infoWindow;
+    let infoWindow = null;
     if (this.state.infoFlag) {
       infoWindow = (
         <InfoWindow
@@ -135,9 +135,8 @@ class SimpleMap extends Component {
           </div>
         </InfoWindow>
       );
-    } else {
-      infoWindow = null;
     }
+    
     return (
       <div className="demo-app">
         <div className="demo-app-sidebar">
