@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {
   GoogleMap,
   LoadScript,
-  Marker,
+  MarkerF,
   InfoWindow,
 } from "@react-google-maps/api";
 import "./MyDemo.css";
@@ -160,7 +160,7 @@ const SimpleMap = () => {
               onClick={onClickChange}
             >
               {places.map((myPlace) => (
-                <Marker
+                <MarkerF
                   label={labels[myPlace.id - 1]}
                   key={myPlace.id}
                   onLoad={onLoad}
