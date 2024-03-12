@@ -40,7 +40,7 @@ const SimpleMap = () => {
     lng: -122.3321,
   });
   const [defaultZoom, setDefaultZoom] = useState(12);
-  const [infoFlag, setInfoFlag] = useState(false);
+  const [showInfoWindow, setShowInfoWindow] = useState(false);
   const [myInfoWindow, setMyInfoWindow] = useState(null);
   const [places, setPlaces] = useState([
     {
@@ -85,7 +85,7 @@ const SimpleMap = () => {
 
   const updatePlace = (newLoc) => {
     setMyInfoWindow(newLoc);
-    setInfoFlag(true);
+    setShowInfoWindow(true);
   };
 
   const onClickChange = (locPosition) => {
@@ -98,34 +98,8 @@ const SimpleMap = () => {
     console.log("my new center is " + center.lat + " " + center.lng);
   };
 
-  let infoWindow = null;
-  if (infoFlag) {
-    infoWindow = (
-      <InfoWindow
-        onLoad={onLoad}
-        onCloseClick={() => {
-          setInfoFlag(false);
-        }}
-        position={myInfoWindow?.position}
-      >
-        <div style={{ backgroundColor: "pink", opacity: 1, padding: 3 }}>
-          <p>
-            <b>{myInfoWindow?.name}</b>
-          </p>
-          <p>
-            <img src={myInfoWindow?.imgSrc} alt={myInfoWindow?.name} />
-          </p>
-          <p>
-            <a href={myInfoWindow?.moreInfo}>Learn More</a>
-          </p>
-          <p>{myInfoWindow?.address}</p>
-        </div>
-      </InfoWindow>
-    );
-  }
-
-  return (
-    <div className="demo-app">
+  const renderSidebar = () => {
+    return (
       <div className="demo-app-sidebar">
         <h2>Google Maps API Demo Instructions</h2>
         <ul>
@@ -148,6 +122,41 @@ const SimpleMap = () => {
           ))}
         </ol>
       </div>
+    );
+  };
+
+  const renderInfoWindow = () => {
+    let infoWindow = null;
+    if (showInfoWindow) {
+      infoWindow = (
+         <InfoWindow
+          onLoad={infOnLoad}
+          onCloseClick={() => {
+            setShowInfoWindow(false);
+          }}
+          position={myInfoWindow?.position}
+        >
+          <div style={{ backgroundColor: "pink", opacity: 1, padding: 3 }}>
+            <p>
+              <b>{myInfoWindow?.name}</b>
+            </p>
+            <p>
+              <img src={myInfoWindow?.imgSrc} alt={myInfoWindow?.name} />
+            </p>
+            <p>
+              <a href={myInfoWindow?.moreInfo}>Learn More</a>
+            </p>
+            <p>{myInfoWindow?.address}</p>
+          </div>
+        </InfoWindow>
+      );
+    }
+    return infoWindow;
+  };
+
+  return (
+    <div className="demo-app">
+      {renderSidebar()}
       <div className="demo-app-main">
         <div className="containerStyle">
           <LoadScript
@@ -172,7 +181,7 @@ const SimpleMap = () => {
                   }}
                 />
               ))}
-              {infoWindow}
+              {renderInfoWindow()}
             </GoogleMap>
           </LoadScript>
         </div>
