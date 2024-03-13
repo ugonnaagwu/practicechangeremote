@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@fluentui/react": "^8.110.8",
+    "@fluentui/react-calendar-compat": "^0.0.23",
+    "@fluentui/react-components": "^9.46.8",
+    "@fluentui/react-datepicker-compat": "^0.4.26",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",

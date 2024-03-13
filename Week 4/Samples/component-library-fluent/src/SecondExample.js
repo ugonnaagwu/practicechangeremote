@@ -1,14 +1,34 @@
 import * as React from "react";
 
-import { Persona } from "@fluentui/react";
-import { Stack } from "@fluentui/react";
+import { Persona, makeStyles } from "@fluentui/react-components";
+
+const useStyles = makeStyles({
+  root: {
+    display: "flex",
+    flexDirection: "column",
+    flexWrap: "nowrap",
+    width: "auto",
+    height: "auto",
+    boxSizing: "border-box",
+    "> *": {
+      textOverflow: "ellipsis",
+    },
+    "> :not(:first-child)": {
+      marginTop: "20px",
+    },
+    "> *:not(.ms-StackItem)": {
+      flexShrink: 1,
+    },
+  },
+});
 
 const SecondExample = () => {
+  const styles = useStyles();
   return (
     <div style={{ height: "360px", padding: 15 }}>
-      <Stack tokens={{ childrenGap: "20px" }}>
+      <div className={styles.root}>
         <PersonaWithClickCounter
-          imageUrl="https://www.bing.com/th?id=OIP.IBGgSiBlFVOG5aIwRa3vuQHaEJ&w=228&h=133&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
+          imageUrl="https://www.bing.com/th?id=OIP.IBGgSiBlFVOG5aIwRa3vuQHaEJ&w=228&h=133&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2.png"
           text="Tom Riddle"
           secondaryText="He Who Must Not Be Named"
         />
@@ -27,7 +47,7 @@ const SecondExample = () => {
           text="Hermione Granger"
           secondaryText="Bails Out Ron And Harry A Lot"
         />
-      </Stack>
+      </div>
     </div>
   );
 };
@@ -36,15 +56,16 @@ const PersonaWithClickCounter = (props) => {
   const [clickCount, setClickCount] = React.useState(0);
 
   const increaseCounter = () => {
-    console.log("this.state.click_count is: " + clickCount);
+    console.log("clickCount is: " + clickCount);
     setClickCount(clickCount + 1);
   };
 
   return (
     <div id="persona-container">
       <Persona
-        imageUrl={props.imageUrl}
-        text={props.text}
+        avatar={{ image: { src: props.imageUrl } }}
+        size="large"
+        name={props.text}
         secondaryText={
           props.secondaryText +
           " | You clicked this " +
