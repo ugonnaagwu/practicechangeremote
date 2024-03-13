@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import {
   GoogleMap,
-  LoadScript,
   MarkerF,
   InfoWindow,
+  useJsApiLoader,
 } from "@react-google-maps/api";
 import "./MyDemo.css";
 
@@ -35,13 +35,20 @@ const icons = {
 const mapLibraries = ["places"];
 
 const SimpleMap = () => {
+  // Load the Google Maps API JS script into the App.
+  const { isLoaded } = useJsApiLoader({
+    id: 'google-map-script',
+    googleMapsApiKey: "YOUR_GOOGLE_MAPS_API_KEY",
+    language: "en",
+    libraries: mapLibraries,    // Note: it is recommended to pass in the library list as a constant, instead of a literal.
+  });
+
   const [center, setCenter] = useState({
     lat: 47.6062,
     lng: -122.3321,
   });
   const [defaultZoom, setDefaultZoom] = useState(12);
-  const [showInfoWindow, setShowInfoWindow] = useState(false);
-  const [myInfoWindow, setMyInfoWindow] = useState(null);
+  const [selectedPlace, setSelectedPlace] = useState(null);
   const [places, setPlaces] = useState([
     {
       id: 1,
@@ -75,6 +82,13 @@ const SimpleMap = () => {
     },
   ]);
 
+  const onMapLoad = useCallback((map) => {
+    // Get the map instance and add the center and place positions to be included in the view when the map is initially loaded.
+    const bounds = new window.google.maps.LatLngBounds(center);
+    places.map((loc) => bounds.extend(loc.position));
+    map.fitBounds(bounds);
+  }, []);
+
   const onLoad = (marker) => {
     console.log("marker: ", marker);
   };
@@ -84,8 +98,7 @@ const SimpleMap = () => {
   };
 
   const updatePlace = (newLoc) => {
-    setMyInfoWindow(newLoc);
-    setShowInfoWindow(true);
+    setSelectedPlace(newLoc);
   };
 
   const onClickChange = (locPosition) => {
@@ -127,26 +140,26 @@ const SimpleMap = () => {
 
   const renderInfoWindow = () => {
     let infoWindow = null;
-    if (showInfoWindow) {
+    if (selectedPlace) {
       infoWindow = (
          <InfoWindow
+          position={selectedPlace?.position}
           onLoad={infOnLoad}
           onCloseClick={() => {
-            setShowInfoWindow(false);
+            setSelectedPlace(null);
           }}
-          position={myInfoWindow?.position}
         >
           <div style={{ backgroundColor: "pink", opacity: 1, padding: 3 }}>
             <p>
-              <b>{myInfoWindow?.name}</b>
+              <b>{selectedPlace?.name}</b>
             </p>
             <p>
-              <img src={myInfoWindow?.imgSrc} alt={myInfoWindow?.name} />
+              <img src={selectedPlace?.imgSrc} alt={selectedPlace?.name} />
             </p>
             <p>
-              <a href={myInfoWindow?.moreInfo}>Learn More</a>
+              <a href={selectedPlace?.moreInfo}>Learn More</a>
             </p>
-            <p>{myInfoWindow?.address}</p>
+            <p>{selectedPlace?.address}</p>
           </div>
         </InfoWindow>
       );
@@ -159,16 +172,14 @@ const SimpleMap = () => {
       {renderSidebar()}
       <div className="demo-app-main">
         <div className="containerStyle">
-          <LoadScript
-            googleMapsApiKey="YOUR_GOOGLE_MAPS_API_KEY"
-            language="en"
-            libraries={mapLibraries}
-          >
+          {/* Render <GoogleMap /> component only when the API is loaded in the App. Otherwise, don't show anything at all. */}
+          {!isLoaded ? null : 
             <GoogleMap
               mapContainerStyle={containerStyle}
               center={center}
               zoom={defaultZoom}
               onClick={onClickChange}
+              onLoad={onMapLoad}
             >
               {places.map((myPlace) => (
                 <MarkerF
@@ -183,11 +194,11 @@ const SimpleMap = () => {
               ))}
               {renderInfoWindow()}
             </GoogleMap>
-          </LoadScript>
+          }
         </div>
       </div>
     </div>
   );
 };
 
-export default SimpleMap;
+export default React.memo(SimpleMap);
