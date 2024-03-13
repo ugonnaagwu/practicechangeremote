@@ -26,14 +26,14 @@ const myNewTheme = {
   160: "#98F289",
 };
 
-const lightTheme = {
+const newTheme = {
   ...createLightTheme(myNewTheme),
 };
 
 const ThemedExample = () => {
   return (
     <div style={{ padding: 15 }}>
-      <FluentProvider theme={lightTheme}>
+      <FluentProvider theme={newTheme}>
         <Button>DefaultButton</Button>
         <Button appearance="primary"> PrimaryButton </Button>
         <Switch label="Enabled" />
@@ -54,7 +54,7 @@ const NormalExample = () => {
   );
 };
 
-const myBadTheme = {
+const myHeadacheTheme = {
   colorNeutralForeground1: "#d3f53b",
   colorNeutralForeground1Hover: "#d3f53b",
   colorNeutralForeground1Pressed: "#d3f53b",
@@ -226,7 +226,7 @@ const myBadTheme = {
 const HeadacheExample = () => {
   return (
     <div style={{ padding: 15 }}>
-      <FluentProvider theme={myBadTheme}>
+      <FluentProvider theme={myHeadacheTheme}>
         <Button>DefaultButton</Button>
         <Button appearance="primary"> PrimaryButton </Button>
         <Switch label="Enabled" />
