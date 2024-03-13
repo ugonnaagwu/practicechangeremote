@@ -16,9 +16,15 @@ yarn add @react-google-maps/api
 ## For FullCalender install
 
 ```zsh
-npm i fullcalendar
-FullCalender React Component: npm i @fullcalendar/react
-FullCalender interaction component: npm i @fullcalendar/interaction
-FullCalender Core, DayGrid and TimeGrid:
-npm install @fullcalendar/core @fullcalendar/daygrid @fullcalendar/timegrid @fullcalendar/list
+npm install fullcalendar        // This will install the complete bundle.
+```
+
+Optionally you can try to install only the libraries that will be used for the demo
+```zsh
+npm install @fullcalendar/react           ----> FullCalender React Component
+npm install @fullcalendar/interaction     ----> FullCalender Interaction Component
+npm install @fullcalendar/daygrid         ----> FullCalender DayGrid Component
+
+// You can also install multiple libraries in one command
+npm install @fullcalendar/react @fullcalendar/interaction @fullcalendar/daygrid
 ```
