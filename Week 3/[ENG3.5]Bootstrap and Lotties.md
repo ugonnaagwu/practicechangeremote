@@ -4,14 +4,14 @@
 
 ## Learning objectives
 
-* TNTs will articulate some of the reasons for using a UI Component Library
-* TNTs will be able to install a UI Component Library and use a component in a React project
-* TNTs will identify requirements, challenges and resources for integrating library components
-* TNT will specifically learn about React-Bootstrap and Lottie
+- TNTs will articulate some of the reasons for using a UI Component Library
+- TNTs will be able to install a UI Component Library and use a component in a React project
+- TNTs will identify requirements, challenges and resources for integrating library components
+- TNT will specifically learn about React-Bootstrap and Lottie
 
 ## Time required and pace
 
-* Total time: 1 hour 30 minutes
+- Total time: 1 hour 30 minutes
 
   - 5 minutes - Resources and choosing a library
   - 10 minutes - React-Bootstrap overview
@@ -21,34 +21,34 @@
 
 ## Background
 
-* HTML, CSS and JavaScript overview for Web Apps 
-* Function components / Class Components
-* Adaptive layouts 
-* React Hooks
+- HTML, CSS and JavaScript overview for Web Apps
+- Function components / Class Components
+- Adaptive layouts
+- React Hooks
 
 ## Resources
 
 ### React Bootstrap Resources
 
-* [React-Bootstrap](https://react-bootstrap.github.io/): UI component library based on Bootstrap
-* [Bootstrap: Front-end UI toolkit](https://react-bootstrap.github.io/getting-started/introduction)
-* Be aware of the different versions of Bootstrap and the difference between Bootstrap and React-Bootstrap
+- [React-Bootstrap](https://react-bootstrap.github.io/): UI component library based on Bootstrap
+- [Bootstrap: Front-end UI toolkit](https://react-bootstrap.github.io/getting-started/introduction)
+- Be aware of the different versions of Bootstrap and the difference between Bootstrap and React-Bootstrap
 
 ### React Hooks for UI
 
-* [React Hooks](https://reactjs.org/docs/hooks-overview.html) are sometimes used in React UI components
+- [React Hooks](https://reactjs.org/docs/hooks-overview.html) are sometimes used in React UI components
 
 ### Other React UI Component Libraries
 
-* [Fluent UI for React](https://developer.microsoft.com/en-us/fluentui#/get-started/web): Microsoft open-source React front-end framework designed to build experiences that fit seamlessly into a broad range of Microsoft products. It provides robust, up-to-date, accessible components which are highly customizable using CSS-in-JS.
-* [Material Design](https://material-ui.com): Create a mobile app feel similar to Android
-* [Ant Design](https://ant.design): Crisp, geometric design feel; built in Typescript
-* [Prime React](https://primefaces.org/primereact/showcase): Over 70 components including a variety of menus, charts, data components, even a color picker
+- [Fluent UI for React](https://developer.microsoft.com/en-us/fluentui#/get-started/web): Microsoft open-source React front-end framework designed to build experiences that fit seamlessly into a broad range of Microsoft products. It provides robust, up-to-date, accessible components which are highly customizable using CSS-in-JS.
+- [Material Design](https://material-ui.com): Create a mobile app feel similar to Android
+- [Ant Design](https://ant.design): Crisp, geometric design feel; built in Typescript
+- [Prime React](https://primefaces.org/primereact/showcase): Over 70 components including a variety of menus, charts, data components, even a color picker
 
 RABBIT HOLE WARNING: Can't find the component that you need in these lists? Checkout out
 
-* [Awesome Components](https://github.com/brillout/awesome-react-components)
-* [Awesome React Component Library list](https://github.com/enaqx/awesome-react#react-component-libraries)
+- [Awesome Components](https://github.com/brillout/awesome-react-components)
+- [Awesome React Component Library list](https://github.com/enaqx/awesome-react#react-component-libraries)
 
 <!--
 ### Lottie
@@ -76,10 +76,10 @@ React-Bootstrap is Javascript library. It replaces Bootstrap JavaScript and was 
 
 To start with React-Bootstrap, use:
 
-* [Getting started with Bootstrap](https://react-bootstrap.github.io/getting-started/introduction)
-* [Explore the existing components](https://react-bootstrap.github.io/components/alerts/)
-* Experiment with [Bootstrap class presets](https://hackerthemes.com/bootstrap-cheatsheet/#m-1)
-* Use the [Component Sandbox](https://codesandbox.io/s/sharp-snow-v1j90?file=/src/App.js) 
+- [Getting started with Bootstrap](https://react-bootstrap.github.io/getting-started/introduction)
+- [Explore the existing components](https://react-bootstrap.github.io/components/alerts/)
+- Experiment with [Bootstrap class presets](https://hackerthemes.com/bootstrap-cheatsheet/#m-1)
+- Use the [Component Sandbox](https://codesandbox.io/s/sharp-snow-v1j90?file=/src/App.js)
 
 ### Exercise
 
@@ -87,18 +87,18 @@ Pick and choose a component from [here](https://react-bootstrap.github.io/compon
 
 ### Demo Code
 
-[Sample code for Bootstrap React UI Components demo](https://github.com/tnt-summer-academy/Samples/tree/main/Week_3/react-bootstrap-javascript)
+[Sample code for Bootstrap React UI Components demo](./Samples/react-bootstrap/)
 
-### Installation 
+### Installation
 
-* Install react-bootstrap using `npm install react-bootstrap bootstrap@4.6.0`. We will use Bootstrap 4.6.0.
-* Install Holder.js `npm install holderjs`. We will use [holder.js](http://holderjs.com/) to render image placeholders entirely in the browser. Placeholders can have custom colors, fonts, resizing behavior, and rendering engine (Canvas/SVG).
-* Install react-router-dom `npm install react-router-dom` to run our demo example as it uses React Router.
-* The example uses sample pictures from https://picsum.photos.  
+- Install react-bootstrap using `npm install react-bootstrap bootstrap@4.6.0`. We will use Bootstrap 4.6.0.
+- Install Holder.js `npm install holderjs`. We will use [holder.js](http://holderjs.com/) to render image placeholders entirely in the browser. Placeholders can have custom colors, fonts, resizing behavior, and rendering engine (Canvas/SVG).
+- Install react-router-dom `npm install react-router-dom` to run our demo example as it uses React Router.
+- The example uses sample pictures from https://picsum.photos.
 
 ### Imports
 
-* Bootstrap styling needs to be imported.
+- Bootstrap styling needs to be imported.
 
 In `index.js`, import Bootstrap style:
 
@@ -106,20 +106,20 @@ In `index.js`, import Bootstrap style:
 import "bootstrap/dist/css/bootstrap.min.css";
 ```
 
-* In `index.js`, import Holder.js:
+- In `index.js`, import Holder.js:
 
 ```
 import "holderjs";
 ```
 
-* To import a React-Bootstrap component, import it from `react-bootstrap`. For example, to use a Button and Image use:
+- To import a React-Bootstrap component, import it from `react-bootstrap`. For example, to use a Button and Image use:
 
 ```
 import { Button } from 'react-bootstrap';
 import { Image } from 'react-bootstrap';
 ```
 
-* To import an Image that is called `myimage.png` saved in a directory `images`, use: 
+- To import an Image that is called `myimage.png` saved in a directory `images`, use:
 
 ```
 import { Image } from 'react-bootstrap';
@@ -138,10 +138,9 @@ The Navbar below uses a primary-themed navbar that is at the top of the page and
 
 Nav is shared by all navigation tabs. Each navigation tab is a Nav.Item that contains a Nav.Link. The base Nav component is built with flexbox.
 
-
 ```
               import { Navbar, Nav } from "react-bootstrap";
-              ...              
+              ...
               <Navbar bg="primary" variant="dark" expand="lg" sticky="top">
                 <Navbar.Brand href="#home">React Bootstrap Navbar</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -206,7 +205,7 @@ Other examples:
   <Button variant="secondary">Secondary</Button>
   <Button variant="success">Success</Button>
   <Button variant="warning">Warning</Button>
-  <Button variant="danger">Danger</Button> 
+  <Button variant="danger">Danger</Button>
   <Button variant="info">Info</Button>
   <Button variant="light">Light</Button> <Button variant="dark">Dark</Button>
   <Button variant="link">Link</Button>
@@ -223,6 +222,7 @@ import { Alert } from 'react-bootstrap';
    The date is saved!
 </Alert >
 ```
+
 ![alert](./images/ENG3.5/Bootstrap-alert.png)
 
 #### Image
@@ -233,6 +233,7 @@ import myimage from "../images/myimage.png";
 ...
 <Image src={myimage} className="border border-primary" roundedCircle />
 ```
+
 ![image](./images/ENG3.5/Bootstrap-image.png)
 
 #### Carousel
@@ -246,7 +247,7 @@ import { Carousel } from 'react-bootstrap';
 ...
                <Carousel>
                     <Carousel.Item>
-                        <img 
+                        <img
                             className="d-block w-100"
                             src="holder.js/800x400?text=First slide&bg=282c34"
                             alt="First slide"
@@ -286,11 +287,9 @@ A nice tutorial is available [here](https://www.freakyjolly.com/react-bootstrap-
 
 ![carousel](./images/ENG3.5/Bootstrap-carousel.png)
 
-
 ### Demo Code
 
 [Sample code for Bootstrap React UI Components demo](https://github.com/tnt-summer-academy/Curriculum-2023/tree/main/Week%203/Samples/react-bootstrap)
-
 
 <!-- remove lottie from this year curriculum
 ## Lottie
@@ -365,6 +364,4 @@ You can edit lotties in the [editor](https://lottiefiles.com/editor).
 
 ## Your turn
 
-Apply what you learned on the YourShare project. Each team member enhanced the screen she/he is responsible of with Bootstrap components and Lottie elements. 
-
-
+Apply what you learned on the YourShare project. Each team member enhanced the screen she/he is responsible of with Bootstrap components and Lottie elements.
