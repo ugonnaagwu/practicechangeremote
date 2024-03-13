@@ -1,15 +1,34 @@
 import * as React from "react";
 
-import { Component } from "react";
-import { Persona } from "@fluentui/react";
-import { Stack } from "@fluentui/react";
+import { Persona, makeStyles } from "@fluentui/react-components";
+
+const useStyles = makeStyles({
+  root: {
+    display: "flex",
+    flexDirection: "column",
+    flexWrap: "nowrap",
+    width: "auto",
+    height: "auto",
+    boxSizing: "border-box",
+    "> *": {
+      textOverflow: "ellipsis",
+    },
+    "> :not(:first-child)": {
+      marginTop: "20px",
+    },
+    "> *:not(.ms-StackItem)": {
+      flexShrink: 1,
+    },
+  },
+});
 
 const SecondExample = () => {
+  const styles = useStyles();
   return (
-    <div style={{ height: "360px" , padding:15}}>
-      <Stack tokens={{ childrenGap: "20px" }}>
+    <div style={{ height: "360px", padding: 15 }}>
+      <div className={styles.root}>
         <PersonaWithClickCounter
-          imageUrl="https://www.bing.com/th?id=OIP.IBGgSiBlFVOG5aIwRa3vuQHaEJ&w=228&h=133&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
+          imageUrl="https://www.bing.com/th?id=OIP.IBGgSiBlFVOG5aIwRa3vuQHaEJ&w=228&h=133&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2.png"
           text="Tom Riddle"
           secondaryText="He Who Must Not Be Named"
         />
@@ -28,41 +47,35 @@ const SecondExample = () => {
           text="Hermione Granger"
           secondaryText="Bails Out Ron And Harry A Lot"
         />
-      </Stack>
+      </div>
     </div>
   );
 };
 
-class PersonaWithClickCounter extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      click_count: 0,
-    };
-  }
+const PersonaWithClickCounter = (props) => {
+  const [clickCount, setClickCount] = React.useState(0);
 
-  increaseCounter = () => {
-    console.log("this.state.click_count is: " + this.state.click_count);
-    this.setState((state) => ({ click_count: state.click_count + 1 }));
+  const increaseCounter = () => {
+    console.log("clickCount is: " + clickCount);
+    setClickCount(clickCount + 1);
   };
 
-  render() {
-    return (
-      <div id="persona-container">
-        <Persona
-          imageUrl={this.props.imageUrl}
-          text={this.props.text}
-          secondaryText={
-            this.props.secondaryText +
-            " | You clicked this " +
-            this.state.click_count.toString() +
-            " times!"
-          }
-          onClick={this.increaseCounter}
-        />
-      </div>
-    );
-  }
-}
+  return (
+    <div id="persona-container">
+      <Persona
+        avatar={{ image: { src: props.imageUrl } }}
+        size="large"
+        name={props.text}
+        secondaryText={
+          props.secondaryText +
+          " | You clicked this " +
+          clickCount.toString() +
+          " times!"
+        }
+        onClick={increaseCounter}
+      />
+    </div>
+  );
+};
 
 export default SecondExample;
