@@ -55,7 +55,6 @@ When building applications with React, understanding how data flows between comp
     - When you need to share state between multiple components, things get interesting.
     - The official React documentation suggests lifting state up to a common ancestor component.
     - This means sharing a piece of state by moving it higher in the <a href="https://react.dev/learn/understanding-your-ui-as-a-tree" target="_blank">component tree.</a>
-    - [test](https://react.dev/learn/understanding-your-ui-as-a-tree:target_blank)
     - The state is then passed down as props to child components.
     - However, this approach can lead to code maintenance challenges and unnecessary re-rendering.
 
@@ -151,7 +150,7 @@ const ourSelector = selector({
   },
 });
 ```
->**NOTE:** refer to the examples below to see Atoms and Selectors in action!
+>**NOTE:** refer to the [Examples Section](#recoil-examples) to see Atoms and Selectors in action!
 ### Summary
 
 * **useRecoilState(state)**
@@ -172,11 +171,16 @@ const ourSelector = selector({
 
 * More on the <a href="https://recoiljs.org/docs/api-reference/core/RecoilRoot" target="_blank">Recoil API</a>
 
-## Example 1 - Number of characters in an input string
+# Recoil Examples
+* Code for the below examples can be found [here](https://github.com/tnt-summer-academy/Samples/tree/main/Stretch/recoil-todo-javascript)
 
-The code is available [here](https://github.com/tnt-summer-academy/Samples/tree/main/Stretch/recoil-todo-javascript)
 
-We will build this app:
+## Example 1 - Number of characters in an input string 
+* See the component `<CharacterCounter />` in [`src/app.js`](https://github.com/tnt-summer-academy/Samples/blob/main/Stretch/recoil-todo-javascript/src/App.js)
+* Code for `CharacterCounter` component can be found in [`src/components/CharacterCounter.js`](https://github.com/tnt-summer-academy/Samples/blob/main/Stretch/recoil-todo-javascript/src/components/CharacterCounter.js)
+
+
+### We will build this app:
 
 ![](https://github.com/tnt-summer-academy/Curriculum/blob/main/Stretch%20topics/recoil/recoilcharactercount.png)
 
@@ -188,7 +192,7 @@ The code below shows how to create and use Recoil Atoms and Selectors.
 
 **Create the textState Atom to define the state**
 
-```
+```JSX
   const textState = atom({
     key: 'textState', // unique ID (with respect to other atoms/selectors)
     default: '', // default value (aka initial value) of textState
@@ -197,7 +201,7 @@ The code below shows how to create and use Recoil Atoms and Selectors.
 
 **Use the textState Atom**
 
-```
+```JSX
   function TextInput() {
     const [text, setText] = useRecoilState(textState);
   
@@ -208,7 +212,7 @@ The code below shows how to create and use Recoil Atoms and Selectors.
 
 **Create the charCountState Selector that returns the length of the input text in the state**
 
-```
+```JSX
     const charCountState = selector({
     key: 'charCountState', // unique ID (with respect to other atoms/selectors)
     get: ({ get }) => {
@@ -220,7 +224,7 @@ The code below shows how to create and use Recoil Atoms and Selectors.
 
 **Use the charCountState Selector**
 
-```
+```JSX
   function CharacterCount() {
     const count = useRecoilValue(charCountState);
     return (
@@ -231,11 +235,14 @@ The code below shows how to create and use Recoil Atoms and Selectors.
   }
 ```
 
+**Reference:** [Getting started with Recoil](https://recoiljs.org/docs/introduction/getting-started)
+
 ## Example 2 - Todolist with filter and stats 
+* See the component `<TodoList />` in [`src/app.js`](https://github.com/tnt-summer-academy/Samples/blob/main/Stretch/recoil-todo-javascript/src/App.js)
+* Code for the `TodoList` component can be found in [`src/components/TodoList.js`](https://github.com/tnt-summer-academy/Samples/blob/main/Stretch/recoil-todo-javascript/src/components/TodoList.js)
 
-The code is available [here](https://github.com/tnt-summer-academy/Samples/tree/main/Stretch/recoil-todo-javascript)
 
-We will build this app:
+### We will build this app:
 
 ![](https://github.com/tnt-summer-academy/Curriculum/blob/main/Stretch%20topics/recoil/recoiltodolist.png)
 
@@ -246,3 +253,5 @@ The component decomposition is depicted here:
 Atoms and Selectors are depicted here:
 
 ![](https://github.com/tnt-summer-academy/Curriculum/blob/main/Stretch%20topics/recoil/recoiltodolistatomselector.png)
+
+**Reference**: [Recoil Basic Tutorial](https://recoiljs.org/docs/basic-tutorial/intro)
