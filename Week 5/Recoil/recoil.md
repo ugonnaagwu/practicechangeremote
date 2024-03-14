@@ -151,7 +151,7 @@ const ourSelector = selector({
   },
 });
 ```
->**NOTE:** refer to the examples below to see Atoms and Selectors in action!
+>**NOTE:** refer to the [Examples Section](#recoil-examples) to see Atoms and Selectors in action!
 ### Summary
 
 * **useRecoilState(state)**
@@ -172,9 +172,11 @@ const ourSelector = selector({
 
 * More on the <a href="https://recoiljs.org/docs/api-reference/core/RecoilRoot" target="_blank">Recoil API</a>
 
-## Example 1 - Number of characters in an input string
+# Recoil Examples
+* the code for the below examples can be found [here](https://github.com/tnt-summer-academy/Samples/tree/main/Stretch/recoil-todo-javascript)
 
-* The code is available [here](https://github.com/tnt-summer-academy/Samples/tree/main/Stretch/recoil-todo-javascript) 
+
+## Example 1 - Number of characters in an input string 
 * see the component `<CharacterCounter />` in [`src/app.js`](https://github.com/tnt-summer-academy/Samples/blob/main/Stretch/recoil-todo-javascript/src/App.js)
 * code for `CharacterCounter` component can be found in [`src/components/CharacterCounter.js`](https://github.com/tnt-summer-academy/Samples/blob/main/Stretch/recoil-todo-javascript/src/components/CharacterCounter.js)
 
