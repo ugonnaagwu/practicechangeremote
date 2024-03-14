@@ -18,7 +18,7 @@ Understanding web design principles is crucial for creating effective and visual
 1. **Simplicity**: Strive for clarity and minimalism. Avoid unnecessary clutter and complexity, ensuring a clean and straightforward design.
 2. **Consistency**: Maintain uniformity in fonts, colors, layout, and style across the entire website. Consistency enhances user familiarity and trust.
 3. **Typography and Readability**: Choose legible fonts that match the website’s tone and purpose. Prioritize readability to engage users effectively.
-4. **Responsive and Mobile-Friendly**: Design your site to adapt seamlessly to various screen sizes and devices. Mobile users constitute a significant portion of web traffic1.
+4. **Responsive and Mobile-Friendly**: Design your site to adapt seamlessly to various screen sizes and devices. Mobile users constitute a significant portion of web traffic.
 5. **Color Palette and Imagery**: Select colors and images that complement each other and convey the desired message and mood.
 6. **Fast Loading**: Optimize website speed and performance to reduce loading times. Users appreciate swift access to content.
 7. **Easy Navigation**: Provide clear and intuitive navigation options. Well-organized menus guide users smoothly through the site.
