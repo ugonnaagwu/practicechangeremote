@@ -22,8 +22,8 @@
   
 ## References
 
-* [React State](https://reactjs.org/docs/faq-state.html)
-* [Recoil](https://recoiljs.org)
+* <a href="https://react.dev/learn/state-a-components-memory" target="_blank">React State </a>
+* <a href="https://recoiljs.org/docs/introduction/core-concepts" target="_blank">Recoil Documentation</a>
 * [Recoil for beginners](https://youtu.be/tMQaxZl_MqY)
 
 ## Code
