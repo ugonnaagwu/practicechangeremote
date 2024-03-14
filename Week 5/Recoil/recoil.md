@@ -174,9 +174,12 @@ const ourSelector = selector({
 
 ## Example 1 - Number of characters in an input string
 
-The code is available [here](https://github.com/tnt-summer-academy/Samples/tree/main/Stretch/recoil-todo-javascript)
+* The code is available [here](https://github.com/tnt-summer-academy/Samples/tree/main/Stretch/recoil-todo-javascript) 
+* see the component `<CharacterCounter />` in [`src/app.js`](https://github.com/tnt-summer-academy/Samples/blob/main/Stretch/recoil-todo-javascript/src/App.js)
+* code for `CharacterCounter` component can be found in [`src/components/CharacterCounter.js`](https://github.com/tnt-summer-academy/Samples/blob/main/Stretch/recoil-todo-javascript/src/components/CharacterCounter.js)
 
-We will build this app:
+
+### We will build this app:
 
 ![](https://github.com/tnt-summer-academy/Curriculum/blob/main/Stretch%20topics/recoil/recoilcharactercount.png)
 
@@ -188,7 +191,7 @@ The code below shows how to create and use Recoil Atoms and Selectors.
 
 **Create the textState Atom to define the state**
 
-```
+```JSX
   const textState = atom({
     key: 'textState', // unique ID (with respect to other atoms/selectors)
     default: '', // default value (aka initial value) of textState
@@ -197,7 +200,7 @@ The code below shows how to create and use Recoil Atoms and Selectors.
 
 **Use the textState Atom**
 
-```
+```JSX
   function TextInput() {
     const [text, setText] = useRecoilState(textState);
   
@@ -208,7 +211,7 @@ The code below shows how to create and use Recoil Atoms and Selectors.
 
 **Create the charCountState Selector that returns the length of the input text in the state**
 
-```
+```JSX
     const charCountState = selector({
     key: 'charCountState', // unique ID (with respect to other atoms/selectors)
     get: ({ get }) => {
@@ -220,7 +223,7 @@ The code below shows how to create and use Recoil Atoms and Selectors.
 
 **Use the charCountState Selector**
 
-```
+```JSX
   function CharacterCount() {
     const count = useRecoilValue(charCountState);
     return (
@@ -231,11 +234,16 @@ The code below shows how to create and use Recoil Atoms and Selectors.
   }
 ```
 
+**Reference:** [Getting started with Recoil](https://recoiljs.org/docs/introduction/getting-started)
+
 ## Example 2 - Todolist with filter and stats 
 
-The code is available [here](https://github.com/tnt-summer-academy/Samples/tree/main/Stretch/recoil-todo-javascript)
+* The code is available [here](https://github.com/tnt-summer-academy/Samples/tree/main/Stretch/recoil-todo-javascript) 
+* see the component `<TodoList />` in [`src/app.js`](https://github.com/tnt-summer-academy/Samples/blob/main/Stretch/recoil-todo-javascript/src/App.js)
+* code for the `TodoList` component can be found in [`src/components/TodoList.js`](https://github.com/tnt-summer-academy/Samples/blob/main/Stretch/recoil-todo-javascript/src/components/TodoList.js)
 
-We will build this app:
+
+### We will build this app:
 
 ![](https://github.com/tnt-summer-academy/Curriculum/blob/main/Stretch%20topics/recoil/recoiltodolist.png)
 
@@ -246,3 +254,5 @@ The component decomposition is depicted here:
 Atoms and Selectors are depicted here:
 
 ![](https://github.com/tnt-summer-academy/Curriculum/blob/main/Stretch%20topics/recoil/recoiltodolistatomselector.png)
+
+**Reference**: [Recoil Basic Tutorial](https://recoiljs.org/docs/basic-tutorial/intro)
