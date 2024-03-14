@@ -7,7 +7,7 @@ To get started with Google Maps Platform you need to:
 3. Enable one or more APIs or SDKs
 4. Get, add, and restrict an API key
 
-To get started, click the *Get Started* on the page [here](https://developers.google.com/maps/gmp-get-started#quickstart) and follow the guide to do the first 3 steps listed above.
+To get started, click the *"Get Started"* button on the page [here](https://developers.google.com/maps/gmp-get-started#quickstart) and follow the guide to do the first 3 steps listed above.
 
 After following the Get Started link, now check the steps screenshots.
 
@@ -15,8 +15,9 @@ After completing **Step 2** you can check your project list
 
 ![ProjectList](./images/Projects.png)
 
-**Step 3**: Now you should be ready to Get, add and restrict an API key. For this session we will be using both, *Maps JavaScript API and Places. Here how you get the* [JavaScript API](https://developers.google.com/maps/documentation/javascript/get-api-key) key
-**ToEnable Maps JavaScript API**
+**Step 3**: Now you should be ready to get, add and restrict an API key. For this session we will be using both, *Maps JavaScript API* and *Places*. Here's how you get the [JavaScript API](https://developers.google.com/maps/documentation/javascript/get-api-key) key
+
+**Enable Maps JavaScript API**
 
 1. Go to Library
 ![API Key](./images/LibraryServices.png)
@@ -29,7 +30,7 @@ After completing **Step 2** you can check your project list
 ![API Key](./images/JavaScriptAPI2.png)
 
 * Now you can copy your API key to use in your code project.
-Go to APIs& Services, then Credentials
+Go to *APIs & Services*, then *Credentials*.
 ![Access Credentials](./images/API-Credentials.png)
 
 * All your project keys should be listed, click and copy the key

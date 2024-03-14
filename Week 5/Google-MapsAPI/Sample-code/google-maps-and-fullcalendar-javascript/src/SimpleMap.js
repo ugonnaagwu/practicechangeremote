@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import {
+  useJsApiLoader,
   GoogleMap,
-  LoadScript,
-  Marker,
+  MarkerF,
   InfoWindow,
 } from "@react-google-maps/api";
 import "./MyDemo.css";
@@ -32,13 +32,23 @@ const icons = {
   },
 };
 
+const mapLibraries = ["places"];
+
 const SimpleMap = () => {
+  // Load the Google Maps API JS script into the App.
+  const { isLoaded } = useJsApiLoader({
+    id: 'google-map-script',
+    googleMapsApiKey: "YOUR_GOOGLE_MAPS_API_KEY",
+    language: "en",
+    libraries: mapLibraries,    // Note: it is recommended to pass in the library list as a constant, instead of a literal.
+  });
+
   const [center, setCenter] = useState({
     lat: 47.6062,
     lng: -122.3321,
   });
   const [defaultZoom, setDefaultZoom] = useState(12);
-  const [infoFlag, setInfoFlag] = useState(false);
+  const [selectedPlace, setSelectedPlace] = useState(null);
   const [places, setPlaces] = useState([
     {
       id: 1,
@@ -63,7 +73,7 @@ const SimpleMap = () => {
       },
       name: "Space Needle",
       description:
-        "Built for the 1962 Seattle World’s Fair, the Space Needle has come to symbolize the Emerald City more than anything else. At 605 feet (184 meters) tall, it dominates Seattle’s skyline. A revolving observation tower sits at 520 feet above the ground, offering ever-changing views of Seattle for miles around, including Puget Sound and the far-off Olympic Mountains. A revolving restaurant is on a lower level. Sunset is a good time to ride the elevator, which climbs at the speed of 10 miles per hour, to the top to see a twinkling Seattle below.",
+        "Built for the 1962 Seattle World's Fair, the Space Needle has come to symbolize the Emerald City more than anything else. At 605 feet (184 meters) tall, it dominates Seattle's skyline. A revolving observation tower sits at 520 feet above the ground, offering ever-changing views of Seattle for miles around, including Puget Sound and the far-off Olympic Mountains. A revolving restaurant is on a lower level. Sunset is a good time to ride the elevator, which climbs at the speed of 10 miles per hour, to the top to see a twinkling Seattle below.",
       imgSrc:
         "https://cdn1.iconfinder.com/data/icons/landmarks-of-the-usa-2/128/USA_Seattle-Space_Needle-512.png",
       address: "400 Broad St, Seattle, WA 98109",
@@ -71,7 +81,13 @@ const SimpleMap = () => {
       type: "beach",
     },
   ]);
-  const [myInfoWindow, setMyInfoWindow] = useState(null);
+
+  const onMapLoad = useCallback((map) => {
+    // Get the map instance and add the center and place positions to be included in the view when the map is initially loaded.
+    const bounds = new window.google.maps.LatLngBounds(center);
+    places.map((loc) => bounds.extend(loc.position));
+    map.fitBounds(bounds);
+  }, []);
 
   const onLoad = (marker) => {
     console.log("marker: ", marker);
@@ -79,11 +95,6 @@ const SimpleMap = () => {
 
   const infOnLoad = (infoBox) => {
     console.log("InfoBox: ", infoBox);
-  };
-
-  const updatePlace = (newLoc) => {
-    setMyInfoWindow(newLoc);
-    setInfoFlag(true);
   };
 
   const onClickChange = (locPosition) => {
@@ -96,34 +107,8 @@ const SimpleMap = () => {
     console.log("my new center is " + center.lat + " " + center.lng);
   };
 
-  let infoWindow = null;
-  if (infoFlag) {
-    infoWindow = (
-      <InfoWindow
-        onLoad={onLoad}
-        onCloseClick={() => {
-          setInfoFlag(false);
-        }}
-        position={myInfoWindow?.position}
-      >
-        <div style={{ backgroundColor: "pink", opacity: 1, padding: 3 }}>
-          <p>
-            <b>{myInfoWindow?.name}</b>
-          </p>
-          <p>
-            <img src={myInfoWindow?.imgSrc} alt={myInfoWindow?.name} />
-          </p>
-          <p>
-            <a href={myInfoWindow?.moreInfo}>Learn More</a>
-          </p>
-          <p>{myInfoWindow?.address}</p>
-        </div>
-      </InfoWindow>
-    );
-  }
-
-  return (
-    <div className="demo-app">
+  const renderSidebar = () => {
+    return (
       <div className="demo-app-sidebar">
         <h2>Google Maps API Demo Instructions</h2>
         <ul>
@@ -146,37 +131,66 @@ const SimpleMap = () => {
           ))}
         </ol>
       </div>
+    );
+  };
+
+  const renderInfoWindow = () => {
+    let infoWindow = null;
+    if (selectedPlace) {
+      infoWindow = (
+         <InfoWindow
+          position={selectedPlace?.position}
+          onLoad={infOnLoad}
+          onCloseClick={() => setSelectedPlace(null)}
+        >
+          <div style={{ backgroundColor: "pink", opacity: 1, padding: 3 }}>
+            <p>
+              <b>{selectedPlace?.name}</b>
+            </p>
+            <p>
+              <img src={selectedPlace?.imgSrc} alt={selectedPlace?.name} />
+            </p>
+            <p>
+              <a href={selectedPlace?.moreInfo}>Learn More</a>
+            </p>
+            <p>{selectedPlace?.address}</p>
+          </div>
+        </InfoWindow>
+      );
+    }
+    return infoWindow;
+  };
+
+  return (
+    <div className="demo-app">
+      {renderSidebar()}
       <div className="demo-app-main">
         <div className="containerStyle">
-          <LoadScript
-            googleMapsApiKey="YOUR_GOOGLE_MAPS_API_KEY"
-            language="en"
-            libraries={["places"]}
-          >
+          {/* Render <GoogleMap /> component only when the API is loaded in the App. Otherwise, don't show anything at all. */}
+          {!isLoaded ? <p>Map not was not loaded correclty.</p> : 
             <GoogleMap
               mapContainerStyle={containerStyle}
               center={center}
               zoom={defaultZoom}
               onClick={onClickChange}
+              onLoad={onMapLoad}
             >
               {places.map((myPlace) => (
-                <Marker
+                <MarkerF
                   label={labels[myPlace.id - 1]}
                   key={myPlace.id}
                   onLoad={onLoad}
                   position={myPlace.position}
-                  onClick={() => {
-                    updatePlace(myPlace);
-                  }}
+                  onClick={() => setSelectedPlace(myPlace)}
                 />
               ))}
-              {infoWindow}
+              {renderInfoWindow()}
             </GoogleMap>
-          </LoadScript>
+          }
         </div>
       </div>
     </div>
   );
 };
 
-export default SimpleMap;
+export default React.memo(SimpleMap);
