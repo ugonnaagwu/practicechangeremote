@@ -55,6 +55,7 @@ When building applications with React, understanding how data flows between comp
     - When you need to share state between multiple components, things get interesting.
     - The official React documentation suggests lifting state up to a common ancestor component.
     - This means sharing a piece of state by moving it higher in the <a href="https://react.dev/learn/understanding-your-ui-as-a-tree" target="_blank">component tree.</a>
+    - [test](https://react.dev/learn/understanding-your-ui-as-a-tree:target_blank)
     - The state is then passed down as props to child components.
     - However, this approach can lead to code maintenance challenges and unnecessary re-rendering.
 
@@ -71,9 +72,9 @@ When building applications with React, understanding how data flows between comp
 
 ### Recoil
 
-Recoil is a state management library for React. It defines a [directed graph](## "graph in which each connection has a clear direction") [orthogonal](## "at 90 degrees") to but also intrinsic and attached to your <a href="https://react.dev/learn/understanding-your-ui-as-a-tree" target="_blank">React tree.</a>. 
+Recoil is a state management library for React. It defines a directed graph (graph in which each connection has a clear direction) that is orthogonal (at 90 degrees) to but also intrinsic and attached to your <a href="https://react.dev/learn/understanding-your-ui-as-a-tree" target="_blank">React tree.</a>. 
 
-State changes flow from the roots of this graph: **Atoms**, through [pure functions](## "function whose output solely depends on its input"): ***Selectors***, and into components. 
+State changes flow from the roots of this graph: **Atoms**, through pure functions (function whose output solely depends on its input): ***Selectors***, and into components. 
 
 ![](https://github.com/tnt-summer-academy/Curriculum/blob/main/Stretch%20topics/recoil/recoilvisualization.png)
 
