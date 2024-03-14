@@ -145,7 +145,7 @@ const ourAtom = atom({
 ```JSX
 const ourSelector = selector({
   key: 'uniqueKey', // unique identifier for selector
-  get: ({get}) => { // get is the function to be computeed
+  get: ({get}) => { // {get} is the function to be computed
     const value = get(ourAtom)
     return value; // return that is solely determined by input
   },
