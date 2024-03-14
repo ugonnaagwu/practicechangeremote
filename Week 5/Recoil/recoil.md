@@ -151,7 +151,7 @@ const ourSelector = selector({
   },
 });
 ```
-
+>**NOTE:** refer to the examples below to see Atoms and Selectors in action!
 ### Summary
 
 * **useRecoilState(state)**
