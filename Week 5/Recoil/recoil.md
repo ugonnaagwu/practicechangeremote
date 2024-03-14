@@ -173,12 +173,12 @@ const ourSelector = selector({
 * More on the <a href="https://recoiljs.org/docs/api-reference/core/RecoilRoot" target="_blank">Recoil API</a>
 
 # Recoil Examples
-* the code for the below examples can be found [here](https://github.com/tnt-summer-academy/Samples/tree/main/Stretch/recoil-todo-javascript)
+* Code for the below examples can be found [here](https://github.com/tnt-summer-academy/Samples/tree/main/Stretch/recoil-todo-javascript)
 
 
 ## Example 1 - Number of characters in an input string 
-* see the component `<CharacterCounter />` in [`src/app.js`](https://github.com/tnt-summer-academy/Samples/blob/main/Stretch/recoil-todo-javascript/src/App.js)
-* code for `CharacterCounter` component can be found in [`src/components/CharacterCounter.js`](https://github.com/tnt-summer-academy/Samples/blob/main/Stretch/recoil-todo-javascript/src/components/CharacterCounter.js)
+* See the component `<CharacterCounter />` in [`src/app.js`](https://github.com/tnt-summer-academy/Samples/blob/main/Stretch/recoil-todo-javascript/src/App.js)
+* Code for `CharacterCounter` component can be found in [`src/components/CharacterCounter.js`](https://github.com/tnt-summer-academy/Samples/blob/main/Stretch/recoil-todo-javascript/src/components/CharacterCounter.js)
 
 
 ### We will build this app:
@@ -239,10 +239,8 @@ The code below shows how to create and use Recoil Atoms and Selectors.
 **Reference:** [Getting started with Recoil](https://recoiljs.org/docs/introduction/getting-started)
 
 ## Example 2 - Todolist with filter and stats 
-
-* The code is available [here](https://github.com/tnt-summer-academy/Samples/tree/main/Stretch/recoil-todo-javascript) 
-* see the component `<TodoList />` in [`src/app.js`](https://github.com/tnt-summer-academy/Samples/blob/main/Stretch/recoil-todo-javascript/src/App.js)
-* code for the `TodoList` component can be found in [`src/components/TodoList.js`](https://github.com/tnt-summer-academy/Samples/blob/main/Stretch/recoil-todo-javascript/src/components/TodoList.js)
+* See the component `<TodoList />` in [`src/app.js`](https://github.com/tnt-summer-academy/Samples/blob/main/Stretch/recoil-todo-javascript/src/App.js)
+* Code for the `TodoList` component can be found in [`src/components/TodoList.js`](https://github.com/tnt-summer-academy/Samples/blob/main/Stretch/recoil-todo-javascript/src/components/TodoList.js)
 
 
 ### We will build this app:
