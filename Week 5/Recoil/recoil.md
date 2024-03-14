@@ -38,18 +38,46 @@ The code for this session is available [here](https://github.com/tnt-summer-acad
 * Install Recoil by using, ```npm install recoil```
 
 ## Why do we need Recoil?
+When building applications with React, understanding how data flows between components is crucial. Let’s break down the key concepts:
 
-React components accept arbitrary inputs called props and return React elements to be rendered on the screen. Props are read-only and passed from a parent to its children. Components may also have (optional) states. State allows React components to change their rendering over time in response to user actions, network responses or anything else. State comes automatically with class components and can be added to function components using a state hook. Only the component itself can access its own state. To share states between components, the official React documentation says you need to share a piece of the state and lift it up a component that is above in the tree hierarchy and the state will be passed as props to children. This solution however comes with issues linked with maintaining the code and efficiency in terms of unnecessary re-rendering. When you need to share the state or part of it with multiple components, you need to have a scalable solution. 
+1. Props and Components:
+    - React components accept **props**, which are like inputs or parameters.
+    - These props are read-only and are passed from a parent component to its children.
+    - Components return React elements (UI components) to be displayed on the screen.
 
-Recoil is a state management solution. There are others. For example, redux provides a global state to the entire application. Recoil is more efficient in that it optimize re-rendering. It is important to note that neither Redux nor Recoil are official React libraries.
+2. States and Dynamic Rendering:
+    - Components can also have an optional feature called **state**
+    - State allows components to manage dynamic data that can change over time.
+    - For example, a button component might have a state to track whether it’s clicked or not.
+    - In **functional components**, you can add state using a state hook (like `useState`).
+
+3. Sharing State  Challenges:
+    - When you need to share state between multiple components, things get interesting.
+    - The official React documentation suggests lifting state up to a common ancestor component.
+    - This means sharing a piece of state by moving it higher in the <a href="https://react.dev/learn/understanding-your-ui-as-a-tree" target="_blank">component tree.</a>
+    - The state is then passed down as props to child components.
+    - However, this approach can lead to code maintenance challenges and unnecessary re-rendering.
+
+4. Enter Recoil:
+    - Recoil is a state management solution specifically designed for React.
+    - It provides a more efficient way to manage state.
+    - Unlike some other solutions (like Redux), Recoil allows you to manage state at a more granular level.
+    - It optimizes re-rendering by only updating components that depend on the changed state.
+    - Think of it as a scalable solution for sharing state across different parts of your application.
+
+<br>
+
+> **NOTE:** Neither Redux nor Recoil are official React libraries.
 
 ### Recoil
 
-Recoil is a state management library for React. It defines a directed graph orthogonal to but also intrinsic and attached to your React tree. State changes flow from the roots of this graph (which we call atoms) through pure functions (which we call selectors) and into components. 
+Recoil is a state management library for React. It defines a [directed graph](## "graph in which each connection has a clear direction") [orthogonal](## "at 90 degrees") to but also intrinsic and attached to your <a href="https://react.dev/learn/understanding-your-ui-as-a-tree" target="_blank">React tree.</a>. 
+
+State changes flow from the roots of this graph: **Atoms**, through [pure functions](## "function whose output solely depends on its input"): ***Selectors***, and into components. 
 
 ![](https://github.com/tnt-summer-academy/Curriculum/blob/main/Stretch%20topics/recoil/recoilvisualization.png)
 
-Source: https://dev.to/coleredfearn/atomos-a-new-recoil-visualization-tool-powered-by-react-flow-4b6l 
+Source: <a href="https://dev.to/coleredfearn/atomos-a-new-recoil-visualization-tool-powered-by-react-flow-4b6l" target="_blank"> Atomos - A New Recoil Visualization Tool Powered by React Flow</a> 
 
 Components that use Recoil state need `<RecoilRoot>` to appear somewhere in the parent tree. 
 
@@ -72,7 +100,7 @@ ReactDOM.render(
 
 * When an atom is updated, each subscribed component is rendered with the new value.
 
-#### Create an Atom
+#### Creating an Atom
 
 * Atoms are created with the **atom** function. They have:
   * a unique **key** 
@@ -82,15 +110,25 @@ ReactDOM.render(
 
 * To read or write an atom from a component, we use a hook called **useRecoilState**. As useState, useRecoilState returns the state and a function to update it.
 
+#### Example
+
+```JSX
+const ourAtom = atom({
+  key: 'uniqueKey', // Unique identifier for the atom
+  default: 1, // Initial value
+});
+```
+
 ### Selector
 
 #### What is a Selector?
 
 * A selector is a **pure function** that accepts atoms or other selectors as input and **calculates derived data that is based on state**.  A selector transforms a state.
-* When these upstream atoms or selectors are updated, the selector function will be re-evaluated and the dependent components re-rendered. This lets us avoid redundant state because a minimal set of state is stored in atoms, while everything else is efficiently computed as a function of that minimal state. 
+* When these upstream atoms or selectors are updated, the selector function will be re-evaluated and the dependent components re-rendered. 
+  * This lets us avoid redundant state because a minimal set of state is stored in atoms, while everything else is efficiently computed as a function of that minimal state. 
 * Components can subscribe to selectors just like atoms and will then be re-rendered when the selectors change.
 
-#### Create a Selector?
+#### Creating a Selector
 
 * Selectors need a **unique key**.
 * They have a property called **get** that is the function that is to be computed.
@@ -101,21 +139,37 @@ ReactDOM.render(
 
 * Selectors can be read using **useRecoilValue()** which takes an atom or selector as an argument and returns the corresponding value
 
+#### Example
+
+```JSX
+const ourSelector = selector({
+  key: 'uniqueKey', // unique identifier for selector
+  get: ({get}) => { // get is the function to be computeed
+    const value = get(ourAtom)
+    return value; // return that is solely determined by input
+  },
+});
+```
+
 ### Summary
 
 * **useRecoilState(state)**
-  * state can be an atom or a _writeable_ selector
+  * State can be an atom or a **_writeable_** selector
   * Returns a tuple where the first element is the value of state and the second element is a setter function that will update the value of the given state.
   * Subscribes the component to the given state.
 * **useRecoilValue(state)**
-  * state can be an atom or selector
-  * Returns the value of the given state.
+  * State can be an atom or selector
+  * Returns the **value** of the given state.
   * Subscribes the component to the given state.
 * **useSetRecoilState(state)**
-  * state is an atom or a _writeable_ selector 
+  * State is an atom or a _writeable_ selector 
   * Returns a setter function for updating the value of writeable Recoil state.  
 
-* More on the [Recoil AP]I(https://recoiljs.org/docs/api-reference/core/RecoilRoot)
+> **NOTE:** `useRecoilValue()` only allows you to read the State value. <br>To Read and Write the state use `useRecoilState()` or `useSetRecoilState()`. If using a selector ensure it is writable before using this functions.
+
+
+
+* More on the <a href="https://recoiljs.org/docs/api-reference/core/RecoilRoot" target="_blank">Recoil API</a>
 
 ## Example 1 - Number of characters in an input string
 
