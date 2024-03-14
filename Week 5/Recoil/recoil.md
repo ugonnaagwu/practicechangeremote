@@ -55,7 +55,6 @@ When building applications with React, understanding how data flows between comp
     - When you need to share state between multiple components, things get interesting.
     - The official React documentation suggests lifting state up to a common ancestor component.
     - This means sharing a piece of state by moving it higher in the <a href="https://react.dev/learn/understanding-your-ui-as-a-tree" target="_blank">component tree.</a>
-    - [test](https://react.dev/learn/understanding-your-ui-as-a-tree:target_blank)
     - The state is then passed down as props to child components.
     - However, this approach can lead to code maintenance challenges and unnecessary re-rendering.
 
