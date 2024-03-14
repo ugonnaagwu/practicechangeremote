@@ -165,7 +165,7 @@ const ourSelector = selector({
   * State is an atom or a _writeable_ selector 
   * Returns a setter function for updating the value of writeable Recoil state.  
 
-> **NOTE:** `useRecoilValue()` only allows you to read the State value. <br>To Read and Write the state use `useRecoilState()` or `useSetRecoilState()`. If using a selector ensure it is writable before using this functions.
+> **NOTE:** `useRecoilValue()` only allows you to read the State value. <br>To Read and Write the state use `useRecoilState()` or `useSetRecoilState()`. If using a selector ensure it is writable before using these functions.
 
 
 
