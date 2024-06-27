@@ -32,9 +32,9 @@ Total time: 2 hours
 
 ## Obtaining the sample
 
-[View the code of this session here](./Samples/todo-via-functions/)
+[View the code of this session here](./Samples/todos-via-functions/)
 
-For this lesson we'd like to allow y'all to make changes to the starter app BUT we don't want everyone to try and change the starter repo in GitHub. We'll solve this by having one person in each team **_fork_** the overall Exercises repo, which will create (yet another :) ) repo on GitHub. Each person should then clone the repo for their team. After that you can work on your team's fork without any worries about changing other team's forks (repos). Here's a picture showing the overall goal here:
+For this lesson we'd like to allow y'all to make changes to the starter app BUT we don't want everyone to try and change the starter repo in GitHub. We'll solve this by having one person in each team **_fork_** the overall Curriculum repo, which will create (yet another :) ) repo on GitHub. Each person should then clone the repo for their machine. After that you can work on your team's fork without any worries about changing other team's forks (repos). Here's a picture showing the overall goal here:
 
 ![](./images/2022-07-05-17-44-55-image.png)
 
@@ -49,7 +49,7 @@ How to fork a repo:
 - Go to your own repositories under your Github account. The forked repo should appear there.
 - Use `git clone` to clone this git repo to your personal machine.
 
-Note: You specifically want the `todo-via-functions` folder, not any other todo folders
+Note: You specifically want the `todos-via-functions` folder, not any other todo folders
 
 _Credit where credit is due:_ this code sample originally came from the [ReactJS – Todo List with Class Components by Ivy Barish](https://fullstacksoup.blog/2020/08/25/reactjs-todo-list-with-class-components/). You may find it helpful to read through that blog post / tutorial as well, although do be aware that a couple of things have been changed in the code that we're using here.
 
