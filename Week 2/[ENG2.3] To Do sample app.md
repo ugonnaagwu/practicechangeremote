@@ -60,7 +60,7 @@ _Credit where credit is due:_ this code sample originally came from the [ReactJS
 - Once you've obtained the sample app you should open it in VSCode and then start the app.
 
   - You can do this by opening VSCode's Terminal in the repo's folder / directory.  
-     Within VSCode's Explorer panel you should Control-Click (Mac) or right-click (Windows) on the `todos-via-classes` folder, and then select 'Open In Integrated Terminal', as pictured here:
+     Within VSCode's Explorer panel you should Control-Click (Mac) or right-click (Windows) on the `todos-via-functions` folder, and then select 'Open In Integrated Terminal', as pictured here:
     ![openTerminal](images/openTerminal.png)
   - Once you've got the Terminal panel open you'll need to install all the modules that the app needs.
     Type in `npm install` and then tap the Return/Enter key.
@@ -68,7 +68,7 @@ _Credit where credit is due:_ this code sample originally came from the [ReactJS
   - After that you should type in `npm start` to actually start the app
   - Sometimes it takes several minutes for the app to actually start; feel free to read through these directions and/or do something else productive and/or take some deep breadths and remind yourself that it's really an opportunity to work on your patience just like this author does :)
 
-# [Conceptual overview of how the app works](./assets/ToDoSample.pptx)
+<!-- # [Conceptual overview of how the app works](./assets/ToDoSample.pptx) -->
 
 ## How the list is displayed in the sample app:
 
@@ -108,7 +108,7 @@ _Credit where credit is due:_ this code sample originally came from the [ReactJS
   - We create it here and then, for the rest of the life of the program, we will update the state by calling the `setTodoArray` method with a brand-new object literal.
 - We'll skip over markComplete until we get to the part about how the app changes when the user clicks on todo items.
 
-#### the return:
+#### the return() metho:
 
 - The return is intended to display a list of the currently existing todo items, and to display a textbox that allows the user to add new todo items
 
@@ -214,7 +214,7 @@ One common error is to try and change state (todoArray here) directly. Syntactic
 ```javascript
 // Common Error:
 // This is not rendered but the list is updated
-// setState needs to be used
+// useState/setTodoArray needs to be used
 todoArray.push(newItem); // WRONG WRONG WRONG DON'T DO THIS!!!! :)
 ```
 
