@@ -8,8 +8,8 @@ It’s up to the team to work through the design phases together. The resources 
 Here’s a recommended schedule:
 
 *  Monday: Read [PM2.0 Usability and interviewing]([PM2.0]Usability%20and%20interviewing.md) and read [PM2.1 Prototype and test]([PM2.1]Prototype%20and%20test.md). Begin work on the user research interview guide and low-fidelity prototype.
-* Tuesday: Holiday
-* Wednesday: Combine and complete the low-fidelity prototype. Test with other NTs, test with friends, test with coaches.
+* Tuesday: Combine and complete the low-fidelity prototype.
+* Wednesday: Test with other NTs, test with friends, test with coaches.
 * Thursday: Complete user testing and read [PM2.2 Value prop and pitch]([PM2.2]Value%20prop%20and%20pitch.md).
 * Friday: Complete initial value prop. Read [PM2.3 Intro to spec]([PM2.3]Intro%20to%20spec.md) for a preview of next week.
 
