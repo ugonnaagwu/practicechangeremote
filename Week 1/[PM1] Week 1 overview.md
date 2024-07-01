@@ -10,8 +10,8 @@ Here’s a recommended schedule:
 *  Monday: Read [PM1.0 Intro to PM and design thinking]([PM1.0]%20Intro%20to%20PM%20and%20design%20thinking.md) – refresher from week 0. and [PM1.1 Empathize]([PM1.1]%20Empathize%20with%20users.md). Begin user research.
 * Tuesday: Conduct user research.
 * Wednesday: Complete the empathy map and read [PM1.2 Define needs]([PM1.2]%20Define%20needs.md) 
-* Thursday: Create personas and complete user journey maps. Take another pass at problem statement and again narrow the problem statement based on what you’ve explored through the week. Read [PM1.3 HMW and Ideation]([PM1.3]%20HMW%20and%20ideation.md). 
-* Friday: From the refined problem statement, stretch ideation on how to solve for it with HMW and 8s.
+* Thursday: HOLIDAY
+* Friday: Create personas and complete user journey maps. Take another pass at problem statement and again narrow the problem statement based on what you’ve explored through the week. Read [PM1.3 HMW and Ideation]([PM1.3]%20HMW%20and%20ideation.md). From the refined problem statement, stretch ideation on how to solve for it with HMW and 8s.
 
 ## Outcomes
 
